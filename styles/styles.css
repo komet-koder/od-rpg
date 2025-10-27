@@ -834,7 +834,7 @@ input[name="selected-specialty"] {
     height: 1em;
     border: none;
     border-radius: 0px 5px 5px 0px;
-    border-radius: 5px;
+    border-radius: 7px;
     font-size: 1.5em;
     position: relative;
     background-color: var(--accent-green-200);
