@@ -1283,11 +1283,7 @@ summary.character-statuses-summary {
   }
 
 
-  .grey-out {
-    color: darkGrey;
-    cursor: not-allowed;
-    pointer-events: none;
-  }
+
 
   .not-visible {
     display: none;
@@ -1818,20 +1814,13 @@ summary.character-statuses-summary {
     list-style: none;
     width: 250px;
     background-color: white;
-    /* border: 1px solid black; */
     border-radius: 5px;
     margin-top: 5px;
-
-    /* top: calc(100% - 115px);
-    left: calc(100% - 215px); */
-
     bottom: 10%;
     left: calc( 50% - (125px));
-
     font-size: 1.25em;
     z-index: 900;
     height: 7em;
-
     align-content: center;
     justify-content: center;
   }
@@ -1845,19 +1834,43 @@ summary.character-statuses-summary {
   li.third-level-dropdown-list {
     position: relative;
     display: none;
-    height: 20px;
     text-align: center;
     width: 95%;
     justify-self: center;
-    padding: 1em;
+    align-self: center;
+    margin: .5em;
+    height: 30px;
   }
 
   li.show-spell-list-dropdown {
     display: block;
-    /* left: 60px; */
+    
   }
 
 
+  li.show-spell-list-dropdown > b{
+    /* display: block; */
+    position: absolute; 
+    top: 15%; 
+    transform: translateX(-50%);
+    width: 100%;
+  }
+
+  li.first-level-dropdown-list:hover,
+  li.second-level-dropdown-list:hover,
+  li.third-level-dropdown-list:hover {
+    background-color: lightblue;
+    /* height: 20px; */
+    border-radius: 5px;
+  }
+
+
+
+  li.first-level-dropdown-list:hover ul[class*="spell-list-combat"],
+  li.second-level-dropdown-list:hover ul[class*="spell-list-combat"],
+  li.third-level-dropdown-list:hover ul[class*="spell-list-combat"] {
+    display: block;
+  }
 
   li.monster-one-spell-list,
   li.monster-two-spell-list,
@@ -1887,44 +1900,10 @@ summary.character-statuses-summary {
     background-color: lightblue;
   }
 
-    li.first-level-dropdown-list:hover,
-  li.second-level-dropdown-list:hover,
-  li.third-level-dropdown-list:hover {
-    background-color: lightblue;
-    height: 20px;
-    border-radius: 5px;
-  }
-
-
-  li.first-level-dropdown-list b:hover,
-  li.second-level-dropdown-list b:hover,
-  li.third-level-dropdown-list b:hover {
-    background-color: lightblue;
-  }
-
-  li.first-level-dropdown-list:hover,
-  li.second-level-dropdown-list:hover,
-  li.third-level-dropdown-list:hover {
-    background-color: lightblue;
-    height: 20px;
-    border-radius: 5px;
-  }
-
-
-  li.first-level-dropdown-list b:hover,
-  li.second-level-dropdown-list b:hover,
-  li.third-level-dropdown-list b:hover {
-    background-color: lightblue;
-  }
-
-  li.first-level-dropdown-list:hover ul[class*="spell-list-combat"],
-  li.second-level-dropdown-list:hover ul[class*="spell-list-combat"],
-  li.third-level-dropdown-list:hover ul[class*="spell-list-combat"] {
-    display: block;
-  }
+  
 
   ul[class*="spell-list-combat"]:hover li.monster-one-spell-list,
- ul[class*="spell-list-combat"]:hover li.monster-two-spell-list,
+  ul[class*="spell-list-combat"]:hover li.monster-two-spell-list,
   ul[class*="spell-list-combat"]:hover li.self-spell-list {
     display: block;
   }
@@ -1933,6 +1912,7 @@ summary.character-statuses-summary {
   li.monster-two-spell-list:hover,
   li.self-spell-list:hover {
     background-color: lightblue;
+    
   }
 
   li.monster-one-spell-list.monster1-spell-dead:hover {
@@ -1952,6 +1932,7 @@ summary.character-statuses-summary {
 
   .show-spell-list-dropdown > b {
     cursor: url("../images/gui/cursor-hover.png"), auto;
+
   }
 
   .spell-list > span {
@@ -2013,6 +1994,13 @@ summary.character-statuses-summary {
   width: 97%;
   text-align: center;
   font-size: 1.5rem;
+  }
+
+  .fight-module-button.grey-out {
+    color: darkGrey;
+    cursor: not-allowed;
+    pointer-events: none;
+    background-color: grey;
   }
 
   .no-display {
