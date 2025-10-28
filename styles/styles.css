@@ -1816,15 +1816,24 @@ summary.character-statuses-summary {
     position: absolute;
     display: none;
     list-style: none;
-    width: 200px;
+    width: 250px;
     background-color: white;
     /* border: 1px solid black; */
     border-radius: 5px;
     margin-top: 5px;
-    top: calc(100% - 115px);
-    left: calc(100% - 215px);
+
+    /* top: calc(100% - 115px);
+    left: calc(100% - 215px); */
+
+    bottom: 10%;
+    left: calc( 50% - (125px));
+
+    font-size: 1.25em;
     z-index: 900;
-    height: 60px;
+    height: 7em;
+
+    align-content: center;
+    justify-content: center;
   }
 
   div > ul.show-spell-list-dropdown {
@@ -1840,6 +1849,7 @@ summary.character-statuses-summary {
     text-align: center;
     width: 95%;
     justify-self: center;
+    padding: 1em;
   }
 
   li.show-spell-list-dropdown {
