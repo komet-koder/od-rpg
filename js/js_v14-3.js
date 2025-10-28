@@ -3384,16 +3384,15 @@ function addingFightModule(monsterOne, monsterTwo, continueNextChapter) {
   dialogueDiv.appendChild(fightModuleContainer);
   headerFightModule.innerHTML = `
     <div class="attack-buttons">
-        <span class='button-border'><input type="submit" class="attack attack-monster-one fight-module-button" value="Attack"></span>
-        <span class='button-border'><input type="submit" class="attack attack-monster-two fight-module-button" value="Attack2"></span>
-        <span class='button-border'><input type="submit" class="attack item-enchantment fight-module-button" value="Items"></span> 
-        <span class='button-border'>
-          <input type="submit" class="attack-spell spell2-monster-one fight-module-button" value="Spells" id="use-spells">
+        <input type="submit" class="attack attack-monster-one fight-module-button" value="Attack">
+        <input type="submit" class="attack attack-monster-two fight-module-button" value="Attack2">
+        <input type="submit" class="attack item-enchantment fight-module-button" value="Items"> 
+        <input type="submit" class="attack-spell spell2-monster-one fight-module-button" value="Spells" id="use-spells">
             <ul class='dropdown-spell-list-ul hide-spell-list-dropdown'>
             </ul>
-        </span>
         
-        <span class='button-border hidden-border no-display'><input type="submit" id="monster-attack" class="fight-module-button no-display" value="Monster(s) Turn"></span><br>
+        
+        <input type="submit" id="monster-attack" class="fight-module-button no-display" value="Monster(s) Turn">
     </div>
   `;
   headerFightModule.classList.remove('no-display');
