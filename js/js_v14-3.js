@@ -3354,7 +3354,7 @@ function addingFightModule(monsterOne, monsterTwo, continueNextChapter) {
         <input type="submit" class="attack attack-monster-two fight-module-button" value="Attack2">
         <input type="submit" class="attack item-enchantment fight-module-button" value="Items"> 
         <input type="submit" class="attack-spell spell2-monster-one fight-module-button" value="Spells" id="use-spells">
-            <ul class='dropdown-spell-list-ul hide-spell-list-dropdown'>
+            <ul class='dropdown-spell-list-ul'>
             </ul>
         
         
@@ -3442,7 +3442,7 @@ function populateMageSpells(m1, m2, nextChap) {
     ) {
       spellList.push(characterFirstLevelSpells[i].name);
       let spellLi = document.createElement("ul");
-      spellLi.classList.add(`spell-list-${characterFirstLevelSpells[i].className}`);
+      spellLi.classList.add(`spell-list-combat-${characterFirstLevelSpells[i].className}`);
       let addedSpellName = document.createElement("span");
       addedSpellName.innerHTML = characterFirstLevelSpells[i].name;
       spellLi.appendChild(addedSpellName);
@@ -3463,7 +3463,7 @@ function populateMageSpells(m1, m2, nextChap) {
     } else if (characterFirstLevelSpells[i].useBattle === true) {
       spellList.push(characterFirstLevelSpells[i].name);
       let spellLi = document.createElement("ul");
-      spellLi.classList.add(`spell-list-${characterFirstLevelSpells[i].className}`);
+      spellLi.classList.add(`spell-list-combat-${characterFirstLevelSpells[i].className}`);
       let addedSpellName = document.createElement("span");
       addedSpellName.innerHTML = characterFirstLevelSpells[i].name;
       spellLi.appendChild(addedSpellName);
@@ -3507,7 +3507,7 @@ function populateMageSpells(m1, m2, nextChap) {
     ) {
       spellList.push(characterSecondLevelSpells[i].name);
       let spellLi = document.createElement("ul");
-      spellLi.classList.add(`spell-list-${characterSecondLevelSpells[i].className}`);
+      spellLi.classList.add(`spell-list-combat-${characterSecondLevelSpells[i].className}`);
       let addedSpellName = document.createElement("span");
       addedSpellName.innerHTML = characterSecondLevelSpells[i].name;
       spellLi.appendChild(addedSpellName);
@@ -3528,7 +3528,7 @@ function populateMageSpells(m1, m2, nextChap) {
     } else if (characterSecondLevelSpells[i].useBattle === true) {
       spellList.push(characterSecondLevelSpells[i].name);
       let spellLi2 = document.createElement("ul");
-      spellLi2.classList.add(`spell-list-${characterSecondLevelSpells[i].className}`);
+      spellLi2.classList.add(`spell-list-combat-${characterSecondLevelSpells[i].className}`);
       let addedSpellName2 = document.createElement("span");
       addedSpellName2.innerHTML = characterSecondLevelSpells[i].name;
       spellLi2.appendChild(addedSpellName2);
@@ -3568,7 +3568,7 @@ function populateMageSpells(m1, m2, nextChap) {
     ) {
       spellList.push(characterThirdLevelSpells[i].name);
       let spellLi = document.createElement("ul");
-      spellLi.classList.add(`spell-list-${characterThirdLevelSpells[i].className}`);
+      spellLi.classList.add(`spell-list-combat-${characterThirdLevelSpells[i].className}`);
       let addedSpellName = document.createElement("span");
       addedSpellName.innerHTML = characterThirdLevelSpells[i].name;
       spellLi.appendChild(addedSpellName);
@@ -3589,7 +3589,7 @@ function populateMageSpells(m1, m2, nextChap) {
     } else if (characterThirdLevelSpells[i].useBattle === true) {
       spellList.push(characterThirdLevelSpells[i].name);
       let spellLi = document.createElement("ul");
-      spellLi.classList.add(`spell-list-${characterThirdLevelSpells[i].className}`);
+      spellLi.classList.add(`spell-list-combat-${characterThirdLevelSpells[i].className}`);
       let addedSpellName = document.createElement("span");
       addedSpellName.innerHTML = characterThirdLevelSpells[i].name;
       spellLi.appendChild(addedSpellName);
@@ -3629,7 +3629,7 @@ function populateMageSpells(m1, m2, nextChap) {
 export function toggleShowSpellList() {
   document
     .querySelector(".dropdown-spell-list-ul")
-    .classList.toggle("hide-spell-list-dropdown");
+    .classList.toggle("show-spell-list-dropdown");
   document
     .querySelector(".first-level-dropdown-list")
     .classList.toggle("show-spell-list-dropdown");
