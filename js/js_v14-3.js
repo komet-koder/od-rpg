@@ -3442,7 +3442,7 @@ function populateMageSpells(m1, m2, nextChap) {
     ) {
       spellList.push(characterFirstLevelSpells[i].name);
       let spellLi = document.createElement("ul");
-      spellLi.classList.add("spell-list");
+      spellLi.classList.add(`spell-list-${characterFirstLevelSpells[i].name}`);
       let addedSpellName = document.createElement("span");
       addedSpellName.innerHTML = characterFirstLevelSpells[i].name;
       spellLi.appendChild(addedSpellName);
@@ -3463,7 +3463,7 @@ function populateMageSpells(m1, m2, nextChap) {
     } else if (characterFirstLevelSpells[i].useBattle === true) {
       spellList.push(characterFirstLevelSpells[i].name);
       let spellLi = document.createElement("ul");
-      spellLi.classList.add("spell-list");
+      spellLi.classList.add(`spell-list-${characterFirstLevelSpells[i].name}`);
       let addedSpellName = document.createElement("span");
       addedSpellName.innerHTML = characterFirstLevelSpells[i].name;
       spellLi.appendChild(addedSpellName);
@@ -3507,7 +3507,7 @@ function populateMageSpells(m1, m2, nextChap) {
     ) {
       spellList.push(characterSecondLevelSpells[i].name);
       let spellLi = document.createElement("ul");
-      spellLi.classList.add("spell-list");
+      spellLi.classList.add(`spell-list-${characterSecondLevelSpells[i].name}`);
       let addedSpellName = document.createElement("span");
       addedSpellName.innerHTML = characterSecondLevelSpells[i].name;
       spellLi.appendChild(addedSpellName);
@@ -3528,7 +3528,7 @@ function populateMageSpells(m1, m2, nextChap) {
     } else if (characterSecondLevelSpells[i].useBattle === true) {
       spellList.push(characterSecondLevelSpells[i].name);
       let spellLi2 = document.createElement("ul");
-      spellLi2.classList.add("spell-list");
+      spellLi2.classList.add(`spell-list-${characterSecondLevelSpells[i].name}`);
       let addedSpellName2 = document.createElement("span");
       addedSpellName2.innerHTML = characterSecondLevelSpells[i].name;
       spellLi2.appendChild(addedSpellName2);
@@ -3568,7 +3568,7 @@ function populateMageSpells(m1, m2, nextChap) {
     ) {
       spellList.push(characterThirdLevelSpells[i].name);
       let spellLi = document.createElement("ul");
-      spellLi.classList.add("spell-list");
+      spellLi.classList.add(`spell-list-${characterThirdLevelSpells[i].name}`);
       let addedSpellName = document.createElement("span");
       addedSpellName.innerHTML = characterThirdLevelSpells[i].name;
       spellLi.appendChild(addedSpellName);
@@ -3589,7 +3589,7 @@ function populateMageSpells(m1, m2, nextChap) {
     } else if (characterThirdLevelSpells[i].useBattle === true) {
       spellList.push(characterThirdLevelSpells[i].name);
       let spellLi = document.createElement("ul");
-      spellLi.classList.add("spell-list");
+      spellLi.classList.add(`spell-list-${characterThirdLevelSpells[i].name}`);
       let addedSpellName = document.createElement("span");
       addedSpellName.innerHTML = characterThirdLevelSpells[i].name;
       spellLi.appendChild(addedSpellName);
