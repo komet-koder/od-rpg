@@ -191,13 +191,10 @@ input[type="text"] {
   #submit-name-div {
     /* grid-area: footer1; */
     grid-area: 5 / 2 / 5 / 2;
-    margin: auto
-  }
-
-  #submit-name {
-    display: block;
     margin: auto;
-  }
+    margin-bottom: 0px;
+}
+ 
   #character-name {
   display: block;
   margin: auto;
@@ -313,7 +310,7 @@ input[type="text"] {
     justify-content: center;
     margin: auto;
     grid-area: 5 / 1 / 5 / 2;
-
+    margin-bottom: 0px;
   }
 
   #confirm-attributes {
@@ -329,8 +326,8 @@ input[type="text"] {
     align-items: center;
     justify-content: center;
     grid-area: 5 / 3 / 5 / 4;
-
     margin: auto;
+    margin-bottom: 0px;
   }
 
   #intro-button-container {
@@ -1161,7 +1158,8 @@ summary.character-statuses-summary {
   #ready,
   #attack-wolves,
   #dont-attack-wolves,
-  .new-continue-button {
+  .new-continue-button,
+  #submit-name {
     background-color: var(--btn-bg);
     color: var(--btn-text);
     border-radius: 10px;
@@ -1173,24 +1171,26 @@ summary.character-statuses-summary {
     align-items: center;
     justify-content: center;
     grid-area: 5 / 2 / 5 / 2;  
+    margin-bottom: 0px;
   }
 
   #submit-all-mage-spells,
   #submit-all-cleric-spells {
-  background-color: var(--btn-bg);
-  color: var(--btn-text);
-  border-radius: 10px;
-  font-size: 1.75rem;
-  text-align: center;
-  height: 30px;
-  width: 210px;
-  border: 0px solid var(--btn-bg);  
-  align-items: center;
-  justify-content: center;
-  justify-self: center;
-  align-self: end;
-  grid-area: 5 / 1 / 5 / 1;
-    }
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    border-radius: 10px;
+    font-size: 1.75rem;
+    text-align: center;
+    height: 30px;
+    width: 210px;
+    border: 0px solid var(--btn-bg);  
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    align-self: end;
+    grid-area: 5 / 1 / 5 / 1;
+    margin-bottom: 0px;
+  }
 
 
 #normal-equipment-link,
