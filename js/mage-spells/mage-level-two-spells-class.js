@@ -81,7 +81,7 @@ continualLight.castSpell = function (monster1, monster2, continueNextChapter, at
 
         finalCharacter.greyOutAttackButtons(monster1, monster2);
         let dialogue = document.querySelector('#fight-module-dialogue');
-        dialogue.innerHTML = `<p>You cast Contiual Light, which which affects a 60 foot area.</p>`;
+        dialogue.innerHTML = `<p>You cast Continual Light, which which affects a 60 foot area.</p>`;
 
         let isBlindedM1 = monster1.status.some((x) => x === "Blind");
         let isBlindedM2 = monster2.status.some((x) => x === "Blind");
@@ -188,12 +188,12 @@ invisibility.castSpell = function (monster1, monster2, continueNextChapter, atta
 
         finalCharacter.greyOutAttackButtons(monster1, monster2);
         let dialogue = document.querySelector('#fight-module-dialogue');
-        dialogue.innerHTML += `<p>You cast Invisibility, which makes you invisible.</p>`;
+        dialogue.innerHTML = `<p>You cast Invisibility, which makes you invisible.</p>`;
 
         finalCharacter.status.push("Invisible");
         console.log(finalCharacter.status);
 
-        dialogue.innerHTML += `<p> You are invisible and will remain that way unless you attack or cast a spell.</p>`;
+        dialogue.innerHTML += `<p> You are invisible until you attack or cast a spell.</p>`;
 
         let addInvisibilityStatus = document.querySelector(".invisibility-status");
 
