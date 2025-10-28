@@ -4,6 +4,7 @@ import { fighterVeteran, fighterWarrior, fighterSwordmaster } from "./character-
 
 import { normalMan } from "./character-class-levels/normalMan-level-class.js";
 
+import { Utilities } from "./Utilities/utilityFunctions.js";
 // import Weapon from './weapon-class-v2.js';
 // import { normalSword, shortBow, silverSword, twoHandedBroadSword, longBow, ebonyBow, mahoganyStaff, gemStaff, noWeapon, obsidianSword, woodenClub, dagger,
 //     silverDagger, battleAxe, handAxe, crossBow, shortSword, mace, javelin, poleArm, sling, spear, warHammer } from './weapon-class-v2.js';
@@ -14,6 +15,9 @@ import { normalMan } from "./character-class-levels/normalMan-level-class.js";
 // import Specialty from './specialty-class-v2.js';
 // import { noSpecialty, warrior, highMage, dragonWarrior, elf, dwarf, halfling, cleric, thief } from './specialty-class-v2.js';
 // import Character from './character-class-v2.js';
+
+  let modalConfig = {};
+
 
 export default class Monster {
   constructor(
@@ -51,6 +55,7 @@ export default class Monster {
     this.maxHP = this.hitDice[0] * 8;
     this.startingHealthPoints = 0;
   }
+
 
   //auto generating HD number of hitpoints for monsters
   createHitPoints() {
@@ -97,9 +102,18 @@ export default class Monster {
   }
 
   monsterAttack(monsterOne, monsterTwo, images) {
-    alert(`Monster(s) Turn!`);
+    // alert(`Monster(s) Turn!`);
+    modalConfig = {
+      id: "monsters-turn-modal",
+      class: "",
+      buttonID: "close-monsters-turn-modal",
+      buttonClass: "",
+      buttonText: "Close",
+      modalText: "Monster(s) Turn!"
+    }
     //Determining what monster attacks first
-
+    Utilities.createModal(modalConfig);
+ 
     if (monsterTwo.healthPoints <= 0) {
       let attackingMonster = monsterOne;
       monsterOne.monstersTurn(attackingMonster, monsterTwo, attackingMonster.name, attackingMonster.damage, attackingMonster.healthPoints, attackingMonster.hitRoll, finalCharacter, monsterOne, monsterTwo, images);

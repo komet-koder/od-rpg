@@ -72,16 +72,18 @@ export function continueTextAnimationWelcomeTitle(chapterConfig) {
 }
 
 export function createModal(modalConfig) {
-  console.log(modalConfig);
-  // modalConfig object:
-  //   modalConfig = {
+  // console.log(modalConfig);
+
+  //  modalConfig = {
   //     id: "",
   //     class: "",
   //     buttonID: "",
   //     buttonClass: "",
   //     buttonText: "",
   //     modalText: ""
-  //   }
+  //  }
+  //  createModal(modalConfig);
+
   let newModal = document.createElement('dialog');
   if (modalConfig.id !== "") {
     newModal.setAttribute('id', modalConfig.id);
