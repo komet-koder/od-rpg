@@ -1704,20 +1704,20 @@ summary.character-statuses-summary {
     align-self: end;
   }
 
-  #monster-attack {
-    grid-area: 1 / 2 / 1 / 4;
-
-  }
-
-  #monster-attack {
+  #monster-attack {    
     position: relative;
-    width: 100%;
+    border: 0px solid var(--btn-bg);  
     border-radius: 5px;
+    width: 100%;
+    margin-bottom: 0px;
     background-color: rgb(224, 193, 193);
+    font-size: 1.75rem;
+    text-align: center;    
+    align-items: center;
+    justify-content: center;
     justify-self: center;
-    align-self: center;
-    /* left: -20px; */
-    /* top: 20px; */
+    align-self: end;  
+    grid-area: 1 / 2 / 1 / 4;
   }
 
   #monster-attack:hover {
