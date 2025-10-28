@@ -1201,6 +1201,23 @@ summary.character-statuses-summary {
   cursor: url("../images/gui/cursor-hover.png"), auto;
 }
 
+  input[type="submit"]:visited,
+  #submit-all-mage-spells:visited,
+  #submit-all-cleric-spells:visited,
+  #buy-items:visited,
+  #generate-attributes:visited,
+  #confirm-attributes:visited,
+  #beginAdventure:visited,
+  #normal-equipment-link:visited,
+  #magical-equipment-link:visited,
+  #spells-link:visited,
+  #treasure-link:visited,
+  #intro-continue-button:visited,
+  #enter-game:visited,
+  #new-continue-button:visited {
+    background-color: var(--btn-bg);
+  }
+
   input[type="submit"]:hover,
   #submit-all-mage-spells:hover,
   #submit-all-cleric-spells:hover,
