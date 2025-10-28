@@ -1857,7 +1857,7 @@ summary.character-statuses-summary {
     cursor: url("../images/gui/cursor-hover.png"), auto;
   }
 
-  ul.spell-list {
+  ul[class*="spell-list"] {
     display: none;
     position: relative;
     top: -100px;
@@ -1869,7 +1869,7 @@ summary.character-statuses-summary {
   }
 
 
-  ul.spell-list:hover {
+  ul[class*="spell-list"]:hover {
     background-color: lightblue;
   }
 
@@ -1903,15 +1903,15 @@ summary.character-statuses-summary {
     background-color: lightblue;
   }
 
-  li.first-level-dropdown-list:hover ul.spell-list,
-  li.second-level-dropdown-list:hover ul.spell-list,
-  li.third-level-dropdown-list:hover ul.spell-list {
+  li.first-level-dropdown-list:hover ul[class*="spell-list"],
+  li.second-level-dropdown-list:hover ul[class*="spell-list"],
+  li.third-level-dropdown-list:hover ul[class*="spell-list"] {
     display: block;
   }
 
-  ul.spell-list:hover li.monster-one-spell-list,
-  ul.spell-list:hover li.monster-two-spell-list,
-  ul.spell-list:hover li.self-spell-list {
+  ul[class*="spell-list"]:hover li.monster-one-spell-list,
+ ul[class*="spell-list"]:hover li.monster-two-spell-list,
+  ul[class*="spell-list"]:hover li.self-spell-list {
     display: block;
   }
 
