@@ -247,11 +247,6 @@ visualViewportWidth = visualViewport.width;
 windowViewportHeight = window.innerHeight;
 windowViewportWidth  = window.innerWidth;
 
-console.log("visual Height: " + visualViewportHeight)
-console.log("visual Width: " + visualViewportWidth)
-console.log("Viewport Height: " + windowViewportHeight)
-console.log("Viewport Width: " + windowViewportWidth)
-
 window.addEventListener(
   "load",
   function () {
@@ -553,7 +548,6 @@ let chapterConfig = {
 }
 
 function beginChapterOneZero () { 
-  console.log('chapter one zero');
   chapterConfig.nextChapterFunction = beginChapterOneOne;
   $(".page-title").animate({
     fontSize: "0px"}, 300).next().animate({
@@ -569,13 +563,10 @@ let chapterOneOneText =
 
 function beginChapterOneOne() {
   $("#header").html("");
-  console.log("chapter one one");
   
   chapterConfig.thisChapterNumber = "1-1",
   chapterConfig.thisChapterDialogue = chapterOneOneText,
   chapterConfig.nextChapterFunction = beginChapterOneTwo;
-
-  console.log(chapterConfig.thisChapterDialogue)
 
   $("#welcome-title").animate({
     fontSize: "0px"}, 300).next().animate({
@@ -588,7 +579,6 @@ let chapterOneTwoText = `It is said that Soul Stealer
   breathes black fire that is able to burn through *almost* anything....`;
 
 function beginChapterOneTwo() {
-  console.log("chapter one two");
   chapterConfig.thisChapterNumber = "1-2",
   chapterConfig.thisChapterDialogue = chapterOneTwoText,
   chapterConfig.nextChapterFunction = beginChapterOneThree;
@@ -602,7 +592,6 @@ function beginChapterOneTwo() {
 let chapterOneThreeText = `You have decided that your training and preparation have readied you for the challenge to venture to the ruins, in hopes of defeating the dragon and obtaining his treasure. You have grown up a lot since your youth.`;
 
 function beginChapterOneThree() {
-  console.log("1-3");
   chapterConfig.thisChapterNumber = "1-3",
   chapterConfig.thisChapterDialogue = chapterOneThreeText,
   chapterConfig.nextChapterFunction = beginChapterOneFour;
@@ -616,7 +605,6 @@ function beginChapterOneThree() {
 let chapterOneFourText = `Now, at age 26, you feel you are at your physical peak. Mentally, you have already taken the leap of faith and prepare to purchase your supplies.`
 
 function beginChapterOneFour() {
-  console.log("1-4");
   chapterConfig.thisChapterNumber = "1-4",
   chapterConfig.thisChapterDialogue = chapterOneFourText,
   chapterConfig.nextChapterFunction = beginChapterOneFive;
@@ -626,7 +614,6 @@ function beginChapterOneFour() {
 let chapterOneFiveText = `Your father, Edwin, and your Mother, Alena, have raised you well. Your father taught you how to handle your skills and how to defend yourself. Your mother taught you how to mend clothes, forage edible foods, and how to take care of your wounds.`
 
 function beginChapterOneFive() {
-  console.log("1-5");
   chapterConfig.thisChapterNumber = "1-5",
   chapterConfig.thisChapterDialogue = chapterOneFiveText,
   chapterConfig.nextChapterFunction = beginChapterOneSix;
@@ -638,12 +625,9 @@ function beginChapterOneFive() {
 let chapterOneSixText = `But did they prepare you for this?.... What's your name?`
 
 function beginChapterOneSix() {
-  console.log("1-6");
-  
   chapterConfig.thisChapterNumber = "1-6",
   chapterConfig.thisChapterDialogue = chapterOneSixText,
   chapterConfig.buttonText = "";
-  
   Utilities.continueTextAnimation(chapterConfig); 
  
   let submitNameButton = document.querySelector("#submit-name-div");
@@ -655,7 +639,6 @@ function beginChapterOneSix() {
 }
 
 function addSubmitNameButton() {
-  console.log("addSubmitNameButton");
   let confirmStart = document.querySelector("#confirm-start");
   confirmStart.style.display = "block";
   let dialogueDivID = document.querySelector("#dialogue");
@@ -906,7 +889,6 @@ function generateNewAttributes() {
 }
 
 function showAlignmentSelection() {
-  console.log(chapterConfig);
   chapterConfig.dialogueDiv = document.querySelector('.welcome-title');
   chapterConfig.dialogueDiv.textContent = "";
   chapterConfig.dialogueDiv.style.fontSize = "1.75rem";
@@ -2839,7 +2821,6 @@ function beginChapterTwoZero() {
   
   let previousChapterDialogue = document.querySelector('#dialogue');
   previousChapterDialogue.innerHTML = "";
-  console.log("2-0");
   chapterConfig.thisChapterNumber = "2-0";
   chapterConfig.thisChapterDialogue = chapterTwoZeroText;
   chapterConfig.buttonText = "Continue";
@@ -2868,7 +2849,6 @@ function beginChapterTwoTwo() {
   chapterTwoTwoText = `
     You remember how much time and effort you put into practicing to become proficient (skilled) with it. You don (put on) your ${finalCharacter.armor.name} and the smell brings you back to your training, remembering what it feels like when you get hit, and how it feels on your body when you strike.   
     `;
-  console.log('2-2');
   chapterConfig.thisChapterNumber = "2-2";
   chapterConfig.thisChapterDialogue = chapterTwoTwoText;
   chapterConfig.buttonText = "Continue";
@@ -2894,7 +2874,6 @@ function beginChapterTwoTwo() {
 let chapterTwoFourText;
 
 function beginChapterTwoFour() {
-  console.log('2-4');
   chapterTwoFourText = `
     These familiar memories make you feel at home and bring a reassurance to your mind about what you are about to do. Others have left on the same journey, and none have returned. Are you better than them? Will you make it? Or will you share their fate?   
     `;
@@ -2929,7 +2908,6 @@ function beginChapterTwoSix() {
   chapterTwoSixText = `
   As you complete preparing, you finish a small bit of tea and some bread with cheese you prepared for breakfast. Afterwards, you head down to the main floor of the inn. You see the innkeeper, Raynard, sitting at the counter. Would you like to speak with Raynard on your way out?      
   `;
-  console.log('2-6');
   chapterConfig.thisChapterNumber = "2-6";
   chapterConfig.thisChapterDialogue = chapterTwoSixText;
   chapterConfig.buttonText = "";
@@ -2993,7 +2971,6 @@ function beginChapterTwoSeven() {
 
   window.scrollTo(0, 0);
 
-  console.log('2-7');
   chapterConfig.thisChapterNumber = "2-7";
   chapterConfig.thisChapterDialogue = chapterTwoSevenText;
   chapterConfig.buttonText = "Continue";
@@ -3007,7 +2984,6 @@ function beginChapterTwoSeven() {
 let chapterTwoEightText;
 
 function beginChapterTwoEight() {
-  console.log('2-8');
   chapterTwoEightText = `
   Did you know that I have also wandered to those ruins
     in my younger years? I remember there being two paths towards the ruins - one path that was easily seen along the north of a forest, but there is another that was less 
@@ -3028,7 +3004,6 @@ function beginChapterTwoNine() {
   chapterTwoNineText = `
   I, unfortunately ended up not making it all the way to the ruins where Soul Stealer lives. I reached some old desert ruins just before his lair, where I removed my armor and was preparing for the battle, but I rushed to the aid of a young woman who was gravely injured by the hands of a pack of orcs. I tended her wounds, and we fled the orcs.      
 `;
-  console.log('2-9');
   chapterConfig.thisChapterNumber = "2-9";
   chapterConfig.thisChapterDialogue = chapterTwoNineText;
   chapterConfig.buttonText = "Continue";
@@ -3041,12 +3016,9 @@ function beginChapterTwoNine() {
 let chapterTwoTenText;
 
 function beginChapterTwoTen() {
-  console.log(finalCharacter);
-  console.log(finalCharacter.name);
   chapterTwoTenText = `
     I returned here, where I took care of her and ended up marrying her and my adventures behind. From one adventurer to another, if you see Glandar, the owner of the Black Horse Farm, give him this: it's a silver coin. He'll know it's from me. Good luck, ${finalCharacter.name} - I wish you well.  
   `;
-  console.log('2-10');
   chapterConfig.thisChapterNumber = "2-10";
   chapterConfig.thisChapterDialogue = chapterTwoTenText;
   chapterConfig.buttonText = "Continue";
@@ -3102,7 +3074,6 @@ function beginChapterTwoTen() {
 let chapterThreeZeroText;
 
 function beginChapterThreeZero() {
-  console.log('3-0');
   chapterThreeZeroText = `
     As you depart the Blue Blade Inn, you feel confident in what you are about the journey you are about to embark on (begin). You've heard stories from others about the 
     road that leads to a small farm town outside Gryphon's Keep.  
@@ -3120,7 +3091,6 @@ function beginChapterThreeZero() {
 let chapterThreeOneText;
 
 function beginChapterThreeOne() {
-  console.log('3-1');
   let chapterDialogue = document.querySelector('#dialogue');
   chapterDialogue.innerHTML = '';
   chapterThreeOneText = `
@@ -3139,7 +3109,6 @@ function beginChapterThreeOne() {
 let chapterThreeTwoText;
 
 function beginChapterThreeTwo() {
-  console.log('3-2');
 
   chapterThreeTwoText = `You walk along the path and Gryphon's Keep gets farther in the distance and the noise of the   village disappears. Part of you likes the quiet, you've always been one to enjoy time to yourself - and in some cases - you prefer it. 
   `;
@@ -3156,7 +3125,6 @@ function beginChapterThreeTwo() {
 let chapterThreeThreeText;
 
 function beginChapterThreeThree() {
- console.log('3-3');
 
   chapterThreeThreeText = `While you think about your past, you also look around you.  It's autumn now, 
     and the air is cool, but not too cold. It's perfect weather to be outside. You feel a light breeze on your face. In front of you, you notice a small dark shape and light dust kicking up along the road.  
@@ -3174,7 +3142,6 @@ function beginChapterThreeThree() {
 let chapterThreeFourText;
 
 function beginChapterThreeFour() {
-console.log('3-4');
 
   chapterThreeFourText = `You can make out the shape of two men in the cart. As it gets closer you notice 
     they are in a hurry and that one horse is missing pulling the wagon. As is comes closer and passes, you see the 
@@ -3193,7 +3160,6 @@ console.log('3-4');
 let chapterThreeFiveText;
 
 function beginChapterThreeFive() {
-console.log('3-5');
 
   chapterThreeFiveText = `You quicken your pace. Ahead, you see two dark figures hovering over a shape on the ground. As you come closer, you can make out a wolf picking at a sheep, dead on the road. Not only is this odd because of the time of day. This wolf has no intention of leaving the sheep, and wolves are dangerous. What do you do?
   `;
