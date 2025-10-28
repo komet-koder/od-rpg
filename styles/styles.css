@@ -252,17 +252,13 @@ input[type="text"] {
   }
 
   #chapter-heading {
-    /* background-color: var(--btn-bg); */
-    /* color: var(--btn-text); */
     background-color: var(--text);
     color: var(--bg-200);
-    border-radius: 10px;
+    border-radius: 7px;
     font-size: 1.5rem;
     text-align: center;
-    height: 30px;
-    /* width: 210px; */
+    height: 25px;
     width: 98%;
-    /* border: 0px solid var(--btn-bg); */
     align-items: center;
     justify-content: center;
     margin: auto;
