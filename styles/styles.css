@@ -1812,7 +1812,7 @@ summary.character-statuses-summary {
     width: 90%;
   }
 
-  ul.dropdown-spell-list-ul {
+  div > ul.dropdown-spell-list-ul {
     position: absolute;
     display: block;
     list-style: none;
@@ -1824,6 +1824,7 @@ summary.character-statuses-summary {
     top: calc(100% - 115px);
     left: calc(100% - 215px);
     z-index: 900;
+    height: 60px;
   }
 
   ul.hide-spell-list-dropdown {
