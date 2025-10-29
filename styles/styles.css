@@ -1857,32 +1857,31 @@ summary.character-statuses-summary {
 
 
   li.show-spell-list-dropdown > div {
-    position: absolute;
+    position: relative;
+    height: 100%;
     /* background-color: red; */
-    top: -80px;
-    left: 25%;    
+    /* top: -80px; */
+    /* left: 25%;     */
   }
 
-    li.show-spell-list-dropdown > div.first-level-spell-list-container > ul[class*="spell-list-combat"]:first-child {
+    li.show-spell-list-dropdown > div.first-level-spell-list-container > ul[class*="spell-list-combat"]:first-child,
+    li.show-spell-list-dropdown > div.second-level-spell-list-container > ul[class*="spell-list-combat"]:first-child,
+    li.show-spell-list-dropdown > div.third-level-spell-list-container > ul[class*="spell-list-combat"]:first-child {
     /* position: absolute; */
     border-radius: 5px 5px 0px 0px;
     /* top: -80px; */
     /* left: 25%;     */
   }
 
-      li.show-spell-list-dropdown > div.first-level-spell-list-container > ul[class*="spell-list-combat"]:last-child {
+    li.show-spell-list-dropdown > div.first-level-spell-list-container > ul[class*="spell-list-combat"]:last-child,
+    li.show-spell-list-dropdown > div.second-level-spell-list-container > ul[class*="spell-list-combat"]:last-child,
+    li.show-spell-list-dropdown > div.third-level-spell-list-container > ul[class*="spell-list-combat"]:last-child {
     /* position: absolute; */
     border-radius: 0px 0px 5px 5px ;
     /* top: -80px; */
     /* left: 25%;     */
   }
 
-    li.show-spell-list-dropdown > div {
-    position: absolute;
-    /* background-color: red; */
-    top: -80px;
-    left: 25%;    
-  }
   li.first-level-dropdown-list:hover,
   li.second-level-dropdown-list:hover,
   li.third-level-dropdown-list:hover {

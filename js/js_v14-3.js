@@ -3431,11 +3431,21 @@ function populateMageSpells(m1, m2, nextChap) {
 
   let secondLevelSpellList = document.createElement("li");
   secondLevelSpellList.classList.add("second-level-dropdown-list");
-  secondLevelSpellList.innerHTML = `<b>Second Level Spells:</b>`;
+  // secondLevelSpellList.innerHTML = `<b>Second Level Spells:</b>`;
+
+  let secondLevelSpellListContainer = document.createElement('div');
+  secondLevelSpellListContainer.classList.add("second-level-spell-list-container");
+  secondLevelSpellListContainer.textContent = "Second Level Spells";
+  secondLevelSpellList.appendChild(secondLevelSpellListContainer);
 
   let thirdLevelSpellList = document.createElement("li");
   thirdLevelSpellList.classList.add("third-level-dropdown-list");
-  thirdLevelSpellList.innerHTML = `<b>Third Level Spells:</b>`;
+  // thirdLevelSpellList.innerHTML = `<b>Third Level Spells:</b>`;
+
+  let thirdLevelSpellListContainer = document.createElement('div');
+  thirdLevelSpellListContainer.classList.add("third-level-spell-list-container");
+  thirdLevelSpellListContainer.textContent = "Third Level Spells";
+  thirdLevelSpellList.appendChild(thirdLevelSpellListContainer);
 
   let addingSpellLevels = document.querySelector(".dropdown-spell-list-ul");
   addingSpellLevels.appendChild(firstLevelSpellList);
@@ -3516,7 +3526,7 @@ function populateMageSpells(m1, m2, nextChap) {
       let addedSpellName = document.createElement("span");
       addedSpellName.innerHTML = characterSecondLevelSpells[i].name;
       spellLi.appendChild(addedSpellName);
-      let addedSpellUl = document.querySelector(".second-level-dropdown-list");
+      let addedSpellUl = document.querySelector(".second-level-spell-list-container");
       addedSpellUl.appendChild(spellLi);
 
       let addSelf1Btn = document.createElement("li");
@@ -3537,7 +3547,7 @@ function populateMageSpells(m1, m2, nextChap) {
       let addedSpellName2 = document.createElement("span");
       addedSpellName2.innerHTML = characterSecondLevelSpells[i].name;
       spellLi2.appendChild(addedSpellName2);
-      let addedSpellUl2 = document.querySelector(".second-level-dropdown-list");
+      let addedSpellUl2 = document.querySelector(".second-level-spell-list-container");
       addedSpellUl2.appendChild(spellLi2);
       let addMonster1Btn = document.createElement("li");
       addMonster1Btn.classList.add("monster-one-spell-list");
@@ -3577,7 +3587,7 @@ function populateMageSpells(m1, m2, nextChap) {
       let addedSpellName = document.createElement("span");
       addedSpellName.innerHTML = characterThirdLevelSpells[i].name;
       spellLi.appendChild(addedSpellName);
-      let addedSpellUl = document.querySelector(".third-level-dropdown-list");
+      let addedSpellUl = document.querySelector(".third-level-spell-list-container");
       addedSpellUl.appendChild(spellLi);
 
       let addSelf1Btn = document.createElement("li");
@@ -3598,7 +3608,7 @@ function populateMageSpells(m1, m2, nextChap) {
       let addedSpellName = document.createElement("span");
       addedSpellName.innerHTML = characterThirdLevelSpells[i].name;
       spellLi.appendChild(addedSpellName);
-      let addedSpellUl = document.querySelector(".third-level-dropdown-list");
+      let addedSpellUl = document.querySelector(".third-level-spell-list-container");
       addedSpellUl.appendChild(spellLi);
       let addMonster1Btn = document.createElement("li");
       addMonster1Btn.classList.add("monster-one-spell-list");
