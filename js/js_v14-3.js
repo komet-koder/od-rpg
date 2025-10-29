@@ -3586,9 +3586,10 @@ function populateMageSpells(m1, m2, nextChap) {
       spellList.push(characterThirdLevelSpells[i].name);
       let spellLi = document.createElement("ul");
       spellLi.classList.add(`spell-list-combat-${characterThirdLevelSpells[i].className}`);
-      let addedSpellName = document.createElement("span");
-      addedSpellName.innerHTML = characterThirdLevelSpells[i].name;
-      spellLi.appendChild(addedSpellName);
+      spellLi.textContent = characterThirdLevelSpells[i].name;
+      // let addedSpellName = document.createElement("span");
+      // addedSpellName.innerHTML = characterThirdLevelSpells[i].name;
+      // spellLi.appendChild(addedSpellName);
       let addedSpellUl = document.querySelector(".third-level-spell-list-container");
       addedSpellUl.appendChild(spellLi);
 
