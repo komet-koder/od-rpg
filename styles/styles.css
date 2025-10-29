@@ -1864,14 +1864,6 @@ summary.character-statuses-summary {
     border-radius: 5px;
   }
 
-
-
-  li.first-level-dropdown-list:hover ul[class*="spell-list-combat"],
-  li.second-level-dropdown-list:hover ul[class*="spell-list-combat"],
-  li.third-level-dropdown-list:hover ul[class*="spell-list-combat"] {
-    display: block;
-  }
-
   li.monster-one-spell-list,
   li.monster-two-spell-list,
   li.self-spell-list {
@@ -1895,12 +1887,15 @@ summary.character-statuses-summary {
     padding: 0px 0px 0px 5px;    
   }
 
+  li.first-level-dropdown-list:hover ul[class*="spell-list-combat"],
+  li.second-level-dropdown-list:hover ul[class*="spell-list-combat"],
+  li.third-level-dropdown-list:hover ul[class*="spell-list-combat"] {
+    display: block;
+  }
 
   ul[class*="spell-list-combat"]:hover {
     background-color: lightblue;
   }
-
-  
 
   ul[class*="spell-list-combat"]:hover li.monster-one-spell-list,
   ul[class*="spell-list-combat"]:hover li.monster-two-spell-list,
@@ -1912,7 +1907,6 @@ summary.character-statuses-summary {
   li.monster-two-spell-list:hover,
   li.self-spell-list:hover {
     background-color: lightblue;
-    
   }
 
   li.monster-one-spell-list.monster1-spell-dead:hover {
