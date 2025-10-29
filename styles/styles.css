@@ -1854,7 +1854,7 @@ summary.character-statuses-summary {
 
   div.first-level-spell-list-container {
     position: absolute;
-    bottom: 60px;
+    bottom: 50px;
     left: 10%;
     height: 100%;
     display: flex;
@@ -1865,7 +1865,7 @@ summary.character-statuses-summary {
   
   div.second-level-spell-list-container {
     position: absolute;
-    bottom: 100px;
+    bottom: 96px;
     left: 10%;
     height: 100%;
     display: flex;
@@ -1875,7 +1875,7 @@ summary.character-statuses-summary {
    
   div.third-level-spell-list-container {
     position: absolute;
-    bottom: 150px;
+    bottom: 142px;
     left: 10%;
     height: 100%;
     display: flex;
