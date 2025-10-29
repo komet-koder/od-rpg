@@ -1850,27 +1850,37 @@ summary.character-statuses-summary {
     align-self: center;
     margin: .5em;
     height: 100%;
-    /* display: flex; */
-    /* justify-content: flex-end; */
-    /* flex-direction: column; */
   }
 
-
-  li.show-spell-list-dropdown > div {
-    /* position: relative;
-    height: 100%; */
-    /* background-color: red; */
-    /* top: -80px; */
-    /* left: 25%;     */
-  }
-
-  div.first-level-spell-list-container,
-  div.second-level-spell-list-container,
-  div.third-level-spell-list-container {
+  div.first-level-spell-list-container {
     position: absolute;
-    top: -80px;
+    bottom: 60px;
     left: 10%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  
+  div.second-level-spell-list-container {
+    position: absolute;
+    bottom: 100px;
+    left: 10%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+   
+  div.third-level-spell-list-container {
+    position: absolute;
+    bottom: 150px;
+    left: 10%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
   }
 
     li.show-spell-list-dropdown > div.first-level-spell-list-container > ul[class*="spell-list-combat"]:first-child,
