@@ -1920,7 +1920,7 @@ summary.character-statuses-summary {
   li.first-level-dropdown-list:hover ul[class*="spell-list-combat"],
   li.second-level-dropdown-list:hover ul[class*="spell-list-combat"],
   li.third-level-dropdown-list:hover ul[class*="spell-list-combat"] {
-    display: block;
+    display: flex;
     position: relative;
     /* top: -150px; */
     background-color: white;
@@ -1929,25 +1929,52 @@ summary.character-statuses-summary {
     width: 250px;
     padding: 0px 0px 0px 5px;  
     left: -30px;  
+    flex-direction: column;
+    justify-content: flex-end;
   }
 
   ul[class*="spell-list-combat"]:hover {
     background-color: lightblue;
   }
 
-  ul[class*="spell-list-combat"]:hover li.monster-one-spell-list,
-  ul[class*="spell-list-combat"]:hover li.monster-two-spell-list,
-  ul[class*="spell-list-combat"]:hover li.self-spell-list {
-    display: block;
-  }
+
 
   li.monster-one-spell-list,
   li.monster-two-spell-list,
   li.self-spell-list {
     display: none;
-    position: relative;
-    top: -20px;
-    left: 143px;
+   
+  }
+
+  
+
+  ul[class*="spell-list-combat"]:hover li.monster-one-spell-list {
+    display: block;
+    background-color: white;
+    border: 1px solid black;
+    cursor: url("../images/gui/cursor-hover.png"), auto;
+  }
+
+  
+  ul[class*="spell-list-combat"]:hover li.monster-two-spell-list {
+    display: block;
+    background-color: white;
+    border: 1px solid black;
+    cursor: url("../images/gui/cursor-hover.png"), auto;
+  }
+
+  ul[class*="spell-list-combat"]:hover li.self-spell-list {
+    display: block;
+    background-color: white;
+    border: 1px solid black;
+    cursor: url("../images/gui/cursor-hover.png"), auto;
+  }
+
+  ul[class*="spell-list-combat"]:hover li.monster-one-spell-list,
+    ul[class*="spell-list-combat"]:hover li.monster-two-spell-list,
+    ul[class*="spell-list-combat"]:hover li.self-spell-list {
+    width: 50%;
+    display: block;
     background-color: white;
     border: 1px solid black;
     cursor: url("../images/gui/cursor-hover.png"), auto;
