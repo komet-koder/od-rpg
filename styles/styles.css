@@ -1237,7 +1237,7 @@ summary.character-statuses-summary {
 
   input[type="submit"]:active,
   #submit-all-mage-spells:active,
-  #submit-all-cleric-spells:hover,
+  #submit-all-cleric-spells:active,
   #buy-items:active,
   #generate-attributes:active,
   #confirm-attributes:active,
@@ -1855,10 +1855,6 @@ summary.character-statuses-summary {
 
 
   li.show-spell-list-dropdown > b{
-    /* display: block; */
-    /* position: relative;  */
-    /* top: 25%;  */
-    /* transform: translateX(-50%); */
     width: 100%;
     cursor: url("../images/gui/cursor-hover.png"), auto;
  
