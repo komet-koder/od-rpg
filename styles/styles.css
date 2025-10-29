@@ -1847,16 +1847,17 @@ summary.character-statuses-summary {
     justify-self: center;
     align-self: center;
     margin: .5em;
-    /* display: flex;
     height: 100%;
+    display: flex;
     justify-content: flex-end;
-    flex-direction: column; */
+    flex-direction: column;
   }
 
 
   li.show-spell-list-dropdown > b{
     width: 100%;
     cursor: url("../images/gui/cursor-hover.png"), auto;
+    height: 100%;
  
   }
 
