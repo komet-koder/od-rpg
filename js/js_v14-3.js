@@ -3460,16 +3460,31 @@ function populateMageSpells(m1, m2, nextChap) {
       spellList.push(characterFirstLevelSpells[i].name);
       let spellLi = document.createElement("ul");
       spellLi.classList.add(`spell-list-combat-${characterFirstLevelSpells[i].className}`);
-      let addedSpellName = document.createElement("span");
-      addedSpellName.innerHTML = characterFirstLevelSpells[i].name;
-      spellLi.appendChild(addedSpellName);
+
+      //remove span; add text to ul; create child div; add taget selectors to child div (set at flex)
+      
+      spellLi.textContent = characterFirstLevelSpells[i].name;
+
+      let targetButtonDiv = document.createElement('div');
+      targetButtonDiv.setAttribute('class', 'spell-target-div');
+
+      spellLi.appendChild(targetButtonDiv);
+
+      // let addedSpellName = document.createElement("span");
+      // addedSpellName.innerHTML = characterFirstLevelSpells[i].name;
+      // spellLi.appendChild(addedSpellName);
+
       let addedSpellUl = document.querySelector(".first-level-spell-list-container");
+      
       addedSpellUl.appendChild(spellLi);
 
       let addSelf1Btn = document.createElement("li");
       addSelf1Btn.classList.add("self-spell-list");
       addSelf1Btn.innerText = "Self";
-      spellLi.appendChild(addSelf1Btn);
+      
+      // spellLi.appendChild(addSelf1Btn);
+      targetButtonDiv.appendChild(addSelf1Btn);
+      
       addSelf1Btn.addEventListener(
         "click",
         function (e) {
@@ -3481,21 +3496,34 @@ function populateMageSpells(m1, m2, nextChap) {
       spellList.push(characterFirstLevelSpells[i].name);
       let spellLi = document.createElement("ul");
       spellLi.classList.add(`spell-list-combat-${characterFirstLevelSpells[i].className}`);
-      let addedSpellName = document.createElement("span");
-      addedSpellName.innerHTML = characterFirstLevelSpells[i].name;
-      spellLi.appendChild(addedSpellName);
+      
+      let targetButtonDiv = document.createElement('div');
+      targetButtonDiv.setAttribute('class', 'spell-target-div');
+
+      spellLi.textContent = characterFirstLevelSpells[i].name;
+
+      spellLi.appendChild(targetButtonDiv);
+      
+      // let addedSpellName = document.createElement("span");
+      // addedSpellName.innerHTML = characterFirstLevelSpells[i].name;
+      // spellLi.appendChild(addedSpellName);
+      
       let addedSpellUl = document.querySelector(".first-level-spell-list-container");
       addedSpellUl.appendChild(spellLi);
 
       let addMonster1Btn = document.createElement("li");
       addMonster1Btn.classList.add("monster-one-spell-list");
       addMonster1Btn.innerText = "Monster 1";
-      spellLi.appendChild(addMonster1Btn);
+      
+      targetButtonDiv.appendChild(addMonster1Btn);
+      // spellLi.appendChild(addMonster1Btn);
 
       let addMonster2Btn = document.createElement("li");
       addMonster2Btn.classList.add("monster-two-spell-list");
       addMonster2Btn.innerText = "Monster 2";
-      spellLi.appendChild(addMonster2Btn);
+      targetButtonDiv.appendChild(addMonster2Btn);
+      
+      // spellLi.appendChild(addMonster2Btn);
 
       //on this event listener, attach function
       addMonster1Btn.addEventListener(
