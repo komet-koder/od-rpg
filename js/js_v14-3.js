@@ -3422,7 +3422,6 @@ function populateMageSpells(m1, m2, nextChap) {
 
   let firstLevelSpellList = document.createElement("li");
   firstLevelSpellList.classList.add("first-level-dropdown-list");
-  // firstLevelSpellList.innerHTML = `<b>First Level Spells:</b>`;
 
   let firstLevelSpellListContainer = document.createElement('div');
   firstLevelSpellListContainer.classList.add("first-level-spell-list-container");
@@ -3432,17 +3431,15 @@ function populateMageSpells(m1, m2, nextChap) {
 
   let secondLevelSpellList = document.createElement("li");
   secondLevelSpellList.classList.add("second-level-dropdown-list");
-  // secondLevelSpellList.innerHTML = `<b>Second Level Spells:</b>`;
-
+  
   let secondLevelSpellListContainer = document.createElement('div');
   secondLevelSpellListContainer.classList.add("second-level-spell-list-container");
-  // secondLevelSpellListContainer.textContent = "Second Level Spells";
+  
   secondLevelSpellList.textContent = 'Second Level Spells';
   secondLevelSpellList.appendChild(secondLevelSpellListContainer);
 
   let thirdLevelSpellList = document.createElement("li");
   thirdLevelSpellList.classList.add("third-level-dropdown-list");
-  // thirdLevelSpellList.innerHTML = `<b>Third Level Spells:</b>`;
 
   let thirdLevelSpellListContainer = document.createElement('div');
   thirdLevelSpellListContainer.classList.add("third-level-spell-list-container");
@@ -3460,8 +3457,6 @@ function populateMageSpells(m1, m2, nextChap) {
       spellList.push(characterFirstLevelSpells[i].name);
       let spellLi = document.createElement("ul");
       spellLi.classList.add(`spell-list-combat-${characterFirstLevelSpells[i].className}`);
-
-      //remove span; add text to ul; create child div; add taget selectors to child div (set at flex)
       
       spellLi.textContent = characterFirstLevelSpells[i].name;
 
@@ -3469,20 +3464,13 @@ function populateMageSpells(m1, m2, nextChap) {
       targetButtonDiv.setAttribute('class', 'spell-target-div');
 
       spellLi.appendChild(targetButtonDiv);
-
-      // let addedSpellName = document.createElement("span");
-      // addedSpellName.innerHTML = characterFirstLevelSpells[i].name;
-      // spellLi.appendChild(addedSpellName);
-
-      let addedSpellUl = document.querySelector(".first-level-spell-list-container");
-      
+      let addedSpellUl = document.querySelector(".first-level-spell-list-container");      
       addedSpellUl.appendChild(spellLi);
 
       let addSelf1Btn = document.createElement("li");
       addSelf1Btn.classList.add("self-spell-list");
       addSelf1Btn.innerText = "Self";
       
-      // spellLi.appendChild(addSelf1Btn);
       targetButtonDiv.appendChild(addSelf1Btn);
       
       addSelf1Btn.addEventListener(
@@ -3504,10 +3492,6 @@ function populateMageSpells(m1, m2, nextChap) {
 
       spellLi.appendChild(targetButtonDiv);
       
-      // let addedSpellName = document.createElement("span");
-      // addedSpellName.innerHTML = characterFirstLevelSpells[i].name;
-      // spellLi.appendChild(addedSpellName);
-      
       let addedSpellUl = document.querySelector(".first-level-spell-list-container");
       addedSpellUl.appendChild(spellLi);
 
@@ -3516,16 +3500,12 @@ function populateMageSpells(m1, m2, nextChap) {
       addMonster1Btn.innerText = "Monster 1";
       
       targetButtonDiv.appendChild(addMonster1Btn);
-      // spellLi.appendChild(addMonster1Btn);
 
       let addMonster2Btn = document.createElement("li");
       addMonster2Btn.classList.add("monster-two-spell-list");
       addMonster2Btn.innerText = "Monster 2";
       targetButtonDiv.appendChild(addMonster2Btn);
       
-      // spellLi.appendChild(addMonster2Btn);
-
-      //on this event listener, attach function
       addMonster1Btn.addEventListener(
         "click",
         function (e) {
@@ -3553,16 +3533,21 @@ function populateMageSpells(m1, m2, nextChap) {
       spellList.push(characterSecondLevelSpells[i].name);
       let spellLi = document.createElement("ul");
       spellLi.classList.add(`spell-list-combat-${characterSecondLevelSpells[i].className}`);
-      let addedSpellName = document.createElement("span");
-      addedSpellName.innerHTML = characterSecondLevelSpells[i].name;
-      spellLi.appendChild(addedSpellName);
+      
+      spellLi.textContent = characterSecondLevelSpells[i].name;
+
+      let targetButtonDiv = document.createElement('div');
+      targetButtonDiv.setAttribute('class', 'spell-target-div');
+      spellLi.appendChild(targetButtonDiv);
+
       let addedSpellUl = document.querySelector(".second-level-spell-list-container");
       addedSpellUl.appendChild(spellLi);
 
       let addSelf1Btn = document.createElement("li");
       addSelf1Btn.classList.add("self-spell-list");
       addSelf1Btn.innerText = "Self";
-      spellLi.appendChild(addSelf1Btn);
+      targetButtonDiv.appendChild(addSelf1Btn);
+
       addSelf1Btn.addEventListener(
         "click",
         function (e) {
@@ -3574,19 +3559,26 @@ function populateMageSpells(m1, m2, nextChap) {
       spellList.push(characterSecondLevelSpells[i].name);
       let spellLi2 = document.createElement("ul");
       spellLi2.classList.add(`spell-list-combat-${characterSecondLevelSpells[i].className}`);
-      let addedSpellName2 = document.createElement("span");
-      addedSpellName2.innerHTML = characterSecondLevelSpells[i].name;
-      spellLi2.appendChild(addedSpellName2);
+      
+      spellLi2.textContent = characterSecondLevelSpells[i].name;
+
+      let targetButtonDiv = document.createElement('div');
+      targetButtonDiv.setAttribute('class', 'spell-target-div');
+      spellLi2.appendChild(targetButtonDiv);
+      
       let addedSpellUl2 = document.querySelector(".second-level-spell-list-container");
       addedSpellUl2.appendChild(spellLi2);
+
       let addMonster1Btn = document.createElement("li");
       addMonster1Btn.classList.add("monster-one-spell-list");
       addMonster1Btn.innerText = "Monster 1";
-      spellLi2.appendChild(addMonster1Btn);
+      targetButtonDiv.appendChild(addMonster1Btn);
+
       let addMonster2Btn = document.createElement("li");
       addMonster2Btn.classList.add("monster-two-spell-list");
-      addMonster2Btn.innerText = "Monster 2";
-      spellLi2.appendChild(addMonster2Btn);
+      addMonster2Btn.innerText = "Monster 2";      
+      targetButtonDiv.appendChild(addMonster2Btn);
+
       addMonster1Btn.addEventListener(
         "click",
         function (e) {
