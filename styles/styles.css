@@ -1935,19 +1935,47 @@ summary.character-statuses-summary {
     background-color: lightblue;
   }
 
-   div.spell-target-div {
+   div.first-spell-target-div,
+   div.second-spell-target-div,
+   div.third-spell-target-div {
     display: none;   
   }
 
-  li.first-level-dropdown-list ul[class*="spell-list-combat"]:hover > div.spell-target-div {
+  /* li.first-level-dropdown-list ul[class*="spell-list-combat"]:hover > div.spell-target-div,
+  li.second-level-dropdown-list ul[class*="spell-list-combat"]:hover > div.spell-target-div,
+  li.third-level-dropdown-list ul[class*="spell-list-combat"]:hover > div.spell-target-div { */
+  div.first-spell-target-div {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     position: absolute;
-    height: 0px;
+    height: 100%;
     width: 100%;
+    top: -90px;
+    background-color: blue;
   }
 
+  div.second-spell-target-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: -90px;
+    background-color: blue;
+  }
+
+  div.third-spell-target-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: -90px;
+    background-color: blue;
+  }
   li.monster-one-spell-list,
   li.monster-two-spell-list,
   li.self-spell-list {
@@ -1958,7 +1986,6 @@ summary.character-statuses-summary {
 
   ul[class*="spell-list-combat"]:hover li.monster-one-spell-list {
     display: block;
-
     background-color: white;
     border: 1px solid black;
     cursor: url("../images/gui/cursor-hover.png"), auto;
@@ -1983,12 +2010,14 @@ summary.character-statuses-summary {
   ul[class*="spell-list-combat"]:hover li.monster-two-spell-list,
   ul[class*="spell-list-combat"]:hover li.self-spell-list {
     position: relative;
+    /* position: absolute; */
+
     width: 50%;
     display: block;
     background-color: white;
     border: 1px solid black;
     cursor: url("../images/gui/cursor-hover.png"), auto;
-    bottom: 200px;
+    /* bottom: 200px; */
     left: 25%;
   }
 

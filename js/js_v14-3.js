@@ -3461,7 +3461,7 @@ function populateMageSpells(m1, m2, nextChap) {
       spellLi.textContent = characterFirstLevelSpells[i].name;
 
       let targetButtonDiv = document.createElement('div');
-      targetButtonDiv.setAttribute('class', 'spell-target-div');
+      targetButtonDiv.setAttribute('class', 'first-spell-target-div');
 
       spellLi.appendChild(targetButtonDiv);
       let addedSpellUl = document.querySelector(".first-level-spell-list-container");      
@@ -3486,7 +3486,7 @@ function populateMageSpells(m1, m2, nextChap) {
       spellLi.classList.add(`spell-list-combat-${characterFirstLevelSpells[i].className}`);
       
       let targetButtonDiv = document.createElement('div');
-      targetButtonDiv.setAttribute('class', 'spell-target-div');
+      targetButtonDiv.setAttribute('class', 'first-spell-target-div');
 
       spellLi.textContent = characterFirstLevelSpells[i].name;
 
@@ -3537,7 +3537,7 @@ function populateMageSpells(m1, m2, nextChap) {
       spellLi.textContent = characterSecondLevelSpells[i].name;
 
       let targetButtonDiv = document.createElement('div');
-      targetButtonDiv.setAttribute('class', 'spell-target-div');
+      targetButtonDiv.setAttribute('class', 'second-spell-target-div');
       spellLi.appendChild(targetButtonDiv);
 
       let addedSpellUl = document.querySelector(".second-level-spell-list-container");
@@ -3563,7 +3563,7 @@ function populateMageSpells(m1, m2, nextChap) {
       spellLi2.textContent = characterSecondLevelSpells[i].name;
 
       let targetButtonDiv = document.createElement('div');
-      targetButtonDiv.setAttribute('class', 'spell-target-div');
+      targetButtonDiv.setAttribute('class', 'second-spell-target-div');
       spellLi2.appendChild(targetButtonDiv);
       
       let addedSpellUl2 = document.querySelector(".second-level-spell-list-container");
@@ -3610,7 +3610,7 @@ function populateMageSpells(m1, m2, nextChap) {
       spellLi.textContent = characterThirdLevelSpells[i].name;
 
      let targetButtonDiv = document.createElement('div');
-      targetButtonDiv.setAttribute('class', 'spell-target-div');
+      targetButtonDiv.setAttribute('class', 'third-spell-target-div');
       spellLi.appendChild(targetButtonDiv);
 
       let addedSpellUl = document.querySelector(".third-level-spell-list-container");
@@ -3636,7 +3636,7 @@ function populateMageSpells(m1, m2, nextChap) {
       spellLi.textContent = characterThirdLevelSpells[i].name;
 
       let targetButtonDiv = document.createElement('div');
-      targetButtonDiv.setAttribute('class', 'spell-target-div');
+      targetButtonDiv.setAttribute('class', 'third-spell-target-div');
       spellLi.appendChild(targetButtonDiv);
 
       let addedSpellUl = document.querySelector(".third-level-spell-list-container");
