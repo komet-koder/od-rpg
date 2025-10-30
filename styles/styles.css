@@ -1850,7 +1850,6 @@ summary.character-statuses-summary {
   div.first-level-spell-list-container {
     position: absolute;
     bottom: 50px;
-    left: 10%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -1861,7 +1860,6 @@ summary.character-statuses-summary {
   div.second-level-spell-list-container {
     position: absolute;
     bottom: 96px;
-    left: 10%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -1871,7 +1869,6 @@ summary.character-statuses-summary {
   div.third-level-spell-list-container {
     position: absolute;
     bottom: 142px;
-    left: 10%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -1923,9 +1920,9 @@ summary.character-statuses-summary {
     background-color: white;
     border: 1px solid black;
     height: 20px;
-    width: 250px;
+    width: 240px;
     padding: 0px 0px 0px 5px;  
-    left: -30px;  
+    /* left: -30px;   */
     
   }
 
