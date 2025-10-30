@@ -1935,19 +1935,26 @@ summary.character-statuses-summary {
     background-color: lightblue;
   }
 
-
+  div.spell-target-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
 
   li.monster-one-spell-list,
   li.monster-two-spell-list,
   li.self-spell-list {
-    display: none;
-   
+    display: none;   
   }
 
   
 
   ul[class*="spell-list-combat"]:hover li.monster-one-spell-list {
     display: block;
+
     background-color: white;
     border: 1px solid black;
     cursor: url("../images/gui/cursor-hover.png"), auto;
@@ -1978,6 +1985,7 @@ summary.character-statuses-summary {
     border: 1px solid black;
     cursor: url("../images/gui/cursor-hover.png"), auto;
     bottom: 200px;
+    left: 25%;
   }
 
   li.monster-one-spell-list:hover,
