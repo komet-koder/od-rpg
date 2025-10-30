@@ -1935,12 +1935,16 @@ summary.character-statuses-summary {
     background-color: lightblue;
   }
 
-  div.spell-target-div {
+   div.spell-target-div {
+    display: none;   
+  }
+
+  li.first-level-dropdown-list ul[class*="spell-list-combat"]:hover > div.spell-target-div {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     position: absolute;
-    height: 100%;
+    height: 0px;
     width: 100%;
   }
 
