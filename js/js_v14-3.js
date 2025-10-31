@@ -3715,26 +3715,21 @@ function populateClericSpells(m1, m2, nextChap) {
   thirdLevelSpellListContainer.classList.add("third-level-spell-list-container");
   thirdLevelSpellList.textContent = "Third Level Spells";
 
+  let fightModuleDiv = document.querySelector('#fight-module');
+
   let addingSpellLevels = document.querySelector(".dropdown-spell-list-ul");
   addingSpellLevels.appendChild(firstLevelSpellList);
-  
-  let fightModuleDiv = document.querySelector('#fight-module');
+
+  //replicate for second and third level spells
+
   let firstLevelSpellContainer = document.createElement('div');
   firstLevelSpellContainer.setAttribute('class', 'cleric-first-level-spell-container');
   fightModuleDiv.appendChild(firstLevelSpellContainer);
 
-  //details will be for each spell need to iterate below
-  // let clericFirstLevelSpellDetails = document.createElement('details');
-  // clericFirstLevelSpellDetails.setAttribute('class', 'cleric-first-level-details');
-  // clericFirstLevelSpellDetails.setAttribute('name', 'cleric-spell-details-set');
-  // clericFirstLevelSpellDetails.setAttribute('id', 'cleric-first-level-detail');
-
-  
-
   for (let i = 0; i < characterFirstLevelSpells.length; i++) {
     if (
       characterFirstLevelSpells[i].useBattle === true &&
-      characterFirstLevelSpells[i].effect === "The cleric only"
+      characterFirstLevelSpells[i].effect === "The Cleric only"
     ) {
       spellList.push(characterFirstLevelSpells[i].name);
       
@@ -3759,14 +3754,6 @@ function populateClericSpells(m1, m2, nextChap) {
         function (e) {
           let hideClericSpellContainer = document.querySelector('.cleric-first-level-spell-container');
           hideClericSpellContainer.classList.remove('show-cleric-first-level-spell-container');
-          // let hideClericSpellDropdown = document.querySelector('.dropdown-spell-list-ul');
-          // hideClericSpellDropdown.classList.remove('show-spell-list-dropdown');
-          // let hideClericFirstLevelDropdownList = document.querySelector('.first-level-dropdown-list');
-          // hideClericFirstLevelDropdownList.classList.remove('show-spell-list-dropdown');
-          // let hideClericSecondLevelDropdownList = document.querySelector('.second-level-dropdown-list');
-          //  hideClericSecondLevelDropdownList.classList.remove('show-spell-list-dropdown');
-          // let hideClericThirdLevelDropdownList = document.querySelector('.third-level-dropdown-list');
-          // hideClericThirdLevelDropdownList.classList.remove('show-spell-list-dropdown');
           castSpellFromList(e, m1, m2, nextChap);
         },
         false
@@ -3800,14 +3787,6 @@ function populateClericSpells(m1, m2, nextChap) {
         function (e) {
           let hideClericSpellContainer = document.querySelector('.cleric-first-level-spell-container');
           hideClericSpellContainer.classList.remove('show-cleric-first-level-spell-container');
-          // let hideClericSpellDropdown = document.querySelector('.dropdown-spell-list-ul');
-          // hideClericSpellDropdown.classList.remove('show-spell-list-dropdown');
-          // let hideClericFirstLevelDropdownList = document.querySelector('.first-level-dropdown-list');
-          // hideClericFirstLevelDropdownList.classList.remove('show-spell-list-dropdown');
-          // let hideClericSecondLevelDropdownList = document.querySelector('.second-level-dropdown-list');
-          //  hideClericSecondLevelDropdownList.classList.remove('show-spell-list-dropdown');
-          // let hideClericThirdLevelDropdownList = document.querySelector('.third-level-dropdown-list');
-          // hideClericThirdLevelDropdownList.classList.remove('show-spell-list-dropdown');
           castSpellFromList(e, m1, m2, nextChap);
         },
         false
@@ -3821,15 +3800,7 @@ function populateClericSpells(m1, m2, nextChap) {
         "click",
         function (e) {
           let hideClericSpellContainer = document.querySelector('.cleric-first-level-spell-container');
-          hideClericSpellContainer.classList.remove('show-cleric-first-level-spell-container');
-          // let hideClericSpellDropdown = document.querySelector('.dropdown-spell-list-ul');
-          // hideClericSpellDropdown.classList.remove('show-spell-list-dropdown');
-          // let hideClericFirstLevelDropdownList = document.querySelector('.first-level-dropdown-list');
-          // hideClericFirstLevelDropdownList.classList.remove('show-spell-list-dropdown');
-          // let hideClericSecondLevelDropdownList = document.querySelector('.second-level-dropdown-list');
-          //  hideClericSecondLevelDropdownList.classList.remove('show-spell-list-dropdown');
-          // let hideClericThirdLevelDropdownList = document.querySelector('.third-level-dropdown-list');
-          // hideClericThirdLevelDropdownList.classList.remove('show-spell-list-dropdown');
+          hideClericSpellContainer.classList.remove('show-cleric-first-level-spell-container');          
           castSpellFromList(e, m1, m2, nextChap);
         },
         false
@@ -3863,12 +3834,123 @@ function populateClericSpells(m1, m2, nextChap) {
     spellContainer1.classList.toggle('show-cleric-first-level-spell-container');
   })
 
-
-
   addingSpellLevels.appendChild(secondLevelSpellList);
     
+//replicate for second and third level spells
 
+  let secondLevelSpellContainer = document.createElement('div');
+  secondLevelSpellContainer.setAttribute('class', 'cleric-second-level-spell-container');
+  fightModuleDiv.appendChild(secondLevelSpellContainer);
 
+  for (let i = 0; i < characterSecondLevelSpells.length; i++) {
+    if (
+      characterSecondLevelSpells[i].useBattle === true &&
+      characterSecondLevelSpells[i].effect === "The Cleric only"
+    ) {
+      spellList.push(characterSecondLevelSpells[i].name);
+      
+      let clericSecondLevelSpellDetails = document.createElement('details');
+      clericSecondLevelSpellDetails.setAttribute('class', 'cleric-second-level-details');
+      clericSecondLevelSpellDetails.setAttribute('name', 'cleric-spell-details-set');
+      clericSecondLevelSpellDetails.setAttribute('id', `cleric-second-level-detail-${characterSecondLevelSpells[i].className}`);
+
+      let clericSecondLevelSpellSummary = document.createElement('summary');
+      clericSecondLevelSpellSummary.setAttribute('class', 'cleric-second-level-summary');
+      clericSecondLevelSpellSummary.textContent = characterSecondLevelSpells[i].name;
+      
+      let addSelf1Btn = document.createElement("div");
+      addSelf1Btn.classList.add("cleric-self-spell-list");
+      addSelf1Btn.setAttribute('id', `self-button-${characterSecondLevelSpells[i].className}`);
+      addSelf1Btn.textContent = "Self";
+
+      clericSecondLevelSpellDetails.appendChild(addSelf1Btn);
+
+      addSelf1Btn.addEventListener(
+        "click",
+        function (e) {
+          let hideClericSpellContainer = document.querySelector('.cleric-second-level-spell-container');
+          hideClericSpellContainer.classList.remove('show-cleric-second-level-spell-container');
+          castSpellFromList(e, m1, m2, nextChap);
+        },
+        false
+      );
+
+      clericSecondLevelSpellDetails.appendChild(clericSecondLevelSpellSummary);
+
+      secondLevelSpellContainer.appendChild(clericSecondLevelSpellDetails);
+
+      
+
+    } else if (characterSecondLevelSpells[i].useBattle === true) {
+      spellList.push(characterSecondLevelSpells[i].name);
+      
+      let clericSecondLevelSpellDetails = document.createElement('details');
+      clericSecondLevelSpellDetails.setAttribute('class', 'cleric-second-level-details');
+      clericSecondLevelSpellDetails.setAttribute('name', 'cleric-spell-details-set');
+      clericSecondLevelSpellDetails.setAttribute('id', `cleric-second-level-detail-${characterSecondLevelSpells[i].className}`);
+      
+      
+      let clericSecondLevelSpellSummary = document.createElement('summary');
+      clericSecondLevelSpellSummary.setAttribute('class', 'cleric-second-level-summary');
+      clericSecondLevelSpellSummary.textContent = characterSecondLevelSpells[i].name;
+
+      let addMonster1Btn = document.createElement("div");
+      addMonster1Btn.classList.add("cleric-monster-one-spell-list");
+      addMonster1Btn.setAttribute('id', `monster-one-button-${characterSecondLevelSpells[i].className}`)
+      addMonster1Btn.textContent = "Monster 1";
+      addMonster1Btn.addEventListener(
+        "click",
+        function (e) {
+          let hideClericSpellContainer = document.querySelector('.cleric-second-level-spell-container');
+          hideClericSpellContainer.classList.remove('show-cleric-second-level-spell-container');
+          castSpellFromList(e, m1, m2, nextChap);
+        },
+        false
+      );
+      
+      if ((m2.name !== " ") || (m2.healthPoints > 0)) {
+        let addMonster2Btn = document.createElement("div");
+        addMonster2Btn.classList.add("cleric-monster-two-spell-list");
+        addMonster2Btn.textContent = "Monster 2";
+        addMonster2Btn.addEventListener(
+        "click",
+        function (e) {
+          let hideClericSpellContainer = document.querySelector('.cleric-second-level-spell-container');
+          hideClericSpellContainer.classList.remove('show-cleric-second-level-spell-container');          
+          castSpellFromList(e, m1, m2, nextChap);
+        },
+        false
+      );
+      }
+
+      clericSecondLevelSpellDetails.appendChild(addMonster1Btn);
+
+      clericSecondLevelSpellDetails.appendChild(clericSecondLevelSpellSummary);
+      
+      secondLevelSpellContainer.appendChild(clericSecondLevelSpellDetails);
+    }
+  }
+
+  
+
+let clericSecondLevelSpellList = document.querySelector('.second-level-dropdown-list');
+
+  clericSecondLevelSpellList.addEventListener('click', function() { 
+    console.log('clicked show spells')
+    let spellContainer1 = document.querySelector('.cleric-second-level-spell-container');
+    let spellContainer2 = document.querySelector('.cleric-second-level-spell-container');
+    let spellContainer3 = document.querySelector('.cleric-third-level-spell-container');
+
+    if ((spellContainer2) && (spellContainer2.classList.contains('show-cleric-second-level-spell-container'))) {
+      spellContainer2.classList.remove('show-cleric-second-level-spell-container');
+    }
+
+      if ((spellContainer2) && (spellContainer3.classList.contains('show-cleric-second-level-spell-container'))) {
+      spellContainer3.classList.remove('show-cleric-second-level-spell-container');
+    }
+
+    spellContainer1.classList.toggle('show-cleric-second-level-spell-container');
+  })
 
 
 
