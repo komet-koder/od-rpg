@@ -3678,7 +3678,55 @@ function populateMageSpells(m1, m2, nextChap) {
 }
 
 function populateClericSpells(m1, m2, nextChap) {
+  let spellList = [];
+  let characterFirstLevelSpells =
+    finalCharacter.specialty.characterLevel.specialtySkills[
+      "First Level Cleric Spells"
+    ];
+  let characterSecondLevelSpells =
+    finalCharacter.specialty.characterLevel.specialtySkills[
+      "Second Level Cleric Spells"
+    ];
+  let characterThirdLevelSpells =
+    finalCharacter.specialty.characterLevel.specialtySkills[
+      "Third Level Cleric Spells"
+    ];
 
+  let firstLevelSpellList = document.createElement("li");
+  firstLevelSpellList.classList.add("first-level-dropdown-list");
+
+  let firstLevelSpellListContainer = document.createElement('div');
+  firstLevelSpellListContainer.classList.add("first-level-spell-list-container");
+  
+  firstLevelSpellList.textContent = 'First Level Spells';
+  firstLevelSpellList.appendChild(firstLevelSpellListContainer);
+
+  let secondLevelSpellList = document.createElement("li");
+  secondLevelSpellList.classList.add("second-level-dropdown-list");
+  
+  let secondLevelSpellListContainer = document.createElement('div');
+  secondLevelSpellListContainer.classList.add("second-level-spell-list-container");
+  
+  secondLevelSpellList.textContent = 'Second Level Spells';
+  secondLevelSpellList.appendChild(secondLevelSpellListContainer);
+
+  let thirdLevelSpellList = document.createElement("li");
+  thirdLevelSpellList.classList.add("third-level-dropdown-list");
+
+  let thirdLevelSpellListContainer = document.createElement('div');
+  thirdLevelSpellListContainer.classList.add("third-level-spell-list-container");
+  thirdLevelSpellList.textContent = "Third Level Spells";
+  thirdLevelSpellList.appendChild(thirdLevelSpellListContainer);
+
+  let addingSpellLevels = document.querySelector(".dropdown-spell-list-ul");
+  addingSpellLevels.appendChild(firstLevelSpellList);
+  
+  addingSpellLevels.appendChild(secondLevelSpellList);
+    
+  addingSpellLevels.appendChild(thirdLevelSpellList);
+
+  let spellShowButton = document.querySelector("#use-spells");
+  spellShowButton.addEventListener("click", toggleShowSpellList, false);
 }
 
 export function toggleShowSpellList() {
