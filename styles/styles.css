@@ -1579,6 +1579,8 @@ summary.character-statuses-summary {
     left: calc(50% - (120px));
     background-color: white;
     width: 240px;
+    border-radius: 7px;
+    padding: 5px;
   }
 
   #monster-info {

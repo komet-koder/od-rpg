@@ -3746,10 +3746,25 @@ function populateClericSpells(m1, m2, nextChap) {
       let clericFirstLevelSpellSummary = document.createElement('summary');
       clericFirstLevelSpellSummary.setAttribute('class', 'cleric-first-level-summary');
       clericFirstLevelSpellSummary.textContent = characterFirstLevelSpells[i].name;
-      clericFirstLevelSpellDetails.appendChild(clericFirstLevelSpellSummary);
       
+      let addSelf1Btn = document.createElement("div");
+      addSelf1Btn.classList.add("cleric-self-spell-list");
+      addSelf1Btn.textContent = "Self";
+
+      clericFirstLevelSpellDetails.appendChild(addSelf1Btn);
+
+      addSelf1Btn.addEventListener(
+        "click",
+        function (e) {
+          castSpellFromList(e, m1, m2, nextChap);
+        },
+        false
+      );
+
+      clericFirstLevelSpellDetails.appendChild(clericFirstLevelSpellSummary);
 
       firstLevelSpellContainer.appendChild(clericFirstLevelSpellDetails);
+
     } else if (characterFirstLevelSpells[i].useBattle === true) {
       spellList.push(characterFirstLevelSpells[i].name);
       
@@ -3763,7 +3778,32 @@ function populateClericSpells(m1, m2, nextChap) {
       clericFirstLevelSpellSummary.setAttribute('class', 'cleric-first-level-summary');
       clericFirstLevelSpellSummary.textContent = characterFirstLevelSpells[i].name;
 
+      let addMonster1Btn = document.createElement("div");
+      addMonster1Btn.classList.add("cleric-monster-one-spell-list");
+      addMonster1Btn.textContent = "Monster 1";
+      addMonster1Btn.addEventListener(
+        "click",
+        function (e) {
+          castSpellFromList(e, m1, m2, nextChap);
+        },
+        false
+      );
       
+      if ((m2.name !== " ") || (m2.healthPoints > 0)) {
+        let addMonster2Btn = document.createElement("div");
+        addMonster2Btn.classList.add("cleric-monster-two-spell-list");
+        addMonster2Btn.textContent = "Monster 2";
+        addMonster2Btn.addEventListener(
+        "click",
+        function (e) {
+          castSpellFromList(e, m1, m2, nextChap);
+        },
+        false
+      );
+      }
+
+      clericFirstLevelSpellDetails.appendChild(addMonster1Btn);
+
       clericFirstLevelSpellDetails.appendChild(clericFirstLevelSpellSummary);
       
       firstLevelSpellContainer.appendChild(clericFirstLevelSpellDetails);
