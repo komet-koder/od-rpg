@@ -3757,6 +3757,16 @@ function populateClericSpells(m1, m2, nextChap) {
       addSelf1Btn.addEventListener(
         "click",
         function (e) {
+          let hideClericSpellContainer = document.querySelector('.cleric-first-level-spell-container');
+          hideClericSpellContainer.classList.remove('show-cleric-first-level-spell-container');
+          // let hideClericSpellDropdown = document.querySelector('.dropdown-spell-list-ul');
+          // hideClericSpellDropdown.classList.remove('show-spell-list-dropdown');
+          // let hideClericFirstLevelDropdownList = document.querySelector('.first-level-dropdown-list');
+          // hideClericFirstLevelDropdownList.classList.remove('show-spell-list-dropdown');
+          // let hideClericSecondLevelDropdownList = document.querySelector('.second-level-dropdown-list');
+          //  hideClericSecondLevelDropdownList.classList.remove('show-spell-list-dropdown');
+          // let hideClericThirdLevelDropdownList = document.querySelector('.third-level-dropdown-list');
+          // hideClericThirdLevelDropdownList.classList.remove('show-spell-list-dropdown');
           castSpellFromList(e, m1, m2, nextChap);
         },
         false
@@ -3788,6 +3798,16 @@ function populateClericSpells(m1, m2, nextChap) {
       addMonster1Btn.addEventListener(
         "click",
         function (e) {
+          let hideClericSpellContainer = document.querySelector('.cleric-first-level-spell-container');
+          hideClericSpellContainer.classList.remove('show-cleric-first-level-spell-container');
+          // let hideClericSpellDropdown = document.querySelector('.dropdown-spell-list-ul');
+          // hideClericSpellDropdown.classList.remove('show-spell-list-dropdown');
+          // let hideClericFirstLevelDropdownList = document.querySelector('.first-level-dropdown-list');
+          // hideClericFirstLevelDropdownList.classList.remove('show-spell-list-dropdown');
+          // let hideClericSecondLevelDropdownList = document.querySelector('.second-level-dropdown-list');
+          //  hideClericSecondLevelDropdownList.classList.remove('show-spell-list-dropdown');
+          // let hideClericThirdLevelDropdownList = document.querySelector('.third-level-dropdown-list');
+          // hideClericThirdLevelDropdownList.classList.remove('show-spell-list-dropdown');
           castSpellFromList(e, m1, m2, nextChap);
         },
         false
@@ -3800,6 +3820,16 @@ function populateClericSpells(m1, m2, nextChap) {
         addMonster2Btn.addEventListener(
         "click",
         function (e) {
+          let hideClericSpellContainer = document.querySelector('.cleric-first-level-spell-container');
+          hideClericSpellContainer.classList.remove('show-cleric-first-level-spell-container');
+          // let hideClericSpellDropdown = document.querySelector('.dropdown-spell-list-ul');
+          // hideClericSpellDropdown.classList.remove('show-spell-list-dropdown');
+          // let hideClericFirstLevelDropdownList = document.querySelector('.first-level-dropdown-list');
+          // hideClericFirstLevelDropdownList.classList.remove('show-spell-list-dropdown');
+          // let hideClericSecondLevelDropdownList = document.querySelector('.second-level-dropdown-list');
+          //  hideClericSecondLevelDropdownList.classList.remove('show-spell-list-dropdown');
+          // let hideClericThirdLevelDropdownList = document.querySelector('.third-level-dropdown-list');
+          // hideClericThirdLevelDropdownList.classList.remove('show-spell-list-dropdown');
           castSpellFromList(e, m1, m2, nextChap);
         },
         false

@@ -124,6 +124,8 @@ cureLightWoundsCleric.castSpell = function (monster1, monster2, continueNextChap
     console.log(monster2);
     console.log(continueNextChapter);
     console.log(attackedMonster);
+    toggleShowSpellList();
+
 };
 
 lightCleric.castSpell = function (monster1, monster2, continueNextChapter, attackedMonster)
