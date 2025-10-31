@@ -1575,9 +1575,10 @@ summary.character-statuses-summary {
 
   .cleric-first-level-spell-container {
     position: absolute;
-    bottom: 300px;
-    left: 25%;
+    bottom: 215px;
+    left: calc(50% - (120px));
     background-color: white;
+    width: 240px;
   }
 
   #monster-info {

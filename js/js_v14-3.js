@@ -3743,10 +3743,12 @@ function populateClericSpells(m1, m2, nextChap) {
       clericFirstLevelSpellDetails.setAttribute('name', 'cleric-spell-details-set');
       clericFirstLevelSpellDetails.setAttribute('id', `cleric-first-level-detail-${characterFirstLevelSpells[i].className}`);
 
-      let clericFirstLevelSpellSummary = document.createElement('summar');
+      let clericFirstLevelSpellSummary = document.createElement('summary');
       clericFirstLevelSpellSummary.setAttribute('class', 'cleric-first-level-summary');
       clericFirstLevelSpellSummary.textContent = characterFirstLevelSpells[i].name;
+      clericFirstLevelSpellDetails.appendChild(clericFirstLevelSpellSummary);
       
+
       firstLevelSpellContainer.appendChild(clericFirstLevelSpellDetails);
     } else if (characterFirstLevelSpells[i].useBattle === true) {
       spellList.push(characterFirstLevelSpells[i].name);
@@ -3756,9 +3758,12 @@ function populateClericSpells(m1, m2, nextChap) {
       clericFirstLevelSpellDetails.setAttribute('name', 'cleric-spell-details-set');
       clericFirstLevelSpellDetails.setAttribute('id', `cleric-first-level-detail-${characterFirstLevelSpells[i].className}`);
       
-      let clericFirstLevelSpellSummary = document.createElement('summar');
+      
+      let clericFirstLevelSpellSummary = document.createElement('summary');
       clericFirstLevelSpellSummary.setAttribute('class', 'cleric-first-level-summary');
       clericFirstLevelSpellSummary.textContent = characterFirstLevelSpells[i].name;
+
+      
       clericFirstLevelSpellDetails.appendChild(clericFirstLevelSpellSummary);
       
       firstLevelSpellContainer.appendChild(clericFirstLevelSpellDetails);
