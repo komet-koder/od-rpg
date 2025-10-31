@@ -3749,6 +3749,7 @@ function populateClericSpells(m1, m2, nextChap) {
       
       let addSelf1Btn = document.createElement("div");
       addSelf1Btn.classList.add("cleric-self-spell-list");
+      addSelf1Btn.setAttribute('id', `self-button-${characterFirstLevelSpells[i].className}`);
       addSelf1Btn.textContent = "Self";
 
       clericFirstLevelSpellDetails.appendChild(addSelf1Btn);
@@ -3782,6 +3783,7 @@ function populateClericSpells(m1, m2, nextChap) {
 
       let addMonster1Btn = document.createElement("div");
       addMonster1Btn.classList.add("cleric-monster-one-spell-list");
+      addMonster1Btn.setAttribute('id', `monster-one-button-${characterFirstLevelSpells[i].className}`)
       addMonster1Btn.textContent = "Monster 1";
       addMonster1Btn.addEventListener(
         "click",
@@ -3870,6 +3872,7 @@ export function toggleShowSpellList() {
 //need to tie casting spell to actual spell methods dynamically
 
 function castSpellFromList(e, m1, m2, nextChap) {
+  console.log("casting spell from list");
   let parentNodeInnerText = e.target.parentNode.firstChild.textContent;
   let thisNodeInnerText = e.target.textContent;
 
@@ -3981,6 +3984,59 @@ function castSpellFromList(e, m1, m2, nextChap) {
         thirdLevel[i].castSpell(m1, m2, nextChap, thisNodeInnerText);
       }
     }
+  }
+
+  else if (finalCharacter.specialty === cleric) {
+    console.log("casting cleric spell");
+    let firstLevel =
+      finalCharacter.specialty.characterLevel.specialtySkills[
+        "First Level Cleric Spells"
+      ];
+    let secondLevel =
+      finalCharacter.specialty.characterLevel.specialtySkills[
+        "Second Level Cleric Spells"
+      ];
+    let thirdLevel =
+      finalCharacter.specialty.characterLevel.specialtySkills[
+        "Third Level Cleric Spells"
+      ];
+
+    for (let i = 0; i < firstLevel.length; i++) {
+      console.log(e.target.id);
+      // console.log(e.target.nextSibling);
+      // let spellTextContent = document.querySelector
+      let firstSibling = document.querySelector(`#${e.target.id}`);
+      let secondSiblng = firstSibling.nextSibling.textContent;
+      console.log(secondSiblng);
+      if (firstLevel[i].name === secondSiblng) {
+        console.log("spell names match");
+        if (finalCharacter.status.includes("Invisible")) {
+
+          modalConfig = {
+            class: "invisibility-removed-modal",
+            buttonClass: "close-invisibility-removed-modal",
+            buttonText: "Close",
+            modalText: `You were invisible but the spell was broken after you cast the spell`
+          }
+
+          Utilities.createModal(modalConfig)
+
+          finalCharacter.status.splice(
+            finalCharacter.status.indexOf("Invisible"),
+            1
+          );
+
+          let addInvisibilityStatus = $(".invisibility-status");
+
+          if (!addInvisibilityStatus.hasClass("hide-status")) {
+            addInvisibilityStatus.addClass("hide-status");
+            console.log(finalCharacter.activeSpellStatuses);
+          }
+        }
+
+        firstLevel[i].castSpell(m1, m2, nextChap, thisNodeInnerText);
+      }
+    }  
   }
 }
 
