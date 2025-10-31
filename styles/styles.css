@@ -1573,6 +1573,13 @@ summary.character-statuses-summary {
     margin-bottom: 0px;
   }
 
+  .cleric-first-level-spell-container {
+    position: absolute;
+    bottom: 300px;
+    left: 25%;
+    background-color: white;
+  }
+
   #monster-info {
     display: grid;
     /* height: 225px; */

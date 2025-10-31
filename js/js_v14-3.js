@@ -3457,6 +3457,8 @@ function populateMageSpells(m1, m2, nextChap) {
       characterFirstLevelSpells[i].effect === "The mage only"
     ) {
       spellList.push(characterFirstLevelSpells[i].name);
+      
+      //add ul 
       let spellLi = document.createElement("ul");
       spellLi.classList.add(`spell-list-combat-${characterFirstLevelSpells[i].className}`);
       
@@ -3696,19 +3698,15 @@ function populateClericSpells(m1, m2, nextChap) {
   firstLevelSpellList.classList.add("first-level-dropdown-list");
 
   let firstLevelSpellListContainer = document.createElement('div');
-  firstLevelSpellListContainer.classList.add("first-level-spell-list-container");
-  
+  firstLevelSpellListContainer.classList.add("first-level-spell-list-container");  
   firstLevelSpellList.textContent = 'First Level Spells';
-  firstLevelSpellList.appendChild(firstLevelSpellListContainer);
 
   let secondLevelSpellList = document.createElement("li");
   secondLevelSpellList.classList.add("second-level-dropdown-list");
   
   let secondLevelSpellListContainer = document.createElement('div');
-  secondLevelSpellListContainer.classList.add("second-level-spell-list-container");
-  
+  secondLevelSpellListContainer.classList.add("second-level-spell-list-container");  
   secondLevelSpellList.textContent = 'Second Level Spells';
-  secondLevelSpellList.appendChild(secondLevelSpellListContainer);
 
   let thirdLevelSpellList = document.createElement("li");
   thirdLevelSpellList.classList.add("third-level-dropdown-list");
@@ -3716,13 +3714,69 @@ function populateClericSpells(m1, m2, nextChap) {
   let thirdLevelSpellListContainer = document.createElement('div');
   thirdLevelSpellListContainer.classList.add("third-level-spell-list-container");
   thirdLevelSpellList.textContent = "Third Level Spells";
-  thirdLevelSpellList.appendChild(thirdLevelSpellListContainer);
 
   let addingSpellLevels = document.querySelector(".dropdown-spell-list-ul");
   addingSpellLevels.appendChild(firstLevelSpellList);
   
+  let fightModuleDiv = document.querySelector('#fight-module');
+  let firstLevelSpellContainer = document.createElement('div');
+  firstLevelSpellContainer.setAttribute('class', 'cleric-first-level-spell-container');
+  fightModuleDiv.appendChild(firstLevelSpellContainer);
+
+  //details will be for each spell need to iterate below
+  // let clericFirstLevelSpellDetails = document.createElement('details');
+  // clericFirstLevelSpellDetails.setAttribute('class', 'cleric-first-level-details');
+  // clericFirstLevelSpellDetails.setAttribute('name', 'cleric-spell-details-set');
+  // clericFirstLevelSpellDetails.setAttribute('id', 'cleric-first-level-detail');
+
+  
+
+  for (let i = 0; i < characterFirstLevelSpells.length; i++) {
+    if (
+      characterFirstLevelSpells[i].useBattle === true &&
+      characterFirstLevelSpells[i].effect === "The cleric only"
+    ) {
+      spellList.push(characterFirstLevelSpells[i].name);
+      
+      let clericFirstLevelSpellDetails = document.createElement('details');
+      clericFirstLevelSpellDetails.setAttribute('class', 'cleric-first-level-details');
+      clericFirstLevelSpellDetails.setAttribute('name', 'cleric-spell-details-set');
+      clericFirstLevelSpellDetails.setAttribute('id', `cleric-first-level-detail-${characterFirstLevelSpells[i].className}`);
+
+      let clericFirstLevelSpellSummary = document.createElement('summar');
+      clericFirstLevelSpellSummary.setAttribute('class', 'cleric-first-level-summary');
+      clericFirstLevelSpellSummary.textContent = characterFirstLevelSpells[i].name;
+      
+      firstLevelSpellContainer.appendChild(clericFirstLevelSpellDetails);
+    } else if (characterFirstLevelSpells[i].useBattle === true) {
+      spellList.push(characterFirstLevelSpells[i].name);
+      
+      let clericFirstLevelSpellDetails = document.createElement('details');
+      clericFirstLevelSpellDetails.setAttribute('class', 'cleric-first-level-details');
+      clericFirstLevelSpellDetails.setAttribute('name', 'cleric-spell-details-set');
+      clericFirstLevelSpellDetails.setAttribute('id', `cleric-first-level-detail-${characterFirstLevelSpells[i].className}`);
+      
+      let clericFirstLevelSpellSummary = document.createElement('summar');
+      clericFirstLevelSpellSummary.setAttribute('class', 'cleric-first-level-summary');
+      clericFirstLevelSpellSummary.textContent = characterFirstLevelSpells[i].name;
+      clericFirstLevelSpellDetails.appendChild(clericFirstLevelSpellSummary);
+      
+      firstLevelSpellContainer.appendChild(clericFirstLevelSpellDetails);
+    }
+  }
+
+
+
+
+
   addingSpellLevels.appendChild(secondLevelSpellList);
     
+
+
+
+
+
+
   addingSpellLevels.appendChild(thirdLevelSpellList);
 
   let spellShowButton = document.querySelector("#use-spells");
