@@ -3765,6 +3765,8 @@ function populateClericSpells(m1, m2, nextChap) {
 
       firstLevelSpellContainer.appendChild(clericFirstLevelSpellDetails);
 
+      
+
     } else if (characterFirstLevelSpells[i].useBattle === true) {
       spellList.push(characterFirstLevelSpells[i].name);
       
@@ -3810,7 +3812,13 @@ function populateClericSpells(m1, m2, nextChap) {
     }
   }
 
+  let clericFirstLevelSpellList = document.querySelector('.first-level-dropdown-list');
 
+  clericFirstLevelSpellList.addEventListener('click', function() { 
+    console.log('clicked show spells')
+    let spellContainer = document.querySelector('.cleric-first-level-spell-container');
+    spellContainer.classList.toggle('show-cleric-first-level-spell-container');
+  })
 
 
 

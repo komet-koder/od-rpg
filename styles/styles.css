@@ -1573,16 +1573,6 @@ summary.character-statuses-summary {
     margin-bottom: 0px;
   }
 
-  .cleric-first-level-spell-container {
-    position: absolute;
-    bottom: 215px;
-    left: calc(50% - (120px));
-    background-color: white;
-    width: 240px;
-    border-radius: 7px;
-    padding: 5px;
-  }
-
   #monster-info {
     display: grid;
     /* height: 225px; */
@@ -1856,6 +1846,27 @@ summary.character-statuses-summary {
     margin: .5em;
     height: 100%;
   }
+
+
+  .cleric-first-level-spell-container {
+    display: none;
+  }
+
+  .cleric-first-level-spell-container {
+    
+  }
+
+  .show-cleric-first-level-spell-container {
+    display: block;
+    position: absolute;
+    bottom: 215px;
+    left: calc(50% - (120px));
+    background-color: white;
+    width: 240px;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  
 
   div.first-level-spell-list-container {
     position: absolute;
