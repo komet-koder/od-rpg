@@ -3399,6 +3399,8 @@ function addingFightModule(monsterOne, monsterTwo, continueNextChapter) {
     finalCharacter.specialty.name === "Elf"
   ) {
     populateMageSpells(monsterOne, monsterTwo, continueNextChapter);
+  } else if (finalCharacter.specialty.name === "Cleric") {
+    populateClericSpells(monsterOne, monsterTwo, continueNextChapter);
   }
   confirmAttackMonsters(monsterOne, monsterTwo, (images = 0));
 }
@@ -3673,6 +3675,10 @@ function populateMageSpells(m1, m2, nextChap) {
   spellShowButton.addEventListener("click", toggleShowSpellList, false);
 
   console.log(finalCharacter);
+}
+
+function populateClericSpells(m1, m2, nextChap) {
+
 }
 
 export function toggleShowSpellList() {
