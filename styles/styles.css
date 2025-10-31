@@ -1807,9 +1807,15 @@ summary.character-statuses-summary {
     width: 90%;
   }
 
-  div > ul.dropdown-spell-list-ul {
+  div > ul.dropdown-spell-list-ul {   
+    display: none;    
+  }
+
+  div > ul.show-spell-list-dropdown {
+    display: grid;
     position: absolute;
-    display: none;
+    grid-template-columns: 100%;
+    grid-template-rows: 33% 33% 33%;
     list-style: none;
     width: 250px;
     background-color: white;
@@ -1822,12 +1828,6 @@ summary.character-statuses-summary {
     height: 7em;
     align-content: center;
     justify-content: center;
-  }
-
-  div > ul.show-spell-list-dropdown {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 33% 33% 33%;
   }  
 
   li.first-level-dropdown-list,
@@ -1854,7 +1854,6 @@ summary.character-statuses-summary {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    width: 200px;
   }
   
   div.second-level-spell-list-container {
@@ -1945,33 +1944,33 @@ summary.character-statuses-summary {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    position: absolute;
+    position: relative;
     height: 100%;
     width: 100%;
-    top: -90px;
-    background-color: blue;
+    /* background-color: blue; */
+    bottom: 20px;
   }
 
   div.second-spell-target-div {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    position: absolute;
+    position: relative;
     height: 100%;
     width: 100%;
-    top: -90px;
-    background-color: blue;
+    /* background-color: blue; */
+    bottom: 20px;
   }
 
   div.third-spell-target-div {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    position: absolute;
+    position: relative;
     height: 100%;
     width: 100%;
-    top: -90px;
-    background-color: blue;
+    /* background-color: blue; */
+    bottom: 20px;
   }
   li.monster-one-spell-list,
   li.monster-two-spell-list,
@@ -2014,7 +2013,7 @@ summary.character-statuses-summary {
     background-color: white;
     border: 1px solid black;
     cursor: url("../images/gui/cursor-hover.png"), auto;
-    /* bottom: 200px; */
+    bottom: 200px;
     left: 25%;
   }
 
@@ -2039,8 +2038,19 @@ summary.character-statuses-summary {
     pointer-events: none;
   }
 
-  .show-spell-list-dropdown > b {
+  ul[class*="spell-list-combat"] > div.first-spell-target-div > .monster-one-spell-list {
+    position: absolute;
+    bottom: 100px;
+  }
 
+  ul[class*="spell-list-combat"] > div.first-spell-target-div > .monster-two-spell-list {
+    position: absolute;
+    bottom: 80px;
+  }
+
+  ul[class*="spell-list-combat"] > div.first-spell-target-div > .self-spell-list {
+    position: absolute;
+    bottom: 60px;
   }
 
   .spell-list > span {
