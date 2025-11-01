@@ -3823,12 +3823,12 @@ function populateClericSpells(m1, m2, nextChap) {
     let spellContainer2 = document.querySelector('.cleric-second-level-spell-container');
     let spellContainer3 = document.querySelector('.cleric-third-level-spell-container');
 
-    if ((spellContainer2) && (spellContainer2.classList.contains('show-cleric-first-level-spell-container'))) {
-      spellContainer2.classList.remove('show-cleric-first-level-spell-container');
+    if ((spellContainer2) && (spellContainer2.classList.contains('show-cleric-second-level-spell-container'))) {
+      spellContainer2.classList.remove('show-cleric-second-level-spell-container');
     }
 
-      if ((spellContainer2) && (spellContainer3.classList.contains('show-cleric-first-level-spell-container'))) {
-      spellContainer3.classList.remove('show-cleric-first-level-spell-container');
+      if ((spellContainer3) && (spellContainer3.classList.contains('show-cleric-third-level-spell-container'))) {
+      spellContainer3.classList.remove('show-cleric-third-level-spell-container');
     }
 
     spellContainer1.classList.toggle('show-cleric-first-level-spell-container');
@@ -3937,16 +3937,16 @@ let clericSecondLevelSpellList = document.querySelector('.second-level-dropdown-
 
   clericSecondLevelSpellList.addEventListener('click', function() { 
     console.log('clicked show spells')
-    let spellContainer1 = document.querySelector('.cleric-second-level-spell-container');
+    let spellContainer1 = document.querySelector('.cleric-first-level-spell-container');
     let spellContainer2 = document.querySelector('.cleric-second-level-spell-container');
     let spellContainer3 = document.querySelector('.cleric-third-level-spell-container');
 
-    if ((spellContainer2) && (spellContainer2.classList.contains('show-cleric-second-level-spell-container'))) {
-      spellContainer2.classList.remove('show-cleric-second-level-spell-container');
+    if ((spellContainer1) && (spellContainer1.classList.contains('show-cleric-first-level-spell-container'))) {
+      spellContainer1.classList.remove('show-cleric-first-level-spell-container');
     }
 
-      if ((spellContainer2) && (spellContainer3.classList.contains('show-cleric-second-level-spell-container'))) {
-      spellContainer3.classList.remove('show-cleric-second-level-spell-container');
+    if ((spellContainer3) && (spellContainer3.classList.contains('show-cleric-third-level-spell-container'))) {
+      spellContainer3.classList.remove('show-cleric-third-level-spell-container');
     }
 
     spellContainer1.classList.toggle('show-cleric-second-level-spell-container');
