@@ -3940,6 +3940,8 @@ function populateClericSpells(m1, m2, nextChap) {
     spellContainer1.classList.toggle('show-cleric-second-level-spell-container');
   })
 
+//add third level spells
+
   addingSpellLevels.appendChild(thirdLevelSpellList);
 
   let clericThirdLevelSpellList = document.querySelector('.third-level-dropdown-list');
