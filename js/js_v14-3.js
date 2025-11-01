@@ -3760,10 +3760,7 @@ function populateClericSpells(m1, m2, nextChap) {
       );
 
       clericFirstLevelSpellDetails.appendChild(clericFirstLevelSpellSummary);
-
-      firstLevelSpellContainer.appendChild(clericFirstLevelSpellDetails);
-
-      
+      firstLevelSpellContainer.appendChild(clericFirstLevelSpellDetails);      
 
     } else if (characterFirstLevelSpells[i].useBattle === true) {
       spellList.push(characterFirstLevelSpells[i].name);
@@ -3808,9 +3805,7 @@ function populateClericSpells(m1, m2, nextChap) {
       }
 
       clericFirstLevelSpellDetails.appendChild(addMonster1Btn);
-
-      clericFirstLevelSpellDetails.appendChild(clericFirstLevelSpellSummary);
-      
+      clericFirstLevelSpellDetails.appendChild(clericFirstLevelSpellSummary);      
       firstLevelSpellContainer.appendChild(clericFirstLevelSpellDetails);
     }
   }
@@ -3876,10 +3871,7 @@ function populateClericSpells(m1, m2, nextChap) {
       );
 
       clericSecondLevelSpellDetails.appendChild(clericSecondLevelSpellSummary);
-
-      secondLevelSpellContainer.appendChild(clericSecondLevelSpellDetails);
-
-      
+      secondLevelSpellContainer.appendChild(clericSecondLevelSpellDetails);    
 
     } else if (characterSecondLevelSpells[i].useBattle === true) {
       spellList.push(characterSecondLevelSpells[i].name);
@@ -3924,14 +3916,10 @@ function populateClericSpells(m1, m2, nextChap) {
       }
 
       clericSecondLevelSpellDetails.appendChild(addMonster1Btn);
-
-      clericSecondLevelSpellDetails.appendChild(clericSecondLevelSpellSummary);
-      
+      clericSecondLevelSpellDetails.appendChild(clericSecondLevelSpellSummary);      
       secondLevelSpellContainer.appendChild(clericSecondLevelSpellDetails);
     }
   }
-
-  
 
   let clericSecondLevelSpellList = document.querySelector('.second-level-dropdown-list');
 
@@ -3951,9 +3939,6 @@ function populateClericSpells(m1, m2, nextChap) {
 
     spellContainer1.classList.toggle('show-cleric-second-level-spell-container');
   })
-
-
-
 
   addingSpellLevels.appendChild(thirdLevelSpellList);
 
@@ -3975,8 +3960,6 @@ function populateClericSpells(m1, m2, nextChap) {
 
     spellContainer1.classList.toggle('show-cleric-third-level-spell-container');
   })
-
-
 
   let spellShowButton = document.querySelector("#use-spells");
   spellShowButton.addEventListener("click", toggleShowSpellList, false);
