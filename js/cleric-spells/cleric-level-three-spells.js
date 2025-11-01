@@ -1,13 +1,17 @@
 
 export default class ClericLevelThreeSpells {
-    constructor (name, level, range, duration, effect, castingEffect, IDName) {
+     constructor (name, level, range, duration, effect, castingEffect, className, useBattle, damage, isAreaEffect, numberOfUses = 0) {
         this.name = name;
         this.level = level;
         this.range = range;
         this.duration = duration;
         this.effect = effect;
         this.castingEffect = castingEffect;
-        this.IDName = IDName;
+        this.className = className;
+        this.useBattle = useBattle;
+        this.damage = damage;
+        this.isAreaEffect = isAreaEffect;
+        this.numberOfUses = numberOfUses;
     }
 };
 

@@ -2,13 +2,18 @@
 export let clericLevelTwoSpells = [];
 
 export default class ClericLevelTwoSpells {
-    constructor (name, level, range, duration, effect, castingEffect) {
+     constructor (name, level, range, duration, effect, castingEffect, className, useBattle, damage, isAreaEffect, numberOfUses = 0) {
         this.name = name;
         this.level = level;
         this.range = range;
         this.duration = duration;
         this.effect = effect;
         this.castingEffect = castingEffect;
+        this.className = className;
+        this.useBattle = useBattle;
+        this.damage = damage;
+        this.isAreaEffect = isAreaEffect;
+        this.numberOfUses = numberOfUses;
     }
 };
 
