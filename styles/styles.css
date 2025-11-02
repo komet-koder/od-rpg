@@ -1848,7 +1848,9 @@ summary.character-statuses-summary {
   }
 
 
-  .cleric-first-level-spell-container {
+  .cleric-first-level-spell-container,
+  .cleric-second-level-spell-container,
+  .cleric-third-level-spell-container {
     display: none;
   }
 
@@ -1856,7 +1858,9 @@ summary.character-statuses-summary {
     
   }
 
-  .show-cleric-first-level-spell-container {
+  .show-cleric-first-level-spell-container,
+  .show-cleric-second-level-spell-container,
+  .show-cleric-third-level-spell-container {
     display: block;
     position: absolute;
     bottom: 215px;

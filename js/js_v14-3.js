@@ -3937,7 +3937,7 @@ function populateClericSpells(m1, m2, nextChap) {
       spellContainer3.classList.remove('show-cleric-third-level-spell-container');
     }
 
-    spellContainer1.classList.toggle('show-cleric-second-level-spell-container');
+    spellContainer2.classList.toggle('show-cleric-second-level-spell-container');
   })
 
 //add third level spells
@@ -4048,7 +4048,7 @@ function populateClericSpells(m1, m2, nextChap) {
       spellContainer2.classList.remove('show-cleric-second-level-spell-container');
     }
 
-    spellContainer1.classList.toggle('show-cleric-third-level-spell-container');
+    spellContainer3.classList.toggle('show-cleric-third-level-spell-container');
   })
 
   let spellShowButton = document.querySelector("#use-spells");
