@@ -3406,6 +3406,277 @@ function addingFightModule(monsterOne, monsterTwo, continueNextChapter) {
 }
 
 function populateMageSpells(m1, m2, nextChap) {
+  // let spellList = [];
+  // let characterFirstLevelSpells =
+  //   finalCharacter.specialty.characterLevel.specialtySkills[
+  //     "First Level Mage Spells"
+  //   ];
+  // let characterSecondLevelSpells =
+  //   finalCharacter.specialty.characterLevel.specialtySkills[
+  //     "Second Level Mage Spells"
+  //   ];
+  // let characterThirdLevelSpells =
+  //   finalCharacter.specialty.characterLevel.specialtySkills[
+  //     "Third Level Mage Spells"
+  //   ];
+
+  // //populating spell list div
+
+  // let firstLevelSpellList = document.createElement("li");
+  // firstLevelSpellList.classList.add("first-level-dropdown-list");
+
+  // let firstLevelSpellListContainer = document.createElement('div');
+  // firstLevelSpellListContainer.classList.add("first-level-spell-list-container");
+  
+  // firstLevelSpellList.textContent = 'First Level Spells';
+  // firstLevelSpellList.appendChild(firstLevelSpellListContainer);
+
+  // let secondLevelSpellList = document.createElement("li");
+  // secondLevelSpellList.classList.add("second-level-dropdown-list");
+  
+  // let secondLevelSpellListContainer = document.createElement('div');
+  // secondLevelSpellListContainer.classList.add("second-level-spell-list-container");
+  
+  // secondLevelSpellList.textContent = 'Second Level Spells';
+  // secondLevelSpellList.appendChild(secondLevelSpellListContainer);
+
+  // let thirdLevelSpellList = document.createElement("li");
+  // thirdLevelSpellList.classList.add("third-level-dropdown-list");
+
+  // let thirdLevelSpellListContainer = document.createElement('div');
+  // thirdLevelSpellListContainer.classList.add("third-level-spell-list-container");
+  // thirdLevelSpellList.textContent = "Third Level Spells";
+  // thirdLevelSpellList.appendChild(thirdLevelSpellListContainer);
+
+  // let addingSpellLevels = document.querySelector(".dropdown-spell-list-ul");
+  // addingSpellLevels.appendChild(firstLevelSpellList);
+
+  // for (let i = 0; i < characterFirstLevelSpells.length; i++) {
+  //   if (
+  //     characterFirstLevelSpells[i].useBattle === true &&
+  //     characterFirstLevelSpells[i].effect === "The mage only"
+  //   ) {
+  //     spellList.push(characterFirstLevelSpells[i].name);
+      
+  //     //add ul 
+  //     let spellLi = document.createElement("ul");
+  //     spellLi.classList.add(`spell-list-combat-${characterFirstLevelSpells[i].className}`);
+      
+  //     spellLi.textContent = characterFirstLevelSpells[i].name;
+
+  //     let targetButtonDiv = document.createElement('div');
+  //     targetButtonDiv.setAttribute('class', 'first-spell-target-div');
+
+  //     spellLi.appendChild(targetButtonDiv);
+  //     let addedSpellUl = document.querySelector(".first-level-spell-list-container");      
+  //     addedSpellUl.appendChild(spellLi);
+
+  //     let addSelf1Btn = document.createElement("li");
+  //     addSelf1Btn.classList.add("self-spell-list");
+  //     addSelf1Btn.innerText = "Self";
+      
+  //     targetButtonDiv.appendChild(addSelf1Btn);
+      
+  //     addSelf1Btn.addEventListener(
+  //       "click",
+  //       function (e) {
+  //         castSpellFromList(e, m1, m2, nextChap);
+  //       },
+  //       false
+  //     );
+  //   } else if (characterFirstLevelSpells[i].useBattle === true) {
+  //     spellList.push(characterFirstLevelSpells[i].name);
+  //     let spellLi = document.createElement("ul");
+  //     spellLi.classList.add(`spell-list-combat-${characterFirstLevelSpells[i].className}`);
+      
+  //     let targetButtonDiv = document.createElement('div');
+  //     targetButtonDiv.setAttribute('class', 'first-spell-target-div');
+
+  //     spellLi.textContent = characterFirstLevelSpells[i].name;
+
+  //     spellLi.appendChild(targetButtonDiv);
+      
+  //     let addedSpellUl = document.querySelector(".first-level-spell-list-container");
+  //     addedSpellUl.appendChild(spellLi);
+
+  //     let addMonster1Btn = document.createElement("li");
+  //     addMonster1Btn.classList.add("monster-one-spell-list");
+  //     addMonster1Btn.innerText = "Monster 1";
+      
+  //     targetButtonDiv.appendChild(addMonster1Btn);
+
+  //     let addMonster2Btn = document.createElement("li");
+  //     addMonster2Btn.classList.add("monster-two-spell-list");
+  //     addMonster2Btn.innerText = "Monster 2";
+  //     targetButtonDiv.appendChild(addMonster2Btn);
+      
+  //     addMonster1Btn.addEventListener(
+  //       "click",
+  //       function (e) {
+  //         castSpellFromList(e, m1, m2, nextChap);
+  //       },
+  //       false
+  //     );
+  //     addMonster2Btn.addEventListener(
+  //       "click",
+  //       function (e) {
+  //         castSpellFromList(e, m1, m2, nextChap);
+  //       },
+  //       false
+  //     );
+  //   }
+  // }
+
+  // addingSpellLevels.appendChild(secondLevelSpellList);
+
+  // for (let i = 0; i < characterSecondLevelSpells.length; i++) {
+  //   if (
+  //     characterSecondLevelSpells[i].useBattle === true &&
+  //     characterSecondLevelSpells[i].effect === "The mage only"
+  //   ) {
+  //     spellList.push(characterSecondLevelSpells[i].name);
+  //     let spellLi = document.createElement("ul");
+  //     spellLi.classList.add(`spell-list-combat-${characterSecondLevelSpells[i].className}`);
+      
+  //     spellLi.textContent = characterSecondLevelSpells[i].name;
+
+  //     let targetButtonDiv = document.createElement('div');
+  //     targetButtonDiv.setAttribute('class', 'second-spell-target-div');
+  //     spellLi.appendChild(targetButtonDiv);
+
+  //     let addedSpellUl = document.querySelector(".second-level-spell-list-container");
+  //     addedSpellUl.appendChild(spellLi);
+
+  //     let addSelf1Btn = document.createElement("li");
+  //     addSelf1Btn.classList.add("self-spell-list");
+  //     addSelf1Btn.innerText = "Self";
+  //     targetButtonDiv.appendChild(addSelf1Btn);
+
+  //     addSelf1Btn.addEventListener(
+  //       "click",
+  //       function (e) {
+  //         castSpellFromList(e, m1, m2, nextChap);
+  //       },
+  //       false
+  //     );
+  //   } else if (characterSecondLevelSpells[i].useBattle === true) {
+  //     spellList.push(characterSecondLevelSpells[i].name);
+  //     let spellLi2 = document.createElement("ul");
+  //     spellLi2.classList.add(`spell-list-combat-${characterSecondLevelSpells[i].className}`);
+      
+  //     spellLi2.textContent = characterSecondLevelSpells[i].name;
+
+  //     let targetButtonDiv = document.createElement('div');
+  //     targetButtonDiv.setAttribute('class', 'second-spell-target-div');
+  //     spellLi2.appendChild(targetButtonDiv);
+      
+  //     let addedSpellUl2 = document.querySelector(".second-level-spell-list-container");
+  //     addedSpellUl2.appendChild(spellLi2);
+
+  //     let addMonster1Btn = document.createElement("li");
+  //     addMonster1Btn.classList.add("monster-one-spell-list");
+  //     addMonster1Btn.innerText = "Monster 1";
+  //     targetButtonDiv.appendChild(addMonster1Btn);
+
+  //     let addMonster2Btn = document.createElement("li");
+  //     addMonster2Btn.classList.add("monster-two-spell-list");
+  //     addMonster2Btn.innerText = "Monster 2";      
+  //     targetButtonDiv.appendChild(addMonster2Btn);
+
+  //     addMonster1Btn.addEventListener(
+  //       "click",
+  //       function (e) {
+  //         castSpellFromList(e, m1, m2, nextChap);
+  //       },
+  //       false
+  //     );
+  //     addMonster2Btn.addEventListener(
+  //       "click",
+  //       function (e) {
+  //         castSpellFromList(e, m1, m2, nextChap);
+  //       },
+  //       false
+  //     );
+  //   }
+  // }
+
+  // addingSpellLevels.appendChild(thirdLevelSpellList);
+
+  // for (let i = 0; i < characterThirdLevelSpells.length; i++) {
+  //   if (
+  //     characterThirdLevelSpells[i].useBattle === true &&
+  //     characterThirdLevelSpells[i].effect === "The mage only"
+  //   ) {
+  //     spellList.push(characterThirdLevelSpells[i].name);
+  //     let spellLi = document.createElement("ul");
+  //     spellLi.classList.add(`spell-list-combat-${characterThirdLevelSpells[i].className}`);
+      
+  //     spellLi.textContent = characterThirdLevelSpells[i].name;
+
+  //    let targetButtonDiv = document.createElement('div');
+  //     targetButtonDiv.setAttribute('class', 'third-spell-target-div');
+  //     spellLi.appendChild(targetButtonDiv);
+
+  //     let addedSpellUl = document.querySelector(".third-level-spell-list-container");
+  //     addedSpellUl.appendChild(spellLi);
+
+  //     let addSelf1Btn = document.createElement("li");
+  //     addSelf1Btn.classList.add("self-spell-list");
+  //     addSelf1Btn.innerText = "Self";
+  //     targetButtonDiv.appendChild(addSelf1Btn);
+
+  //     addSelf1Btn.addEventListener(
+  //       "click",
+  //       function (e) {
+  //         castSpellFromList(e, m1, m2, nextChap);
+  //       },
+  //       false
+  //     );
+  //   } else if (characterThirdLevelSpells[i].useBattle === true) {
+  //     spellList.push(characterThirdLevelSpells[i].name);
+  //     let spellLi = document.createElement("ul");
+  //     spellLi.classList.add(`spell-list-combat-${characterThirdLevelSpells[i].className}`);
+      
+  //     spellLi.textContent = characterThirdLevelSpells[i].name;
+
+  //     let targetButtonDiv = document.createElement('div');
+  //     targetButtonDiv.setAttribute('class', 'third-spell-target-div');
+  //     spellLi.appendChild(targetButtonDiv);
+
+  //     let addedSpellUl = document.querySelector(".third-level-spell-list-container");
+  //     addedSpellUl.appendChild(spellLi);
+
+  //     let addMonster1Btn = document.createElement("li");
+  //     addMonster1Btn.classList.add("monster-one-spell-list");
+  //     addMonster1Btn.innerText = "Monster 1";
+  //     targetButtonDiv.appendChild(addMonster1Btn);
+
+  //     let addMonster2Btn = document.createElement("li");
+  //     addMonster2Btn.classList.add("monster-two-spell-list");
+  //     addMonster2Btn.innerText = "Monster 2";
+  //     targetButtonDiv.appendChild(addMonster2Btn);
+      
+  //     addMonster1Btn.addEventListener(
+  //       "click",
+  //       function (e) {
+  //         castSpellFromList(e, m1, m2, nextChap);
+  //       },
+  //       false
+  //     );
+  //     addMonster2Btn.addEventListener(
+  //       "click",
+  //       function (e) {
+  //         castSpellFromList(e, m1, m2, nextChap);
+  //       },
+  //       false
+  //     );
+  //   }
+  // }
+
+  // let spellShowButton = document.querySelector("#use-spells");
+  // spellShowButton.addEventListener("click", toggleShowSpellList, false);
+
+  // console.log(finalCharacter);
   let spellList = [];
   let characterFirstLevelSpells =
     finalCharacter.specialty.characterLevel.specialtySkills[
@@ -3420,25 +3691,19 @@ function populateMageSpells(m1, m2, nextChap) {
       "Third Level Mage Spells"
     ];
 
-  //populating spell list div
-
   let firstLevelSpellList = document.createElement("li");
   firstLevelSpellList.classList.add("first-level-dropdown-list");
 
   let firstLevelSpellListContainer = document.createElement('div');
-  firstLevelSpellListContainer.classList.add("first-level-spell-list-container");
-  
+  firstLevelSpellListContainer.classList.add("first-level-spell-list-container");  
   firstLevelSpellList.textContent = 'First Level Spells';
-  firstLevelSpellList.appendChild(firstLevelSpellListContainer);
 
   let secondLevelSpellList = document.createElement("li");
   secondLevelSpellList.classList.add("second-level-dropdown-list");
   
   let secondLevelSpellListContainer = document.createElement('div');
-  secondLevelSpellListContainer.classList.add("second-level-spell-list-container");
-  
+  secondLevelSpellListContainer.classList.add("second-level-spell-list-container");  
   secondLevelSpellList.textContent = 'Second Level Spells';
-  secondLevelSpellList.appendChild(secondLevelSpellListContainer);
 
   let thirdLevelSpellList = document.createElement("li");
   thirdLevelSpellList.classList.add("third-level-dropdown-list");
@@ -3446,237 +3711,362 @@ function populateMageSpells(m1, m2, nextChap) {
   let thirdLevelSpellListContainer = document.createElement('div');
   thirdLevelSpellListContainer.classList.add("third-level-spell-list-container");
   thirdLevelSpellList.textContent = "Third Level Spells";
-  thirdLevelSpellList.appendChild(thirdLevelSpellListContainer);
+
+  let fightModuleDiv = document.querySelector('#fight-module');
 
   let addingSpellLevels = document.querySelector(".dropdown-spell-list-ul");
   addingSpellLevels.appendChild(firstLevelSpellList);
 
+  //replicate for second and third level spells
+
+  let firstLevelSpellContainer = document.createElement('div');
+  firstLevelSpellContainer.setAttribute('class', 'mage-first-level-spell-container');
+  fightModuleDiv.appendChild(firstLevelSpellContainer);
+
   for (let i = 0; i < characterFirstLevelSpells.length; i++) {
     if (
       characterFirstLevelSpells[i].useBattle === true &&
-      characterFirstLevelSpells[i].effect === "The mage only"
+      characterFirstLevelSpells[i].effect === "The Mage only"
     ) {
       spellList.push(characterFirstLevelSpells[i].name);
       
-      //add ul 
-      let spellLi = document.createElement("ul");
-      spellLi.classList.add(`spell-list-combat-${characterFirstLevelSpells[i].className}`);
-      
-      spellLi.textContent = characterFirstLevelSpells[i].name;
+      let mageFirstLevelSpellDetails = document.createElement('details');
+      mageFirstLevelSpellDetails.setAttribute('class', 'mage-first-level-details');
+      mageFirstLevelSpellDetails.setAttribute('name', 'mage-spell-details-set');
+      mageFirstLevelSpellDetails.setAttribute('id', `mage-first-level-detail-${characterFirstLevelSpells[i].className}`);
 
-      let targetButtonDiv = document.createElement('div');
-      targetButtonDiv.setAttribute('class', 'first-spell-target-div');
-
-      spellLi.appendChild(targetButtonDiv);
-      let addedSpellUl = document.querySelector(".first-level-spell-list-container");      
-      addedSpellUl.appendChild(spellLi);
-
-      let addSelf1Btn = document.createElement("li");
-      addSelf1Btn.classList.add("self-spell-list");
-      addSelf1Btn.innerText = "Self";
+      let mageFirstLevelSpellSummary = document.createElement('summary');
+      mageFirstLevelSpellSummary.setAttribute('class', 'mage-first-level-summary');
+      mageFirstLevelSpellSummary.textContent = characterFirstLevelSpells[i].name;
       
-      targetButtonDiv.appendChild(addSelf1Btn);
-      
+      let addSelf1Btn = document.createElement("div");
+      addSelf1Btn.classList.add("mage-self-spell-list");
+      addSelf1Btn.setAttribute('id', `self-button-${characterFirstLevelSpells[i].className}`);
+      addSelf1Btn.textContent = "Self";
+
+      mageFirstLevelSpellDetails.appendChild(addSelf1Btn);
+
       addSelf1Btn.addEventListener(
         "click",
         function (e) {
+          let hideMageSpellContainer = document.querySelector('.mage-first-level-spell-container');
+          hideMageSpellContainer.classList.remove('show-mage-first-level-spell-container');
           castSpellFromList(e, m1, m2, nextChap);
         },
         false
       );
+
+      mageFirstLevelSpellDetails.appendChild(mageFirstLevelSpellSummary);
+      firstLevelSpellContainer.appendChild(mageFirstLevelSpellDetails);      
+
     } else if (characterFirstLevelSpells[i].useBattle === true) {
       spellList.push(characterFirstLevelSpells[i].name);
-      let spellLi = document.createElement("ul");
-      spellLi.classList.add(`spell-list-combat-${characterFirstLevelSpells[i].className}`);
       
-      let targetButtonDiv = document.createElement('div');
-      targetButtonDiv.setAttribute('class', 'first-spell-target-div');
-
-      spellLi.textContent = characterFirstLevelSpells[i].name;
-
-      spellLi.appendChild(targetButtonDiv);
+      let mageFirstLevelSpellDetails = document.createElement('details');
+      mageFirstLevelSpellDetails.setAttribute('class', 'mage-first-level-details');
+      mageFirstLevelSpellDetails.setAttribute('name', 'mage-spell-details-set');
+      mageFirstLevelSpellDetails.setAttribute('id', `mage-first-level-detail-${characterFirstLevelSpells[i].className}`);
       
-      let addedSpellUl = document.querySelector(".first-level-spell-list-container");
-      addedSpellUl.appendChild(spellLi);
-
-      let addMonster1Btn = document.createElement("li");
-      addMonster1Btn.classList.add("monster-one-spell-list");
-      addMonster1Btn.innerText = "Monster 1";
       
-      targetButtonDiv.appendChild(addMonster1Btn);
+      let mageFirstLevelSpellSummary = document.createElement('summary');
+      mageFirstLevelSpellSummary.setAttribute('class', 'mage-first-level-summary');
+      mageFirstLevelSpellSummary.textContent = characterFirstLevelSpells[i].name;
 
-      let addMonster2Btn = document.createElement("li");
-      addMonster2Btn.classList.add("monster-two-spell-list");
-      addMonster2Btn.innerText = "Monster 2";
-      targetButtonDiv.appendChild(addMonster2Btn);
-      
+      let addMonster1Btn = document.createElement("div");
+      addMonster1Btn.classList.add("mage-monster-one-spell-list");
+      addMonster1Btn.setAttribute('id', `monster-one-button-${characterFirstLevelSpells[i].className}`)
+      addMonster1Btn.textContent = "Monster 1";
       addMonster1Btn.addEventListener(
         "click",
         function (e) {
+          let hideMageSpellContainer = document.querySelector('.mage-first-level-spell-container');
+          hideMageSpellContainer.classList.remove('show-mage-first-level-spell-container');
           castSpellFromList(e, m1, m2, nextChap);
         },
         false
       );
-      addMonster2Btn.addEventListener(
+      
+      if ((m2.name !== " ") || (m2.healthPoints > 0)) {
+        let addMonster2Btn = document.createElement("div");
+        addMonster2Btn.classList.add("mage-monster-two-spell-list");
+        addMonster2Btn.textContent = "Monster 2";
+        addMonster2Btn.addEventListener(
         "click",
         function (e) {
+          let hideMageSpellContainer = document.querySelector('.mage-first-level-spell-container');
+          hideMageSpellContainer.classList.remove('show-mage-first-level-spell-container');          
           castSpellFromList(e, m1, m2, nextChap);
         },
         false
       );
+      }
+
+      mageFirstLevelSpellDetails.appendChild(addMonster1Btn);
+      mageFirstLevelSpellDetails.appendChild(mageFirstLevelSpellSummary);      
+      firstLevelSpellContainer.appendChild(mageFirstLevelSpellDetails);
     }
   }
 
+  let mageFirstLevelSpellList = document.querySelector('.first-level-dropdown-list');
+
+  mageFirstLevelSpellList.addEventListener('click', function() { 
+    console.log('clicked show spells')
+    let spellContainer1 = document.querySelector('.mage-first-level-spell-container');
+    let spellContainer2 = document.querySelector('.mage-second-level-spell-container');
+    let spellContainer3 = document.querySelector('.mage-third-level-spell-container');
+
+    if ((spellContainer2) && (spellContainer2.classList.contains('show-mage-second-level-spell-container'))) {
+      spellContainer2.classList.remove('show-mage-second-level-spell-container');
+    }
+
+      if ((spellContainer3) && (spellContainer3.classList.contains('show-mage-third-level-spell-container'))) {
+      spellContainer3.classList.remove('show-mage-third-level-spell-container');
+    }
+
+    spellContainer1.classList.toggle('show-mage-first-level-spell-container');
+  })
+
   addingSpellLevels.appendChild(secondLevelSpellList);
+    
+//replicate for second and third level spells
+
+  let secondLevelSpellContainer = document.createElement('div');
+  secondLevelSpellContainer.setAttribute('class', 'mage-second-level-spell-container');
+  fightModuleDiv.appendChild(secondLevelSpellContainer);
 
   for (let i = 0; i < characterSecondLevelSpells.length; i++) {
     if (
       characterSecondLevelSpells[i].useBattle === true &&
-      characterSecondLevelSpells[i].effect === "The mage only"
+      characterSecondLevelSpells[i].effect === "The Mage only"
     ) {
       spellList.push(characterSecondLevelSpells[i].name);
-      let spellLi = document.createElement("ul");
-      spellLi.classList.add(`spell-list-combat-${characterSecondLevelSpells[i].className}`);
       
-      spellLi.textContent = characterSecondLevelSpells[i].name;
+      let mageSecondLevelSpellDetails = document.createElement('details');
+      mageSecondLevelSpellDetails.setAttribute('class', 'mage-second-level-details');
+      mageSecondLevelSpellDetails.setAttribute('name', 'mage-spell-details-set');
+      mageSecondLevelSpellDetails.setAttribute('id', `mage-second-level-detail-${characterSecondLevelSpells[i].className}`);
 
-      let targetButtonDiv = document.createElement('div');
-      targetButtonDiv.setAttribute('class', 'second-spell-target-div');
-      spellLi.appendChild(targetButtonDiv);
+      let mageSecondLevelSpellSummary = document.createElement('summary');
+      mageSecondLevelSpellSummary.setAttribute('class', 'mage-second-level-summary');
+      mageSecondLevelSpellSummary.textContent = characterSecondLevelSpells[i].name;
+      
+      let addSelf1Btn = document.createElement("div");
+      addSelf1Btn.classList.add("mage-self-spell-list");
+      addSelf1Btn.setAttribute('id', `self-button-${characterSecondLevelSpells[i].className}`);
+      addSelf1Btn.textContent = "Self";
 
-      let addedSpellUl = document.querySelector(".second-level-spell-list-container");
-      addedSpellUl.appendChild(spellLi);
-
-      let addSelf1Btn = document.createElement("li");
-      addSelf1Btn.classList.add("self-spell-list");
-      addSelf1Btn.innerText = "Self";
-      targetButtonDiv.appendChild(addSelf1Btn);
+      mageSecondLevelSpellDetails.appendChild(addSelf1Btn);
 
       addSelf1Btn.addEventListener(
         "click",
         function (e) {
+          let hideMageSpellContainer = document.querySelector('.mage-second-level-spell-container');
+          hideMageSpellContainer.classList.remove('show-mage-second-level-spell-container');
           castSpellFromList(e, m1, m2, nextChap);
         },
         false
       );
+
+      mageSecondLevelSpellDetails.appendChild(mageSecondLevelSpellSummary);
+      secondLevelSpellContainer.appendChild(mageSecondLevelSpellDetails);    
+
     } else if (characterSecondLevelSpells[i].useBattle === true) {
       spellList.push(characterSecondLevelSpells[i].name);
-      let spellLi2 = document.createElement("ul");
-      spellLi2.classList.add(`spell-list-combat-${characterSecondLevelSpells[i].className}`);
       
-      spellLi2.textContent = characterSecondLevelSpells[i].name;
-
-      let targetButtonDiv = document.createElement('div');
-      targetButtonDiv.setAttribute('class', 'second-spell-target-div');
-      spellLi2.appendChild(targetButtonDiv);
+      let mageSecondLevelSpellDetails = document.createElement('details');
+      mageSecondLevelSpellDetails.setAttribute('class', 'mage-second-level-details');
+      mageSecondLevelSpellDetails.setAttribute('name', 'mage-spell-details-set');
+      mageSecondLevelSpellDetails.setAttribute('id', `mage-second-level-detail-${characterSecondLevelSpells[i].className}`);
       
-      let addedSpellUl2 = document.querySelector(".second-level-spell-list-container");
-      addedSpellUl2.appendChild(spellLi2);
+      
+      let mageSecondLevelSpellSummary = document.createElement('summary');
+      mageSecondLevelSpellSummary.setAttribute('class', 'mage-second-level-summary');
+      mageSecondLevelSpellSummary.textContent = characterSecondLevelSpells[i].name;
 
-      let addMonster1Btn = document.createElement("li");
-      addMonster1Btn.classList.add("monster-one-spell-list");
-      addMonster1Btn.innerText = "Monster 1";
-      targetButtonDiv.appendChild(addMonster1Btn);
-
-      let addMonster2Btn = document.createElement("li");
-      addMonster2Btn.classList.add("monster-two-spell-list");
-      addMonster2Btn.innerText = "Monster 2";      
-      targetButtonDiv.appendChild(addMonster2Btn);
-
+      let addMonster1Btn = document.createElement("div");
+      addMonster1Btn.classList.add("mage-monster-one-spell-list");
+      addMonster1Btn.setAttribute('id', `monster-one-button-${characterSecondLevelSpells[i].className}`)
+      addMonster1Btn.textContent = "Monster 1";
       addMonster1Btn.addEventListener(
         "click",
         function (e) {
+          let hideMageSpellContainer = document.querySelector('.mage-second-level-spell-container');
+          hideMageSpellContainer.classList.remove('show-mage-second-level-spell-container');
           castSpellFromList(e, m1, m2, nextChap);
         },
         false
       );
-      addMonster2Btn.addEventListener(
+      
+      if ((m2.name !== " ") || (m2.healthPoints > 0)) {
+        let addMonster2Btn = document.createElement("div");
+        addMonster2Btn.classList.add("mage-monster-two-spell-list");
+        addMonster2Btn.textContent = "Monster 2";
+        addMonster2Btn.addEventListener(
         "click",
         function (e) {
+          let hideMageSpellContainer = document.querySelector('.mage-second-level-spell-container');
+          hideMageSpellContainer.classList.remove('show-mage-second-level-spell-container');          
           castSpellFromList(e, m1, m2, nextChap);
         },
         false
       );
+      }
+
+      mageSecondLevelSpellDetails.appendChild(addMonster1Btn);
+      mageSecondLevelSpellDetails.appendChild(mageSecondLevelSpellSummary);      
+      secondLevelSpellContainer.appendChild(mageSecondLevelSpellDetails);
     }
   }
 
+  let mageSecondLevelSpellList = document.querySelector('.second-level-dropdown-list');
+
+  mageSecondLevelSpellList.addEventListener('click', function() { 
+    console.log('clicked show spells')
+    let spellContainer1 = document.querySelector('.mage-first-level-spell-container');
+    let spellContainer2 = document.querySelector('.mage-second-level-spell-container');
+    let spellContainer3 = document.querySelector('.mage-third-level-spell-container');
+
+    if ((spellContainer1) && (spellContainer1.classList.contains('show-mage-first-level-spell-container'))) {
+      spellContainer1.classList.remove('show-mage-first-level-spell-container');
+    }
+
+    if ((spellContainer3) && (spellContainer3.classList.contains('show-mage-third-level-spell-container'))) {
+      spellContainer3.classList.remove('show-mage-third-level-spell-container');
+    }
+
+    spellContainer2.classList.toggle('show-mage-second-level-spell-container');
+  })
+
+//add third level spells
+
   addingSpellLevels.appendChild(thirdLevelSpellList);
+
+  let thirdLevelSpellContainer = document.createElement('div');
+  thirdLevelSpellContainer.setAttribute('class', 'mage-third-level-spell-container');
+  fightModuleDiv.appendChild(thirdLevelSpellContainer);
 
   for (let i = 0; i < characterThirdLevelSpells.length; i++) {
     if (
       characterThirdLevelSpells[i].useBattle === true &&
-      characterThirdLevelSpells[i].effect === "The mage only"
+      characterThirdLevelSpells[i].effect === "The Mage only"
     ) {
       spellList.push(characterThirdLevelSpells[i].name);
-      let spellLi = document.createElement("ul");
-      spellLi.classList.add(`spell-list-combat-${characterThirdLevelSpells[i].className}`);
       
-      spellLi.textContent = characterThirdLevelSpells[i].name;
+      let mageThirdLevelSpellDetails = document.createElement('details');
+      mageThirdLevelSpellDetails.setAttribute('class', 'mage-third-level-details');
+      mageThirdLevelSpellDetails.setAttribute('name', 'mage-spell-details-set');
+      mageThirdLevelSpellDetails.setAttribute('id', `mage-third-level-detail-${characterThirdLevelSpells[i].className}`);
 
-     let targetButtonDiv = document.createElement('div');
-      targetButtonDiv.setAttribute('class', 'third-spell-target-div');
-      spellLi.appendChild(targetButtonDiv);
+      let mageThirdLevelSpellSummary = document.createElement('summary');
+      mageThirdLevelSpellSummary.setAttribute('class', 'mage-third-level-summary');
+      mageThirdLevelSpellSummary.textContent = characterThirdLevelSpells[i].name;
+      
+      let addSelf1Btn = document.createElement("div");
+      addSelf1Btn.classList.add("mage-self-spell-list");
+      addSelf1Btn.setAttribute('id', `self-button-${characterThirdLevelSpells[i].className}`);
+      addSelf1Btn.textContent = "Self";
 
-      let addedSpellUl = document.querySelector(".third-level-spell-list-container");
-      addedSpellUl.appendChild(spellLi);
-
-      let addSelf1Btn = document.createElement("li");
-      addSelf1Btn.classList.add("self-spell-list");
-      addSelf1Btn.innerText = "Self";
-      targetButtonDiv.appendChild(addSelf1Btn);
+      mageThirdLevelSpellDetails.appendChild(addSelf1Btn);
 
       addSelf1Btn.addEventListener(
         "click",
         function (e) {
+          let hideMageSpellContainer = document.querySelector('.mage-third-level-spell-container');
+          hideMageSpellContainer.classList.remove('show-mage-third-level-spell-container');
           castSpellFromList(e, m1, m2, nextChap);
         },
         false
       );
+
+      mageThirdLevelSpellDetails.appendChild(mageThirdLevelSpellSummary);
+      thirdLevelSpellContainer.appendChild(mageThirdLevelSpellDetails);    
+
     } else if (characterThirdLevelSpells[i].useBattle === true) {
       spellList.push(characterThirdLevelSpells[i].name);
-      let spellLi = document.createElement("ul");
-      spellLi.classList.add(`spell-list-combat-${characterThirdLevelSpells[i].className}`);
       
-      spellLi.textContent = characterThirdLevelSpells[i].name;
-
-      let targetButtonDiv = document.createElement('div');
-      targetButtonDiv.setAttribute('class', 'third-spell-target-div');
-      spellLi.appendChild(targetButtonDiv);
-
-      let addedSpellUl = document.querySelector(".third-level-spell-list-container");
-      addedSpellUl.appendChild(spellLi);
-
-      let addMonster1Btn = document.createElement("li");
-      addMonster1Btn.classList.add("monster-one-spell-list");
-      addMonster1Btn.innerText = "Monster 1";
-      targetButtonDiv.appendChild(addMonster1Btn);
-
-      let addMonster2Btn = document.createElement("li");
-      addMonster2Btn.classList.add("monster-two-spell-list");
-      addMonster2Btn.innerText = "Monster 2";
-      targetButtonDiv.appendChild(addMonster2Btn);
+      let mageThirdLevelSpellDetails = document.createElement('details');
+      mageThirdLevelSpellDetails.setAttribute('class', 'mage-third-level-details');
+      mageThirdLevelSpellDetails.setAttribute('name', 'mage-spell-details-set');
+      mageThirdLevelSpellDetails.setAttribute('id', `mage-third-level-detail-${characterThirdLevelSpells[i].className}`);
       
+      
+      let mageThirdLevelSpellSummary = document.createElement('summary');
+      mageThirdLevelSpellSummary.setAttribute('class', 'mage-third-level-summary');
+      mageThirdLevelSpellSummary.textContent = characterThirdLevelSpells[i].name;
+
+      let addMonster1Btn = document.createElement("div");
+      addMonster1Btn.classList.add("mage-monster-one-spell-list");
+      addMonster1Btn.setAttribute('id', `monster-one-button-${characterThirdLevelSpells[i].className}`)
+      addMonster1Btn.textContent = "Monster 1";
       addMonster1Btn.addEventListener(
         "click",
         function (e) {
+          let hideMageSpellContainer = document.querySelector('.mage-third-level-spell-container');
+          hideMageSpellContainer.classList.remove('show-mage-third-level-spell-container');
           castSpellFromList(e, m1, m2, nextChap);
         },
         false
       );
-      addMonster2Btn.addEventListener(
+      
+      if ((m2.name !== " ") || (m2.healthPoints > 0)) {
+        let addMonster2Btn = document.createElement("div");
+        addMonster2Btn.classList.add("mage-monster-two-spell-list");
+        addMonster2Btn.textContent = "Monster 2";
+        addMonster2Btn.addEventListener(
         "click",
         function (e) {
+          let hideMageSpellContainer = document.querySelector('.mage-third-level-spell-container');
+          hideMageSpellContainer.classList.remove('show-mage-third-level-spell-container');          
           castSpellFromList(e, m1, m2, nextChap);
         },
         false
       );
+      }
+
+      mageThirdLevelSpellDetails.appendChild(addMonster1Btn);
+      mageThirdLevelSpellDetails.appendChild(mageThirdLevelSpellSummary);      
+      thirdLevelSpellContainer.appendChild(mageThirdLevelSpellDetails);
     }
   }
 
-  let spellShowButton = document.querySelector("#use-spells");
-  spellShowButton.addEventListener("click", toggleShowSpellList, false);
+  let mageThirdLevelSpellList = document.querySelector('.third-level-dropdown-list');
 
-  console.log(finalCharacter);
+  mageThirdLevelSpellList.addEventListener('click', function() { 
+    console.log('clicked show spells')
+    let spellContainer1 = document.querySelector('.mage-first-level-spell-container');
+    let spellContainer2 = document.querySelector('.mage-second-level-spell-container');
+    let spellContainer3 = document.querySelector('.mage-third-level-spell-container');
+
+    if ((spellContainer1) && (spellContainer1.classList.contains('show-mage-first-level-spell-container'))) {
+      spellContainer1.classList.remove('show-mage-first-level-spell-container');
+    }
+
+    if ((spellContainer2) && (spellContainer2.classList.contains('show-mage-second-level-spell-container'))) {
+      spellContainer2.classList.remove('show-mage-second-level-spell-container');
+    }
+
+    spellContainer3.classList.toggle('show-mage-third-level-spell-container');
+  })
+
+  let spellShowButton = document.querySelector("#use-spells");
+  spellShowButton.addEventListener("click", function() {
+    toggleShowSpellList();
+    let spellContainer1 = document.querySelector('.mage-first-level-spell-container');
+    let spellContainer2 = document.querySelector('.mage-second-level-spell-container');
+    let spellContainer3 = document.querySelector('.mage-third-level-spell-container');
+
+    if ((spellContainer1) && (spellContainer1.classList.contains('show-mage-first-level-spell-container'))) {
+      spellContainer1.classList.remove('show-mage-first-level-spell-container');
+    }
+
+    if ((spellContainer2) && (spellContainer2.classList.contains('show-mage-second-level-spell-container'))) {
+      spellContainer2.classList.remove('show-mage-second-level-spell-container');
+    }
+
+     if ((spellContainer3) && (spellContainer3.classList.contains('show-mage-third-level-spell-container'))) {
+      spellContainer3.classList.remove('show-mage-third-level-spell-container');
+    }
+  }, false);
 }
 
 function populateClericSpells(m1, m2, nextChap) {
