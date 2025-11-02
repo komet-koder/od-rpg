@@ -469,8 +469,9 @@ input[name="selected-specialty"] {
     /* visibility: hidden; */
     padding-right: 5px;
     padding-left: 5px;
+    width: 100%;
     
-    grid-area: emptySpace;
+    grid-area: name;
   }
 
   #char-armor {
@@ -482,12 +483,15 @@ input[name="selected-specialty"] {
   #char-weapon {
     grid-area: weapon;
     padding-left: 5px;
+    width: 100%;
 
   }
 
   #char-level {
     padding-left: 5px;
     grid-area: level;
+    width: 100%;
+
   }
 
   #char-specialty {
@@ -1041,7 +1045,7 @@ summary.character-statuses-summary {
   div.char-stats-module {
     width: 100%;
     display: grid;
-    grid-template-areas:  "emptySpace emptySpace"    
+    grid-template-areas:  "name emptySpace"    
                           "level specialty"
                           "weapon armor";    
     column-gap: 10px;
