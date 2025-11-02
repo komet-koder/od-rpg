@@ -1641,9 +1641,9 @@ summary.character-statuses-summary {
     margin-bottom: 0px;
   }
 
-  .attack-monster-one {
+  /* .attack-monster-one {
     grid-area: 1 / 1 / 1 / 2;
-  }
+  } */
 
 .area-attack,
 .item-enchantment,
@@ -1674,28 +1674,28 @@ summary.character-statuses-summary {
 
   input[type="submit"].attack-monster-one {
     font-size: 1.25em;
-    grid-area: 1 / 1 / 1 / 2;
+    grid-area: 1 / 4 / 1 / 5;
     width: 90%;
     align-self: end;
   }
 
  input[type="submit"].attack-monster-two {
     font-size: 1.25em;
-    grid-area: 1 / 2 / 1 / 3;
+    grid-area: 1 / 1 / 1 / 2;
     width: 90%;
     align-self: end;
   }
 
    input[type="submit"].item-enchantment {
     font-size: 1.25em;
-    grid-area: 1 / 3 / 1 / 4;
+    grid-area: 1 / 2 / 1 / 3;
     width: 90%;
     align-self: end;
   }
 
    input[type="submit"].attack-spell {
     font-size: 1.25em;
-    grid-area: 1 / 4 / 1 / 5;
+    grid-area: 1 / 3 / 1 / 4;
     width: 90%;
     align-self: end;
   }
@@ -1734,6 +1734,7 @@ summary.character-statuses-summary {
   #monster-two {
     width: 100%;
     height: 100%;    
+    padding: 5px;
   }
 
   .monster-info-module {
@@ -1747,6 +1748,7 @@ summary.character-statuses-summary {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 33% 33% 33%;
+    padding: 5px;
     
   }
 
