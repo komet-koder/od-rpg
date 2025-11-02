@@ -356,7 +356,7 @@ export default class Monster {
             let updatedMonsterHP2 = document.querySelector("#monster-two-hp");
 
             updatedMonsterHP2.innerHTML = `
-              <h4 id="monster-two-hp">Hit Points: ${otherMonster.healthPoints}<progress class='monster-hp-prog-bar' max="${otherMonster.startingHealthPoints}" value="${otherMonster.healthPoints}"></progress></h4> 
+              <h4 id="monster-two-hp">Hit Points: ${otherMonster.healthPoints}<progress class='monster-hp-prog-bar'  id="monster-two-hp-progress-bar" max="${otherMonster.startingHealthPoints}" value="${otherMonster.healthPoints}"></progress></h4> 
               `;
             // let clearDialogue = document.querySelector("#fight-module-dialogue");
             // clearDialogue.textContent = ``;
@@ -367,7 +367,7 @@ export default class Monster {
             let updatedMonsterHP1 = document.querySelector("#monster-one-hp");
 
             updatedMonsterHP1.innerHTML = `
-              <h4 id="monster-one-hp">Hit Points: ${otherMonster.healthPoints}<progress class='monster-hp-prog-bar' max="${otherMonster.startingHealthPoints}" value="${otherMonster.healthPoints}"></progress></h4> 
+              <h4 id="monster-one-hp">Hit Points: ${otherMonster.healthPoints}<progress class='monster-hp-prog-bar'  id="monster-one-hp-progress-bar" max="${otherMonster.startingHealthPoints}" value="${otherMonster.healthPoints}"></progress></h4> 
               `;
             // let clearDialogue = document.querySelector("#fight-module-dialogue");
             // clearDialogue.textContent = ``;
@@ -385,7 +385,7 @@ export default class Monster {
       let updatedMonsterHP2 = document.querySelector("#monster-two-hp");
 
       updatedMonsterHP2.innerHTML = `
-        <h4 id="monster-two-hp">Hit Points: ${otherMonster.healthPoints}<progress class='monster-hp-prog-bar' max="${otherMonster.startingHealthPoints}" value="${otherMonster.healthPoints}"></progress></h4> 
+        <h4 id="monster-two-hp">Hit Points: ${otherMonster.healthPoints}<progress class='monster-hp-prog-bar'  id="monster-two-hp-progress-bar" max="${otherMonster.startingHealthPoints}" value="${otherMonster.healthPoints}"></progress></h4> 
         `;
       // let clearDialogue = document.querySelector("#fight-module-dialogue");
       // clearDialogue.textContent = ``;
@@ -398,7 +398,7 @@ export default class Monster {
       let updatedMonsterHP1 = document.querySelector("#monster-one-hp");
 
       updatedMonsterHP1.innerHTML = `
-        <h4 id="monster-one-hp">Hit Points: ${otherMonster.healthPoints}<progress class='monster-hp-prog-bar' max="${otherMonster.startingHealthPoints}" value="${otherMonster.healthPoints}"></progress></h4> 
+        <h4 id="monster-one-hp">Hit Points: ${otherMonster.healthPoints}<progress class='monster-hp-prog-bar'  id="monster-one-hp-progress-bar" max="${otherMonster.startingHealthPoints}" value="${otherMonster.healthPoints}"></progress></h4> 
         `;
       // let clearDialogue = document.querySelector("#fight-module-dialogue");
       // clearDialogue.textContent = ``;
