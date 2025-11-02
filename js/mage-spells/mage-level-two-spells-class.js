@@ -32,7 +32,7 @@ let continualLight = new MageLevelTwoSpells("Continual Light", 2, 120, 999, "Vol
 let detectEvil = new MageLevelTwoSpells("Detect Evil", 2, 60, 2, "Everything within 60 feet", function () { console.log('Casting'); }, "detect-evil", false, 0, true);
 
 //completed
-let invisibility = new MageLevelTwoSpells("Invisibility", 2, 240, 999, "The mage only", function () { console.log('Casting'); }, "invisibility", true, 0, false);
+let invisibility = new MageLevelTwoSpells("Invisibility", 2, 240, 999, "The Mage only", function () { console.log('Casting'); }, "invisibility", true, 0, false);
 
 
 let esp = new MageLevelTwoSpells("ESP", 2, 60, 12, "All thoughts in one direction", function () { console.log('Casting'); }, "esp", false, 0, false);
@@ -41,13 +41,13 @@ let esp = new MageLevelTwoSpells("ESP", 2, 60, 12, "All thoughts in one directio
 let knock = new MageLevelTwoSpells("Knock", 2, 60, 1, "One lock or bar", function () { console.log('Casting'); }, "knock", false, 0, false);
 
 
-let levitate = new MageLevelTwoSpells("Levitate", 2, 0, 6, "The mage only", function () { console.log('Casting'); }, "levitate", false, 0, false);
+let levitate = new MageLevelTwoSpells("Levitate", 2, 0, 6, "The Mage only", function () { console.log('Casting'); }, "levitate", false, 0, false);
 
 
 let locateObject = new MageLevelTwoSpells("Locate Object", 2, 60, 2, "One object within range", function () { console.log('Casting'); }, "locate-object", false, 0, true);
 
 //completed
-let mirrorImage = new MageLevelTwoSpells("Mirror Image", 2, 0, 6, "The mage only", function () { console.log('Casting'); }, "mirror-image", true, 0, false);
+let mirrorImage = new MageLevelTwoSpells("Mirror Image", 2, 0, 6, "The Mage only", function () { console.log('Casting'); }, "mirror-image", true, 0, false);
 
 //battle spell
 let phantasmalForce = new MageLevelTwoSpells("Phantasmal Force", 2, 999, 12, "20 foot volume", function () { console.log('Casting'); }, "phantasmal-force", true, 0, true);

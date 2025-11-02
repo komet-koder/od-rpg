@@ -4509,7 +4509,11 @@ function castSpellFromList(e, m1, m2, nextChap) {
 
     //NEED TO ITERATE THROUGH THE 'NAME' PROPERTY AND MATCH THE PARENTNODEINNERTEXT TO LINK TO ASSOCIATED SPELL
     for (let i = 0; i < firstLevel.length; i++) {
-      if (firstLevel[i].name === parentNodeInnerText) {
+      // 
+      let firstSibling = document.querySelector(`#${e.target.id}`);
+      let secondSiblng = firstSibling.nextSibling.textContent;
+      if (firstLevel[i].name === secondSiblng) {
+        console.log("spell names match");
         if (finalCharacter.status.includes("Invisible")) {
 
           modalConfig = {
@@ -4615,12 +4619,8 @@ function castSpellFromList(e, m1, m2, nextChap) {
       ];
 
     for (let i = 0; i < firstLevel.length; i++) {
-      console.log(e.target.id);
-      // console.log(e.target.nextSibling);
-      // let spellTextContent = document.querySelector
       let firstSibling = document.querySelector(`#${e.target.id}`);
       let secondSiblng = firstSibling.nextSibling.textContent;
-      console.log(secondSiblng);
       if (firstLevel[i].name === secondSiblng) {
         console.log("spell names match");
         if (finalCharacter.status.includes("Invisible")) {

@@ -47,12 +47,12 @@ let light = new MageLevelOneSpells("Light", 1, 120, 6, "Volume of 30 feet diamet
 let magicMissile = new MageLevelOneSpells("Magic Missile", 1, 150, 0.1, "Creates one or more arrows", function () { console.log('casting') }, "magic-missile", true, 8, false);
 
 //comleted protection from evil
-let protectionFromEvil = new MageLevelOneSpells("Protection from Evil", 1, 0, 6, "The mage only", function () { console.log('casting') }, "protection-from-evil", true, 0, false);
+let protectionFromEvil = new MageLevelOneSpells("Protection from Evil", 1, 0, 6, "The Mage only", function () { console.log('casting') }, "protection-from-evil", true, 0, false);
 
-let readLanguages = new MageLevelOneSpells("Read Languages", 1, 0, 2, "The mage only", function () { console.log('casting') }, "read-languages", false, 0, false);
+let readLanguages = new MageLevelOneSpells("Read Languages", 1, 0, 2, "The Mage only", function () { console.log('casting') }, "read-languages", false, 0, false);
 
 //completed shield
-let shield = new MageLevelOneSpells("Shield", 1, 0, 2, "The mage only", function () { console.log('casting') }, "shield", true, 0, false);
+let shield = new MageLevelOneSpells("Shield", 1, 0, 2, "The Mage only", function () { console.log('casting') }, "shield", true, 0, false);
 
 //completed sleep
 let sleep = new MageLevelOneSpells("Sleep", 1, 240, [4, 16], "2-16 Hit Dice of leaving creatures within a 40 foot square area", function () { console.log('casting') }, "sleep", true, 0, true);
@@ -60,7 +60,7 @@ let sleep = new MageLevelOneSpells("Sleep", 1, 240, [4, 16], "2-16 Hit Dice of l
 //completed ventriloquism
 let ventriloquism = new MageLevelOneSpells("Ventriloquism", 1, 60, 2, "One item or location", function () { console.log('casting') }, "ventriloquism", true, 0, false);
 
-let readMagic = new MageLevelOneSpells("Read Magic", 1, 0, 0, "The mage only", function () { console.log('casting') }, "read-magic", false, 0, false);
+let readMagic = new MageLevelOneSpells("Read Magic", 1, 0, 0, "The Mage only", function () { console.log('casting') }, "read-magic", false, 0, false);
 
 //CREATING METHODS TO INDIVIDUAL SPELLS AND NOT TO THE ENTIRE SPELL PROTOTYPE
 

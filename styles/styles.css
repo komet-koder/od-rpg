@@ -1854,8 +1854,10 @@ summary.character-statuses-summary {
     display: none;
   }
 
-  .cleric-first-level-spell-container {
-    
+  .mage-first-level-spell-container,
+  .mage-second-level-spell-container,
+  .mage-third-level-spell-container {
+    display: none;
   }
 
   .show-cleric-first-level-spell-container,
@@ -1871,6 +1873,18 @@ summary.character-statuses-summary {
     padding: 5px;
   }
   
+  .show-mage-first-level-spell-container,
+  .show-mage-second-level-spell-container,
+  .show-mage-third-level-spell-container {
+    display: block;
+    position: absolute;
+    bottom: 215px;
+    left: calc(50% - (120px));
+    background-color: white;
+    width: 240px;
+    border-radius: 5px;
+    padding: 5px;
+  }
 
   div.first-level-spell-list-container {
     position: absolute;
