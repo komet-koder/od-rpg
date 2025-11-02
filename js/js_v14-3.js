@@ -4273,7 +4273,9 @@ function castSpellFromList(e, m1, m2, nextChap) {
     }
 
     for (let i = 0; i < secondLevel.length; i++) {
-      if (secondLevel[i].name === parentNodeInnerText) {
+      let firstSibling = document.querySelector(`#${e.target.id}`);
+      let secondSiblng = firstSibling.nextSibling.textContent;
+      if (secondLevel[i].name === secondSiblng) {
         if (finalCharacter.status.includes("Invisible")) {
 
 
@@ -4305,7 +4307,9 @@ function castSpellFromList(e, m1, m2, nextChap) {
     }
 
     for (let i = 0; i < thirdLevel.length; i++) {
-      if (thirdLevel[i].name === parentNodeInnerText) {
+      let firstSibling = document.querySelector(`#${e.target.id}`);
+      let secondSiblng = firstSibling.nextSibling.textContent;
+      if (secondSiblng && (thirdLevel[i].name === secondSiblng)) {
         if (finalCharacter.status.includes("Invisible")) {
 
           modalConfig = {
