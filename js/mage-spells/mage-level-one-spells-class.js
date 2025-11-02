@@ -84,12 +84,15 @@ ventriloquism.castSpell = function (monster1, monster2, continueNextChapter, att
 
         if ((attackedMonster === "Monster 1" && monster1.status.includes("Charmed")) || (attackedMonster === "Monster 1" && monster1.status.includes("Sleep")))
         {
+            let dialogue = document.querySelector('#fight-module.dialogue');
             dialogue.innerHTML = `<p>You cast Ventriloquism, but nothing happens.</p>`;
             toggleShowSpellList();
             finalCharacter.greyOutAttackButtons(monster1, monster2);
 
         } else if ((attackedMonster === "Monster 2" && monster2.status.includes("Charmed")) || (attackedMonster === "Monster 2" && monster2.status.includes("Sleep")))
         {
+            let dialogue = document.querySelector('#fight-module.dialogue');
+
             dialogue.innerHTML = `<p>You cast Ventriloquism, but nothing happens.</p>`;
             toggleShowSpellList();
             finalCharacter.greyOutAttackButtons(monster1, monster2);
@@ -102,8 +105,9 @@ ventriloquism.castSpell = function (monster1, monster2, continueNextChapter, att
                 finalCharacter.weaponAttackMonster1(monster1, monster2, finalCharacter.weapon, continueNextChapter, 2, 2)
             } else
             {
-                dialogue.innerHTML = `<p>You cast Ventriloquism, and cause a distraction and the ${monster1.name} is caught offguard, but you decide not to attack</p>`;
-                finalCharacter.greyOutAttackButtons(monster1, monster2);
+              let dialogue = document.querySelector('#fight-module.dialogue');
+              dialogue.innerHTML = `<p>You cast Ventriloquism, and cause a distraction and the ${monster1.name} is caught offguard, but you decide not to attack</p>`;
+              finalCharacter.greyOutAttackButtons(monster1, monster2);
             }
 
         } else if ((attackedMonster === "Monster 2") && (monster2.healthPoints > 0))
@@ -114,12 +118,14 @@ ventriloquism.castSpell = function (monster1, monster2, continueNextChapter, att
                 finalCharacter.weaponAttackMonster2(monster1, monster2, finalCharacter.weapon, continueNextChapter, 2, 2)
             } else
             {
-                dialogue.innerHTML = `<p>You cast Ventriloquism, and cause a distraction and the ${monster2.name} is caught offguard, but you decide not to attack</p>`;
-                finalCharacter.greyOutAttackButtons(monster1, monster2);
+              let dialogue = document.querySelector('#fight-module.dialogue');
+              dialogue.innerHTML = `<p>You cast Ventriloquism, and cause a distraction and the ${monster2.name} is caught offguard, but you decide not to attack</p>`;
+              finalCharacter.greyOutAttackButtons(monster1, monster2);
             }
         } else
         {
-            dialogue.innerHTML = `<p>You cast Ventriloquism, but nothing happens.</p>`;
+          let dialogue = document.querySelector('#fight-module.dialogue');
+          dialogue.innerHTML = `<p>You cast Ventriloquism, but nothing happens.</p>`;
         }
     }
 }
@@ -170,8 +176,7 @@ light.castSpell = function (monster1, monster2, continueNextChapter, attackedMon
         {
             dialogue.innerHTML += `<p>${monster1.name} has been blinded.</p>`;
             monster1.status.push('Blind');
-            let monster1Status = document.querySelector("#monster-one-status");
-            monster1Status.innerHTML = `<h4 id="monster-one-status">Status: ${monster1.status.join(', ')}</h4>`
+           
 
             //need to make variable, push to an array, and then call the function expression
 
@@ -182,18 +187,34 @@ light.castSpell = function (monster1, monster2, continueNextChapter, attackedMon
                 // monster1.status.splice(removeBlindM1); //removing Blind after function call
                 monster1.status.splice(monster1.status.indexOf("Blind"), 1);
 
-                let updateM1Status = document.querySelector("#monster-one");
-                updateM1Status.innerHTML = `
-                <div class="monster" id="monster-one">
-                    <fieldset class='monster-info-module'>
-                        <legend class='monster-dashboard'>Monster 1</legend>
-                        <h4 id="monster-one-type">Monster Type: ${monster1.name}</h4>
-                        <h4 id="monster-one-hp">Hit Points: ${monster1.healthPoints}<progress class='monster-hp-prog-bar' max="${monster1.startingHealthPoints}" value="${monster1.healthPoints}"></progress></h4> 
-                        <h4 id="monster-one-ap">Armor Class: ${monster1.armorClass}</h4>
-                        <h4 id="monster-one-damage">Damage: ${monster1.damage}</h4>
-                        <h4 id="monster-one-status">Status: ${monster1.status}</h4>
-                    </fieldset>   
-                </div>`;
+                // let updateM1Status = document.querySelector("#monster-one");
+                // updateM1Status.innerHTML = `
+                // <div class="monster" id="monster-one">
+                //     <fieldset class='monster-info-module'>
+                //         <legend class='monster-dashboard'>Monster 1</legend>
+                //         <h4 id="monster-one-type">Monster Type: ${monster1.name}</h4>
+                //         <h4 id="monster-one-hp">Hit Points: ${monster1.healthPoints}<progress class='monster-hp-prog-bar' max="${monster1.startingHealthPoints}" value="${monster1.healthPoints}"></progress></h4> 
+                //         <h4 id="monster-one-ap">Armor Class: ${monster1.armorClass}</h4>
+                //         <h4 id="monster-one-damage">Damage: ${monster1.damage}</h4>
+                //         <h4 id="monster-one-status">Status: ${monster1.status}</h4>
+                //     </fieldset>   
+                // </div>`;
+
+                let monsterOneHP = document.querySelector('#monster-one-hp');
+                monsterOneHP.innerHTML = `Hit Points: ${monster1.healthPoints}`;
+
+                let monsterOneHPProgress = document.querySelector('#monster-one-hp');
+                monsterOneHPProgress.setAttribute('value', `${monster1.healthPoints}`); 
+
+                let monsterOneAP = document.querySelector('#monster-one-ap');
+                monsterOneAP.innerHTML = `Armor Class: ${monster1.armorClass}`;
+
+                let monsterOneDamage = document.querySelector('#monster-one-damage');
+                monsterOneDamage.innerHTML = `Damage: ${monster1.damage}`;
+
+                let monster1Status = document.querySelector("#monster-one-status");
+                monster1Status.innerHTML = `Status: ${monster1.status.join(', ')}`;
+
                 console.log('Blind removed m1')
             }, 30000);
 
