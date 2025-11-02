@@ -432,7 +432,7 @@ protectionFromEvil.castSpell = function (monster1, monster2, continueNextChapter
                         <fieldset class='monster-info-module'>
                             <legend class='monster-dashboard'>Monster 2</legend>
                             <h4 id="monster-two-type">Monster Type: ${monster2.name}</h4>
-                            <h4 id="monster-two-hp">Hit Points: ${monster2.healthPoints}<progress class='monster-hp-prog-bar' max="${monster2.startingHealthPoints}" value="${monster2.healthPoints}"></progress></h4> 
+                            <h4 id="monster-two-hp">Hit Points: ${monster2.healthPoints}<progress class='monster-hp-prog-bar'  id="monster-two-hp-progress-bar" max="${monster2.startingHealthPoints}" value="${monster2.healthPoints}"></progress></h4> 
                             <h4 id="monster-two-ap">Armor Class: ${monster2.armorClass}</h4>
                             <h4 id="monster-two-damage">Damage: ${monster2.damage}</h4>
                             <h4 id="monster-two-status">Status: ${monster2.status.join(', ')}</h4>
@@ -465,7 +465,7 @@ protectionFromEvil.castSpell = function (monster1, monster2, continueNextChapter
                     <fieldset class='monster-info-module'>
                         <legend class='monster-dashboard'>Monster 1</legend>
                         <h4 id="monster-one-type">Monster Type: ${monster1.name}</h4>
-                        <h4 id="monster-one-hp">Hit Points: ${monster1.healthPoints}<progress class='monster-hp-prog-bar' max="${monster1.startingHealthPoints}" value="${monster1.healthPoints}"></progress></h4> 
+                        <h4 id="monster-one-hp">Hit Points: ${monster1.healthPoints}<progress class='monster-hp-prog-bar'  id="monster-one-hp-progress-bar" max="${monster1.startingHealthPoints}" value="${monster1.healthPoints}"></progress></h4> 
                         <h4 id="monster-one-ap">Armor Class: ${monster1.armorClass}</h4>
                         <h4 id="monster-one-damage">Damage: ${monster1.damage}</h4>
                         <h4 id="monster-one-status">Status: ${monster1.status.join(', ')}</h4>
@@ -542,7 +542,7 @@ charmPerson.castSpell = function (monster1, monster2, continueNextChapter, attac
                     <fieldset class='monster-info-module'>
                         <legend class='monster-dashboard'>Monster 1</legend>
                         <h4 id="monster-one-type">Monster Type: ${monster1.name}</h4>
-                        <h4 id="monster-one-hp">Hit Points: ${monster1.healthPoints}<progress class='monster-hp-prog-bar' max="${monster1.startingHealthPoints}" value="${monster1.healthPoints}"></progress></h4> 
+                        <h4 id="monster-one-hp">Hit Points: ${monster1.healthPoints}<progress class='monster-hp-prog-bar'  id="monster-one-hp-progress-bar" max="${monster1.startingHealthPoints}" value="${monster1.healthPoints}"></progress></h4> 
                         <h4 id="monster-one-ap">Armor Class: ${monster1.armorClass}</h4>
                         <h4 id="monster-one-damage">Damage: ${monster1.damage}</h4>
                         <h4 id="monster-one-status">Status: ${monster1.status}</h4>
@@ -574,7 +574,7 @@ charmPerson.castSpell = function (monster1, monster2, continueNextChapter, attac
                     <fieldset class='monster-info-module'>
                         <legend class='monster-dashboard'>Monster 1</legend>
                         <h4 id="monster-two-type">Monster Type: ${monster2.name}</h4>
-                        <h4 id="monster-two-hp">Hit Points: ${monster2.healthPoints}<progress class='monster-hp-prog-bar' max="${monster2.startingHealthPoints}" value="${monster2.healthPoints}"></progress></h4> 
+                        <h4 id="monster-two-hp">Hit Points: ${monster2.healthPoints}<progress class='monster-hp-prog-bar'  id="monster-two-hp-progress-bar" max="${monster2.startingHealthPoints}" value="${monster2.healthPoints}"></progress></h4> 
                         <h4 id="monster-two-ap">Armor Class: ${monster2.armorClass}</h4>
                         <h4 id="monster-two-damage">Damage: ${monster2.damage}</h4>
                         <h4 id="monster-two-status">Status: ${monster2.status}</h4>
@@ -635,7 +635,7 @@ sleep.castSpell = function (monster1, monster2, continueNextChapter, attackedMon
                     <fieldset class='monster-info-module'>
                         <legend class='monster-dashboard'>Monster 1</legend>
                         <h4 id="monster-one-type">Monster Type: ${monster1.name}</h4>
-                        <h4 id="monster-one-hp">Hit Points: ${monster1.healthPoints}<progress class='monster-hp-prog-bar' max="${monster1.startingHealthPoints}" value="${monster1.healthPoints}"></progress></h4> 
+                        <h4 id="monster-one-hp">Hit Points: ${monster1.healthPoints}<progress class='monster-hp-prog-bar'  id="monster-one-hp-progress-bar" max="${monster1.startingHealthPoints}" value="${monster1.healthPoints}"></progress></h4> 
                         <h4 id="monster-one-ap">Armor Class: ${monster1.armorClass}</h4>
                         <h4 id="monster-one-damage">Damage: ${monster1.damage}</h4>
                         <h4 id="monster-one-status">Status: ${monster1.status}</h4>
@@ -675,7 +675,7 @@ sleep.castSpell = function (monster1, monster2, continueNextChapter, attackedMon
                     <fieldset class='monster-info-module'>
                         <legend class='monster-dashboard'>Monster 2</legend>
                         <h4 id="monster-two-type">Monster Type: ${monster2.name}</h4>
-                        <h4 id="monster-two-hp">Hit Points: ${monster2.healthPoints}<progress class='monster-hp-prog-bar' max="${monster2.startingHealthPoints}" value="${monster2.healthPoints}"></progress></h4> 
+                        <h4 id="monster-two-hp">Hit Points: ${monster2.healthPoints}<progress class='monster-hp-prog-bar'  id="monster-two-hp-progress-bar" max="${monster2.startingHealthPoints}" value="${monster2.healthPoints}"></progress></h4> 
                         <h4 id="monster-two-ap">Armor Class: ${monster2.armorClass}</h4>
                         <h4 id="monster-two-damage">Damage: ${monster2.damage}</h4>
                         <h4 id="monster-two-status">Status: ${monster2.status}</h4>
