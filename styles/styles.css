@@ -1703,7 +1703,7 @@ summary.character-statuses-summary {
   #monster-attack {    
     position: relative;
     border: 0px solid var(--btn-bg);  
-    border-radius: 5px;
+    border-radius: 15px;
     width: 100%;
     margin-bottom: 0px;
     background-color: rgb(224, 193, 193);
