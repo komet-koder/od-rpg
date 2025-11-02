@@ -4242,7 +4242,7 @@ function castSpellFromList(e, m1, m2, nextChap) {
       // 
       let firstSibling = document.querySelector(`#${e.target.id}`);
       let secondSiblng = firstSibling.nextSibling.textContent;
-      if (firstLevel[i].name === secondSiblng) {
+      if (secondSiblng && (firstLevel[i].name === secondSiblng)) {
         console.log("spell names match");
         if (finalCharacter.status.includes("Invisible")) {
 
@@ -4275,7 +4275,7 @@ function castSpellFromList(e, m1, m2, nextChap) {
     for (let i = 0; i < secondLevel.length; i++) {
       let firstSibling = document.querySelector(`#${e.target.id}`);
       let secondSiblng = firstSibling.nextSibling.textContent;
-      if (secondLevel[i].name === secondSiblng) {
+      if (secondSiblng && (secondLevel[i].name === secondSiblng)) {
         if (finalCharacter.status.includes("Invisible")) {
 
 
