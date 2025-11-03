@@ -440,7 +440,7 @@ export default class Character {
               </div> 
             <div id="monster-one-ap">Armor Class: ${monsterOne.armorClass}</div>
             <div id="monster-one-damage">Damage: ${monsterOne.damage}</div>
-            <div id ="monster-one-status-heading>Status</div>
+            <div id="monster-one-status-heading">Status</div>
             <div id="monster-one-status">${monsterOne.status}</div>           
             <div id="canvas-area-monster-one">                  
               <canvas id="canvas-monster-one" height="200" width="200"></canvas>
@@ -600,7 +600,7 @@ export default class Character {
               </div> 
             <div id="monster-one-ap">Armor Class: ${monster1.armorClass}</div>
             <div id="monster-one-damage">Damage: ${monster1.damage}</div>
-            <div id ="monster-one-status-heading>Status</div>
+            <div id="monster-one-status-heading">Status</div>
             <div id="monster-one-status">${monster1.status}</div>           
             <div id="canvas-area-monster-one">                  
               <canvas id="canvas-monster-one" height="200" width="200"></canvas>
@@ -1023,7 +1023,7 @@ export default class Character {
               </div> 
             <div id="monster-one-ap">Armor Class: ${monster1.armorClass}</div>
             <div id="monster-one-damage">Damage: ${monster1.damage}</div>
-            <div id ="monster-one-status-heading>Status</div>
+            <div id="monster-one-status-heading">Status</div>
             <div id="monster-one-status">${monster1.status}</div>           
             <div id="canvas-area-monster-one">                  
               <canvas id="canvas-monster-one" height="200" width="200"></canvas>

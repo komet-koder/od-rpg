@@ -1715,10 +1715,16 @@ summary.character-statuses-summary {
     bottom: 50px;    
   }
 
- /* input[type="submit"].attack-monster-two.show-attack-melee-buttons,
-  input[type="submit"].attack-monster-two.show-attack-melee-buttons {
+  /* #attack-monster-one-button, 
+  #attack-monster-two-button {
     display: block;
   } */
+
+  #attack-monster-one-button.show-attack-melee-buttons,
+  #attack-monster-two-button.show-attack-melee-buttons 
+   {
+    display: block;
+  }
 
    input[type="submit"].item-enchantment {
     font-size: 1.25em;
@@ -2221,6 +2227,10 @@ summary.character-statuses-summary {
     background-color: grey;
   }
 
+  #attack-melee.no-display {
+    display: none;
+  }
+  
   .no-display {
     display: none;
   }

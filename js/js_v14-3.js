@@ -3257,11 +3257,11 @@ function addingFightModule(monsterOne, monsterTwo, continueNextChapter) {
   dialogueDiv.appendChild(fightModuleContainer);
   headerFightModule.innerHTML = `
     <div class="attack-buttons">
-        <button class"attack fight-module-button" id="attack-melee">Attack</button>
+        <button class"attack fight-module-button" id="attack-melee" class="attack">Attack</button>
         <input type="submit" id="attack-monster-one-button" class="attack attack-monster-one fight-module-button" value="Attack">
         <input type="submit" id="attack-monster-two-button" class="attack attack-monster-two fight-module-button" value="Attack2">
         <input type="submit" id="select-item-button" class="attack item-enchantment fight-module-button" value="Items"> 
-        <input type="submit" id="select-spells-button" class="attack-spell spell2-monster-one fight-module-button" value="Spells" id="use-spells">
+        <input type="submit" class="attack-spell spell2-monster-one fight-module-button" value="Spells" id="use-spells">
             <ul class='dropdown-spell-list-ul'>
             </ul>
         
@@ -3277,16 +3277,29 @@ function addingFightModule(monsterOne, monsterTwo, continueNextChapter) {
   attackMelee.addEventListener(
     'click',
     function () {
-      let attackMonsterOneButton = document.querySelector('.attack-monster-one');
-      attackMonsterOneButton.classList.add('.show-attack-melee-buttons')
+      console.log('select attack-melee');
+      let attackMonsterOneButton = document.querySelector('#attack-monster-one-button');
+      attackMonsterOneButton.classList.toggle('show-attack-melee-buttons');
+      let attackMonsterTwoButton = document.querySelector('#attack-monster-two-button');
+      attackMonsterTwoButton.classList.toggle('show-attack-melee-buttons');
+  
     },
     false
   )
 
-  let attackMonsterOne = document.querySelector(".attack-monster-one");
+  let attackMonsterOne = document.querySelector("#attack-monster-one-button");
   attackMonsterOne.addEventListener(
     "click",
     function () {
+      console.log('attack monster one');
+      let attackMonsterOneButton = document.querySelector('#attack-monster-one-button');
+      attackMonsterOneButton.classList.toggle('show-attack-melee-buttons');
+      let attackMonsterTwoButton = document.querySelector('#attack-monster-two-button');
+      attackMonsterTwoButton.classList.toggle('show-attack-melee-buttons');
+      let attackMonstersButton = document.querySelector('#attack-melee');
+      if (!attackMonstersButton.classList.contains('no-display')) {
+        attackMonstersButton.classList.add('no-display');
+      };
       animate();
       finalCharacter.weaponAttackMonster1(
         monsterOne,
@@ -3298,10 +3311,19 @@ function addingFightModule(monsterOne, monsterTwo, continueNextChapter) {
     false
   );
 
-  let attackMonsterTwo = document.querySelector(".attack-monster-two");
+  let attackMonsterTwo = document.querySelector("#attack-monster-two-button");
   attackMonsterTwo.addEventListener(
     "click",
     function () {
+      console.log('attack monster 2');
+      let attackMonsterOneButton = document.querySelector('#attack-monster-one-button');
+      attackMonsterOneButton.classList.toggle('show-attack-melee-buttons');
+      let attackMonsterTwoButton = document.querySelector('#attack-monster-two-button');
+      attackMonsterTwoButton.classList.toggle('show-attack-melee-buttons');
+      let attackMonstersButton = document.querySelector('#attack-melee');
+      if (!attackMonstersButton.classList.contains('no-display')) {
+        attackMonstersButton.classList.add('no-display');
+      };
       animate();
       finalCharacter.weaponAttackMonster2(
         monsterOne,
