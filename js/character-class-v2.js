@@ -1266,7 +1266,7 @@ export default class Character {
       `;
 
     let monster1Status = document.querySelector("#monster-one-status");
-    monster1Status.innerHTML = `${monster2.status.join(
+    monster1Status.textContent = `${monster1.status.join(
       ", "
     )}`;
 

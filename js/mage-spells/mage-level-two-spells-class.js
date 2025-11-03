@@ -103,15 +103,19 @@ continualLight.castSpell = function (monster1, monster2, continueNextChapter, at
                 monster1.status.splice(removeBlindM1); //removing Blind after function call
                 let updateM1Status = document.querySelector("#monster-one");
                 updateM1Status.innerHTML = `
-                <div class="monster" id="monster-one">
-                    <fieldset class='monster-info-module'>
-                        <legend class='monster-dashboard'>Monster 1</legend>
-                        <h4 id="monster-one-type">Monster Type: ${monster1.name}</h4>
-                        <h4 id="monster-one-hp">Hit Points: ${monster1.healthPoints}<progress class='monster-hp-prog-bar'  id="monster-one-hp-progress-bar" max="${monster1.startingHealthPoints}" value="${monster1.healthPoints}"></progress></h4> 
-                        <h4 id="monster-one-ap">Armor Class: ${monster1.armorClass}</h4>
-                        <h4 id="monster-one-damage">Damage: ${monster1.damage}</h4>
-                        <h4 id="monster-one-status">Status: ${monster1.status}</h4>
-                    </fieldset>   
+                <div class='monster-info-module'>
+                    <div id="monster-one-hp">
+                        <div>Hit Points</div>
+                        <progress class='monster-hp-prog-bar'  id="monster-one-hp-progress-bar" max="${monster1.startingHealthPoints}" value="${monster1.healthPoints}"></progress>
+                        <div>${monster1.healthPoints}</div>
+                    </div> 
+                        <div id="monster-one-ap">Armor Class: ${monster1.armorClass}</div>
+                        <div id="monster-one-damage">Damage: ${monster1.damage}</div>
+                        <div id="monster-one-status-heading">Status</div>
+                        <div id="monster-one-status">${monster1.status}</div>           
+                    <div id="canvas-area-monster-one">                  
+                        <canvas id="canvas-monster-one" height="200" width="200"></canvas>
+                    </div>
                 </div>`;
                 console.log('Blind removed m1')
             }, 60000);
@@ -420,9 +424,12 @@ web.castSpell = function (monster1, monster2, continueNextChapter, attackedMonst
 
         if ((monster1.healthPoints > 0 && isWebbedM1 === false))
         {
+            let dialogue = document.querySelector('#fight-module-dialogue');
+
             dialogue.textContent += `${monster1.name} is stuck in the web.`;
             monster1.status.push('Web');
             let monster1Status = document.querySelector("#monster-one-status");
+            console.log(monster1Status);
             monster1Status.textContent = `${monster1.status.join(', ')}`
 
             //need to make variable, push to an array, and then call the function expression
@@ -460,6 +467,8 @@ web.castSpell = function (monster1, monster2, continueNextChapter, attackedMonst
 
         if ((monster2.healthPoints > 0 && isWebbedM2 === false))
         {
+            let dialogue = document.querySelector('#fight-module-dialogue');
+
             dialogue.textContent += `${monster2.name} is stuck in the web.`;
             monster2.status.push('Web');
             let monster2Status = document.querySelector("#monster-two-status");
