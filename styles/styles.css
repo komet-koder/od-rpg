@@ -1650,18 +1650,18 @@ summary.character-statuses-summary {
     grid-area: 1 / 1 / 1 / 2;
   } */
 
-.area-attack,
-.item-enchantment,
-.attack-monster-one,
-.attack-monster-two,
-.spell2-monster-one,
-.spell2-monster-two,
-.spell1-heal,
-#attack-melee {
-  width: 200px;
-  border-radius: 5px;
-  background-color: rgb(193, 224, 193);  
-}
+  .area-attack,
+  .item-enchantment,
+  .attack-monster-one,
+  .attack-monster-two,
+  .spell2-monster-one,
+  .spell2-monster-two,
+  .spell1-heal,
+  #attack-melee {
+    width: 200px;
+    border-radius: 5px;
+    background-color: rgb(193, 224, 193);  
+  }
 
   .fight-module-button {
     position: relative;

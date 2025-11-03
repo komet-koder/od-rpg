@@ -3258,10 +3258,10 @@ function addingFightModule(monsterOne, monsterTwo, continueNextChapter) {
   headerFightModule.innerHTML = `
     <div class="attack-buttons">
         <button class"attack fight-module-button" id="attack-melee">Attack</button>
-        <input type="submit" class="attack attack-monster-one fight-module-button" value="Attack">
-        <input type="submit" class="attack attack-monster-two fight-module-button" value="Attack2">
-        <input type="submit" class="attack item-enchantment fight-module-button" value="Items"> 
-        <input type="submit" class="attack-spell spell2-monster-one fight-module-button" value="Spells" id="use-spells">
+        <input type="submit" id="attack-monster-one-button" class="attack attack-monster-one fight-module-button" value="Attack">
+        <input type="submit" id="attack-monster-two-button" class="attack attack-monster-two fight-module-button" value="Attack2">
+        <input type="submit" id="select-item-button" class="attack item-enchantment fight-module-button" value="Items"> 
+        <input type="submit" id="select-spells-button" class="attack-spell spell2-monster-one fight-module-button" value="Spells" id="use-spells">
             <ul class='dropdown-spell-list-ul'>
             </ul>
         
