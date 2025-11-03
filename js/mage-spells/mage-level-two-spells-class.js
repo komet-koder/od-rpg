@@ -66,7 +66,6 @@ continualLight.castSpell = function (monster1, monster2, continueNextChapter, at
     let dialogue = document.querySelector('#fight-module-dialogue');
     if (this.numberOfUses <= 0)
     {
-        let dialogue = document.querySelector('#fight-module-dialogue');
         dialogue.textContent = `You try to cast Continual Light, but the words won't come to your mind.`;
         toggleShowSpellList();
 
@@ -81,7 +80,6 @@ continualLight.castSpell = function (monster1, monster2, continueNextChapter, at
         toggleShowSpellList();
 
         finalCharacter.greyOutAttackButtons(monster1, monster2);
-        let dialogue = document.querySelector('#fight-module-dialogue');
         dialogue.textContent = `You cast Continual Light, which which affects a 60 foot area.`;
 
         let isBlindedM1 = monster1.status.some((x) => x === "Blind");
@@ -91,7 +89,6 @@ continualLight.castSpell = function (monster1, monster2, continueNextChapter, at
 
         if ((attackedMonster === "Monster 1" && monster1.healthPoints > 0 && isBlindedM1 === false) || (attackedMonster === "Monster 1" && (monster1.healthPoints > 0 && isBlindedM1 === false)))
         {
-            let dialogue = document.querySelector('#fight-module-dialogue');
             dialogue.textContent += `${monster1.name} has been blinded.`;
             monster1.status.push('Blind');
             let monster1Status = document.querySelector("#monster-one-status");
@@ -127,7 +124,6 @@ continualLight.castSpell = function (monster1, monster2, continueNextChapter, at
 
         } else if ((attackedMonster === "Monster 2" && monster2.healthPoints > 0 && isBlindedM2 === false) || (attackedMonster === "Monster 2" && (monster2.healthPoints > 0 && isBlindedM2 === false)))
         {
-            let dialogue = document.querySelector('#fight-module-dialogue');
             dialogue.textContent += `${monster2.name} is blinded.`;
             monster2.status.push('Blind');
             let monster2Status = document.querySelector("#monster-two-status");
@@ -157,11 +153,9 @@ continualLight.castSpell = function (monster1, monster2, continueNextChapter, at
 
         } else if (attackedMonster === "Monster 2")
         {
-            let dialogue = document.querySelector('#fight-module-dialogue');
             dialogue.textContent += `${monster2.name} was not affected.`;
         } else if (attackedMonster === "Monster 1")
         {
-            let dialogue = document.querySelector('#fight-module-dialogue');
             dialogue.textContent += `${monster1.name} was not affected.`;
         }
     }
@@ -198,7 +192,6 @@ invisibility.castSpell = function (monster1, monster2, continueNextChapter, atta
         toggleShowSpellList();
 
         finalCharacter.greyOutAttackButtons(monster1, monster2);
-        let dialogue = document.querySelector('#fight-module-dialogue');
         dialogue.textContent = `You cast Invisibility, which makes you invisible.`;
 
         finalCharacter.status.push("Invisible");
@@ -262,7 +255,6 @@ mirrorImage.castSpell = function (monster1, monster2, continueNextChapter, attac
     console.log('Casting Mirror Image');
     if (this.numberOfUses <= 0)
     {
-        let dialogue = document.querySelector('#fight-module-dialogue');
         dialogue.textContent = `You try to cast Mirror Image, but the words won't come to your mind.`;
         toggleShowSpellList();
 
@@ -277,7 +269,6 @@ mirrorImage.castSpell = function (monster1, monster2, continueNextChapter, attac
         toggleShowSpellList();
         finalCharacter.mirrorImages = Math.ceil(Math.random(1) * 4);
         finalCharacter.greyOutAttackButtons(monster1, monster2, finalCharacter.mirrorImages);
-        let dialogue = document.querySelector('#fight-module-dialogue');
         dialogue.textContent = `You cast Mirror Image, which which created ${finalCharacter.mirrorImages} more image(s) of you.`;
 
 
@@ -333,7 +324,6 @@ phantasmalForce.castSpell = function (monster1, monster2, continueNextChapter, a
     console.log('Casting Phantasmal Force')
     if (this.numberOfUses <= 0)
     {
-        let dialogue = document.querySelector('#fight-module-dialogue');
         dialogue.textContent = `You try to cast Phantasmal Force, but the words won't come to your mind.`;
         toggleShowSpellList();
 
@@ -393,7 +383,6 @@ phantasmalForce.castSpell = function (monster1, monster2, continueNextChapter, a
         toggleShowSpellList();
 
         finalCharacter.greyOutAttackButtons(monster1, monster2);
-        let dialogue = document.querySelector('#fight-module-dialogue');
         dialogue.textContent = `You cast Phantasmal Force and create a Troll to attack the monsters.`;
     }
 }
@@ -410,7 +399,6 @@ web.castSpell = function (monster1, monster2, continueNextChapter, attackedMonst
 
     if (this.numberOfUses <= 0)
     {
-        let dialogue = document.querySelector('#fight-module-dialogue');
         dialogue.textContent = `You try to cast Web, but the words won't come to your mind.`;
         toggleShowSpellList();
 
@@ -434,8 +422,6 @@ web.castSpell = function (monster1, monster2, continueNextChapter, attackedMonst
 
         if ((monster1.healthPoints > 0 && isWebbedM1 === false))
         {
-            let dialogue = document.querySelector('#fight-module-dialogue');
-
             dialogue.textContent += `${monster1.name} is stuck in the web.`;
             monster1.status.push('Web');
             let monster1Status = document.querySelector("#monster-one-status");
@@ -477,8 +463,6 @@ web.castSpell = function (monster1, monster2, continueNextChapter, attackedMonst
 
         if ((monster2.healthPoints > 0 && isWebbedM2 === false))
         {
-            let dialogue = document.querySelector('#fight-module-dialogue');
-
             dialogue.textContent += `${monster2.name} is stuck in the web.`;
             monster2.status.push('Web');
             let monster2Status = document.querySelector("#monster-two-status");

@@ -71,7 +71,6 @@ ventriloquism.castSpell = function (monster1, monster2, continueNextChapter, att
     console.log(attackedMonster, attackedMonster.status)
     if (this.numberOfUses <= 0)
     {
-        let dialogue = document.querySelector('#fight-module-dialogue');
         dialogue.innerHTML = `<p>You try to cast Ventriloquism, but the words won't come to your mind.</p>`;
         toggleShowSpellList();
     } else
@@ -85,15 +84,12 @@ ventriloquism.castSpell = function (monster1, monster2, continueNextChapter, att
 
         if ((attackedMonster === "Monster 1" && monster1.status.includes("Charmed")) || (attackedMonster === "Monster 1" && monster1.status.includes("Sleep")))
         {
-            let dialogue = document.querySelector('#fight-module.dialogue');
             dialogue.innerHTML = `<p>You cast Ventriloquism, but nothing happens.</p>`;
             toggleShowSpellList();
             finalCharacter.greyOutAttackButtons(monster1, monster2);
 
         } else if ((attackedMonster === "Monster 2" && monster2.status.includes("Charmed")) || (attackedMonster === "Monster 2" && monster2.status.includes("Sleep")))
         {
-            let dialogue = document.querySelector('#fight-module.dialogue');
-
             dialogue.innerHTML = `<p>You cast Ventriloquism, but nothing happens.</p>`;
             toggleShowSpellList();
             finalCharacter.greyOutAttackButtons(monster1, monster2);
@@ -106,7 +102,6 @@ ventriloquism.castSpell = function (monster1, monster2, continueNextChapter, att
                 finalCharacter.weaponAttackMonster1(monster1, monster2, finalCharacter.weapon, continueNextChapter, 2, 2);
             } else
             {
-              let dialogue = document.querySelector('#fight-module.dialogue');
               dialogue.innerHTML = `<p>You cast Ventriloquism, and cause a distraction and the ${monster1.name} is caught offguard, but you decide not to attack</p>`;
               finalCharacter.greyOutAttackButtons(monster1, monster2);
             }
@@ -119,13 +114,11 @@ ventriloquism.castSpell = function (monster1, monster2, continueNextChapter, att
                 finalCharacter.weaponAttackMonster2(monster1, monster2, finalCharacter.weapon, continueNextChapter, 2, 2);
             } else
             {
-              let dialogue = document.querySelector('#fight-module.dialogue');
               dialogue.innerHTML = `<p>You cast Ventriloquism, and cause a distraction and the ${monster2.name} is caught offguard, but you decide not to attack</p>`;
               finalCharacter.greyOutAttackButtons(monster1, monster2);
             }
         } else
         {
-          let dialogue = document.querySelector('#fight-module.dialogue');
           dialogue.innerHTML = `<p>You cast Ventriloquism, but nothing happens.</p>`;
         }
     }
@@ -151,7 +144,6 @@ light.castSpell = function (monster1, monster2, continueNextChapter, attackedMon
     let dialogue = document.querySelector('#fight-module-dialogue');
     if (this.numberOfUses <= 0)
     {
-        let dialogue = document.querySelector('#fight-module-dialogue');
         dialogue.innerHTML = `<p>You try to cast Light, but the words won't come to your mind.</p>`;
         toggleShowSpellList();
 
@@ -166,7 +158,6 @@ light.castSpell = function (monster1, monster2, continueNextChapter, attackedMon
         toggleShowSpellList();
 
         finalCharacter.greyOutAttackButtons(monster1, monster2);
-        let dialogue = document.querySelector('#fight-module-dialogue');
         dialogue.innerHTML = `<p>You cast Light, which affects a 30 foot area.</p>`;
 
         let isBlindedM1 = monster1.status.some((x) => x === "Blind");
@@ -301,7 +292,6 @@ magicMissile.castSpell = function (monster1, monster2, continueNextChapter, atta
 
     if (this.numberOfUses <= 0)
     {
-        let dialogue = document.querySelector('#fight-module-dialogue');
         dialogue.innerHTML = `<p>You try to cast Magic Missile, but the words won't come to your mind.</p>`;
         toggleShowSpellList();
     } else
@@ -330,7 +320,6 @@ shield.castSpell = function (monster1, monster2, continueNextChapter, attackedMo
     let dialogue = document.querySelector('#fight-module-dialogue');
     if (this.numberOfUses <= 0)
     {
-        let dialogue = document.querySelector('#fight-module-dialogue');
         dialogue.innerHTML = `<p>You try to cast Shield, but the words won't come to your mind.</p>`;
         toggleShowSpellList();
     } else if (finalCharacter.status.includes("Shield"))
@@ -347,7 +336,6 @@ shield.castSpell = function (monster1, monster2, continueNextChapter, attackedMo
         toggleShowSpellList();
         console.log("Casting Shield spell");
         finalCharacter.greyOutAttackButtons(monster1, monster2);
-        let dialogue = document.querySelector('#fight-module-dialogue');
         dialogue.innerHTML = `<p>You cast Shield and reduce your Armor Class to 4</p>`;
         let oldAC = finalCharacter.armorClass;
         finalCharacter.armorClass = 4;
@@ -378,7 +366,6 @@ protectionFromEvil.castSpell = function (monster1, monster2, continueNextChapter
     let dialogue = document.querySelector('#fight-module-dialogue');
     if (this.numberOfUses <= 0)
     {
-        let dialogue = document.querySelector('#fight-module-dialogue');
         dialogue.innerHTML = `<p>You try to cast Protection From Evil, but the words won't come to your mind.</p>`;
         toggleShowSpellList();
     } else
@@ -390,7 +377,6 @@ protectionFromEvil.castSpell = function (monster1, monster2, continueNextChapter
         }
         toggleShowSpellList();
         finalCharacter.greyOutAttackButtons(monster1, monster2);
-        let dialogue = document.querySelector('#fight-module-dialogue');
         dialogue.innerHTML = `<p>You cast Protection From Evil and increase your Saving Throws by 1 and reduce Monster Hit Rolls by 1</p>`;
 
         for (let i = 0; i < monster1.hitRoll.length; i++)
@@ -497,7 +483,6 @@ charmPerson.castSpell = function (monster1, monster2, continueNextChapter, attac
     console.log(attackedMonster)
     if (this.numberOfUses <= 0)
     {
-        let dialogue = document.querySelector('#fight-module-dialogue');
         dialogue.innerHTML = `<p>You try to cast Charm Person, but the words won't come to your mind.</p>`;
         toggleShowSpellList();
     } else
@@ -527,7 +512,6 @@ charmPerson.castSpell = function (monster1, monster2, continueNextChapter, attac
 
         } else if (attackedMonster === "Monster 1" && monster1.healthPoints > 0)
         {
-            let dialogue = document.querySelector('#fight-module-dialogue');
             dialogue.innerHTML = `<p>You cast Charm Person on the ${monster1.name}.</p>`;
             console.log("Charming Monster 1")
             monster1.status.push('Charmed');
@@ -561,7 +545,6 @@ charmPerson.castSpell = function (monster1, monster2, continueNextChapter, attac
 
         } else if (attackedMonster === "Monster 2" && monster2.healthPoints > 0)
         {
-            let dialogue = document.querySelector('#fight-module-dialogue');
             dialogue.innerHTML = `<p>You cast Charm Person on the ${monster2.name}.</p>`;
             console.log("charming monster 2")
             monster2.status.push('Charmed');
@@ -599,7 +582,6 @@ sleep.castSpell = function (monster1, monster2, continueNextChapter, attackedMon
     let dialogue = document.querySelector('#fight-module-dialogue');
     if (this.numberOfUses <= 0)
     {
-        let dialogue = document.querySelector('#fight-module-dialogue');
         dialogue.innerHTML = `<p>You try to cast Sleep, but the words won't come to your mind.</p>`;
         toggleShowSpellList();
 
@@ -614,7 +596,6 @@ sleep.castSpell = function (monster1, monster2, continueNextChapter, attackedMon
         toggleShowSpellList();
 
         finalCharacter.greyOutAttackButtons(monster1, monster2);
-        let dialogue = document.querySelector('#fight-module-dialogue');
         dialogue.innerHTML = `<p>You cast Sleep, which affects a 40 foot area.</p>`;
 
         let isSleepingM1 = monster1.status.some((x) => x === "Sleep");
