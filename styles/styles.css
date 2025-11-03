@@ -1159,7 +1159,8 @@ summary.character-statuses-summary {
   #attack-wolves,
   #dont-attack-wolves,
   .new-continue-button,
-  #submit-name {
+  #submit-name
+  {
     background-color: var(--btn-bg);
     color: var(--btn-text);
     border-radius: 10px;
@@ -1655,7 +1656,8 @@ summary.character-statuses-summary {
 .attack-monster-two,
 .spell2-monster-one,
 .spell2-monster-two,
-.spell1-heal {
+.spell1-heal,
+#attack-melee {
   width: 200px;
   border-radius: 5px;
   background-color: rgb(193, 224, 193);  
@@ -1676,19 +1678,47 @@ summary.character-statuses-summary {
     margin-bottom: 0px;
   }
 
+  #attack-melee {
+    display: inline-block;
+    height: 24px;
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    border-radius: 10px;
+    border: 0px solid var(--btn-bg);  
+    justify-self: center;
+    align-self: end;
+    margin-bottom: 0px;
+    font-size: 1.25em;
+    grid-area: 1 / 4 / 1 / 5;
+    width: 90%;
+    z-index: 900;
+    line-height: 1.25em;
+  }
+
   input[type="submit"].attack-monster-one {
+    display: none;
     font-size: 1.25em;
     grid-area: 1 / 4 / 1 / 5;
     width: 90%;
     align-self: end;
+    bottom: 25px;
   }
 
  input[type="submit"].attack-monster-two {
+    display: none; 
+    /* position: absolute; */
     font-size: 1.25em;
-    grid-area: 1 / 1 / 1 / 2;
+    grid-area: 1 / 4 / 1 / 5;
     width: 90%;
     align-self: end;
+    z-index: 1000;
+    bottom: 50px;    
   }
+
+ /* input[type="submit"].attack-monster-two.show-attack-melee-buttons,
+  input[type="submit"].attack-monster-two.show-attack-melee-buttons {
+    display: block;
+  } */
 
    input[type="submit"].item-enchantment {
     font-size: 1.25em;

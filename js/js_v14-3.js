@@ -3257,6 +3257,7 @@ function addingFightModule(monsterOne, monsterTwo, continueNextChapter) {
   dialogueDiv.appendChild(fightModuleContainer);
   headerFightModule.innerHTML = `
     <div class="attack-buttons">
+        <button class"attack fight-module-button" id="attack-melee">Attack</button>
         <input type="submit" class="attack attack-monster-one fight-module-button" value="Attack">
         <input type="submit" class="attack attack-monster-two fight-module-button" value="Attack2">
         <input type="submit" class="attack item-enchantment fight-module-button" value="Items"> 
@@ -3271,6 +3272,17 @@ function addingFightModule(monsterOne, monsterTwo, continueNextChapter) {
   headerFightModule.classList.remove('no-display');
   fightModuleContainer.classList.remove('no-display');
   fightModuleDialogue.classList.remove('no-display');
+
+  let attackMelee = document.querySelector('#attack-melee');
+  attackMelee.addEventListener(
+    'click',
+    function () {
+      let attackMonsterOneButton = document.querySelector('.attack-monster-one');
+      attackMonsterOneButton.classList.add('.show-attack-melee-buttons')
+    },
+    false
+  )
+
   let attackMonsterOne = document.querySelector(".attack-monster-one");
   attackMonsterOne.addEventListener(
     "click",
