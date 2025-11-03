@@ -148,7 +148,6 @@ lightCleric.castSpell = function (monster1, monster2, continueNextChapter, attac
         toggleShowSpellList();
 
         finalCharacter.greyOutAttackButtons(monster1, monster2);
-        let dialogue = document.querySelector('#fight-module-dialogue');
         dialogue.innerHTML = `<p>You cast Light, which affects a 30 foot area.</p>`;
 
         let isBlindedM1 = monster1.status.some((x) => x === "Blind");
