@@ -144,9 +144,7 @@ export function updateMonsterOne(monsterOne) {
   monsterOneDamage.innerHTML = `Damage: ${monsterOne.damage}`;
 
   let monsterOneStatus = document.querySelector('#monster-one-status');
-  monsterOneStatus.innerHTML = `${monsterOne.status}`;
-  
- 
+  monsterOneStatus.innerHTML = `${monsterOne.status}`; 
 }
 
 export function updateMonsterTwo(monsterTwo) {
@@ -166,9 +164,11 @@ export function updateMonsterTwo(monsterTwo) {
   monsterTwoDamage.innerHTML = `Damage: ${monsterTwo.damage}`;
 
   let monsterTwoStatus = document.querySelector('#monster-two-status');
-  monsterTwoStatus.innerHTML = `${monsterTwo.status}`;
-  
- 
+  monsterTwoStatus.innerHTML = `${monsterTwo.status}`; 
+}
+
+export function updateCharacter(finalCharacter) {
+  console.log('update character');
 }
 
 export * as Utilities from "./utilityFunctions.js";

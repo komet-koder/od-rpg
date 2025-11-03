@@ -102,7 +102,7 @@ ventriloquism.castSpell = function (monster1, monster2, continueNextChapter, att
             toggleShowSpellList();
             if (confirm(`You cast Ventriloquism, and cause a distraction and the ${monster1.name} is caught offguard increasing your chances of hitting, do you want to take the initiative and attack the ${monster1.name}?`))
             {
-                finalCharacter.weaponAttackMonster1(monster1, monster2, finalCharacter.weapon, continueNextChapter, 2, 2)
+                finalCharacter.weaponAttackMonster1(monster1, monster2, finalCharacter.weapon, continueNextChapter, 2, 2);
             } else
             {
               let dialogue = document.querySelector('#fight-module.dialogue');
@@ -115,7 +115,7 @@ ventriloquism.castSpell = function (monster1, monster2, continueNextChapter, att
             toggleShowSpellList();
             if (confirm(`You cast Ventriloquism, and cause a distraction and the ${monster2.name} is caught offguard increasing your chances of hitting, do you want to take the initiative and attack the ${monster2.name}?`))
             {
-                finalCharacter.weaponAttackMonster2(monster1, monster2, finalCharacter.weapon, continueNextChapter, 2, 2)
+                finalCharacter.weaponAttackMonster2(monster1, monster2, finalCharacter.weapon, continueNextChapter, 2, 2);
             } else
             {
               let dialogue = document.querySelector('#fight-module.dialogue');
