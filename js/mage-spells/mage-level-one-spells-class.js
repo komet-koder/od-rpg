@@ -66,6 +66,7 @@ let readMagic = new MageLevelOneSpells("Read Magic", 1, 0, 0, "The Mage only", f
 
 ventriloquism.castSpell = function (monster1, monster2, continueNextChapter, attackedMonster)
 {
+    let dialogue = document.querySelector('#fight-module-dialogue');
     console.log('Casting Ventriloquism')
     console.log(attackedMonster, attackedMonster.status)
     if (this.numberOfUses <= 0)
@@ -147,6 +148,7 @@ holdPortal.castSpell = function ()
 
 light.castSpell = function (monster1, monster2, continueNextChapter, attackedMonster)
 {
+    let dialogue = document.querySelector('#fight-module-dialogue');
     if (this.numberOfUses <= 0)
     {
         let dialogue = document.querySelector('#fight-module-dialogue');
@@ -294,7 +296,7 @@ readMagic.castSpell = function ()
 
 magicMissile.castSpell = function (monster1, monster2, continueNextChapter, attackedMonster)
 {
-
+    let dialogue = document.querySelector('#fight-module-dialogue');
     //SETTING TIMEOUT TO TEST CANCELING AND PASSING TWO TIMEOUTS
 
     if (this.numberOfUses <= 0)
@@ -325,6 +327,7 @@ magicMissile.castSpell = function (monster1, monster2, continueNextChapter, atta
 
 shield.castSpell = function (monster1, monster2, continueNextChapter, attackedMonster)
 {
+    let dialogue = document.querySelector('#fight-module-dialogue');
     if (this.numberOfUses <= 0)
     {
         let dialogue = document.querySelector('#fight-module-dialogue');
@@ -372,6 +375,7 @@ shield.castSpell = function (monster1, monster2, continueNextChapter, attackedMo
 
 protectionFromEvil.castSpell = function (monster1, monster2, continueNextChapter, attackedMonster)
 {
+    let dialogue = document.querySelector('#fight-module-dialogue');
     if (this.numberOfUses <= 0)
     {
         let dialogue = document.querySelector('#fight-module-dialogue');
@@ -489,6 +493,7 @@ protectionFromEvil.castSpell = function (monster1, monster2, continueNextChapter
 
 charmPerson.castSpell = function (monster1, monster2, continueNextChapter, attackedMonster)
 {
+    let dialogue = document.querySelector('#fight-module-dialogue');
     console.log(attackedMonster)
     if (this.numberOfUses <= 0)
     {
@@ -591,6 +596,7 @@ charmPerson.castSpell = function (monster1, monster2, continueNextChapter, attac
 
 sleep.castSpell = function (monster1, monster2, continueNextChapter, attackedMonster)
 {
+    let dialogue = document.querySelector('#fight-module-dialogue');
     if (this.numberOfUses <= 0)
     {
         let dialogue = document.querySelector('#fight-module-dialogue');

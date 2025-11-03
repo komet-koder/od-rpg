@@ -101,6 +101,7 @@ waterBreathing.castSpell = function ()
 
 fireBall.castSpell = function (monster1, monster2, continueNextChapter, attackedMonster)
 {
+    let dialogue = document.querySelector('#fight-module-dialogue');
     toggleShowSpellList();
 
     let thisSpellDamage = 0;
@@ -123,6 +124,7 @@ fireBall.castSpell = function (monster1, monster2, continueNextChapter, attacked
 
 lightningBolt.castSpell = function (monster1, monster2, continueNextChapter, attackedMonster)
 {
+    let dialogue = document.querySelector('#fight-module-dialogue');
     toggleShowSpellList();
     let thisSpellDamage = 0;
 

@@ -130,6 +130,7 @@ cureLightWoundsCleric.castSpell = function (monster1, monster2, continueNextChap
 
 lightCleric.castSpell = function (monster1, monster2, continueNextChapter, attackedMonster)
 {
+    let dialogue = document.querySelector('#fight-module-dialogue');
     if (this.numberOfUses <= 0)
     {
         let dialogue = document.querySelector('#fight-module-dialogue');
