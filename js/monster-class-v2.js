@@ -277,36 +277,20 @@ export default class Monster {
 
             let removeMirrorImage = finalCharacter.status.filter((x) => "Mirror Image");
             finalCharacter.status.splice(removeMirrorImage); //removing Mirror Image after function call
-          //   let updateCharacterStatus = document.querySelector("#char-status");
-          //   updateCharacterStatus.innerHTML = `
-          //       <h4 id='char-status' class='char-info-label'>Status: <span class="character-display-info">${finalCharacter.status
-          //     }</span></h4>`;
           };
 
-          // alert(`The ${thisMonster.name} attacks you and strikes one of your Mirror Images - there are ${images} left.`);
           $("#fight-module-dialogue").text(`The ${thisMonster.name} attacks you and strikes one of your Mirror Images - there are ${images} left.`);
 
         } else {
           let monsterRandomDamage = Math.ceil(Math.random() * thisMonster.damage);
 
           finalCharacter.specialty.healthPoints = finalCharacter.specialty.healthPoints - monsterRandomDamage;
-          // alert(`The ${thisMonster.name} attacks you and causes ${monsterRandomDamage} points of damage.`);
 
           $("#fight-module-dialogue").text(`The ${thisMonster.name} attacks you and causes ${monsterRandomDamage} points of damage.`);
 
           if (finalCharacter.specialty.healthPoints <= 0) {
             finalCharacter.specialty.healthPoints = 0;  //prevents negative HP
           }
-
-          // let updatedCharHP = document.querySelector("#char-hp");
-          // updatedCharHP.innerHTML = `
-          //     Hit Points: 
-          //       <span id='hpBar'>                    
-          //         <progress id='hp-prog-bar' max="${finalCharacter.specialty.maxHealthPoints}" value="${finalCharacter.specialty.healthPoints}"></progress>
-          //         <span class="character-hp-bar">${finalCharacter.specialty.healthPoints}/${finalCharacter.specialty.maxHealthPoints}</span>
-          //       </span>
-
-          //     `;
 
           let updateCharacterHPGuage = document.querySelector(".hitpoint-guage-value-current");
           updateCharacterHPGuage.textContent = `${finalCharacter.specialty.healthPoints}`;
