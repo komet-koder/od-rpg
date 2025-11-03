@@ -66,7 +66,7 @@ continualLight.castSpell = function (monster1, monster2, continueNextChapter, at
     if (this.numberOfUses <= 0)
     {
         let dialogue = document.querySelector('#fight-module-dialogue');
-        dialogue.innerHTML = `<p>You try to cast Continual Light, but the words won't come to your mind.</p>`;
+        dialogue.textContent = `You try to cast Continual Light, but the words won't come to your mind.`;
         toggleShowSpellList();
 
     } else
@@ -81,7 +81,7 @@ continualLight.castSpell = function (monster1, monster2, continueNextChapter, at
 
         finalCharacter.greyOutAttackButtons(monster1, monster2);
         let dialogue = document.querySelector('#fight-module-dialogue');
-        dialogue.innerHTML = `<p>You cast Continual Light, which which affects a 60 foot area.</p>`;
+        dialogue.textContent = `You cast Continual Light, which which affects a 60 foot area.`;
 
         let isBlindedM1 = monster1.status.some((x) => x === "Blind");
         let isBlindedM2 = monster2.status.some((x) => x === "Blind");
@@ -90,7 +90,7 @@ continualLight.castSpell = function (monster1, monster2, continueNextChapter, at
 
         if ((attackedMonster === "Monster 1" && monster1.healthPoints > 0 && isBlindedM1 === false) || (attackedMonster === "Monster 1" && (monster1.healthPoints > 0 && isBlindedM1 === false)))
         {
-            dialogue.innerHTML += `<p>${monster1.name} has been blinded.</p>`;
+            dialogue.textContent += `${monster1.name} has been blinded.`;
             monster1.status.push('Blind');
             let monster1Status = document.querySelector("#monster-one-status");
             monster1Status.innerHTML = `<h4 id="monster-one-status">Status: ${monster1.status.join(', ')}</h4>`
@@ -121,7 +121,7 @@ continualLight.castSpell = function (monster1, monster2, continueNextChapter, at
 
         } else if ((attackedMonster === "Monster 2" && monster2.healthPoints > 0 && isBlindedM2 === false) || (attackedMonster === "Monster 2" && (monster2.healthPoints > 0 && isBlindedM2 === false)))
         {
-            dialogue.innerHTML += `<p>${monster2.name} is blinded.</p>`;
+            dialogue.textContent += `${monster2.name} is blinded.`;
             monster2.status.push('Blind');
             let monster2Status = document.querySelector("#monster-two-status");
             monster2Status.innerHTML = `<h4 id="monster-two-status">Status: ${monster2.status.join(', ')}</h4>`
@@ -150,10 +150,10 @@ continualLight.castSpell = function (monster1, monster2, continueNextChapter, at
 
         } else if (attackedMonster === "Monster 2")
         {
-            dialogue.innerHTML += `<p>${monster2.name} was not affected.</p>`;
+            dialogue.textContent += `${monster2.name} was not affected.`;
         } else if (attackedMonster === "Monster 1")
         {
-            dialogue.innerHTML += `<p>${monster1.name} was not affected.</p>`;
+            dialogue.textContent += `${monster1.name} was not affected.`;
         }
     }
 }
@@ -169,12 +169,12 @@ invisibility.castSpell = function (monster1, monster2, continueNextChapter, atta
     if (this.numberOfUses <= 0)
     {
         let dialogue = document.querySelector('#fight-module-dialogue');
-        dialogue.innerHTML = `<p>You try to cast Invisibility, but the words won't come to your mind.</p>`;
+        dialogue.textContent = `You try to cast Invisibility, but the words won't come to your mind.`;
         toggleShowSpellList();
 
     } else if (finalCharacter.status.includes("Invisible"))
     {
-        dialogue.innerHTML = `<p>You are already invisible.</p>`;
+        dialogue.textContent = `You are already invisible.`;
         toggleShowSpellList();
     } else
     {
@@ -188,12 +188,12 @@ invisibility.castSpell = function (monster1, monster2, continueNextChapter, atta
 
         finalCharacter.greyOutAttackButtons(monster1, monster2);
         let dialogue = document.querySelector('#fight-module-dialogue');
-        dialogue.innerHTML = `<p>You cast Invisibility, which makes you invisible.</p>`;
+        dialogue.textContent = `You cast Invisibility, which makes you invisible.`;
 
         finalCharacter.status.push("Invisible");
         console.log(finalCharacter.status);
 
-        dialogue.innerHTML += `<p> You are invisible until you attack or cast a spell.</p>`;
+        dialogue.textContent += ` You are invisible until you attack or cast a spell.`;
 
         let addInvisibilityStatus = document.querySelector(".invisibility-status");
 
@@ -251,7 +251,7 @@ mirrorImage.castSpell = function (monster1, monster2, continueNextChapter, attac
     if (this.numberOfUses <= 0)
     {
         let dialogue = document.querySelector('#fight-module-dialogue');
-        dialogue.innerHTML = `<p>You try to cast Mirror Image, but the words won't come to your mind.</p>`;
+        dialogue.textContent = `You try to cast Mirror Image, but the words won't come to your mind.`;
         toggleShowSpellList();
 
     } else
@@ -266,7 +266,7 @@ mirrorImage.castSpell = function (monster1, monster2, continueNextChapter, attac
         finalCharacter.mirrorImages = Math.ceil(Math.random(1) * 4);
         finalCharacter.greyOutAttackButtons(monster1, monster2, finalCharacter.mirrorImages);
         let dialogue = document.querySelector('#fight-module-dialogue');
-        dialogue.innerHTML = `<p>You cast Mirror Image, which which created ${finalCharacter.mirrorImages} more image(s) of you.</p>`;
+        dialogue.textContent = `You cast Mirror Image, which which created ${finalCharacter.mirrorImages} more image(s) of you.`;
 
 
         // let addMirrorImageStatus = document.querySelector('#char-status');
@@ -321,7 +321,7 @@ phantasmalForce.castSpell = function (monster1, monster2, continueNextChapter, a
     if (this.numberOfUses <= 0)
     {
         let dialogue = document.querySelector('#fight-module-dialogue');
-        dialogue.innerHTML = `<p>You try to cast Phantasmal Force, but the words won't come to your mind.</p>`;
+        dialogue.textContent = `You try to cast Phantasmal Force, but the words won't come to your mind.`;
         toggleShowSpellList();
 
     } else
@@ -381,7 +381,7 @@ phantasmalForce.castSpell = function (monster1, monster2, continueNextChapter, a
 
         finalCharacter.greyOutAttackButtons(monster1, monster2);
         let dialogue = document.querySelector('#fight-module-dialogue');
-        dialogue.innerHTML = `<p>You cast Phantasmal Force and create a Troll to attack the monsters.</p>`;
+        dialogue.textContent = `You cast Phantasmal Force and create a Troll to attack the monsters.`;
     }
 }
 
@@ -397,7 +397,7 @@ web.castSpell = function (monster1, monster2, continueNextChapter, attackedMonst
     if (this.numberOfUses <= 0)
     {
         let dialogue = document.querySelector('#fight-module-dialogue');
-        dialogue.innerHTML = `<p>You try to cast Web, but the words won't come to your mind.</p>`;
+        dialogue.textContent = `You try to cast Web, but the words won't come to your mind.`;
         toggleShowSpellList();
 
     } else
@@ -420,10 +420,10 @@ web.castSpell = function (monster1, monster2, continueNextChapter, attackedMonst
 
         if ((monster1.healthPoints > 0 && isWebbedM1 === false))
         {
-            dialogue.innerHTML += `<p>${monster1.name} is stuck in the web.</p>`;
+            dialogue.textContent += `${monster1.name} is stuck in the web.`;
             monster1.status.push('Web');
             let monster1Status = document.querySelector("#monster-one-status");
-            monster1Status.innerHTML = `<h4 id="monster-one-status">Status: ${monster1.status.join(', ')}</h4>`
+            monster1Status.textContent = `${monster1.status.join(', ')}`
 
             //need to make variable, push to an array, and then call the function expression
 
@@ -431,17 +431,23 @@ web.castSpell = function (monster1, monster2, continueNextChapter, attackedMonst
             {
                 let removeWebM1 = monster1.status.filter((x) => "Web");
                 monster1.status.splice(removeWebM1); //removing Web after function call
+                
+                
                 let updateM1Status = document.querySelector("#monster-one");
                 updateM1Status.innerHTML = `
-                <div class="monster" id="monster-one">
-                    <fieldset class='monster-info-module'>
-                        <legend class='monster-dashboard'>Monster 1</legend>
-                        <h4 id="monster-one-type">Monster Type: ${monster1.name}</h4>
-                        <h4 id="monster-one-hp">Hit Points: ${monster1.healthPoints}<progress class='monster-hp-prog-bar'  id="monster-one-hp-progress-bar" max="${monster1.startingHealthPoints}" value="${monster1.healthPoints}"></progress></h4> 
-                        <h4 id="monster-one-ap">Armor Class: ${monster1.armorClass}</h4>
-                        <h4 id="monster-one-damage">Damage: ${monster1.damage}</h4>
-                        <h4 id="monster-one-status">Status: ${monster1.status}</h4>
-                    </fieldset>   
+                <div class='monster-info-module'>
+                    <div id="monster-one-hp">
+                        <div>Hit Points</div>
+                        <progress class='monster-hp-prog-bar'  id="monster-one-hp-progress-bar" max="${monster1.startingHealthPoints}" value="${monster1.healthPoints}"></progress>
+                        <div>${monster1.healthPoints}</div>
+                    </div> 
+                        <div id="monster-one-ap">Armor Class: ${monster1.armorClass}</div>
+                        <div id="monster-one-damage">Damage: ${monster1.damage}</div>
+                        <div id="monster-one-status-heading">Status</div>
+                        <div id="monster-one-status">${monster1.status}</div>           
+                    <div id="canvas-area-monster-one">                  
+                        <canvas id="canvas-monster-one" height="200" width="200"></canvas>
+                    </div>
                 </div>`;
                 console.log('Web removed m1')
                 console.log(monster1.status)
@@ -454,7 +460,7 @@ web.castSpell = function (monster1, monster2, continueNextChapter, attackedMonst
 
         if ((monster2.healthPoints > 0 && isWebbedM2 === false))
         {
-            dialogue.innerHTML += `<p>${monster2.name} is stuck in the web.</p>`;
+            dialogue.textContent += `${monster2.name} is stuck in the web.`;
             monster2.status.push('Web');
             let monster2Status = document.querySelector("#monster-two-status");
             monster2Status.innerHTML = `<h4 id="monster-two-status">Status: ${monster2.status.join(', ')}</h4>`

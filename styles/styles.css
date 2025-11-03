@@ -1820,28 +1820,27 @@ summary.character-statuses-summary {
 
   }
 
+  #monster-one-status-heading,
+  #monster-two-status-heading {
+    background-color: var(--primary-300);
+    text-align: center;
+    line-height: 1em;
+    grid-area: 3 / 1 / 4 / 3;
+  }
+
   #monster-one-status,
   #monster-two-status {
-    background-color: var(--primary-300);
     height: 100%;
     width: 100%;
-    grid-area: 3 / 1 / 4 / 3;
+    grid-area: 4 / 1 / 5 / 3;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     /* border-bottom: 1px solid var(--text); */
     border-radius: 5px;
-    text-align: center;
     
   }
-
-   #monster-one-status > span,
-  #monster-two-status > span {
-   
-    text-align: center;
-    
-  }
-
+ 
   .monster-dashboard {
     float: clear;
     border-radius: 5px;
@@ -2230,7 +2229,7 @@ summary.character-statuses-summary {
   #attack-melee.no-display {
     display: none;
   }
-  
+
   .no-display {
     display: none;
   }

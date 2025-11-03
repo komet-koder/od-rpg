@@ -527,9 +527,9 @@ export default class Character {
         //ATTEMPTING TO GREY OUT ATTACK MODULE BUTTONS//
         monster1.status.splice(monster1.status.indexOf("Sleep"), 1);
         let monster1Status = document.querySelector("#monster-one-status");
-        monster1Status.innerHTML = `<h4 id="monster-one-status">Status: ${monster1.status.join(
+        monster1Status.innerHTML = `${monster1.status.join(
           ", "
-        )}</h4>`;
+        )}`;
         finalCharacter.greyOutAttackButtons(monster1, monster2);
       }
 
@@ -547,9 +547,9 @@ export default class Character {
         //ATTEMPTING TO GREY OUT ATTACK MODULE BUTTONS//
         monster1.status.splice(monster1.status.indexOf("Charmed"), 1);
         let monster1Status = document.querySelector("#monster-one-status");
-        monster1Status.innerHTML = `<h4 id="monster-one-status">Status: ${monster1.status.join(
+        monster1Status.innerHTML = `${monster1.status.join(
           ", "
-        )}</h4>`;
+        )}`;
         finalCharacter.greyOutAttackButtons(monster1, monster2);
       } else if (finalCharacter.status.includes("Invisibility")) {
         alert(
@@ -567,9 +567,9 @@ export default class Character {
           1
         );
         let monster1Status = document.querySelector("#monster-one-status");
-        monster1Status.innerHTML = `<h4 id="monster-one-status">Status: ${monster1.status.join(
+        monster1Status.innerHTML = `${monster1.status.join(
           ", "
-        )}</h4>`;
+        )}`;
         finalCharacter.greyOutAttackButtons(monster1, monster2);
       }
 
@@ -592,7 +592,7 @@ export default class Character {
         let monsterOneStatus = document.querySelector("#monster-one");
         let defeatMonster1 = document.querySelector("#fight-module-dialogue");
         monsterOneStatus.innerHTML = `
-              <div class='monster-info-module'>
+          <div class='monster-info-module'>
             <div id="monster-one-hp">
               <div>Hit Points</div>
               <progress class='monster-hp-prog-bar'  id="monster-one-hp-progress-bar" max="${monster1.startingHealthPoints}" value="${monster1.healthPoints}"></progress>
@@ -995,9 +995,9 @@ export default class Character {
         );
         monster1.status.splice(monster1.status.indexOf("Sleep"), 1);
         let monster1Status = document.querySelector("#monster-one-status");
-        monster1Status.innerHTML = `<h4 id="monster-one-status">Status: ${monster1.status.join(
+        monster1Status.innerHTML = `${monster1.status.join(
           ", "
-        )}</h4>`;
+        )}`;
       }
 
       monster1.healthPoints = monster1.healthPoints - inflictedDamage;
@@ -1266,9 +1266,9 @@ export default class Character {
       `;
 
     let monster1Status = document.querySelector("#monster-one-status");
-    monster1Status.innerHTML = `<h4 id="monster-one-status">Status: ${monster2.status.join(
+    monster1Status.innerHTML = `${monster2.status.join(
       ", "
-    )}</h4>`;
+    )}`;
 
     let monster2Status = document.querySelector("#monster-two-status");
     monster2Status.innerHTML = `<h4 id="monster-two-status">Status: ${monster2.status.join(
