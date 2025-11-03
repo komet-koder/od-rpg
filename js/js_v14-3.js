@@ -642,7 +642,6 @@ function addSubmitNameButton() {
   let confirmStart = document.querySelector("#confirm-start");
   confirmStart.style.display = "block";
   let dialogueDivID = document.querySelector("#dialogue");
-  // confirmStart.style.gridArea = "dialogue";
   dialogueDivID.appendChild(confirmStart);
 }
 
@@ -985,21 +984,6 @@ function confirmingAttributes() {
 
   let containerDiv = document.querySelector('#container');
   containerDiv.appendChild(beginningAdventure);
-
-  // $('#beginingAdventure').css({
-  //   'background-color': 'var(--btn-bg)',
-  //   'color': 'var(--btn-text)',
-  //   'border-radius': '10px',
-  //   'font-size': '1.75rem',
-  //   'text-align': 'center',
-  //   'height': '30px',
-  //   'width': '210px',
-  //   'border': '0px solid var(--btn-bg)',  
-  //   'align-items': 'center',
-  //   'justify-content': 'center',
-  //   'margin': 'auto',
-  //   'display': 'block', 
-  // })
 
 }
 
@@ -1711,11 +1695,7 @@ function beginJourney() {
   }
 }
 
-
-
 function setSpellsAndInventory() {
-
-
   let removeReadyButton = document.querySelector('#ready');
   removeReadyButton.remove();
 
@@ -1742,12 +1722,9 @@ function setSpellsAndInventory() {
   console.log(finalCharacter);
 }
 
-
 //populating inventory
 
 function showInventory() { 
-
-
   modalConfig = {
     id: "inventory-modal",
     class: "",
@@ -2802,11 +2779,6 @@ function submitAllClericSpells() {
 }
 
 //CHAPTER TWO
-
-
-
-
-
     
 let chapterTwoZeroText;
 
@@ -2829,20 +2801,6 @@ function beginChapterTwoZero() {
   Utilities.continueTextAnimation(chapterConfig);  
 }
 
-// let chapterTwoOneText = `
-//     As you pack up your belongings, you know your ${finalCharacter.specialty.name} training will serve you well. You pick up your ${finalCharacter.weapon.name} and slide your hand along it.   
-//     `;
-
-// function beginChapterTwoOne() {
-//   console.log('2-1');
-//   chapterConfig.thisChapterNumber = "2-1";
-//   chapterConfig.thisChapterDialogue = chapterTwoOneText;
-//   chapterConfig.buttonText = "Continue";
-//   chapterConfig.dialogueDiv = document.querySelector('#dialogue');
-//   chapterConfig.nextChapterFunction = beginChapterTwoTwo;
-//   Utilities.continueTextAnimation(chapterConfig);  
-// }
-
 let chapterTwoTwoText;
 
 function beginChapterTwoTwo() {
@@ -2856,20 +2814,6 @@ function beginChapterTwoTwo() {
   chapterConfig.nextChapterFunction = beginChapterTwoFour;
   Utilities.continueTextAnimation(chapterConfig);  
 }
-
-// let chapterTwoThreeText = `
-//   You remember how much time and effort you put into practicing to become proficient (skilled) with it. You don (put on) your ${finalCharacter.armor.name} and the smell brings you back to your training, remembering what it feels like when you get hit, and how it feels on your body when you strike.
-// `;
-
-// function beginChapterTwoThree() {
-//   console.log('2-3');
-//   chapterConfig.thisChapterNumber = "2-3";
-//   chapterConfig.thisChapterDialogue = chapterTwoThreeText;
-//   chapterConfig.buttonText = "Continue";
-//   chapterConfig.dialogueDiv = document.querySelector('#dialogue');
-//   chapterConfig.nextChapterFunction = beginChapterTwoFour;
-//   Utilities.continueTextAnimation(chapterConfig);  
-// }
 
 let chapterTwoFourText;
 
@@ -2885,26 +2829,10 @@ function beginChapterTwoFour() {
   Utilities.continueTextAnimation(chapterConfig);
 }
 
-// let chapterTwoFiveText = `
-//   As you complete preparing, you finish a small bit of tea and some bread with cheese you prepared for breakfast. Afterwards, you head down to the main floor of the inn. 
-// `;
-
-// function beginChapterTwoFive() {
-//   console.log('2-5');
-//   chapterConfig.thisChapterNumber = "2-5";
-//   chapterConfig.thisChapterDialogue = chapterTwoFiveText;
-//   chapterConfig.buttonText = "Continue";
-//   chapterConfig.dialogueDiv = document.querySelector('#dialogue');
-//   chapterConfig.nextChapterFunction = beginChapterTwoSix;
-//   Utilities.continueTextAnimation(chapterConfig);
-//   //add talk to raynard buttons
-// }
-
 let chapterTwoSixText;
 
 function beginChapterTwoSix() {
-  // let removeChapterTwoFiveButton = document.querySelector('#button-2-5');
-  // removeChapterTwoFiveButton.remove();
+  
   chapterTwoSixText = `
   As you complete preparing, you finish a small bit of tea and some bread with cheese you prepared for breakfast. Afterwards, you head down to the main floor of the inn. You see the innkeeper, Raynard, sitting at the counter. Would you like to speak with Raynard on your way out?      
   `;
@@ -2912,7 +2840,6 @@ function beginChapterTwoSix() {
   chapterConfig.thisChapterDialogue = chapterTwoSixText;
   chapterConfig.buttonText = "";
   chapterConfig.dialogueDiv = document.querySelector('#dialogue');
-  // chapterConfig.nextChapterFunction = beginChapterTwoSeven;
   Utilities.continueTextAnimation(chapterConfig);
   //add talk to raynard buttons
 
@@ -2947,11 +2874,6 @@ function beginChapterTwoSix() {
      containerDiv.appendChild(yesTalkToRayard);
      containerDiv.appendChild(noTalkToRayard);
   }
-
-  
-
-  //<input type="submit" id="talk-raynard-yes" value="Yes"><input type="submit" id="talk-raynard-no" value="No"><br></br>
- 
 }
 
 let chapterTwoSevenText;
@@ -2963,11 +2885,6 @@ function beginChapterTwoSeven() {
     dragon arriving to the ruins and hoarding a treasure so valuable that many travellers lost their lives looking for it. Did you know that I have also wandered to those ruins
     in my younger years?      
   `;
-  // let removeTalkToRaynardButton = document.querySelector('#talk-raynard-yes');
-  // removeTalkToRaynardButton.remove();
-
-  // let removeNoTalktoRaynardButton = document.querySelector('#talk-raynard-no');
-  // removeNoTalktoRaynardButton.remove();
 
   window.scrollTo(0, 0);
 
@@ -3068,7 +2985,6 @@ function beginChapterTwoTen() {
     itemList.appendChild(addedItemSpan);
   }
   //end adding tooltip
-
 }
 
 let chapterThreeZeroText;
@@ -3164,8 +3080,6 @@ function beginChapterThreeFive() {
   chapterThreeFiveText = `You quicken your pace. Ahead, you see two dark figures hovering over a shape on the ground. As you come closer, you can make out a wolf picking at a sheep, dead on the road. Not only is this odd because of the time of day. This wolf has no intention of leaving the sheep, and wolves are dangerous. What do you do?
   `;
 
-  
-
   chapterConfig.thisChapterNumber = "3-5";
   chapterConfig.thisChapterDialogue = chapterThreeFiveText;
   chapterConfig.buttonText = "";
@@ -3173,9 +3087,6 @@ function beginChapterThreeFive() {
   chapterConfig.nextChapterFunction = beginChapterThreeSix;
   chapterConfig.dialogueDiv.innerHTML = "";
   Utilities.continueTextAnimation(chapterConfig);
-
-  
-
 
   setTimeout(() => {
     populateAttackWolfButtons();
@@ -3219,8 +3130,6 @@ function beginChapterThreeFive() {
      containerDiv.appendChild(attackWolvesButton);
      containerDiv.appendChild(goAroundButton);  
   }
-  
-
 }
 
 let chapterThreeSixText;
@@ -3229,8 +3138,6 @@ function beginChapterThreeSix() {
   console.log("3-6");
   chapterThreeSixText = `
     chapter three-six
-
-     
   `;
   
   chapterConfig.thisChapterNumber = "3-6";
@@ -4889,9 +4796,6 @@ function continueChapterFourTwoOne() {
     itemList.appendChild(addedItemSpan);
 
     //end re-adding tooltips
-
-    // let giveRaynardsCoin = document.querySelector("#normal-equipment-list");
-    // giveRaynardsCoin.innerHTML += `${finalCharacter.inventory[i].name} <br>`;
   }
 
   let chapterFourTwoOneDialogue = document.querySelector("#dialogue");
