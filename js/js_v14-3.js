@@ -3447,7 +3447,12 @@ function populateMageSpells(m1, m2, nextChap) {
 
       let mageFirstLevelSpellSummary = document.createElement('summary');
       mageFirstLevelSpellSummary.setAttribute('class', 'mage-first-level-summary');
+      let spellSummaryIcon = document.createElement('i');
+      spellSummaryIcon.classList.add('fa-regular');
+      spellSummaryIcon.classList.add('fa-circle-plus');
+      
       mageFirstLevelSpellSummary.textContent = characterFirstLevelSpells[i].name;
+      mageFirstLevelSpellSummary.appendChild(spellSummaryIcon);
       
       let addSelf1Btn = document.createElement("div");
       addSelf1Btn.classList.add("mage-self-spell-list");

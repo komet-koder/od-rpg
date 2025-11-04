@@ -1980,6 +1980,19 @@ input[name="selected-specialty"] {
     cursor: url("../images/gui/cursor-hover.png"), auto;
   }
 
+/* spell drop down targets */
+  .mage-first-level-summary::marker, .mage-second-level-summary::marker, .mage-third-level-summary::marker {
+    content: "";
+    display: none;
+    list-style: none;
+  }
+
+  .mage-self-spell-list,
+  .mage-monster-one-spell-list,
+  .mage-monster-two-spell-list {
+    text-align: center;
+  }
+
   #start-chapter-three-four {
     grid-area: 5 / 2 / 5 / 3;
   }
@@ -2001,7 +2014,6 @@ input[name="selected-specialty"] {
     z-index: 1;
     padding: 10% 30% 30%;
   }
-
 
   #player-sheet {
     margin: 0px;
