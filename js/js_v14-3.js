@@ -3282,7 +3282,46 @@ function addingFightModule(monsterOne, monsterTwo, continueNextChapter) {
       attackMonsterOneButton.classList.toggle('show-attack-melee-buttons');
       let attackMonsterTwoButton = document.querySelector('#attack-monster-two-button');
       attackMonsterTwoButton.classList.toggle('show-attack-melee-buttons');
-  
+      // toggleShowSpellList();
+
+      let hideSpellDropdownList = document.querySelector('.dropdown-spell-list-ul');
+      if ((hideSpellDropdownList) && (hideSpellDropdownList.classList.contains('show-spell-list-dropdown'))) {
+        hideSpellDropdownList.classList.remove('show-spell-list-dropdown');
+      }
+
+      let spellContainer1 = document.querySelector('.cleric-first-level-spell-container');
+      let spellContainer2 = document.querySelector('.cleric-second-level-spell-container');
+      let spellContainer3 = document.querySelector('.cleric-third-level-spell-container');
+
+      if ((spellContainer1) && (spellContainer1.classList.contains('show-cleric-first-level-spell-container'))) {
+        spellContainer1.classList.remove('show-cleric-first-level-spell-container');
+      }
+
+      if ((spellContainer2) && (spellContainer2.classList.contains('show-cleric-second-level-spell-container'))) {
+        spellContainer2.classList.remove('show-cleric-second-level-spell-container');
+      }
+
+      if ((spellContainer3) && (spellContainer3.classList.contains('show-cleric-third-level-spell-container'))) {
+        spellContainer3.classList.remove('show-cleric-third-level-spell-container');
+      } 
+      
+      let mageSpellContainer1 = document.querySelector('.mage-first-level-spell-container');
+      let mageSpellContainer2 = document.querySelector('.mage-second-level-spell-container');
+      let mageSpellContainer3 = document.querySelector('.mage-third-level-spell-container');
+
+      if ((mageSpellContainer1) && (mageSpellContainer1.classList.contains('show-mage-first-level-spell-container'))) {
+        mageSpellContainer1.classList.remove('show-mage-first-level-spell-container');
+      }
+
+      if ((mageSpellContainer2) && (mageSpellContainer2.classList.contains('show-mage-second-level-spell-container'))) {
+        mageSpellContainer2.classList.remove('show-mage-second-level-spell-container');
+      }
+
+      if ((mageSpellContainer3) && (mageSpellContainer3.classList.contains('show-mage-third-level-spell-container'))) {
+        mageSpellContainer3.classList.remove('show-mage-third-level-spell-container');
+      }
+
+
     },
     false
   )
