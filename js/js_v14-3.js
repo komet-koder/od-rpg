@@ -3258,8 +3258,8 @@ function addingFightModule(monsterOne, monsterTwo, continueNextChapter) {
   headerFightModule.innerHTML = `
     <div class="attack-buttons">
         <button class"attack fight-module-button" id="attack-melee" class="attack">Attack</button>
-        <input type="submit" id="attack-monster-one-button" class="attack attack-monster-one fight-module-button" value="Attack">
-        <input type="submit" id="attack-monster-two-button" class="attack attack-monster-two fight-module-button" value="Attack2">
+        <input type="submit" id="attack-monster-one-button" class="attack attack-monster-one fight-module-button attack-group" value="Attack">
+        <input type="submit" id="attack-monster-two-button" class="attack attack-monster-two fight-module-button attack-group" value="Attack2">
         <input type="submit" id="select-item-button" class="attack item-enchantment fight-module-button" value="Items"> 
         <input type="submit" class="attack-spell spell2-monster-one fight-module-button" value="Spells" id="use-spells">
             <ul class='dropdown-spell-list-ul'>
@@ -3735,8 +3735,20 @@ function populateMageSpells(m1, m2, nextChap) {
     }
 
      if ((spellContainer3) && (spellContainer3.classList.contains('show-mage-third-level-spell-container'))) {
-      spellContainer3.classList.remove('show-mage-third-level-spell-container');
+      spellContainer3.classList.remove('show-mage-third-level-spell-container');    
     }
+   
+    let attackGroupButtons = document.querySelectorAll('.attack-group');
+    attackGroupButtons.forEach(function(button) {
+      if (button.classList.contains('show-attack-melee-buttons')) {
+        button.classList.remove('show-attack-melee-buttons');
+      }
+    });
+
+    let attackMeleeButton = document.querySelector('#attack-melee');
+    if(!attackMeleeButton.classList.contains('grey-out')) {
+      attackMeleeButton.classList.add('grey-out');
+    } 
   }, false);
 }
 
