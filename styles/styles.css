@@ -888,6 +888,20 @@ input[name="selected-specialty"] {
     display: block;
   }  
 
+/* details {
+  background: gainsboro;
+  padding: 10px;
+}
+
+details summary {
+  cursor: pointer;
+  transition: margin 150ms ease-out;
+}
+
+details[open] summary {
+  margin-bottom: 10px;
+} */
+
   summary.character-stats-summary::marker,
   summary.character-statuses-summary::marker,
   summary.character-afflictions-summary::marker,
