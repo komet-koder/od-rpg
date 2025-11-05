@@ -476,7 +476,7 @@ input[name="selected-specialty"] {
 
   }
 
-  .fa-solid.fa-plus,
+  .fa-regular.fa-circle-plus,
   .fa-solid.fa-minus {
     color: var(--bg-300);
     position: relative;

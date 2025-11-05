@@ -1153,7 +1153,7 @@ function startGame() {
         </div>
 
         <details id='character-stats' name="character-detail-sets" open>
-          <summary class="character-stats-summary">Player Data<i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></summary>
+          <summary class="character-stats-summary">Player Data<i class="fa-regular fa-circle-plus"></i><i class="fa-solid fa-minus"></i></summary>
           <div class='char-stats-module'>            
             
             <h4 id='char-name' class='char-info-label'>Name: <span class="character-display-info">${submittedCharName}</span></h4>
