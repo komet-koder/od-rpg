@@ -824,20 +824,6 @@ input[name="selected-specialty"] {
     text-align: center;
   }
 
-  details[name="mage-spells-details-set"] {
-    overflow: hidden;
-
-  }
-
-   details [name="mage-spells-details-set"]::details-content {
-    block-size: 0;
-
-  }
-
-   details[name="mage-spells-details-set"][open]::details-content {
-    block-size: 0;
-    transition: block-size 1s;
-  }
 
   details > summary.character-statuses-summary,
   details > summary.character-stats-summary,
@@ -904,20 +890,6 @@ input[name="selected-specialty"] {
   details[open] > summary.character-stats-summary > i.fa-minus    {
     display: block;
   }  
-
-/* details {
-  background: gainsboro;
-  padding: 10px;
-}
-
-details summary {
-  cursor: pointer;
-  transition: margin 150ms ease-out;
-}
-
-details[open] summary {
-  margin-bottom: 10px;
-} */
 
   summary.character-stats-summary::marker,
   summary.character-statuses-summary::marker,
@@ -1935,6 +1907,22 @@ details[open] summary {
   }
 
   
+  #mage-first-level-detail-charm-person {
+    overflow: hidden;
+
+  }
+
+   #mage-first-level-detail-charm-person::details-content {
+    block-size: 0;
+    transition: block-size 500ms,
+                content-visibility 500ms;
+    transition-behavior: allow-discrete;
+
+  }
+
+   #mage-first-level-detail-charm-person[open]::details-content {
+    block-size: auto;
+  }
 
   ul[class*="spell-list-combat"]:hover li.monster-one-spell-list {
     display: block;
