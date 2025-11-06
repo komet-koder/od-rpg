@@ -1908,10 +1908,11 @@ input[name="selected-specialty"] {
 
   .mage-first-level-details,
   .mage-second-level-details,
-  .mage-third-level-details,
+  .mage-third-level-details
    {
     overflow: hidden;
-
+    margin: 2px;
+    
   }
 
    .mage-first-level-details::details-content,
