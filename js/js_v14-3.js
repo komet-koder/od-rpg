@@ -4190,23 +4190,33 @@ function populateClericSpells(m1, m2, nextChap) {
 }
 
 export function toggleShowSpellList() {
-  document
-    .querySelector(".dropdown-spell-list-ul")
-    .classList.toggle("show-spell-list-dropdown");
-  document
-    .querySelector(".first-level-dropdown-list")
-    .classList.toggle("show-spell-list-dropdown");
-  document
-    .querySelector(".second-level-dropdown-list")
-    .classList.toggle("show-spell-list-dropdown");
-  document
-    .querySelector(".third-level-dropdown-list")
-    .classList.toggle("show-spell-list-dropdown");
+  
+    document.querySelector(".dropdown-spell-list-ul").classList.toggle("show-spell-list-dropdown");
+  
 
-  let getAllAttackButtons = document.querySelectorAll(".attack");
-  for (let i = 0; i < getAllAttackButtons.length; i++) {
-    getAllAttackButtons[i].classList.toggle("grey-out");
+  if (!document.querySelector(".first-level-dropdown-list").classList.contains("show-spell-list-dropdown")) {
+    document.querySelector(".first-level-dropdown-list").classList.add("show-spell-list-dropdown");
+
   }
+
+ if (!document.querySelector(".second-level-dropdown-list").classList.contains("show-spell-list-dropdown")) {
+    document.querySelector(".second-level-dropdown-list").classList.add("show-spell-list-dropdown");
+
+  }
+
+ if (!document.querySelector(".third-level-dropdown-list").classList.contains("show-spell-list-dropdown")) {
+    document.querySelector(".third-level-dropdown-list").classList.add("show-spell-list-dropdown");
+
+  }
+  
+  // document.querySelector(".second-level-dropdown-list").classList.add("show-spell-list-dropdown");
+  // document.querySelector(".third-level-dropdown-list").classList.add("show-spell-list-dropdown");
+
+  // let getAllAttackButtons = document.querySelectorAll(".attack");
+  // for (let i = 0; i < getAllAttackButtons.length; i++) {
+  //   if(!getAllAttackButtons[i].classList.contains("grey-out"))
+  //   getAllAttackButtons[i].classList.add("grey-out");
+  // }
 }
 
 //need to tie casting spell to actual spell methods dynamically
