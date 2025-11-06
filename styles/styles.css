@@ -478,11 +478,20 @@ input[name="selected-specialty"] {
 
   }
 
-  .fa-regular.fa-circle-plus,
+  .fa-regular.fa-circle-plus {
+    color: var(--bg-300);
+    position: relative;
+    float: left;    
+    transform: scale(.8);
+  }
+
   .fa-solid.fa-minus {
     color: var(--bg-300);
     position: relative;
     float: left;    
+    transform: scale(.4);
+    left: -30px;
+    top: 1-px;
   }
 
   .ac-guage {
