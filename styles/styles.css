@@ -35,6 +35,8 @@
   /*text*/
   --hover-text: rgb(163, 205, 163);
   --btn-text: #0d6e6e;
+
+  interpolate-size: allow-keywords;
 }
 
 * {
@@ -820,6 +822,21 @@ input[name="selected-specialty"] {
     background-color: var(--accent-green-200);
     color: var(--primary);
     text-align: center;
+  }
+
+  details[name="mage-spells-details-set"] {
+    overflow: hidden;
+
+  }
+
+   details [name="mage-spells-details-set"]::details-content {
+    block-size: 0;
+
+  }
+
+   details[name="mage-spells-details-set"][open]::details-content {
+    block-size: 0;
+    transition: block-size 1s;
   }
 
   details > summary.character-statuses-summary,
