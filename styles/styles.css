@@ -1789,7 +1789,7 @@ input[name="selected-specialty"] {
     bottom: 215px;
     left: calc(50% - (120px));
     font-size: 1.2em;
-    background-color: white;
+    /* background-color: white; */
     width: 240px;
     border-radius: 5px;
     padding: 5px;
@@ -1908,7 +1908,8 @@ input[name="selected-specialty"] {
 
   .mage-first-level-details,
   .mage-second-level-details,
-  .mage-third-level-details {
+  .mage-third-level-details,
+   {
     overflow: hidden;
 
   }
@@ -1927,6 +1928,23 @@ input[name="selected-specialty"] {
    .mage-second-level-details[open]::details-content,
    .mage-third-level-details[open]::details-content {
     block-size: auto;
+  }
+
+  summary.mage-first-level-summary,
+  summary.mage-second-level-summary,
+  summary.mage-third-level-summary {
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 7px 0px 7px 5px;
+  }
+
+  .mage-monster-one-spell-list,
+  .mage-monster-two-spell-list,
+  .mage-self-spell-list {
+    background-color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 5px;
   }
 
   ul[class*="spell-list-combat"]:hover li.monster-one-spell-list {
