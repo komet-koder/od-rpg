@@ -1906,21 +1906,26 @@ input[name="selected-specialty"] {
     display: none;   
   }
 
-  
-  #mage-first-level-detail-charm-person {
+  .mage-first-level-details,
+  .mage-second-level-details,
+  .mage-third-level-details {
     overflow: hidden;
 
   }
 
-   #mage-first-level-detail-charm-person::details-content {
+   .mage-first-level-details::details-content,
+   .mage-second-level-details::details-content,
+   .mage-third-level-details::details-content {
     block-size: 0;
-    transition: block-size 500ms,
-                content-visibility 500ms;
+    transition: block-size 250ms,
+                content-visibility 250ms;
     transition-behavior: allow-discrete;
 
   }
 
-   #mage-first-level-detail-charm-person[open]::details-content {
+   .mage-first-level-details[open]::details-content,
+   .mage-second-level-details[open]::details-content,
+   .mage-third-level-details[open]::details-content {
     block-size: auto;
   }
 
