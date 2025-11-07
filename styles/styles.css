@@ -772,6 +772,32 @@ input[name="selected-specialty"] {
     position: relative;
     z-index: 900;
   }
+  #character-hitpoints {
+    grid-area: 1 / 1 / 1 / 3;
+  }
+
+  #character-stats {
+    grid-area: 2 / 1 / 2 / 3;
+  }
+
+  #character-stats[open] {
+    height: 6em;
+    transition: height 350ms;
+  }
+
+  #character-stats::details-content {
+    height: 0em;
+    transition: height 350ms,
+                content-visibility 350ms;
+    transition-behavior: allow-discrete;
+    overflow: hidden;
+  }
+
+  #character-stats[open]::details-content {
+    height: 4.5em;
+    /* transition: height 300ms; */
+
+  }
 
   summary.character-stats-summary {
     height: 1em;
@@ -829,35 +855,6 @@ input[name="selected-specialty"] {
 
   }
 
-  details[open] > summary.character-stats-summary,
-  details[open] > summary.character-statuses-summary,
-  details[open] > summary.character-afflictions-summary,
-  details[open] > summary.character-hitpoints-summary {
-      height: 1em;
-      border: none;
-      border-radius: 0px 5px 5px 0px;
-      border-radius: 5px;
-      font-size: 1.5em;
-      position: relative;
-      background-color: var(--accent-green-200);
-      color: var(--primary);
-      text-align: center;
-    }
-
-  /* details > summary.character-statuses-summary > i.fa-minus,
-  details > summary.character-stats-summary > i.fa-minus,
-  details > summary.character-hitpoints-summary > i.fa-minus,
-  details > summary.character-afflictions-summary > i.fa-minus {
-    display: none;
-  }   */
-
-  /* details > summary.character-statuses-summary > i.fa-plus,
-  details > summary.character-stats-summary > i.fa-plus,
-  details > summary.character-hitpoints-summary > i.fa-plus,
-  details > summary.character-afflictions-summary > i.fa-plus {
-    display: block;
-  }   */
-
   details[open] {
     summary.character-statuses-summary,
     summary.character-stats-summary,
@@ -878,6 +875,8 @@ input[name="selected-specialty"] {
         }  
     }
   } 
+
+
 
   details[open] > summary.character-statuses-summary > i.fa-minus,
   details[open] > summary.character-hitpoints-summary > i.fa-minus,
@@ -904,27 +903,6 @@ input[name="selected-specialty"] {
     list-style: none;
   }
 
-  #character-hitpoints {
-    grid-area: 1 / 1 / 1 / 3;
-  }
-
-  #character-stats {
-    grid-area: 2 / 1 / 2 / 3;
-  }
-
-  #character-stats[open] {
-    height: 6em;
-  }
-
-   /* .fa-regular.fa-circle-plus {
-    color: var(--bg-300);
-    position: absolute;
-    transform: scale(.8);
-    left: -1px;
-    top: 0px;
-
-  } */
-
   #character-stats summary .fa-solid.fa-minus {
     color: var(--bg-300);
     position: absolute;
@@ -947,9 +925,28 @@ input[name="selected-specialty"] {
     transform: rotateX(90deg) scale(.8);
     transition-behavior: allow-discrete;
   }
- 
+
   #character-statuses {
     grid-area: 3 / 1 / 3 / 3;
+  }
+
+
+  #character-statuses[open] {
+    height: 6em;
+
+  }
+
+  #character-statuses::details-content {
+    height: 0;
+    transition: height 250ms,
+                content-visibility 350ms;
+    transition-behavior: allow-discrete;
+    overflow: hidden;
+  }
+
+  #character-statuses[open]::details-content {
+    height: 4.5em;
+    transition: height 350ms;
   }
 
   #character-statuses summary .fa-solid.fa-minus {
@@ -1014,7 +1011,7 @@ input[name="selected-specialty"] {
                           "weapon armor";    
     column-gap: 10px;
     place-content: end space-between;
-    height: 100%;
+    height: 6em;
     padding-bottom: 5px;
     border: none;
     border-radius: 5px;
@@ -1040,6 +1037,22 @@ input[name="selected-specialty"] {
     height: 100%;
     transform: scale(1.5);
   }
+
+
+  #character-stats > .char-stats-module {
+    transition: height 350ms,
+                content-visibility 350ms;
+    transition-behavior: allow-discrete;
+    height: 0em;
+
+    overflow: hidden;
+  }
+
+  #character-stats[open] > .char-stats-module {
+    height: 4.5em;
+    transition: height 350ms;
+  }
+
 
   div.char-afflictions-module {
     width: 100%;
