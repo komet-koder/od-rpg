@@ -491,7 +491,7 @@ input[name="selected-specialty"] {
     float: left;    
     transform: scale(.4);
     left: -30px;
-    top: 1-px;
+    top: -1px;
   }
 
   .ac-guage {
