@@ -839,7 +839,7 @@ input[name="selected-specialty"] {
   details > summary.character-hitpoints-summary,
   details > summary.character-afflictions-summary {
     list-style: none;
-      z-index: 1000;
+    z-index: 1000;
 
   }
 
@@ -858,19 +858,19 @@ input[name="selected-specialty"] {
       text-align: center;
     }
 
-  details > summary.character-statuses-summary > i.fa-minus,
+  /* details > summary.character-statuses-summary > i.fa-minus,
   details > summary.character-stats-summary > i.fa-minus,
   details > summary.character-hitpoints-summary > i.fa-minus,
   details > summary.character-afflictions-summary > i.fa-minus {
     display: none;
-  }  
+  }   */
 
-  details > summary.character-statuses-summary > i.fa-plus,
+  /* details > summary.character-statuses-summary > i.fa-plus,
   details > summary.character-stats-summary > i.fa-plus,
   details > summary.character-hitpoints-summary > i.fa-plus,
   details > summary.character-afflictions-summary > i.fa-plus {
     display: block;
-  }  
+  }   */
 
   details[open] {
     summary.character-statuses-summary,
