@@ -1928,8 +1928,8 @@ input[name="selected-specialty"] {
    .mage-second-level-details::details-content,
    .mage-third-level-details::details-content {
     block-size: 0;
-    transition: block-size 250ms,
-                content-visibility 250ms;
+    transition: block-size 350ms,
+                content-visibility 350ms;
     transition-behavior: allow-discrete;
 
   }
