@@ -788,7 +788,7 @@ input[name="selected-specialty"] {
   #character-stats::details-content {
     height: 0em;
     transition: height 350ms,
-                content-visibility 350ms;
+                content-visibility 250ms;
     transition-behavior: allow-discrete;
     overflow: hidden;
   }
@@ -933,20 +933,21 @@ input[name="selected-specialty"] {
 
   #character-statuses[open] {
     height: 6em;
+    transition: height 250ms;
 
   }
 
   #character-statuses::details-content {
     height: 0;
     transition: height 250ms,
-                content-visibility 350ms;
+                content-visibility 250ms;
     transition-behavior: allow-discrete;
     overflow: hidden;
   }
 
   #character-statuses[open]::details-content {
     height: 4.5em;
-    transition: height 350ms;
+    transition: height 250ms;
   }
 
   #character-statuses summary .fa-solid.fa-minus {
