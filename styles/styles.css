@@ -1564,41 +1564,8 @@ input[name="selected-specialty"] {
 
   .fight-module-button {
     position: relative;
-    width: 100%;
-    display: inline-block;
-    border: 1px solid transparent;
     padding: 2px 2px 2px 2px;
-    border-radius: 3px;
-    background-color: transparent;
     justify-self: center;
-    align-self: center;
-    margin-bottom: 0px;
-  }
-
-  .area-attack,
-  .item-enchantment,
-  .attack-monster-one,
-  .attack-monster-two,
-  .spell2-monster-one,
-  .spell2-monster-two,
-  .spell1-heal,
-  #attack-melee {
-    width: 200px;
-    border-radius: 5px;
-    background-color: rgb(193, 224, 193);  
-  }
-
-  .fight-module-button {
-    position: relative;
-    width: 100%;
-    display: inline-block;
-    border: 1px solid transparent;
-    padding: 2px 2px 2px 2px;
-    border-radius: 3px;
-    background-color: transparent;
-    justify-self: center;
-    align-self: center;
-    margin-bottom: 0px;
   }
 
   #attack-melee {
