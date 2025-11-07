@@ -478,20 +478,7 @@ input[name="selected-specialty"] {
 
   }
 
-  .fa-regular.fa-circle-plus {
-    color: var(--bg-300);
-    position: absolute;
-    transform: scale(.8);
-    left: -1px;
-  }
 
-  .fa-solid.fa-minus {
-    color: var(--bg-300);
-    position: absolute;
-    transform: scale(.4);
-    left: -1px;
-    top: -33px;
-  }
 
   .ac-guage {
     width: 100%;
@@ -929,8 +916,63 @@ input[name="selected-specialty"] {
     height: 6em;
   }
 
+   /* .fa-regular.fa-circle-plus {
+    color: var(--bg-300);
+    position: absolute;
+    transform: scale(.8);
+    left: -1px;
+    top: 0px;
+
+  } */
+
+  #character-stats summary .fa-solid.fa-minus {
+    color: var(--bg-300);
+    position: absolute;
+    transform: scale(.4);
+    left: -1px;
+    top: 0px;
+  }
+
+  #character-stats summary i.fa-circle-plus {
+    color: var(--bg-300);
+    position: absolute;
+    left: -1px;
+    top: 0px;
+    transform: rotateX(0deg) scale(.8);
+    transition: transform 350ms ease;
+  }
+
+ #character-stats[open] summary i.fa-circle-plus {
+    transition: transform 350ms ease;
+    transform: rotateX(90deg) scale(.8);
+    transition-behavior: allow-discrete;
+  }
+ 
   #character-statuses {
     grid-area: 3 / 1 / 3 / 3;
+  }
+
+  #character-statuses summary .fa-solid.fa-minus {
+    color: var(--bg-300);
+    position: absolute;
+    transform: scale(.4);
+    left: -1px;
+    top: 0px;
+  }
+
+  #character-statuses summary i.fa-circle-plus {
+    color: var(--bg-300);
+    position: absolute;
+    left: -1px;
+    top: 0px;
+    transform: rotateX(0deg) scale(.8);
+    transition: transform 350ms ease;
+  }
+
+ #character-statuses[open] summary i.fa-circle-plus {
+    transition: transform 350ms ease;
+    transform: rotateX(90deg) scale(.8);
+    transition-behavior: allow-discrete;
   }
 
   .character-statuses-and-afflictions {
