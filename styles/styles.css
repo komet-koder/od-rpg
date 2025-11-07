@@ -933,7 +933,7 @@ input[name="selected-specialty"] {
 
   #character-statuses[open] {
     height: 6em;
-    transition: height 250ms;
+    transition: height 350ms;
 
   }
 
@@ -947,7 +947,7 @@ input[name="selected-specialty"] {
 
   #character-statuses[open]::details-content {
     height: 4.5em;
-    transition: height 250ms;
+    transition: height 350ms;
   }
 
   #character-statuses summary .fa-solid.fa-minus {
