@@ -3583,7 +3583,23 @@ function populateMageSpells(m1, m2, nextChap) {
 
       let mageSecondLevelSpellSummary = document.createElement('summary');
       mageSecondLevelSpellSummary.setAttribute('class', 'mage-second-level-summary');
+
+            
+      let spellSummaryIcon = document.createElement('i');
+      spellSummaryIcon.classList.add('fa-regular');
+      spellSummaryIcon.classList.add('fa-circle-plus');
+      
+
+      let spellSummaryMinusIcon = document.createElement('i');
+      spellSummaryMinusIcon.classList.add('fa-solid');
+      spellSummaryMinusIcon.classList.add('fa-minus');
+      
       mageSecondLevelSpellSummary.textContent = characterSecondLevelSpells[i].name;
+
+      mageSecondLevelSpellSummary.prepend(spellSummaryIcon);
+      mageSecondLevelSpellSummary.prepend(spellSummaryMinusIcon);
+
+   
       
       let addSelf1Btn = document.createElement("div");
       addSelf1Btn.classList.add("mage-self-spell-list");
@@ -3616,7 +3632,20 @@ function populateMageSpells(m1, m2, nextChap) {
       
       let mageSecondLevelSpellSummary = document.createElement('summary');
       mageSecondLevelSpellSummary.setAttribute('class', 'mage-second-level-summary');
+      
+      let spellSummaryIcon = document.createElement('i');
+      spellSummaryIcon.classList.add('fa-regular');
+      spellSummaryIcon.classList.add('fa-circle-plus');
+      
+
+      let spellSummaryMinusIcon = document.createElement('i');
+      spellSummaryMinusIcon.classList.add('fa-solid');
+      spellSummaryMinusIcon.classList.add('fa-minus');
+      
       mageSecondLevelSpellSummary.textContent = characterSecondLevelSpells[i].name;
+
+      mageSecondLevelSpellSummary.prepend(spellSummaryIcon);
+      mageSecondLevelSpellSummary.prepend(spellSummaryMinusIcon);
 
       let addMonster1Btn = document.createElement("div");
       addMonster1Btn.classList.add("mage-monster-one-spell-list");
@@ -3694,7 +3723,21 @@ function populateMageSpells(m1, m2, nextChap) {
 
       let mageThirdLevelSpellSummary = document.createElement('summary');
       mageThirdLevelSpellSummary.setAttribute('class', 'mage-third-level-summary');
-      mageThirdLevelSpellSummary.textContent = characterThirdLevelSpells[i].name;
+      
+      let spellSummaryIcon = document.createElement('i');
+      spellSummaryIcon.classList.add('fa-regular');
+      spellSummaryIcon.classList.add('fa-circle-plus');
+      
+
+      let spellSummaryMinusIcon = document.createElement('i');
+      spellSummaryMinusIcon.classList.add('fa-solid');
+      spellSummaryMinusIcon.classList.add('fa-minus');
+      
+       mageThirdLevelSpellSummary.textContent = characterThirdLevelSpells[i].name;
+
+      mageThirdLevelSpellSummary.prepend(spellSummaryIcon);
+      mageThirdLevelSpellSummary.prepend(spellSummaryMinusIcon);
+     
       
       let addSelf1Btn = document.createElement("div");
       addSelf1Btn.classList.add("mage-self-spell-list");
@@ -3727,7 +3770,20 @@ function populateMageSpells(m1, m2, nextChap) {
       
       let mageThirdLevelSpellSummary = document.createElement('summary');
       mageThirdLevelSpellSummary.setAttribute('class', 'mage-third-level-summary');
-      mageThirdLevelSpellSummary.textContent = characterThirdLevelSpells[i].name;
+      
+      let spellSummaryIcon = document.createElement('i');
+      spellSummaryIcon.classList.add('fa-regular');
+      spellSummaryIcon.classList.add('fa-circle-plus');
+      
+
+      let spellSummaryMinusIcon = document.createElement('i');
+      spellSummaryMinusIcon.classList.add('fa-solid');
+      spellSummaryMinusIcon.classList.add('fa-minus');
+      
+       mageThirdLevelSpellSummary.textContent = characterThirdLevelSpells[i].name;
+
+      mageThirdLevelSpellSummary.prepend(spellSummaryIcon);
+      mageThirdLevelSpellSummary.prepend(spellSummaryMinusIcon);
 
       let addMonster1Btn = document.createElement("div");
       addMonster1Btn.classList.add("mage-monster-one-spell-list");
