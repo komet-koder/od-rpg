@@ -1020,7 +1020,7 @@ function startGame() {
   window.scrollTo(0, 0);
 
   let welcomeTitle = document.querySelector('.welcome-title');
-  welcomeTitle.textContent = "";  
+  welcomeTitle.remove();  
 
 
   let strengthPlusAdjustment;
@@ -3102,7 +3102,8 @@ function beginChapterThreeFive() {
         this.remove();
         let removeGoAroundButton = document.querySelector('#dont-attack-wolves');
         removeGoAroundButton.remove();
-          let dialogueDiv = document.querySelector('#dialogue');
+        
+        let dialogueDiv = document.querySelector('#dialogue');
         dialogueDiv.innerHTML = "";
         addingFightModule(smallWolf, noMonster, continueChapterThreeFour);
         declareAttack();

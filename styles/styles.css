@@ -109,7 +109,7 @@ button {
 /******************************************** MODE NOT SUPPORTED *********************************************/
 
 
-@media only screen and (width < 375px), screen and (max-height: 690px) {
+@media only screen and (width < 375px), screen and (height < 690px) {
   body {
     
   }
