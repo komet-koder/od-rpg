@@ -1967,7 +1967,7 @@ input[name="selected-specialty"] {
   summary.mage-third-level-summary {
     background-color: #ffffff;
     border-radius: 5px;
-    padding: 7px 0px 7px 25px;
+    padding: 7px 0px 7px 0px;
   }
 
   summary.mage-first-level-summary > .fa-solid.fa-minus,
@@ -1975,20 +1975,24 @@ input[name="selected-specialty"] {
   summary.mage-third-level-summary  > .fa-solid.fa-minus{
     position: relative;
     transform: scale(.4);
-    left: 27px;
-    top: 15px;
-    
+    /* left: -23px; */
   }
-
-  
 
   summary.mage-first-level-summary > .fa-regular.fa-circle-plus,
   summary.mage-second-level-summary > .fa-regular.fa-circle-plus,
   summary.mage-third-level-summary  > .fa-regular.fa-circle-plus{
     position: relative;
-    left: 27px;
-    /* top: 15px; */
-    position: relative;
+    left: -24px;
+     transform: rotateX(0deg);
+    transition: transform 200ms ease ;
+  }
+
+  details[open] summary.mage-first-level-summary > .fa-regular.fa-circle-plus,
+  details[open] summary.mage-second-level-summary > .fa-regular.fa-circle-plus,
+  details[open] summary.mage-third-level-summary  > .fa-regular.fa-circle-plus{
+    transition: transform 200ms ease ;
+    transform: rotateX(90deg);
+    transition-behavior: allow-discrete;
   }
 
   .mage-monster-one-spell-list,
