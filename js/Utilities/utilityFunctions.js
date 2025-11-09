@@ -145,23 +145,24 @@ export function updateMonsterOne(monsterOne) {
 }
 
 export function updateMonsterTwo(monsterTwo) {
-  
-  let monsterTwoHP = document.querySelector('#monster-two-hp');
-  monsterTwoHP.innerHTML = 
-  `
-  <div>Hit Points</div>
-  <progress class='monster-hp-prog-bar' id="monster-two-hp-progress-bar" max="${monsterTwo.startingHealthPoints}" value="${monsterTwo.healthPoints}"></progress>
-  <div>${monsterTwo.healthPoints}</div>
-  `;
-  
-  let monsterTwoAC = document.querySelector('#monster-two-ap');
-  monsterTwoAC.innerHTML = `Armor Class: ${monsterTwo.armorClass}`;
+  if (monsterTwo) {
+    let monsterTwoHP = document.querySelector('#monster-two-hp');
+      monsterTwoHP.innerHTML = 
+      `
+      <div>Hit Points</div>
+      <progress class='monster-hp-prog-bar' id="monster-two-hp-progress-bar" max="${monsterTwo.startingHealthPoints}" value="${monsterTwo.healthPoints}"></progress>
+      <div>${monsterTwo.healthPoints}</div>
+      `;
+      
+      let monsterTwoAC = document.querySelector('#monster-two-ap');
+      monsterTwoAC.innerHTML = `Armor Class: ${monsterTwo.armorClass}`;
 
-  let monsterTwoDamage = document.querySelector('#monster-two-damage');
-  monsterTwoDamage.innerHTML = `Damage: ${monsterTwo.damage}`;
+      let monsterTwoDamage = document.querySelector('#monster-two-damage');
+      monsterTwoDamage.innerHTML = `Damage: ${monsterTwo.damage}`;
 
-  let monsterTwoStatus = document.querySelector('#monster-two-status');
-  monsterTwoStatus.innerHTML = `${monsterTwo.status}`; 
+      let monsterTwoStatus = document.querySelector('#monster-two-status');
+      monsterTwoStatus.innerHTML = `${monsterTwo.status}`; 
+  }  
 }
 
 export function updateCharacterData(finalCharacter) {
