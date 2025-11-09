@@ -113,6 +113,7 @@ import {
   kobold,
   phantasmalTroll,
 } from "./monster-class-v2.js";
+import { Utilities } from "./Utilities/utilityFunctions.js";
 
 //import { noAchievements, killedFarmWolves, spokeToRaynard } from './achievements-v1.js';
 
@@ -477,6 +478,15 @@ export default class Character {
         finalCharacter.specialty.characterLevel.level.maxXP
       ) {
         alert("Congratulations, you have achieved the next level!");
+        modalConfig = {
+          id: "",
+          class: "level-up-modal",
+          buttonID: "",
+          buttonClass: "close-level-up-modal",
+          buttonText: "Close",
+          modalText: "Congratulations, you have achieved the next level!"
+        }
+        Utilities.createModal(modalConfig);
       }
     } else {
       return;

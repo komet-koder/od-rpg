@@ -110,9 +110,9 @@ button {
 
 
 @media only screen and (width < 375px), screen and (height < 690px) {
-  body {
+  /* body {
     
-  }
+  } */
   #container {
     display: none;  
   }
