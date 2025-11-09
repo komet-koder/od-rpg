@@ -323,6 +323,8 @@ shield.castSpell = function (monster1, monster2, continueNextChapter, attackedMo
             removeShieldStatus.classList.add('hide-status')
             console.log("shield spell removed");
             console.log(finalCharacter.status)
+            Utilities.updateCharacterData(finalCharacter);
+
         }, 120000);
 
         finalCharacter.activeSpellStatuses.push(shieldTimer)
