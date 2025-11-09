@@ -478,7 +478,7 @@ export default class Character {
         finalCharacter.specialty.characterLevel.level.maxXP
       ) {
         alert("Congratulations, you have achieved the next level!");
-        modalConfig = {
+        let modalConfig = {
           id: "",
           class: "level-up-modal",
           buttonID: "",
@@ -513,6 +513,16 @@ export default class Character {
         finalCharacter.weapon.attackType === "Edged"
       ) {
         monster1.healthPoints = 0;
+        let modalConfig = {
+          id: "",
+          class: "sleeping-monster-killed-modal",
+          buttonID: "",
+          buttonClass: "close-sleeping-monster-killed-modal",
+          buttonText: "Close",
+          modalText: "The ${monster1.name} was asleep, and was killed instantly with your attack."
+        }
+        Utilities.createModal(modalConfig);
+        
         alert(
           `The ${monster1.name} was asleep, and was killed instantly with your attack.`
         );
@@ -712,7 +722,16 @@ export default class Character {
       for (let i = 0; i < playerHitRoll1.length; i++) {
         if (playerHitRoll1[i][0] === monsterArmorClass1) {
           if (playerHitRollValue1 < playerHitRoll1[i][1]) {
-            alert("Player misses!");
+            // alert("Player misses!");
+            let modalConfig = {
+              id: "",
+              class: "player-misses-modal",
+              buttonID: "",
+              buttonClass: "close-player-misses-modal",
+              buttonText: "Close",
+              modalText: "Player misses!"
+            }
+            Utilities.createModal(modalConfig);
             finalCharacter.greyOutAttackButtons(monster1, monster2);
           } else {
             hitRollSucceed(monster1, finalCharacter);
@@ -940,7 +959,16 @@ export default class Character {
       for (let i = 0; i < playerHitRoll1.length; i++) {
         if (playerHitRoll1[i][0] === monsterArmorClass1) {
           if (playerHitRollValue1 < playerHitRoll1[i][1]) {
-            alert("Player misses!");
+            // alert("Player misses!");
+            let modalConfig = {
+              id: "",
+              class: "player-misses-modal",
+              buttonID: "",
+              buttonClass: "close-player-misses-modal",
+              buttonText: "Close",
+              modalText: "Player misses!"
+            }
+            Utilities.createModal(modalConfig);
             finalCharacter.greyOutAttackButtons(monster1, monster2);
           } else {
             hitRollSucceed(monster1, finalCharacter);
