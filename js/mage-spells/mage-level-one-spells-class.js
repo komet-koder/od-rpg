@@ -172,7 +172,7 @@ light.castSpell = function (monster1, monster2, continueNextChapter, attackedMon
             monster1.status.push('Blind');
 
             let monster1Status = document.querySelector("#monster-one-status");
-            monster1Status.innerHTML = `<h4 id="monster-one-status">Status: ${monster1.status.join(', ')}</h4>`
+            monster1Status.innerHTML = `Status: ${monster1.status.join(', ')}`
 
             //need to make variable, push to an array, and then call the function expression
 
@@ -221,7 +221,7 @@ light.castSpell = function (monster1, monster2, continueNextChapter, attackedMon
             monster2.status.push('Blind');
             
             let monster2Status = document.querySelector("#monster-two-status");
-            monster2Status.innerHTML = `<h4 id="monster-two-status">Status: ${monster2.status.join(', ')}</h4>`
+            monster2Status.innerHTML = `Status: ${monster2.status.join(', ')}`
 
             let blindTimer2 = setTimeout(function ()
             {
@@ -400,7 +400,7 @@ protectionFromEvil.castSpell = function (monster1, monster2, continueNextChapter
 
         monster1.status.push("Protection from Evil");
         let monster1Status = document.querySelector("#monster-one-status");
-        monster1Status.innerHTML = `<h4 id="monster-one-status">Status: ${monster1.status.join(', ')}</h4>`;
+        monster1Status.innerHTML = `Status: ${monster1.status.join(', ')}`;
 
         if (monster2.name !== " ")
         {
@@ -415,7 +415,7 @@ protectionFromEvil.castSpell = function (monster1, monster2, continueNextChapter
 
             monster2.status.push("Protection from Evil");
             let monster2Status = document.querySelector("#monster-two-status");
-            monster2Status.innerHTML = `<h4 id="monster-two-status">Status: ${monster2.status.join(', ')}</h4>`
+            monster2Status.innerHTML = `Status: ${monster2.status.join(', ')}`
 
             let protectionFromEvilTimer2 = setTimeout(function ()
             {
@@ -538,7 +538,7 @@ charmPerson.castSpell = function (monster1, monster2, continueNextChapter, attac
             console.log("Charming Monster 1")
             monster1.status.push('Charmed');
             let monster1Status = document.querySelector("#monster-one-status");
-            monster1Status.innerHTML = `<h4 id="monster-one-status">Status: ${monster1.status.join(', ')}</h4>`
+            monster1Status.innerHTML = `Status: ${monster1.status.join(', ')}`
 
             // WORKING TO PULL SET TIMEOUT OUT OF SPELL CASTING AND MAKING IT'S OWN F(X)
 
@@ -576,7 +576,7 @@ charmPerson.castSpell = function (monster1, monster2, continueNextChapter, attac
             console.log("charming monster 2")
             monster2.status.push('Charmed');
             let monster2Status = document.querySelector("#monster-two-status");
-            monster2Status.innerHTML = `<h4 id="monster-two-status">Status: ${monster2.status.join(', ')}</h4>`
+            monster2Status.innerHTML = `Status: ${monster2.status.join(', ')}`
 
             let charmTimer2 = setTimeout(function ()
             {
@@ -640,7 +640,7 @@ sleep.castSpell = function (monster1, monster2, continueNextChapter, attackedMon
             dialogue.innerHTML += `<p>${monster1.name} fell asleep.</p>`;
             monster1.status.push('Sleep');
             let monster1Status = document.querySelector("#monster-one-status");
-            monster1Status.innerHTML = `<h4 id="monster-one-status">Status: ${monster1.status.join(', ')}</h4>`
+            monster1Status.innerHTML = `Status: ${monster1.status.join(', ')}`
 
             //need to make variable, push to an array, and then call the function expression
 
@@ -686,7 +686,7 @@ sleep.castSpell = function (monster1, monster2, continueNextChapter, attackedMon
             dialogue.innerHTML += `<p>${monster2.name} fell asleep.</p>`;
             monster2.status.push('Sleep');
             let monster2Status = document.querySelector("#monster-two-status");
-            monster2Status.innerHTML = `<h4 id="monster-two-status">Status: ${monster2.status.join(', ')}</h4>`
+            monster2Status.innerHTML = `Status: ${monster2.status.join(', ')}`
 
             let sleepTimer2 = setTimeout(function ()
             {

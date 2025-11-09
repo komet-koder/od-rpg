@@ -1706,7 +1706,7 @@ input[name="selected-specialty"] {
     grid-template-columns: 50% 50%;
     grid-template-rows: 30% 30% 10% 30%;
     padding: 5px;
-    
+    font-size: .75em;
   }
 
   .monster-info-module > div {
