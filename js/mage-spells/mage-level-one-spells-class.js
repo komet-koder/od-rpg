@@ -307,6 +307,7 @@ shield.castSpell = function (monster1, monster2, continueNextChapter, attackedMo
         let oldAC = finalCharacter.armorClass;
         finalCharacter.armorClass = 4;
 
+        Utilities.updateCharacterData(finalCharacter);
         //adding status icon to player status module
 
         finalCharacter.status.push("Shield");

@@ -164,8 +164,39 @@ export function updateMonsterTwo(monsterTwo) {
   monsterTwoStatus.innerHTML = `${monsterTwo.status}`; 
 }
 
-export function updateCharacter(finalCharacter) {
+export function updateCharacterData(finalCharacter) {
   console.log('update character');
+  
+  let acGuageValue = document.querySelector('.ac-guage-value');
+  
+  acGuageValue.textContent = finalCharacter.armorClass - finalCharacter.attributes[3].adjustment;
+
+  let hpGuageCurrent = document.querySelector('.hitpoint-guage-value-current');
+  hpGuageCurrent.textContent = finalCharacter.specialty.healthPoints + finalCharacter.attributes[4].adjustment <= 0 ? 0 : finalCharacter.specialty.healthPoints + finalCharacter.attributes[4].adjustment;
+
+  let hpGuageValueTotal = document.querySelector('.hitpoint-guage-value-total');
+  hpGuageValueTotal.textContent = finalCharacter.specialty.healthPoints + finalCharacter.attributes[4].adjustment <= 0 ? 0 : finalCharacter.specialty.healthPoints + finalCharacter.attributes[4].adjustment;
+
+  let xpGaugeValueCurrent = document.querySelector('.xp-guage-value-current');
+  xpGaugeValueCurrent.textContent = finalCharacter.specialty.characterExperience;
+
+  let xpGuageValueTotal = document.querySelector('.xp-guage-value-total');
+  xpGuageValueTotal.textContent = finalCharacter.specialty.characterLevel.level.maxXP;
+
+  let charLevelUpdate = document.querySelector('#char-level > span');
+  charLevelUpdate.textContent = finalCharacter.specialty.characterLevel.level.level;
+
+  let charArmorUpdate = document.querySelector('.armor-tooltip > span');
+  charArmorUpdate.textContent = finalCharacter.armor.name;
+
+  let charArmorClassUpdate = document.querySelector('.armor-tooltiptext');
+  charArmorClassUpdate.textContent = `Armor Class: ${finalCharacter.armor.armorClass}`;
+
+  let weaponCharUpdate = document.querySelector('.weapon-tooltip > span');
+  weaponCharUpdate.textContent = finalCharacter.weapon.name;
+
+  let charWeaponToottipText = document.querySelector('.weapon-tooltiptext');
+  charWeaponToottipText.textContent = finalCharacter.weapon.damage;
 }
 
 export * as Utilities from "./utilityFunctions.js";
