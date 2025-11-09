@@ -4,6 +4,7 @@ import
 } from "../js_v14-3.js";
 
 import { toggleShowSpellList } from "../js_v14-3.js";
+import { Utilities } from "../Utilities/utilityFunctions.js";
 
 export let mageLevelOneSpells = [];
 
@@ -180,17 +181,19 @@ light.castSpell = function (monster1, monster2, continueNextChapter, attackedMon
                 // monster1.status.splice(removeBlindM1); //removing Blind after function call
                 monster1.status.splice(monster1.status.indexOf("Blind"), 1);
 
-                let monsterOneHP = document.querySelector('#monster-one-hp');
-                monsterOneHP.innerHTML = `Hit Points: ${monster1.healthPoints}`;
+                Utilities.updateMonsterOne(monster1);
+                
+                // let monsterOneHP = document.querySelector('#monster-one-hp');
+                // monsterOneHP.innerHTML = `Hit Points: ${monster1.healthPoints}`;
 
-                let monsterOneHPProgress = document.querySelector('#monster-one-hp');
-                monsterOneHPProgress.setAttribute('value', `${monster1.healthPoints}`); 
+                // let monsterOneHPProgress = document.querySelector('#monster-one-hp');
+                // monsterOneHPProgress.setAttribute('value', `${monster1.healthPoints}`); 
 
-                let monsterOneAP = document.querySelector('#monster-one-ap');
-                monsterOneAP.innerHTML = `Armor Class: ${monster1.armorClass}`;
+                // let monsterOneAP = document.querySelector('#monster-one-ap');
+                // monsterOneAP.innerHTML = `Armor Class: ${monster1.armorClass}`;
 
-                let monsterOneDamage = document.querySelector('#monster-one-damage');
-                monsterOneDamage.innerHTML = `Damage: ${monster1.damage}`;
+                // let monsterOneDamage = document.querySelector('#monster-one-damage');
+                // monsterOneDamage.innerHTML = `Damage: ${monster1.damage}`;
 
                 let monster1Status = document.querySelector("#monster-one-status");
                 monster1Status.innerHTML = `Status: ${monster1.status.join(', ')}`;
