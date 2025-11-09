@@ -199,4 +199,12 @@ export function updateCharacterData(finalCharacter) {
   charWeaponToottipText.textContent = finalCharacter.weapon.damage;
 }
 
+export function updateCharacterAttributes(finalCharacter) {
+  console.log('update char attributes')
+};
+
+export function updateCharacterSaves(finalCharacter) {
+  console.log('update char saves');
+}
+
 export * as Utilities from "./utilityFunctions.js";
