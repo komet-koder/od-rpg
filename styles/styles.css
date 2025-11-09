@@ -1285,7 +1285,10 @@ input[name="selected-specialty"] {
   #monsters-turn-modal,
   .sleeping-monster-killed-modal,
   .player-misses-modal,
-  .level-up-modal  {
+  .level-up-modal,
+  .charmed-monster-broken-modal,
+  .invisibility-spell-broken-modal,
+  .sleeping-monster-woke-modal  {
     color: var(--btn-bg);
     border: 4px solid var(--btn-bg);
     background-color: #2a2446;
@@ -1309,7 +1312,10 @@ input[name="selected-specialty"] {
   #monsters-turn-modal::backdrop,
   .sleeping-monster-killed-modal::backdrop,
   .player-misses-modal::backdrop,
-  .level-up-modal::backdrop {
+  .level-up-modal::backdrop,
+  .charmed-monster-broken-modal::backdrop,
+  .invisibility-spell-broken-modal::backdrop,
+  .sleeping-monster-woke-modal::backdrop {
     backdrop-filter: blur(3px);
   }
 
@@ -1325,7 +1331,10 @@ input[name="selected-specialty"] {
   #monsters-turn-modal > p,
   .sleeping-monster-killed-modal > p,
   .player-misses-modal > p,
-  .level-up-modal > p {
+  .level-up-modal > p,
+  .charmed-monster-broken-modal > p,
+  .invisibility-spell-broken-modal > p,
+  .sleeping-monster-woke-modal > p {
     height: 50%;
     width: 50%;
     margin: 15% 25% 0% 25%;
@@ -1343,7 +1352,10 @@ input[name="selected-specialty"] {
   #close-monsters-turn-modal, 
   .close-sleeping-monster-killed-modal,
   .close-player-misses-modal,
-  .close.level-up-modal {
+  .close.level-up-modal,
+  .close-charmed-monster-broken-modal,
+  .close-invisibility-spell-broken-modal,
+  .close-sleeping-monster-woke-modal {
     background-color: var(--accent-orange);
     border: 3px solid  var(--accent-200);
     color: var(--accent-200);

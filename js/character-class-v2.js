@@ -513,19 +513,21 @@ export default class Character {
         finalCharacter.weapon.attackType === "Edged"
       ) {
         monster1.healthPoints = 0;
+        
+        alert(
+          `The ${monster1.name} was asleep, and was killed instantly with your attack.`
+        );
+
         let modalConfig = {
           id: "",
           class: "sleeping-monster-killed-modal",
           buttonID: "",
           buttonClass: "close-sleeping-monster-killed-modal",
           buttonText: "Close",
-          modalText: "The ${monster1.name} was asleep, and was killed instantly with your attack."
+          modalText: `The ${monster1.name} was asleep, and was killed instantly with your attack.`
         }
-        Utilities.createModal(modalConfig);
+        Utilities.createModal(modalConfig);       
         
-        alert(
-          `The ${monster1.name} was asleep, and was killed instantly with your attack.`
-        );
         finalCharacter.greyOutAttackButtons(monster1, monster2);
         let updatedMonsterHP = document.querySelector("#monster-one-hp");
         updatedMonsterHP.innerHTML = `
@@ -538,6 +540,17 @@ export default class Character {
         alert(
           `The ${monster1.name} was asleep, but woke up after being struck by your ${finalCharacter.weapon.name}.`
         );
+
+        let modalConfig = {
+          id: "",
+          class: "sleeping-monster-woke-modal",
+          buttonID: "",
+          buttonClass: "close-sleeping-monster-woke-modal",
+          buttonText: "Close",
+          modalText: `The ${monster1.name} was asleep, but woke up after being struck by your ${finalCharacter.weapon.name}.`
+        }
+        Utilities.createModal(modalConfig);
+
         monster1.healthPoints = monster1.healthPoints - inflictedDamage;
         let updatedMonsterHP = document.querySelector("#monster-one-hp");
         updatedMonsterHP.innerHTML = `
@@ -556,8 +569,19 @@ export default class Character {
       //checking if monster is charmed
       else if (monster1.status.includes("Charmed")) {
         alert(
-          `The ${monster1.name} was charmed, but the charm was broken after being attacked`
+          `The ${monster1.name} was charmed, but the charm was broken after being attacked.`
         );
+
+        let modalConfig = {
+          id: "",
+          class: "charmed-monster-broken-modal",
+          buttonID: "",
+          buttonClass: "close-charmed-monster-borken-modal",
+          buttonText: "Close",
+          modalText: `The ${monster1.name} was charmed, but the charm was broken after being attacked.`
+        }
+        Utilities.createModal(modalConfig);
+
         monster1.healthPoints = monster1.healthPoints - inflictedDamage;
         let updatedMonsterHP = document.querySelector("#monster-one-hp");
         updatedMonsterHP.innerHTML = `
@@ -575,6 +599,17 @@ export default class Character {
         alert(
           `You were invisible and the ${monster1.name} could not see you, but the spell was broken after you attacked`
         );
+
+        let modalConfig = {
+          id: "",
+          class: "invisibility-spell-broken-modal",
+          buttonID: "",
+          buttonClass: "close-invisibility-spell-borken-modal",
+          buttonText: "Close",
+          modalText: `You were invisible and the ${monster1.name} could not see you, but the spell was broken after you attacked.`
+        }
+        Utilities.createModal(modalConfig);
+
         monster1.healthPoints = monster1.healthPoints - inflictedDamage;
         let updatedMonsterHP = document.querySelector("#monster-one-hp");
         updatedMonsterHP.innerHTML = `
@@ -708,6 +743,16 @@ export default class Character {
         alert(
           `You were invisible and the ${monster1.name} could not see you, but the spell was broken after you attacked`
         );
+
+        let modalConfig = {
+          id: "",
+          class: "invisibility-spell-broken-modal",
+          buttonID: "",
+          buttonClass: "close-invisibility-spell-borken-modal",
+          buttonText: "Close",
+          modalText: `You were invisible and the ${monster1.name} could not see you, but the spell was broken after you attacked.`
+        }
+        Utilities.createModal(modalConfig);
         finalCharacter.status.splice(
           finalCharacter.status.indexOf("Invisible"),
           1
@@ -722,7 +767,6 @@ export default class Character {
       for (let i = 0; i < playerHitRoll1.length; i++) {
         if (playerHitRoll1[i][0] === monsterArmorClass1) {
           if (playerHitRollValue1 < playerHitRoll1[i][1]) {
-            // alert("Player misses!");
             let modalConfig = {
               id: "",
               class: "player-misses-modal",
@@ -778,6 +822,17 @@ export default class Character {
         alert(
           `The ${monster2.name} was asleep, and was killed instantly with your attack.`
         );
+
+        let modalConfig = {
+          id: "",
+          class: "sleeping-monster-killed-modal",
+          buttonID: "",
+          buttonClass: "close-sleeping-monster-killed-modal",
+          buttonText: "Close",
+          modalText: `The ${monster2.name} was asleep, and was killed instantly with your attack.`
+        }
+        Utilities.createModal(modalConfig);
+
         finalCharacter.greyOutAttackButtons(monster1, monster2);
         let updatedMonsterHP = document.querySelector("#monster-two-hp");
         updatedMonsterHP.innerHTML = `
@@ -790,6 +845,17 @@ export default class Character {
         alert(
           `The ${monster2.name} was asleep, but woke up after being struck by your ${finalCharacter.weapon.name}.`
         );
+
+        let modalConfig = {
+          id: "",
+          class: "charmed-monster-broken-modal",
+          buttonID: "",
+          buttonClass: "close-charmed-monster-borken-modal",
+          buttonText: "Close",
+          modalText: `The ${monster2.name} was asleep, but woke up after being struck by your ${finalCharacter.weapon.name}.`
+        }
+        Utilities.createModal(modalConfig);
+
         monster2.healthPoints = monster2.healthPoints - inflictedDamage;
         let updatedMonsterHP = document.querySelector("#monster-two-hp");
         updatedMonsterHP.innerHTML = `
@@ -807,6 +873,17 @@ export default class Character {
         alert(
           `The ${monster2.name} was charmed, but the charm was broken after being attacked`
         );
+
+        let modalConfig = {
+          id: "",
+          class: "charmed-monster-broken-modal",
+          buttonID: "",
+          buttonClass: "close-charmed-monster-borken-modal",
+          buttonText: "Close",
+          modalText: `The ${monster2.name} was charmed, but the charm was broken after being attacked.`
+        }
+        Utilities.createModal(modalConfig);
+
         monster2.healthPoints = monster2.healthPoints - inflictedDamage;
         let updatedMonsterHP = document.querySelector("#monster-two-hp");
         updatedMonsterHP.innerHTML = `
@@ -824,6 +901,17 @@ export default class Character {
         alert(
           `You were invisible and the ${monster2.name} could not see you, but the spell was broken after you attacked`
         );
+
+        let modalConfig = {
+          id: "",
+          class: "invisibility-spell-broken-modal",
+          buttonID: "",
+          buttonClass: "close-invisibility-spell-borken-modal",
+          buttonText: "Close",
+          modalText: `You were invisible and the ${monster2.name} could not see you, but the spell was broken after you attacked.`
+        }
+        Utilities.createModal(modalConfig);
+
         monster2.healthPoints = monster2.healthPoints - inflictedDamage;
         let updatedMonsterHP = document.querySelector("#monster-two-hp");
         updatedMonsterHP.innerHTML = `
@@ -945,6 +1033,17 @@ export default class Character {
         alert(
           `You were invisible and the ${monster2.name} could not see you, but the spell was broken after you attacked`
         );
+
+        let modalConfig = {
+          id: "",
+          class: "invisibility-spell-broken-modal",
+          buttonID: "",
+          buttonClass: "close-invisibility-spell-borken-modal",
+          buttonText: "Close",
+          modalText: `You were invisible and the ${monster2.name} could not see you, but the spell was broken after you attacked.`
+        }
+        Utilities.createModal(modalConfig);
+
         finalCharacter.status.splice(
           finalCharacter.status.indexOf("Invisible"),
           1
@@ -959,7 +1058,6 @@ export default class Character {
       for (let i = 0; i < playerHitRoll1.length; i++) {
         if (playerHitRoll1[i][0] === monsterArmorClass1) {
           if (playerHitRollValue1 < playerHitRoll1[i][1]) {
-            // alert("Player misses!");
             let modalConfig = {
               id: "",
               class: "player-misses-modal",
@@ -994,6 +1092,17 @@ export default class Character {
       alert(
         `You were invisible and the ${monster1.name} could not see you, but the spell was broken after you attacked`
       );
+
+      let modalConfig = {
+          id: "",
+          class: "invisibility-spell-broken-modal",
+          buttonID: "",
+          buttonClass: "close-invisibility-spell-borken-modal",
+          buttonText: "Close",
+          modalText: `You were invisible and the ${monster1.name} could not see you, but the spell was broken after you attacked.`
+        }
+        Utilities.createModal(modalConfig);
+
       finalCharacter.status.splice(
         finalCharacter.status.indexOf("Invisible"),
         1
@@ -1031,6 +1140,17 @@ export default class Character {
         alert(
           `The ${monster1.name} was asleep, but woke up after being struck by your spell.`
         );
+
+        let modalConfig = {
+          id: "",
+          class: "sleeping-monster-woke-modal",
+          buttonID: "",
+          buttonClass: "close-sleeping-monster-woke-modal",
+          buttonText: "Close",
+          modalText: `The ${monster1.name} was asleep, but woke up after being struck by your spell.`
+        }
+        Utilities.createModal(modalConfig);
+
         monster1.status.splice(monster1.status.indexOf("Sleep"), 1);
         let monster1Status = document.querySelector("#monster-one-status");
         monster1Status.innerHTML = `${monster1.status.join(
@@ -1095,6 +1215,17 @@ export default class Character {
       alert(
         `You were invisible and the ${monster2.name} could not see you, but the spell was broken after you attacked`
       );
+
+      let modalConfig = {
+          id: "",
+          class: "invisibility-spell-broken-modal",
+          buttonID: "",
+          buttonClass: "close-invisibility-spell-borken-modal",
+          buttonText: "Close",
+          modalText: `You were invisible and the ${monster2.name} could not see you, but the spell was broken after you attacked.`
+        }
+        Utilities.createModal(modalConfig);
+
       finalCharacter.status.splice(
         finalCharacter.status.indexOf("Invisible"),
         1
@@ -1134,6 +1265,17 @@ export default class Character {
         alert(
           `The ${monster2.name} was asleep, but woke up after being struck by your spell.`
         );
+
+        let modalConfig = {
+          id: "",
+          class: "sleeping-monster-woke-modal",
+          buttonID: "",
+          buttonClass: "close-sleeping-monster-woke-modal",
+          buttonText: "Close",
+          modalText: `The ${monster2.name} was asleep, but woke up after being struck by your spell.`
+        }
+        Utilities.createModal(modalConfig);
+
         monster2.status.splice(monster2.status.indexOf("Sleep"), 1);
         let monster2Status = document.querySelector("#monster-two-status");
         monster2Status.innerHTML = `<h4 id="monster-two-status">Status: ${monster2.status.join(
@@ -1143,6 +1285,17 @@ export default class Character {
         alert(
           `The ${monster2.name} was charmed, but the charm was broken after being struck by your spell.`
         );
+
+         let modalConfig = {
+          id: "",
+          class: "charmed-monster-broken-modal",
+          buttonID: "",
+          buttonClass: "close-charmed-monster-broken-modal",
+          buttonText: "Close",
+          modalText: `The ${monster2.name} was charmed, but the charm was broken after being struck by your spell.`
+        }
+        Utilities.createModal(modalConfig);
+
         monster2.status.splice(monster2.status.indexOf("Charmed"), 1);
         let monster2Status = document.querySelector("#monster-two-status");
         monster2Status.innerHTML = `<h4 id="monster-two-status">Status: ${monster2.status.join(
@@ -1258,11 +1411,33 @@ export default class Character {
           alert(
             `The ${item.name} was asleep, but woke up after being struck by your spell.`
           );
+
+          let modalConfig = {
+            id: "",
+            class: "sleeping-monster-woke-modal",
+            buttonID: "",
+            buttonClass: "close-sleeping-monster-woke-modal",
+            buttonText: "Close",
+            modalText: `The ${item.name} was asleep, but woke up after being struck by your spell.`
+          }
+          Utilities.createModal(modalConfig);
+
           item.status.splice(item.status.indexOf("Sleep"), 1);
         } else if (item.status.includes("Charmed")) {
           alert(
             `The ${item.name} was charmed, but the charm was broken after being struck by your spell.`
           );
+          
+         let modalConfig = {
+          id: "",
+          class: "sleeping-monster-woke-modal",
+          buttonID: "",
+          buttonClass: "close-sleeping-monster-woke-modal",
+          buttonText: "Close",
+          modalText: `The ${item.name} was charmed, but the charm was broken after being struck by your spell.`
+        }
+        Utilities.createModal(modalConfig);
+
           item.status.splice(item.status.indexOf("Charmed"), 1);
         }
 
