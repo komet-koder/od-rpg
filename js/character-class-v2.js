@@ -587,7 +587,9 @@ export default class Character {
         monster1.healthPoints = monster1.healthPoints - inflictedDamage;
         let updatedMonsterHP = document.querySelector("#monster-one-hp");
         updatedMonsterHP.innerHTML = `
-          <h4 id="monster-one-hp">Hit Points: ${monster1.healthPoints}<progress class='monster-hp-prog-bar'  id="monster-one-hp-progress-bar" max="${monster1.startingHealthPoints}" value="${monster1.healthPoints}"></progress></h4> 
+          <div>Hit Points</div>
+          <progress class='monster-hp-prog-bar' id="monster-one-hp-progress-bar" max="${monster1.startingHealthPoints}" value="${monster1.healthPoints}"></progress>
+          <div>${monster1.healthPoints}</div> 
           `;
 
         //ATTEMPTING TO GREY OUT ATTACK MODULE BUTTONS//
@@ -615,8 +617,10 @@ export default class Character {
         monster1.healthPoints = monster1.healthPoints - inflictedDamage;
         let updatedMonsterHP = document.querySelector("#monster-one-hp");
         updatedMonsterHP.innerHTML = `
-            <h4 id="monster-one-hp">Hit Points: ${monster1.healthPoints}<progress class='monster-hp-prog-bar'  id="monster-one-hp-progress-bar" max="${monster1.startingHealthPoints}" value="${monster1.healthPoints}"></progress></h4> 
-            `;
+          <div>Hit Points</div>
+          <progress class='monster-hp-prog-bar' id="monster-one-hp-progress-bar" max="${monster1.startingHealthPoints}" value="${monster1.healthPoints}"></progress>
+          <div>${monster1.healthPoints}</div> 
+        `;
 
         //ATTEMPTING TO GREY OUT ATTACK MODULE BUTTONS//
         monster1.status.splice(
@@ -635,8 +639,10 @@ export default class Character {
         monster1.healthPoints = monster1.healthPoints - inflictedDamage;
         let updatedMonsterHP = document.querySelector("#monster-one-hp");
         updatedMonsterHP.innerHTML = `
-              <h4 id="monster-one-hp">Hit Points: ${monster1.healthPoints}<progress class='monster-hp-prog-bar'  id="monster-one-hp-progress-bar" max="${monster1.startingHealthPoints}" value="${monster1.healthPoints}"></progress></h4> 
-              `;
+          <div>Hit Points</div>
+          <progress class='monster-hp-prog-bar' id="monster-one-hp-progress-bar" max="${monster1.startingHealthPoints}" value="${monster1.healthPoints}"></progress>
+          <div>${monster1.healthPoints}</div> 
+        `;
 
         //ATTEMPTING TO GREY OUT ATTACK MODULE BUTTONS//
 
@@ -646,23 +652,26 @@ export default class Character {
       } else if (monster1.healthPoints - inflictedDamage <= 0) {
         monster1.healthPoints = 0;
 
-        let monsterOneStatus = document.querySelector("#monster-one");
-        let defeatMonster1 = document.querySelector("#fight-module-dialogue");
-        monsterOneStatus.innerHTML = `
-          <div class='monster-info-module'>
-            <div id="monster-one-hp">
-              <div>Hit Points</div>
-              <progress class='monster-hp-prog-bar'  id="monster-one-hp-progress-bar" max="${monster1.startingHealthPoints}" value="${monster1.healthPoints}"></progress>
-              <div>${monster1.healthPoints}</div>
-              </div> 
-            <div id="monster-one-ap">Armor Class: ${monster1.armorClass}</div>
-            <div id="monster-one-damage">Damage: ${monster1.damage}</div>
-            <div id="monster-one-status-heading">Status</div>
-            <div id="monster-one-status">${monster1.status}</div>           
-            <div id="canvas-area-monster-one">                  
-              <canvas id="canvas-monster-one" height="200" width="200"></canvas>
-            </div>
-          </div>`;
+        Utilities.updateMonsterOne(monster1);
+
+
+        // let monsterOneStatus = document.querySelector("#monster-one");
+        // let defeatMonster1 = document.querySelector("#fight-module-dialogue");
+        // monsterOneStatus.innerHTML = `
+        //   <div class='monster-info-module'>
+        //     <div id="monster-one-hp">
+        //       <div>Hit Points</div>
+        //       <progress class='monster-hp-prog-bar'  id="monster-one-hp-progress-bar" max="${monster1.startingHealthPoints}" value="${monster1.healthPoints}"></progress>
+        //       <div>${monster1.healthPoints}</div>
+        //       </div> 
+        //     <div id="monster-one-ap">Armor Class: ${monster1.armorClass}</div>
+        //     <div id="monster-one-damage">Damage: ${monster1.damage}</div>
+        //     <div id="monster-one-status-heading">Status</div>
+        //     <div id="monster-one-status">${monster1.status}</div>           
+        //     <div id="canvas-area-monster-one">                  
+        //       <canvas id="canvas-monster-one" height="200" width="200"></canvas>
+        //     </div>
+        //   </div>`;
 
         defeatMonster1.innerHTML = `<p>Congratulations, you defeated the Monster 1!</p>`;
 

@@ -44,7 +44,6 @@ export function createNextDialogue(chapterConfig) {
     // let nextChapterFunction = "textDialogue" + chapterIterator;
     // let compiledNextChapter = functions[nextChapterFunction];    
     // console.log(nextChapter);
-    console.log(chapterConfig.dialogueDiv);
     chapterConfig.dialogueDiv.textContent = "";  
     let nextDialogueDiv = document.createElement('div');
     nextDialogueDiv.id = `dialogue-div-${chapterConfig.thisChapterNumber}`;
@@ -106,8 +105,6 @@ export function createModal(modalConfig) {
 
   newModalCloseButton.addEventListener('click', function () {
     // let dialog = document.querySelector("dialog");
-    console.log("test");
-
     newModal.close();
     newModal.remove();
 
