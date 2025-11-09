@@ -1288,7 +1288,10 @@ input[name="selected-specialty"] {
   .level-up-modal,
   .charmed-monster-broken-modal,
   .invisibility-spell-broken-modal,
-  .sleeping-monster-woke-modal  {
+  .sleeping-monster-woke-modal,
+  .monster-misses-monster-modal,
+  .monster-attacks-monster-modal,
+  .monster-kills-monster-modal  {
     color: var(--btn-bg);
     border: 4px solid var(--btn-bg);
     background-color: #2a2446;
@@ -1315,7 +1318,10 @@ input[name="selected-specialty"] {
   .level-up-modal::backdrop,
   .charmed-monster-broken-modal::backdrop,
   .invisibility-spell-broken-modal::backdrop,
-  .sleeping-monster-woke-modal::backdrop {
+  .sleeping-monster-woke-modal::backdrop,
+  .monster-misses-monster-modal::backdrop,
+  .monster-attacks-monster-modal::backdrop,
+  .monster-kills-monster-modal::backdrop {
     backdrop-filter: blur(3px);
   }
 
@@ -1334,7 +1340,10 @@ input[name="selected-specialty"] {
   .level-up-modal > p,
   .charmed-monster-broken-modal > p,
   .invisibility-spell-broken-modal > p,
-  .sleeping-monster-woke-modal > p {
+  .sleeping-monster-woke-modal > p,
+  .monster-misses-monster-modal > p,
+  .monster-attacks-monster-modal > p,
+  .monster-kills-monster-modal > p {
     height: 50%;
     width: 50%;
     margin: 15% 25% 0% 25%;
@@ -1355,7 +1364,10 @@ input[name="selected-specialty"] {
   .close.level-up-modal,
   .close-charmed-monster-broken-modal,
   .close-invisibility-spell-broken-modal,
-  .close-sleeping-monster-woke-modal {
+  .close-sleeping-monster-woke-modal,
+  .close-monster-misses-monster-modal,
+  .close-monster-attacks-monster-modal,
+  .close-monster-kills-monster-modal {
     background-color: var(--accent-orange);
     border: 3px solid  var(--accent-200);
     color: var(--accent-200);

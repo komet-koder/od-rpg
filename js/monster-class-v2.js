@@ -323,6 +323,17 @@ export default class Monster {
       if (thisMonster.hitRoll[i][0] === otherMonster.armorClass) {
         if (monstersHitRollValue < thisMonster.hitRoll[i][1]) {
           alert(`${thisMonster.name} misses the ${otherMonster.name}!`);
+
+          let modalConfig = {
+            id: "",
+            class: "monster-misses-monster-modal",
+            buttonID: "",
+            buttonClass: "close-monster-misses-monster-modal",
+            buttonText: "Close",
+            modalText: `${thisMonster.name} misses the ${otherMonster.name}!`
+          }
+          Utilities.createModal(modalConfig);
+
           this.revertToAttackButtons();
           confirmAttackMonsters(monsterOne, monsterTwo);
         } else {
@@ -330,6 +341,16 @@ export default class Monster {
 
           otherMonster.healthPoints = otherMonster.healthPoints - monsterRandomDamage;
           alert(`The ${thisMonster.name} attacks the ${otherMonster.name} and causes ${monsterRandomDamage} points of damage.`);
+
+          let modalConfig = {
+            id: "",
+            class: "monster-attacks-monster-modal",
+            buttonID: "",
+            buttonClass: "close-monster-attacks-monster-modal",
+            buttonText: "Close",
+            modalText: `The ${thisMonster.name} attacks the ${otherMonster.name} and causes ${monsterRandomDamage} points of damage.`
+          }
+          Utilities.createModal(modalConfig);
 
           //need to include follow on function when a monster kills the other
           if (otherMonster.healthPoints <= 0) {
@@ -376,6 +397,16 @@ export default class Monster {
 
       alert(`${monsterOne.name} killed ${monsterTwo.name}!`)
 
+      let modalConfig = {
+        id: "",
+        class: "monster-kills-monster-modal",
+        buttonID: "",
+        buttonClass: "close-monster-kills-monster-modal",
+        buttonText: "Close",
+        modalText: `${monsterOne.name} killed ${monsterTwo.name}!`
+      }
+      Utilities.createModal(modalConfig);
+
       this.revertToAttackButtons();
       confirmAttackMonsters(monsterOne, monsterTwo);
     } else if (thisMonster.name === monsterTwo.name) {
@@ -387,7 +418,17 @@ export default class Monster {
       // let clearDialogue = document.querySelector("#fight-module-dialogue");
       // clearDialogue.textContent = ``;
 
-      alert(`The ${monsterTwo.name} killed the ${monsterOne.name}!`)
+      alert(`The ${monsterTwo.name} killed the ${monsterOne.name}!`);
+      
+      let modalConfig = {
+        id: "",
+        class: "monster-kills-monster-modal",
+        buttonID: "",
+        buttonClass: "close-monster-kills-monster-modal",
+        buttonText: "Close",
+        modalText: `The ${monsterTwo.name} killed the ${monsterOne.name}!`
+      }
+      Utilities.createModal(modalConfig);
 
       this.revertToAttackButtons();
       confirmAttackMonsters(monsterOne, monsterTwo);
