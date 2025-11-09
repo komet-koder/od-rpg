@@ -1036,7 +1036,9 @@ input[name="selected-specialty"] {
 
   div.char-statuses-module img {
     height: 100%;
-    transform: scale(1.5);
+    transform: scale(1);
+    border-radius: 5px;
+    border: solid green 2px;
   }
 
 
