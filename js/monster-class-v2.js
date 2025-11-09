@@ -214,7 +214,6 @@ export default class Monster {
       //   }
       
       //   Utilities.createModal(modalConfig);
-
       $("#fight-module-dialogue").text(`${thisMonster.name} is charmed and does not attack you.`);
       this.revertToAttackButtons();
       confirmAttackMonsters(monsterOne, monsterTwo);
