@@ -178,25 +178,11 @@ light.castSpell = function (monster1, monster2, continueNextChapter, attackedMon
 
             let blindTimer = setTimeout(function ()
             {
-                // let removeBlindM1 = monster1.status.filter((x) => "Blind");
-                // monster1.status.splice(monster1.status.indexOf("Blind"), 1);
-                // monster1.status.splice(removeBlindM1); //removing Blind after function call
+                
                 monster1.status.splice(monster1.status.indexOf("Blind"), 1);
 
                 Utilities.updateMonsterOne(monster1);
                 
-                // let monsterOneHP = document.querySelector('#monster-one-hp');
-                // monsterOneHP.innerHTML = `Hit Points: ${monster1.healthPoints}`;
-
-                // let monsterOneHPProgress = document.querySelector('#monster-one-hp');
-                // monsterOneHPProgress.setAttribute('value', `${monster1.healthPoints}`); 
-
-                // let monsterOneAP = document.querySelector('#monster-one-ap');
-                // monsterOneAP.innerHTML = `Armor Class: ${monster1.armorClass}`;
-
-                // let monsterOneDamage = document.querySelector('#monster-one-damage');
-                // monsterOneDamage.innerHTML = `Damage: ${monster1.damage}`;
-
                 let monster1Status = document.querySelector("#monster-one-status");
                 monster1Status.innerHTML = `Status: ${monster1.status.join(', ')}`;
 
@@ -226,41 +212,12 @@ light.castSpell = function (monster1, monster2, continueNextChapter, attackedMon
             let blindTimer2 = setTimeout(function ()
             {
                 monster2.status.splice(monster2.status.indexOf("Blind"), 1);
-                // let removeBlindM2 = monster2.status.filter((x) => "Blind");
-                // monster2.status.splice(removeBlindM2);
-                
-                // monster1.status.splice(monster1.status.indexOf("Blind"), 1);
-
+               
                 Utilities.updateMonsterTwo(monster2);
 
-                // let monsterTwoHP = document.querySelector('#monster-two-hp');
-                // monsterTwoHP.innerHTML = `Hit Points: ${monster2.healthPoints}`;
-
-                // let monsterTwoHPProgress = document.querySelector('#monster-two-hp');
-                // monsterTwoHPProgress.setAttribute('value', `${monster2.healthPoints}`); 
-
-                // let monsterTwoAP = document.querySelector('#monster-two-ap');
-                // monsterTwoAP.innerHTML = `Armor Class: ${monster2.armorClass}`;
-
-                // let monsterTwoDamage = document.querySelector('#monster-two-damage');
-                // monsterTwoDamage.innerHTML = `Damage: ${monster2.damage}`;
-
                 let monsterTwoStatus = document.querySelector("#monster-two-status");
-                monsterTwoStatus.innerHTML = `Status: ${monster2.status.join(', ')}`;
+                monsterTwoStatus.innerHTML = `Status: ${monster2.status.join(', ')}`;                
                 
-                
-                // let updateM2Status = document.querySelector("#monster-two");
-                // updateM2Status.innerHTML = `
-                // <div class="monster" id="monster-two">
-                //     <fieldset class='monster-info-module'>
-                //         <legend class='monster-dashboard'>Monster 2</legend>
-                //         <h4 id="monster-two-type">Monster Type: ${monster2.name}</h4>
-                //         <h4 id="monster-two-hp">Hit Points: ${monster2.healthPoints}<progress class='monster-hp-prog-bar' max="${monster2.startingHealthPoints}" value="${monster2.healthPoints}"></progress></h4> 
-                //         <h4 id="monster-two-ap">Armor Class: ${monster2.armorClass}</h4>
-                //         <h4 id="monster-two-damage">Damage: ${monster2.damage}</h4>
-                //         <h4 id="monster-two-status">Status: ${monster2.status}</h4>
-                //     </fieldset>   
-                // </div>`;
                 console.log('blind removed m2')
 
             }, 30000);
@@ -424,23 +381,9 @@ protectionFromEvil.castSpell = function (monster1, monster2, continueNextChapter
                     monster2.hitRoll[i][1] = monster2.hitRoll[i][1] - 1;
                 }
                 monster2.status.splice(monster2.status.indexOf("Protection from Evil"), 1);
-                // let removeProtFromEvilM2 = monster2.status.filter((x) => "Protection from Evil");
-                // monster2.status.splice(removeProtFromEvilM2);
-                
+                               
                 Utilities.updateMonsterTwo(monster2);
-                // let updateM2Status = document.querySelector("#monster-two");
-                // updateM2Status.innerHTML = `
-                //     <div class="monster" id="monster-two">
-                //         <fieldset class='monster-info-module'>
-                //             <legend class='monster-dashboard'>Monster 2</legend>
-                //             <h4 id="monster-two-type">Monster Type: ${monster2.name}</h4>
-                //             <h4 id="monster-two-hp">Hit Points: ${monster2.healthPoints}<progress class='monster-hp-prog-bar'  id="monster-two-hp-progress-bar" max="${monster2.startingHealthPoints}" value="${monster2.healthPoints}"></progress></h4> 
-                //             <h4 id="monster-two-ap">Armor Class: ${monster2.armorClass}</h4>
-                //             <h4 id="monster-two-damage">Damage: ${monster2.damage}</h4>
-                //             <h4 id="monster-two-status">Status: ${monster2.status.join(', ')}</h4>
-                //         </fieldset>   
-                //     </div>`;
-
+               
                 let monsterTwoStatus = document.querySelector("#monster-two-status");
                 monsterTwoStatus.innerHTML = `Status: ${monster2.status.join(', ')}`;
 
@@ -463,25 +406,10 @@ protectionFromEvil.castSpell = function (monster1, monster2, continueNextChapter
             }
             monster1.status.splice(monster1.status.indexOf("Protection from Evil"), 1);
 
-            // let removeProtFromEvilM1 = monster1.status.filter((x) => "Protection from Evil");
-            // monster1.status.splice(removeProtFromEvilM1);
-            // let updateM1Status = document.querySelector("#monster-one");
-            // updateM1Status.innerHTML = `
-            //     <div class="monster" id="monster-one">
-            //         <fieldset class='monster-info-module'>
-            //             <legend class='monster-dashboard'>Monster 1</legend>
-            //             <h4 id="monster-one-type">Monster Type: ${monster1.name}</h4>
-            //             <h4 id="monster-one-hp">Hit Points: ${monster1.healthPoints}<progress class='monster-hp-prog-bar'  id="monster-one-hp-progress-bar" max="${monster1.startingHealthPoints}" value="${monster1.healthPoints}"></progress></h4> 
-            //             <h4 id="monster-one-ap">Armor Class: ${monster1.armorClass}</h4>
-            //             <h4 id="monster-one-damage">Damage: ${monster1.damage}</h4>
-            //             <h4 id="monster-one-status">Status: ${monster1.status.join(', ')}</h4>
-            //         </fieldset>   
-            //     </div>`;
-
-                Utilities.updateMonsterOne(monster1);
+            Utilities.updateMonsterOne(monster1);
                 
-                let monster1Status = document.querySelector("#monster-one-status");
-                monster1Status.innerHTML = `Status: ${monster1.status.join(', ')}`;
+            let monster1Status = document.querySelector("#monster-one-status");
+            monster1Status.innerHTML = `Status: ${monster1.status.join(', ')}`;
 
         }, 60000);
         finalCharacter.activeSpellStatuses.push(protectionFromEvilTimer);
@@ -545,21 +473,7 @@ charmPerson.castSpell = function (monster1, monster2, continueNextChapter, attac
             let charmTimer = setTimeout(function ()
             {
                 monster1.status.splice(monster1.status.indexOf("Charmed"), 1);
-                // let removeCharmM1 = monster1.status.filter((x) => "Charmed");
-                // monster1.status.splice(removeCharmM1);
-                // let updateM1Status = document.querySelector("#monster-one");
-                // updateM1Status.innerHTML = `
-                // <div class="monster" id="monster-one">
-                //     <fieldset class='monster-info-module'>
-                //         <legend class='monster-dashboard'>Monster 1</legend>
-                //         <h4 id="monster-one-type">Monster Type: ${monster1.name}</h4>
-                //         <h4 id="monster-one-hp">Hit Points: ${monster1.healthPoints}<progress class='monster-hp-prog-bar'  id="monster-one-hp-progress-bar" max="${monster1.startingHealthPoints}" value="${monster1.healthPoints}"></progress></h4> 
-                //         <h4 id="monster-one-ap">Armor Class: ${monster1.armorClass}</h4>
-                //         <h4 id="monster-one-damage">Damage: ${monster1.damage}</h4>
-                //         <h4 id="monster-one-status">Status: ${monster1.status}</h4>
-                //     </fieldset>   
-                // </div>`;
-
+                
                 Utilities.updateMonsterOne(monster1);
 
                 let monster1Status = document.querySelector("#monster-one-status");
@@ -581,22 +495,7 @@ charmPerson.castSpell = function (monster1, monster2, continueNextChapter, attac
             let charmTimer2 = setTimeout(function ()
             {
                 monster2.status.splice(monster2.status.indexOf("Sleep"), 1);
-                // let removeCharmM2 = monster2.status.filter((x) => "Charmed");
-                // monster2.status.splice(removeCharmM2);
-                // let updateM2Status = document.querySelector("#monster-two");
-                // updateM2Status.innerHTML = `
-                // <div class="monster" id="monster-two">
-                //     <fieldset class='monster-info-module'>
-                //         <legend class='monster-dashboard'>Monster 1</legend>
-                //         <h4 id="monster-two-type">Monster Type: ${monster2.name}</h4>
-                //         <h4 id="monster-two-hp">Hit Points: ${monster2.healthPoints}<progress class='monster-hp-prog-bar'  id="monster-two-hp-progress-bar" max="${monster2.startingHealthPoints}" value="${monster2.healthPoints}"></progress></h4> 
-                //         <h4 id="monster-two-ap">Armor Class: ${monster2.armorClass}</h4>
-                //         <h4 id="monster-two-damage">Damage: ${monster2.damage}</h4>
-                //         <h4 id="monster-two-status">Status: ${monster2.status}</h4>
-                //     </fieldset>   
-                // </div>`;
-                // console.log('charm removed m2')
-
+                
                 Utilities.updateMonsterTwo(monster2);
                 
                 let monsterTwoStatus = document.querySelector("#monster-two-status");
@@ -646,22 +545,8 @@ sleep.castSpell = function (monster1, monster2, continueNextChapter, attackedMon
 
             let sleepTimer = setTimeout(function ()
             {
-                // let removeSleepM1 = monster1.status.filter((x) => "Sleep");
-                monster1.status.splice(monster1.status.indexOf("Sleep"), 1); //removing sleep after function call
                 
-                // let updateM1Status = document.querySelector("#monster-one");
-                // updateM1Status.innerHTML = `
-                // <div class="monster" id="monster-one">
-                //     <fieldset class='monster-info-module'>
-                //         <legend class='monster-dashboard'>Monster 1</legend>
-                //         <h4 id="monster-one-type">Monster Type: ${monster1.name}</h4>
-                //         <h4 id="monster-one-hp">Hit Points: ${monster1.healthPoints}<progress class='monster-hp-prog-bar'  id="monster-one-hp-progress-bar" max="${monster1.startingHealthPoints}" value="${monster1.healthPoints}"></progress></h4> 
-                //         <h4 id="monster-one-ap">Armor Class: ${monster1.armorClass}</h4>
-                //         <h4 id="monster-one-damage">Damage: ${monster1.damage}</h4>
-                //         <h4 id="monster-one-status">Status: ${monster1.status}</h4>
-                //     </fieldset>   
-                // </div>`;
-                // console.log('sleep removed m1')
+                monster1.status.splice(monster1.status.indexOf("Sleep"), 1); //removing sleep after function call                            
 
                 Utilities.updateMonsterOne(monster1);
 
@@ -690,22 +575,9 @@ sleep.castSpell = function (monster1, monster2, continueNextChapter, attackedMon
 
             let sleepTimer2 = setTimeout(function ()
             {
-                // let removeSleepM2 = monster2.status.filter((x) => "Sleep");
+                
                 monster2.status.splice(monster2.status.indexOf("Sleep"), 1); //removing sleep after function call
-                // let updateM2Status = document.querySelector("#monster-two");
-                // updateM2Status.innerHTML = `
-                // <div class="monster" id="monster-two">
-                //     <fieldset class='monster-info-module'>
-                //         <legend class='monster-dashboard'>Monster 2</legend>
-                //         <h4 id="monster-two-type">Monster Type: ${monster2.name}</h4>
-                //         <h4 id="monster-two-hp">Hit Points: ${monster2.healthPoints}<progress class='monster-hp-prog-bar'  id="monster-two-hp-progress-bar" max="${monster2.startingHealthPoints}" value="${monster2.healthPoints}"></progress></h4> 
-                //         <h4 id="monster-two-ap">Armor Class: ${monster2.armorClass}</h4>
-                //         <h4 id="monster-two-damage">Damage: ${monster2.damage}</h4>
-                //         <h4 id="monster-two-status">Status: ${monster2.status}</h4>
-                //     </fieldset>   
-                // </div>`;
-                // console.log('sleep removed m2');
-
+                
                 Utilities.updateMonsterTwo(monster2);
 
             }, 30000);
