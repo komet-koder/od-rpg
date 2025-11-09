@@ -833,7 +833,7 @@ export default class Character {
         Utilities.updateMonsterTwo(monster2);
 
         let monster2Status = document.querySelector("#monster-two-status");
-        monster2Status.innerHTML = `Status: ${monster2.status.join(
+        monster2Status.innerHTML = `${monster2.status.join(
           ", "
         )}`;
 
@@ -864,7 +864,7 @@ export default class Character {
         //ATTEMPTING TO GREY OUT ATTACK MODULE BUTTONS//
         monster2.status.splice(monster2.status.indexOf("Charmed"), 1);
         let monster2Status = document.querySelector("#monster-two-status");
-        monster2Status.innerHTML = `Status: ${monster2.status.join(
+        monster2Status.innerHTML = `${monster2.status.join(
           ", "
         )}`;
 
@@ -896,7 +896,7 @@ export default class Character {
           1
         );
         let monster2Status = document.querySelector("#monster-two-status");
-        monster2Status.innerHTML = `Status: ${monster2.status.join(
+        monster2Status.innerHTML = `${monster2.status.join(
           ", "
         )}`;
         finalCharacter.greyOutAttackButtons(monster1, monster2);
@@ -1219,7 +1219,7 @@ export default class Character {
 
         monster2.status.splice(monster2.status.indexOf("Sleep"), 1);
         let monster2Status = document.querySelector("#monster-two-status");
-        monster2Status.innerHTML = `Status: ${monster2.status.join(
+        monster2Status.innerHTML = `${monster2.status.join(
           ", "
         )}`;
       } else if (monster2.status.includes("Charmed")) {
@@ -1239,7 +1239,7 @@ export default class Character {
 
         monster2.status.splice(monster2.status.indexOf("Charmed"), 1);
         let monster2Status = document.querySelector("#monster-two-status");
-        monster2Status.innerHTML = `Status: ${monster2.status.join(
+        monster2Status.innerHTML = `${monster2.status.join(
           ", "
         )}`;
       }
@@ -1404,7 +1404,7 @@ export default class Character {
     )}`;
 
     let monster2Status = document.querySelector("#monster-two-status");
-    monster2Status.innerHTML = `Status: ${monster2.status.join(
+    monster2Status.innerHTML = `${monster2.status.join(
       ", "
     )}`;
 
