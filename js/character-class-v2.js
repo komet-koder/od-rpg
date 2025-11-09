@@ -572,7 +572,7 @@ export default class Character {
           id: "",
           class: "charmed-monster-broken-modal",
           buttonID: "",
-          buttonClass: "close-charmed-monster-borken-modal",
+          buttonClass: "close-charmed-monster-broken-modal",
           buttonText: "Close",
           modalText: `The ${monster1.name} was charmed, but the charm was broken after being attacked.`
         }
@@ -598,7 +598,7 @@ export default class Character {
           id: "",
           class: "invisibility-spell-broken-modal",
           buttonID: "",
-          buttonClass: "close-invisibility-spell-borken-modal",
+          buttonClass: "close-invisibility-spell-broken-modal",
           buttonText: "Close",
           modalText: `You were invisible and the ${monster1.name} could not see you, but the spell was broken after you attacked.`
         }
@@ -721,7 +721,7 @@ export default class Character {
           id: "",
           class: "invisibility-spell-broken-modal",
           buttonID: "",
-          buttonClass: "close-invisibility-spell-borken-modal",
+          buttonClass: "close-invisibility-spell-broken-modal",
           buttonText: "Close",
           modalText: `You were invisible and the ${monster1.name} could not see you, but the spell was broken after you attacked.`
         }
@@ -822,7 +822,7 @@ export default class Character {
           id: "",
           class: "charmed-monster-broken-modal",
           buttonID: "",
-          buttonClass: "close-charmed-monster-borken-modal",
+          buttonClass: "close-charmed-monster-broken-modal",
           buttonText: "Close",
           modalText: `The ${monster2.name} was asleep, but woke up after being struck by your ${finalCharacter.weapon.name}.`
         }
@@ -851,7 +851,7 @@ export default class Character {
           id: "",
           class: "charmed-monster-broken-modal",
           buttonID: "",
-          buttonClass: "close-charmed-monster-borken-modal",
+          buttonClass: "close-charmed-monster-broken-modal",
           buttonText: "Close",
           modalText: `The ${monster2.name} was charmed, but the charm was broken after being attacked.`
         }
@@ -878,7 +878,7 @@ export default class Character {
           id: "",
           class: "invisibility-spell-broken-modal",
           buttonID: "",
-          buttonClass: "close-invisibility-spell-borken-modal",
+          buttonClass: "close-invisibility-spell-broken-modal",
           buttonText: "Close",
           modalText: `You were invisible and the ${monster2.name} could not see you, but the spell was broken after you attacked.`
         }
@@ -994,7 +994,7 @@ export default class Character {
           id: "",
           class: "invisibility-spell-broken-modal",
           buttonID: "",
-          buttonClass: "close-invisibility-spell-borken-modal",
+          buttonClass: "close-invisibility-spell-broken-modal",
           buttonText: "Close",
           modalText: `You were invisible and the ${monster2.name} could not see you, but the spell was broken after you attacked.`
         }
@@ -1053,7 +1053,7 @@ export default class Character {
           id: "",
           class: "invisibility-spell-broken-modal",
           buttonID: "",
-          buttonClass: "close-invisibility-spell-borken-modal",
+          buttonClass: "close-invisibility-spell-broken-modal",
           buttonText: "Close",
           modalText: `You were invisible and the ${monster1.name} could not see you, but the spell was broken after you attacked.`
         }
@@ -1161,7 +1161,7 @@ export default class Character {
           id: "",
           class: "invisibility-spell-broken-modal",
           buttonID: "",
-          buttonClass: "close-invisibility-spell-borken-modal",
+          buttonClass: "close-invisibility-spell-broken-modal",
           buttonText: "Close",
           modalText: `You were invisible and the ${monster2.name} could not see you, but the spell was broken after you attacked.`
         }
