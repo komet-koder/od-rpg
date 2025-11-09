@@ -554,8 +554,10 @@ export default class Character {
         monster1.healthPoints = monster1.healthPoints - inflictedDamage;
         let updatedMonsterHP = document.querySelector("#monster-one-hp");
         updatedMonsterHP.innerHTML = `
-              <h4 id="monster-one-hp">Hit Points: ${monster1.healthPoints}<progress class='monster-hp-prog-bar'  id="monster-one-hp-progress-bar" max="${monster1.startingHealthPoints}" value="${monster1.healthPoints}"></progress></h4> 
-              `;
+          <div>Hit Points</div>
+          <progress class='monster-hp-prog-bar' id="monster-one-hp-progress-bar" max="${monster1.startingHealthPoints}" value="${monster1.healthPoints}"></progress>
+          <div>${monster1.healthPoints}</div> 
+        `;
 
         //ATTEMPTING TO GREY OUT ATTACK MODULE BUTTONS//
         monster1.status.splice(monster1.status.indexOf("Sleep"), 1);
