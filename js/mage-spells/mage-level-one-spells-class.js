@@ -170,7 +170,6 @@ light.castSpell = function (monster1, monster2, continueNextChapter, attackedMon
         {
             dialogue.innerHTML += `<p>${monster1.name} has been blinded.</p>`;
             monster1.status.push('Blind');
-           
 
             //need to make variable, push to an array, and then call the function expression
 
