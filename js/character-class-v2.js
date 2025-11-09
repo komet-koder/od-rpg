@@ -444,7 +444,7 @@ export default class Character {
             <div id="monster-one-status-heading">Status</div>
             <div id="monster-one-status">${monsterOne.status}</div>           
             <div id="canvas-area-monster-one">                  
-              <canvas id="canvas-monster-one" height="200" width="200"></canvas>
+              <canvas id="canvas-monster-one"></canvas>
             </div>
           </div>  
         </div>
@@ -461,7 +461,7 @@ export default class Character {
             <div id ="monster-two-status-heading>Status</div>
             <div id="monster-two-status">${monsterTwo.status}</div>
             <div id="canvas-area-monster-two">                  
-              <canvas id="canvas-monster-two" height="200" width="200"></canvas>
+              <canvas id="canvas-monster-two"></canvas>
             </div>    
           </div>        
         </div>
