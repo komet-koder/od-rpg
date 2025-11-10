@@ -4348,6 +4348,17 @@ function populateClericSpells(m1, m2, nextChap) {
      if ((spellContainer3) && (spellContainer3.classList.contains('show-cleric-third-level-spell-container'))) {
       spellContainer3.classList.remove('show-cleric-third-level-spell-container');
     }
+    let attackGroupButtons = document.querySelectorAll('.attack-group');
+    attackGroupButtons.forEach(function(button) {
+      if (button.classList.contains('show-attack-melee-buttons')) {
+        button.classList.remove('show-attack-melee-buttons');
+      }
+    });
+
+    let attackMeleeButton = document.querySelector('#attack-melee');
+    if(!attackMeleeButton.classList.contains('grey-out')) {
+      attackMeleeButton.classList.add('grey-out');
+    } 
   }, false);
 }
 
