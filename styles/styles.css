@@ -1775,6 +1775,8 @@ input[name="selected-specialty"] {
     border-radius: 5px;
     height: 50px;
     width: 50px;
+    align-self: center;
+    justify-self: center;
   }
 
   #canvas-monster-one,
