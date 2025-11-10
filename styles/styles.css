@@ -240,7 +240,7 @@ button {
   }
 
   #chapter-heading {
-    background-color: var(--text);
+    background-color: var(--btn-bg);
     color: var(--bg-200);
     border-radius: 7px;
     font-size: 1.5rem;
