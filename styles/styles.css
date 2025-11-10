@@ -1846,11 +1846,11 @@ input[name="selected-specialty"] {
   .show-cleric-first-level-spell-container,
   .show-cleric-second-level-spell-container,
   .show-cleric-third-level-spell-container {
-    display: block;
+  display: block;
     position: absolute;
     bottom: 215px;
     left: calc(50% - (120px));
-    background-color: white;
+    font-size: 1.2em;
     width: 240px;
     border-radius: 5px;
     padding: 5px;
@@ -1864,7 +1864,6 @@ input[name="selected-specialty"] {
     bottom: 215px;
     left: calc(50% - (120px));
     font-size: 1.2em;
-    /* background-color: white; */
     width: 240px;
     border-radius: 5px;
     padding: 5px;
@@ -1983,7 +1982,10 @@ input[name="selected-specialty"] {
 
   .mage-first-level-details,
   .mage-second-level-details,
-  .mage-third-level-details
+  .mage-third-level-details,
+  .cleric-first-level-details,
+  .cleric-second-level-details,
+  .cleric-third-level-details
    {
     overflow: hidden;
     margin: 2px;
@@ -1992,7 +1994,10 @@ input[name="selected-specialty"] {
 
    .mage-first-level-details::details-content,
    .mage-second-level-details::details-content,
-   .mage-third-level-details::details-content {
+   .mage-third-level-details::details-content,
+   .cleric-first-level-details::details-content,
+   .cleric-second-level-details::details-content,
+   .cleric-third-level-details::details-content {
     block-size: 0;
     transition: block-size 350ms,
                 content-visibility 350ms;
@@ -2002,13 +2007,19 @@ input[name="selected-specialty"] {
 
    .mage-first-level-details[open]::details-content,
    .mage-second-level-details[open]::details-content,
-   .mage-third-level-details[open]::details-content {
+   .mage-third-level-details[open]::details-content,
+   .cleric-first-level-details[open]::details-content,
+   .cleric-second-level-details[open]::details-content,
+   .cleric-third-level-details[open]::details-content {
     block-size: auto;
   }
 
   summary.mage-first-level-summary,
   summary.mage-second-level-summary,
-  summary.mage-third-level-summary {
+  summary.mage-third-level-summary,
+  summary.cleric-first-level-summary,
+  summary.cleric-second-level-summary,
+  summary.cleric-third-level-summary {
     background-color: #ffffff;
     border-radius: 5px;
     padding: 7px 0px 7px 0px;
@@ -2016,7 +2027,10 @@ input[name="selected-specialty"] {
 
   summary.mage-first-level-summary > .fa-solid.fa-minus,
   summary.mage-second-level-summary > .fa-solid.fa-minus,
-  summary.mage-third-level-summary  > .fa-solid.fa-minus{
+  summary.mage-third-level-summary  > .fa-solid.fa-minus,
+  summary.cleric-first-level-summary > .fa-solid.fa-minus,
+  summary.cleric-second-level-summary > .fa-solid.fa-minus,
+  summary.cleric-third-level-summary  > .fa-solid.fa-minus{
     position: relative;
     transform: scale(.4);
     /* left: -23px; */
@@ -2024,7 +2038,10 @@ input[name="selected-specialty"] {
 
   summary.mage-first-level-summary > .fa-regular.fa-circle-plus,
   summary.mage-second-level-summary > .fa-regular.fa-circle-plus,
-  summary.mage-third-level-summary  > .fa-regular.fa-circle-plus{
+  summary.mage-third-level-summary  > .fa-regular.fa-circle-plus,
+  summary.cleric-first-level-summary > .fa-regular.fa-circle-plus,
+  summary.cleric-second-level-summary > .fa-regular.fa-circle-plus,
+  summary.cleric-third-level-summary  > .fa-regular.fa-circle-plus{
     position: relative;
     left: -24px;
      transform: rotateX(0deg);
@@ -2033,7 +2050,9 @@ input[name="selected-specialty"] {
 
   details[open] summary.mage-first-level-summary > .fa-regular.fa-circle-plus,
   details[open] summary.mage-second-level-summary > .fa-regular.fa-circle-plus,
-  details[open] summary.mage-third-level-summary  > .fa-regular.fa-circle-plus{
+  details[open] summary.mage-third-level-summary  > .fa-regular.fa-circle-plus, details[open] summary.cleric-first-level-summary > .fa-regular.fa-circle-plus,
+  details[open] summary.cleric-second-level-summary > .fa-regular.fa-circle-plus,
+  details[open] summary.cleric-third-level-summary  > .fa-regular.fa-circle-plus{
     transition: transform 200ms ease ;
     transform: rotateX(90deg);
     transition-behavior: allow-discrete;
@@ -2041,7 +2060,10 @@ input[name="selected-specialty"] {
 
   .mage-monster-one-spell-list,
   .mage-monster-two-spell-list,
-  .mage-self-spell-list {
+  .mage-self-spell-list,
+  .cleric-monster-one-spell-list,
+  .cleric-monster-two-spell-list,
+  .cleric-self-spell-list {
     background-color: white;
     margin-left: 10px;
     margin-right: 10px;
@@ -2124,7 +2146,8 @@ input[name="selected-specialty"] {
   }
 
 /* spell drop down targets */
-  .mage-first-level-summary::marker, .mage-second-level-summary::marker, .mage-third-level-summary::marker {
+  .mage-first-level-summary::marker, .mage-second-level-summary::marker, .mage-third-level-summary::marker,
+  .cleric-first-level-summary::marker, .cleric-second-level-summary::marker, .cleric-third-level-summary::marker {
     content: "";
     display: none;
     list-style: none;
@@ -2132,7 +2155,10 @@ input[name="selected-specialty"] {
 
   .mage-self-spell-list,
   .mage-monster-one-spell-list,
-  .mage-monster-two-spell-list {
+  .mage-monster-two-spell-list,
+  .cleric-self-spell-list,
+  .cleric-monster-one-spell-list,
+  .cleric-monster-two-spell-list {
     text-align: center;
   }
 
