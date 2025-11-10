@@ -125,27 +125,28 @@ export function createModal(modalConfig) {
 }
 
 export function updateMonsterOne(monsterOne) {
-  
-  let monsterOneHP = document.querySelector('#monster-one-hp');
-  monsterOneHP.innerHTML = 
-  `
-  <div>Hit Points</div>
-  <progress class='monster-hp-prog-bar' id="monster-one-hp-progress-bar" max="${monsterOne.startingHealthPoints}" value="${monsterOne.healthPoints}"></progress>
-  <div>${monsterOne.healthPoints}</div>
-  `;
-  
-  let monsterOneAC = document.querySelector('#monster-one-ap');
-  monsterOneAC.innerHTML = `Armor Class: ${monsterOne.armorClass}`;
+  if (monsterOne.name !== " " && monsterOne.healthPoints > 0) {
+    let monsterOneHP = document.querySelector('#monster-one-hp');
+    monsterOneHP.innerHTML = 
+    `
+    <div>Hit Points</div>
+    <progress class='monster-hp-prog-bar' id="monster-one-hp-progress-bar" max="${monsterOne.startingHealthPoints}" value="${monsterOne.healthPoints}"></progress>
+    <div>${monsterOne.healthPoints}</div>
+    `;
+    
+    let monsterOneAC = document.querySelector('#monster-one-ap');
+    monsterOneAC.innerHTML = `Armor Class: ${monsterOne.armorClass}`;
 
-  let monsterOneDamage = document.querySelector('#monster-one-damage');
-  monsterOneDamage.innerHTML = `Damage: ${monsterOne.damage}`;
+    let monsterOneDamage = document.querySelector('#monster-one-damage');
+    monsterOneDamage.innerHTML = `Damage: ${monsterOne.damage}`;
 
-  let monsterOneStatus = document.querySelector('#monster-one-status');
-  monsterOneStatus.innerHTML = `${monsterOne.status}`; 
+    let monsterOneStatus = document.querySelector('#monster-one-status');
+    monsterOneStatus.innerHTML = `${monsterOne.status}`; 
+  }
 }
 
 export function updateMonsterTwo(monsterTwo) {
-  if (monsterTwo) {
+  if (monsterTwo.name !== " " && monsterTwo.healthPoints > 0) {
     let monsterTwoHP = document.querySelector('#monster-two-hp');
       monsterTwoHP.innerHTML = 
       `

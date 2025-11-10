@@ -458,7 +458,7 @@ export default class Character {
             </div> 
             <div id="monster-two-ap">Armor Class: ${monsterTwo.armorClass}</div>
             <div id="monster-two-damage">Damage: ${monsterTwo.damage}</div> 
-            <div id ="monster-two-status-heading>Status</div>
+            <div id="monster-two-status-heading">Status</div>
             <div id="monster-two-status">${monsterTwo.status}</div>
             <div id="canvas-area-monster-two">                  
               <canvas id="canvas-monster-two"></canvas>
