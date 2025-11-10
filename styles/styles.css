@@ -1742,7 +1742,7 @@ input[name="selected-specialty"] {
     line-height: 1em;
     grid-area: 3 / 1 / 4 / 3;
     border-radius: 5px;
-
+    font-size: 1em;
   }
 
   #monster-one-status,
