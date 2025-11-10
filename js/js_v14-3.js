@@ -3934,7 +3934,23 @@ function populateClericSpells(m1, m2, nextChap) {
 
       let clericFirstLevelSpellSummary = document.createElement('summary');
       clericFirstLevelSpellSummary.setAttribute('class', 'cleric-first-level-summary');
+      
+      let spellSummaryIcon = document.createElement('i');
+      spellSummaryIcon.classList.add('fa-regular');
+      spellSummaryIcon.classList.add('fa-circle-plus');
+      
+
+      let spellSummaryMinusIcon = document.createElement('i');
+      spellSummaryMinusIcon.classList.add('fa-solid');
+      spellSummaryMinusIcon.classList.add('fa-minus');
+      
       clericFirstLevelSpellSummary.textContent = characterFirstLevelSpells[i].name;
+      
+      clericFirstLevelSpellSummary.prepend(spellSummaryIcon);
+      clericFirstLevelSpellSummary.prepend(spellSummaryMinusIcon);
+
+      
+      
       
       let addSelf1Btn = document.createElement("div");
       addSelf1Btn.classList.add("cleric-self-spell-list");
@@ -3967,7 +3983,20 @@ function populateClericSpells(m1, m2, nextChap) {
       
       let clericFirstLevelSpellSummary = document.createElement('summary');
       clericFirstLevelSpellSummary.setAttribute('class', 'cleric-first-level-summary');
+      
+       let spellSummaryIcon = document.createElement('i');
+      spellSummaryIcon.classList.add('fa-regular');
+      spellSummaryIcon.classList.add('fa-circle-plus');
+      
+
+      let spellSummaryMinusIcon = document.createElement('i');
+      spellSummaryMinusIcon.classList.add('fa-solid');
+      spellSummaryMinusIcon.classList.add('fa-minus');
+      
       clericFirstLevelSpellSummary.textContent = characterFirstLevelSpells[i].name;
+      
+      clericFirstLevelSpellSummary.prepend(spellSummaryIcon);
+      clericFirstLevelSpellSummary.prepend(spellSummaryMinusIcon);
 
       let addMonster1Btn = document.createElement("div");
       addMonster1Btn.classList.add("cleric-monster-one-spell-list");
@@ -4045,8 +4074,22 @@ function populateClericSpells(m1, m2, nextChap) {
 
       let clericSecondLevelSpellSummary = document.createElement('summary');
       clericSecondLevelSpellSummary.setAttribute('class', 'cleric-second-level-summary');
+      
+      let spellSummaryIcon = document.createElement('i');
+      spellSummaryIcon.classList.add('fa-regular');
+      spellSummaryIcon.classList.add('fa-circle-plus');
+      
+
+      let spellSummaryMinusIcon = document.createElement('i');
+      spellSummaryMinusIcon.classList.add('fa-solid');
+      spellSummaryMinusIcon.classList.add('fa-minus');
+      
       clericSecondLevelSpellSummary.textContent = characterSecondLevelSpells[i].name;
       
+      clericSecondLevelSpellSummary.prepend(spellSummaryIcon);
+      clericSecondLevelSpellSummary.prepend(spellSummaryMinusIcon);
+      
+          
       let addSelf1Btn = document.createElement("div");
       addSelf1Btn.classList.add("cleric-self-spell-list");
       addSelf1Btn.setAttribute('id', `self-button-${characterSecondLevelSpells[i].className}`);
@@ -4078,7 +4121,22 @@ function populateClericSpells(m1, m2, nextChap) {
       
       let clericSecondLevelSpellSummary = document.createElement('summary');
       clericSecondLevelSpellSummary.setAttribute('class', 'cleric-second-level-summary');
+      
+      let spellSummaryIcon = document.createElement('i');
+      spellSummaryIcon.classList.add('fa-regular');
+      spellSummaryIcon.classList.add('fa-circle-plus');
+      
+
+      let spellSummaryMinusIcon = document.createElement('i');
+      spellSummaryMinusIcon.classList.add('fa-solid');
+      spellSummaryMinusIcon.classList.add('fa-minus');
+      
       clericSecondLevelSpellSummary.textContent = characterSecondLevelSpells[i].name;
+      
+      clericSecondLevelSpellSummary.prepend(spellSummaryIcon);
+      clericSecondLevelSpellSummary.prepend(spellSummaryMinusIcon);
+
+     
 
       let addMonster1Btn = document.createElement("div");
       addMonster1Btn.classList.add("cleric-monster-one-spell-list");
@@ -4156,8 +4214,22 @@ function populateClericSpells(m1, m2, nextChap) {
 
       let clericThirdLevelSpellSummary = document.createElement('summary');
       clericThirdLevelSpellSummary.setAttribute('class', 'cleric-third-level-summary');
+      
+      let spellSummaryIcon = document.createElement('i');
+      spellSummaryIcon.classList.add('fa-regular');
+      spellSummaryIcon.classList.add('fa-circle-plus');
+      
+
+      let spellSummaryMinusIcon = document.createElement('i');
+      spellSummaryMinusIcon.classList.add('fa-solid');
+      spellSummaryMinusIcon.classList.add('fa-minus');
+      
       clericThirdLevelSpellSummary.textContent = characterThirdLevelSpells[i].name;
       
+      clericThirdLevelSpellSummary.prepend(spellSummaryIcon);
+      clericThirdLevelSpellSummary.prepend(spellSummaryMinusIcon);
+
+           
       let addSelf1Btn = document.createElement("div");
       addSelf1Btn.classList.add("cleric-self-spell-list");
       addSelf1Btn.setAttribute('id', `self-button-${characterThirdLevelSpells[i].className}`);
@@ -4189,7 +4261,20 @@ function populateClericSpells(m1, m2, nextChap) {
       
       let clericThirdLevelSpellSummary = document.createElement('summary');
       clericThirdLevelSpellSummary.setAttribute('class', 'cleric-third-level-summary');
+      
+       let spellSummaryIcon = document.createElement('i');
+      spellSummaryIcon.classList.add('fa-regular');
+      spellSummaryIcon.classList.add('fa-circle-plus');
+      
+
+      let spellSummaryMinusIcon = document.createElement('i');
+      spellSummaryMinusIcon.classList.add('fa-solid');
+      spellSummaryMinusIcon.classList.add('fa-minus');
+      
       clericThirdLevelSpellSummary.textContent = characterThirdLevelSpells[i].name;
+      
+      clericThirdLevelSpellSummary.prepend(spellSummaryIcon);
+      clericThirdLevelSpellSummary.prepend(spellSummaryMinusIcon);
 
       let addMonster1Btn = document.createElement("div");
       addMonster1Btn.classList.add("cleric-monster-one-spell-list");
