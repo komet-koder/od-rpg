@@ -1829,9 +1829,9 @@ input[name="selected-specialty"] {
     justify-self: center;
     align-self: center;
     margin: .5em;
-    height: 100%;
-    line-height: 2em;
-
+    height: 75%;
+    line-height: 1.5em;
+    
   }
 
 
@@ -1906,7 +1906,7 @@ input[name="selected-specialty"] {
   li.first-level-dropdown-list:hover,
   li.second-level-dropdown-list:hover,
   li.third-level-dropdown-list:hover {
-    background-color: lightblue;
+    background-color: var(--background);
     border-radius: 5px;
     
   }
