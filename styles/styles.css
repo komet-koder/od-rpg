@@ -1800,8 +1800,6 @@ input[name="selected-specialty"] {
     grid-template-rows: 33% 33% 33%;
     list-style: none;
     width: 250px;
-    background-color: white;
-    border-radius: 5px;
     margin-top: 5px;
     bottom: 10%;
     left: calc( 50% - (125px));
@@ -1810,6 +1808,11 @@ input[name="selected-specialty"] {
     height: 7em;
     align-content: center;
     justify-content: center;
+    color: var(--btn-bg);
+    border: 4px solid var(--btn-bg);
+    background-color: #2a2446;
+    border-radius: 15px;
+
   }  
 
   li.first-level-dropdown-list,
@@ -1828,34 +1831,22 @@ input[name="selected-specialty"] {
     margin: .5em;
     height: 100%;
     line-height: 2em;
+
   }
 
 
   .cleric-first-level-spell-container,
   .cleric-second-level-spell-container,
-  .cleric-third-level-spell-container {
-    display: none;
-  }
-
+  .cleric-third-level-spell-container, 
   .mage-first-level-spell-container,
   .mage-second-level-spell-container,
   .mage-third-level-spell-container {
     display: none;
   }
-
+  
   .show-cleric-first-level-spell-container,
   .show-cleric-second-level-spell-container,
-  .show-cleric-third-level-spell-container {
-  display: block;
-    position: absolute;
-    bottom: 215px;
-    left: calc(50% - (120px));
-    font-size: 1.2em;
-    width: 240px;
-    border-radius: 5px;
-    padding: 5px;
-  }
-  
+  .show-cleric-third-level-spell-container, 
   .show-mage-first-level-spell-container,
   .show-mage-second-level-spell-container,
   .show-mage-third-level-spell-container {
@@ -1867,6 +1858,10 @@ input[name="selected-specialty"] {
     width: 240px;
     border-radius: 5px;
     padding: 5px;
+    color: var(--btn-bg);
+    border: 4px solid var(--btn-bg);
+    background-color: #2a2446;
+    border-radius: 15px;
   }
 
   div.first-level-spell-list-container {
@@ -2020,9 +2015,13 @@ input[name="selected-specialty"] {
   summary.cleric-first-level-summary,
   summary.cleric-second-level-summary,
   summary.cleric-third-level-summary {
-    background-color: #ffffff;
-    border-radius: 5px;
+    /* background-color: #ffffff; */
+    /* border-radius: 5px; */
     padding: 7px 0px 7px 0px;
+    color: var(--btn-bg);
+    border: 2px solid var(--btn-bg);
+    background-color: #2a2446;
+    border-radius: 15px;
   }
 
   summary.mage-first-level-summary > .fa-solid.fa-minus,
@@ -2044,7 +2043,7 @@ input[name="selected-specialty"] {
   summary.cleric-third-level-summary  > .fa-regular.fa-circle-plus{
     position: relative;
     left: -24px;
-     transform: rotateX(0deg);
+    transform: rotateX(0deg);
     transition: transform 200ms ease ;
   }
 
@@ -2068,6 +2067,9 @@ input[name="selected-specialty"] {
     margin-left: 10px;
     margin-right: 10px;
     padding: 5px;
+    color:  #2a2446;
+    background-color:  var(--btn-bg);
+    border-radius: 15px;
   }
 
   ul[class*="spell-list-combat"]:hover li.monster-one-spell-list {
