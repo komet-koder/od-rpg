@@ -4538,32 +4538,34 @@ function castSpellFromList(e, m1, m2, nextChap) {
 
     for (let i = 0; i < firstLevel.length; i++) {
       let firstSibling = document.querySelector(`#${e.target.id}`);
-      let secondSiblng = firstSibling.nextSibling.textContent;
-      if (firstLevel[i].name === secondSiblng) {
-        console.log("spell names match");
-        if (finalCharacter.status.includes("Invisible")) {
+      if (firstSibling !== null) {
+        let secondSiblng = firstSibling.nextSibling.textContent;
+        if (firstLevel[i].name === secondSiblng) {
+          console.log("spell names match");
+          if (finalCharacter.status.includes("Invisible")) {
 
-          modalConfig = {
-            class: "invisibility-removed-modal",
-            buttonClass: "close-invisibility-removed-modal",
-            buttonText: "Close",
-            modalText: `You were invisible but the spell was broken after you cast the spell`
+            modalConfig = {
+              class: "invisibility-removed-modal",
+              buttonClass: "close-invisibility-removed-modal",
+              buttonText: "Close",
+              modalText: `You were invisible but the spell was broken after you cast the spell`
+            }
+
+            Utilities.createModal(modalConfig)
+
+            finalCharacter.status.splice(
+              finalCharacter.status.indexOf("Invisible"),
+              1
+            );
+
+            let addInvisibilityStatus = $(".invisibility-status");
+
+            if (!addInvisibilityStatus.hasClass("hide-status")) {
+              addInvisibilityStatus.addClass("hide-status");
+              console.log(finalCharacter.activeSpellStatuses);
+            }
           }
-
-          Utilities.createModal(modalConfig)
-
-          finalCharacter.status.splice(
-            finalCharacter.status.indexOf("Invisible"),
-            1
-          );
-
-          let addInvisibilityStatus = $(".invisibility-status");
-
-          if (!addInvisibilityStatus.hasClass("hide-status")) {
-            addInvisibilityStatus.addClass("hide-status");
-            console.log(finalCharacter.activeSpellStatuses);
-          }
-        }
+        }      
 
         firstLevel[i].castSpell(m1, m2, nextChap, thisNodeInnerText);
       }
