@@ -4488,33 +4488,36 @@ function castSpellFromList(e, m1, m2, nextChap) {
     for (let i = 0; i < thirdLevel.length; i++) {
       let firstSibling = document.querySelector(`#${e.target.id}`);
       console.log(firstSibling);
-      let secondSibling = firstSibling.nextSibling.textContent;
-      console.log(secondSibling);
-      if (secondSibling && (thirdLevel[i].name === secondSibling)) {
-        if (finalCharacter.status.includes("Invisible")) {
+      if (firstSibling.nextSibling.textContent)  {
+        let secondSibling = firstSibling.nextSibling.textContent;
+          if (secondSibling && (thirdLevel[i].name === secondSibling)) {
+            if (finalCharacter.status.includes("Invisible")) {
 
-          modalConfig = {
-            class: "invisibility-removed-modal",
-            buttonClass: "close-invisibility-removed-modal",
-            buttonText: "Close",
-            modalText: `You were invisible but the spell was broken after you cast the spell`
+              modalConfig = {
+                class: "invisibility-removed-modal",
+                buttonClass: "close-invisibility-removed-modal",
+                buttonText: "Close",
+                modalText: `You were invisible but the spell was broken after you cast the spell`
+              }
+
+              Utilities.createModal(modalConfig)
+
+              finalCharacter.status.splice(
+                finalCharacter.status.indexOf("Invisible"),
+                1
+              );
+
+              let addInvisibilityStatus = $(".invisibility-status");
+              if (!addInvisibilityStatus.hasClass("hide-status")) {
+                addInvisibilityStatus.removeClass("hide-status");
+              }
+            }
+
+          thirdLevel[i].castSpell(m1, m2, nextChap, thisNodeInnerText);
           }
-
-          Utilities.createModal(modalConfig)
-
-          finalCharacter.status.splice(
-            finalCharacter.status.indexOf("Invisible"),
-            1
-          );
-
-          let addInvisibilityStatus = $(".invisibility-status");
-          if (!addInvisibilityStatus.hasClass("hide-status")) {
-            addInvisibilityStatus.removeClass("hide-status");
-          }
-        }
-
-        thirdLevel[i].castSpell(m1, m2, nextChap, thisNodeInnerText);
       }
+      // console.log(secondSibling);
+    
     }
   }
 
