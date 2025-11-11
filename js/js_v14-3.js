@@ -4412,8 +4412,12 @@ function castSpellFromList(e, m1, m2, nextChap) {
     for (let i = 0; i < firstLevel.length; i++) {
       // 
       let firstSibling = document.querySelector(`#${e.target.id}`);
-      let secondSiblng = firstSibling.nextSibling.textContent;
-      if (secondSiblng && (firstLevel[i].name === secondSiblng)) {
+      console.log(firstSibling);
+
+      let secondSibling = firstSibling.nextSibling.textContent;
+      console.log(secondSibling);
+
+      if (secondSibling && (firstLevel[i].name === secondSibling)) {
         console.log("spell names match");
         if (finalCharacter.status.includes("Invisible")) {
 
@@ -4445,8 +4449,12 @@ function castSpellFromList(e, m1, m2, nextChap) {
 
     for (let i = 0; i < secondLevel.length; i++) {
       let firstSibling = document.querySelector(`#${e.target.id}`);
-      let secondSiblng = firstSibling.nextSibling.textContent;
-      if (secondSiblng && (secondLevel[i].name === secondSiblng)) {
+      console.log(firstSibling);
+
+      let secondSibling = firstSibling.nextSibling.textContent;
+      console.log(secondSibling);
+      
+      if (secondSibling && (secondLevel[i].name === secondSibling)) {
         if (finalCharacter.status.includes("Invisible")) {
 
 
@@ -4479,8 +4487,10 @@ function castSpellFromList(e, m1, m2, nextChap) {
 
     for (let i = 0; i < thirdLevel.length; i++) {
       let firstSibling = document.querySelector(`#${e.target.id}`);
-      let secondSiblng = firstSibling.nextSibling.textContent;
-      if (secondSiblng && (thirdLevel[i].name === secondSiblng)) {
+      console.log(firstSibling);
+      let secondSibling = firstSibling.nextSibling.textContent;
+      console.log(secondSibling);
+      if (secondSibling && (thirdLevel[i].name === secondSibling)) {
         if (finalCharacter.status.includes("Invisible")) {
 
           modalConfig = {
