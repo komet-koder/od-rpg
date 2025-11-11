@@ -4488,7 +4488,7 @@ function castSpellFromList(e, m1, m2, nextChap) {
     for (let i = 0; i < thirdLevel.length; i++) {
       let firstSibling = document.querySelector(`#${e.target.id}`);
       console.log(firstSibling);
-      if (firstSibling.nextSibling.textContent)  {
+      if (firstSibling.nextSibling)  {
         let secondSibling = firstSibling.nextSibling.textContent;
           if (secondSibling && (thirdLevel[i].name === secondSibling)) {
             if (finalCharacter.status.includes("Invisible")) {
