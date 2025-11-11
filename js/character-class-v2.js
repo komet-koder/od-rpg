@@ -1043,7 +1043,7 @@ export default class Character {
     continueNextChapter,
     damage,
     spellName
-  ) {
+    ) {
     if (finalCharacter.status.includes("Invisible")) {
       alert(
         `You were invisible and the ${monster1.name} could not see you, but the spell was broken after you attacked`
@@ -1091,6 +1091,7 @@ export default class Character {
       finalCharacter.greyOutAttackButtons(monster1, monster2);
     } else if (monster1.healthPoints - inflictedDamage > 0) {
       let isSleepingM1 = monster1.status.some((x) => x === "Sleep");
+      let isCharmedM1 = monster1.status.some((x) => x === "Charmed");
 
       if (isSleepingM1 === true) {
         alert(
@@ -1105,14 +1106,21 @@ export default class Character {
           buttonText: "Close",
           modalText: `The ${monster1.name} was asleep, but woke up after being struck by your spell.`
         }
-        Utilities.createModal(modalConfig);
 
         monster1.status.splice(monster1.status.indexOf("Sleep"), 1);
+        
+      } else if (isCharmedM1 === true) {
+        let attackDialogue = document.querySelector('#fight-module-dialogue');
+        attackDialogue.textContent = `The ${monster1.name} was charmed, but the spell was broken once struck by ${spellName}, `;
+         monster1.status.splice(monster1.status.indexOf("Charmed"), 1);
+
+      }
+
         let monster1Status = document.querySelector("#monster-one-status");
         monster1Status.innerHTML = `${monster1.status.join(
           ", "
         )}`;
-      }
+        // Utilities.updateMonsterOne(monster1);
 
       monster1.healthPoints = monster1.healthPoints - inflictedDamage;
       
