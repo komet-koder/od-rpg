@@ -4,6 +4,7 @@ import
 } from "../js_v14-3.js";
 
 import { toggleShowSpellList } from "../js_v14-3.js";
+import { SpellUtilities } from "../Utilities/spellUtilityFunctions.js";
 
 export let mageLevelTwoSpells = [];
 
@@ -66,7 +67,7 @@ continualLight.castSpell = function (monster1, monster2, continueNextChapter, at
     let dialogue = document.querySelector('#fight-module-dialogue');
     if (this.numberOfUses <= 0)
     {
-        dialogue.textContent = `You try to cast Continual Light, but the words won't come to your mind.`;
+        SpellUtilities.cantCastSpell("Continual Light", dialogue);
         toggleShowSpellList();
 
     } else
@@ -173,8 +174,7 @@ invisibility.castSpell = function (monster1, monster2, continueNextChapter, atta
     if (this.numberOfUses <= 0)
     {
         
-        
-        dialogue.textContent = `You try to cast Invisibility, but the words won't come to your mind.`;
+        SpellUtilities.cantCastSpell("Invisibility", dialogue);
         toggleShowSpellList();
 
     } else if (finalCharacter.status.includes("Invisible"))
@@ -255,7 +255,7 @@ mirrorImage.castSpell = function (monster1, monster2, continueNextChapter, attac
     console.log('Casting Mirror Image');
     if (this.numberOfUses <= 0)
     {
-        dialogue.textContent = `You try to cast Mirror Image, but the words won't come to your mind.`;
+        SpellUtilities.cantCastSpell("Mirror Image", dialogue);
         toggleShowSpellList();
 
     } else
@@ -324,7 +324,7 @@ phantasmalForce.castSpell = function (monster1, monster2, continueNextChapter, a
     console.log('Casting Phantasmal Force')
     if (this.numberOfUses <= 0)
     {
-        dialogue.textContent = `You try to cast Phantasmal Force, but the words won't come to your mind.`;
+        SpellUtilities.cantCastSpell("Phantasmal Force", dialogue);
         toggleShowSpellList();
 
     } else
@@ -399,7 +399,7 @@ web.castSpell = function (monster1, monster2, continueNextChapter, attackedMonst
 
     if (this.numberOfUses <= 0)
     {
-        dialogue.textContent = `You try to cast Web, but the words won't come to your mind.`;
+        SpellUtilities.cantCastSpell("Web", dialogue);
         toggleShowSpellList();
 
     } else
