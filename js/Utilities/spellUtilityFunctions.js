@@ -14,4 +14,4 @@ export function cantCastSpell(spell, dialogueDiv) {
     return dialogueDiv.innerHTML = `<p>You try to cast ${spell}, but ${dialogueArray[randomNumber]}</p>`;    
 }
 
-export * as SpellUtilities from "./spellUtilitiesFunctions.js";
+export * as SpellUtilities from "./spellUtilityFunctions.js";

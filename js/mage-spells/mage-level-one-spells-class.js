@@ -74,7 +74,7 @@ ventriloquism.castSpell = function (monster1, monster2, continueNextChapter, att
     
     if (this.numberOfUses <= 0)
     {
-        SpellUtilities.cantCastSpells("Ventriloquism", dialogue);
+        SpellUtilities.cantCastSpell("Ventriloquism", dialogue);
         toggleShowSpellList();
     } else
     {
@@ -147,7 +147,7 @@ light.castSpell = function (monster1, monster2, continueNextChapter, attackedMon
     let dialogue = document.querySelector('#fight-module-dialogue');
     if (this.numberOfUses <= 0)
     {
-        SpellUtilities.cantCastSpells("Light", dialogue);
+        SpellUtilities.cantCastSpell("Light", dialogue);
         toggleShowSpellList();
 
     } else
@@ -261,8 +261,8 @@ magicMissile.castSpell = function (monster1, monster2, continueNextChapter, atta
 
     if (this.numberOfUses <= 0)
     {
-        dialogue.innerHTML = `<p>You try to cast Magic Missile, but the words won't come to your mind.</p>`;
-        toggleShowSpellList();
+       SpellUtilities.cantCastSpell("Magic Missile", dialogue);
+       toggleShowSpellList();
     } else
     {
         this.numberOfUses -= 1;
@@ -289,7 +289,7 @@ shield.castSpell = function (monster1, monster2, continueNextChapter, attackedMo
     let dialogue = document.querySelector('#fight-module-dialogue');
     if (this.numberOfUses <= 0)
     {
-        dialogue.innerHTML = `<p>You try to cast Shield, but the words won't come to your mind.</p>`;
+        SpellUtilities.cantCastSpell("Shield", dialogue);
         toggleShowSpellList();
     } else if (finalCharacter.status.includes("Shield"))
     {
@@ -338,7 +338,7 @@ protectionFromEvil.castSpell = function (monster1, monster2, continueNextChapter
     let dialogue = document.querySelector('#fight-module-dialogue');
     if (this.numberOfUses <= 0)
     {
-        dialogue.innerHTML = `<p>You try to cast Protection From Evil, but the words won't come to your mind.</p>`;
+        SpellUtilities.cantCastSpell("Protection from Evil", dialogue);
         toggleShowSpellList();
     } else
     {
@@ -438,7 +438,7 @@ charmPerson.castSpell = function (monster1, monster2, continueNextChapter, attac
     console.log(attackedMonster)
     if (this.numberOfUses <= 0)
     {
-        dialogue.innerHTML = `<p>You try to cast Charm Person, but the words won't come to your mind.</p>`;
+        SpellUtilities.cantCastSpell("Charm Person", dialogue);
         toggleShowSpellList();
     } else
     {
@@ -518,7 +518,7 @@ sleep.castSpell = function (monster1, monster2, continueNextChapter, attackedMon
     let dialogue = document.querySelector('#fight-module-dialogue');
     if (this.numberOfUses <= 0)
     {
-        dialogue.innerHTML = `<p>You try to cast Sleep, but the words won't come to your mind.</p>`;
+        SpellUtilities.cantCastSpell("Sleep", dialogue);
         toggleShowSpellList();
 
     } else
