@@ -1,28 +1,28 @@
 //import fighter
-import { fighterVeteran, fighterWarrior, fighterSwordmaster } from './character-class-levels/fighter-level-class.js';
+import { fighterVeteran, fighterWarrior, fighterSwordmaster } from '../character-class-levels/fighter-level-class.js';
 
 //import mage
-import { mageMedium, mageSeer, mageConjurer } from './character-class-levels/mage-level-class.js';
+import { mageMedium, mageSeer, mageConjurer } from '../character-class-levels/mage-level-class.js';
 
 //import thief
-import { apprentice, footpad, robber } from './character-class-levels/thief-level-class.js';
+import { apprentice, footpad, robber } from '../character-class-levels/thief-level-class.js';
 
 //import elf
-import { veteranMedium, warriorSeer, swordMasterConjurer } from './character-class-levels/elf-level-class.js';
+import { veteranMedium, warriorSeer, swordMasterConjurer } from '../character-class-levels/elf-level-class.js';
 
 //import dwarf
-import { dwarvenVeteran, dwarvenWarrior, dwarvenSwordmaster } from './character-class-levels/dwarf-level-class.js';
+import { dwarvenVeteran, dwarvenWarrior, dwarvenSwordmaster } from '../character-class-levels/dwarf-level-class.js';
 
 //import halfling
-import { halflingVeteran, halflingWarrior, halflingSwordmaster } from './character-class-levels/halfling-level-class.js';
+import { halflingVeteran, halflingWarrior, halflingSwordmaster } from '../character-class-levels/halfling-level-class.js';
 
 //import cleric
-import { acolyte, adept, priest } from './character-class-levels/cleric-level-class.js';
+import { acolyte, adept, priest } from '../character-class-levels/cleric-level-class.js';
 
 //import spells
 import { noSpell, mediumHealing, majorHealing, earthStrike, lightening, minorHealing, fireStorm, fireArrows, dragonFang } from './spell-class-v2.js';
-import { dragonWarriorVeteran } from './character-class-levels/dragon-warrior-level-class.js';
-import { traveller } from './character-class-levels/adventurer-level-class.js';
+import { dragonWarriorVeteran } from '../character-class-levels/dragon-warrior-level-class.js';
+import { traveller } from '../character-class-levels/adventurer-level-class.js';
 
 //==============================================end imports===============================================//
 

@@ -1,10 +1,10 @@
-import { finalCharacter, confirmAttackMonsters } from "./js_v14-3.js";
+import { finalCharacter, confirmAttackMonsters } from "../js_v14-3.js";
 
-import { fighterVeteran, fighterWarrior, fighterSwordmaster } from "./character-class-levels/fighter-level-class.js";
+import { fighterVeteran, fighterWarrior, fighterSwordmaster } from "../character-class-levels/fighter-level-class.js";
 
-import { normalMan } from "./character-class-levels/normalMan-level-class.js";
+import { normalMan } from "../character-class-levels/normalMan-level-class.js";
 
-import { Utilities } from "./Utilities/utilityFunctions.js";
+import { Utilities } from "../Utilities/utilityFunctions.js";
 // import Weapon from './weapon-class-v2.js';
 // import { normalSword, shortBow, silverSword, twoHandedBroadSword, longBow, ebonyBow, mahoganyStaff, gemStaff, noWeapon, obsidianSword, woodenClub, dagger,
 //     silverDagger, battleAxe, handAxe, crossBow, shortSword, mace, javelin, poleArm, sling, spear, warHammer } from './weapon-class-v2.js';

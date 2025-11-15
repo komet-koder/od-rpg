@@ -1,4 +1,4 @@
-import { finalCharacter } from "./js_v14-3.js";
+import { finalCharacter } from "../js_v14-3.js";
 import Weapon from "./weapon-class-v2.js";
 
 //==============================================end imports===============================================//

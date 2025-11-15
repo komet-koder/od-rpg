@@ -6,7 +6,7 @@ import
 import { toggleShowSpellList } from "../js_v14-3.js";
 import { Utilities } from "../Utilities/utilityFunctions.js";
 import { SpellUtilities } from "../Utilities/spellUtilityFunctions.js";
-import Spell from "../spell-class-v2.js";
+import Spell from "../Classes/spell-class-v2.js";
 
 export let mageLevelOneSpells = [];
 

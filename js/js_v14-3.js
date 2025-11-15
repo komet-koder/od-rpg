@@ -1,7 +1,7 @@
 //imports modules
 
 //weapon imports
-import Weapon from "./weapon-class-v2.js";
+import Weapon from "./Classes/weapon-class-v2.js";
 import {
   fists,
   normalSword,
@@ -27,10 +27,10 @@ import {
   sling,
   spear,
   warHammer,
-} from "./weapon-class-v2.js";
+} from "./Classes/weapon-class-v2.js";
 
 //armor imports
-import Armor from "./armor-class-v2.js";
+import Armor from "./Classes/armor-class-v2.js";
 import {
   chainMail,
   leatherArmor,
@@ -40,10 +40,10 @@ import {
   plateMail,
   bandedMail,
   obsidianPlateMail,
-} from "./armor-class-v2.js";
+} from "./Classes/armor-class-v2.js";
 
 //spell imports
-import Spell from "./spell-class-v2.js";
+import Spell from "./Classes/spell-class-v2.js";
 import {
   noSpell,
   mediumHealing,
@@ -54,10 +54,10 @@ import {
   fireStorm,
   dragonFang,
   fireArrows,
-} from "./spell-class-v2.js";
+} from "./Classes/spell-class-v2.js";
 
 //specialty imports
-import Specialty from "./specialty-class-v2.js";
+import Specialty from "./Classes/specialty-class-v2.js";
 import {
   adventurer,
   warrior,
@@ -68,13 +68,13 @@ import {
   halfling,
   cleric,
   thief,
-} from "./specialty-class-v2.js";
+} from "./Classes/specialty-class-v2.js";
 
 //character imports
-import Character from "./character-class-v2.js";
+import Character from "./Classes/character-class-v2.js";
 
 //moster imports
-import Monster from "./monster-class-v2.js";
+import Monster from "./Classes/monster-class-v2.js";
 import {
   smallWolf,
   wolf1,
@@ -89,10 +89,10 @@ import {
   bugBear1,
   kobold,
   kobold1,
-} from "./monster-class-v2.js";
+} from "./Classes/monster-class-v2.js";
 
 //inventory imports
-import Inventory from "./inventory-class-v1.js";
+import Inventory from "./Classes/inventory-class-v1.js";
 import {
   raynardsCoin,
   farmersNote,
@@ -121,7 +121,7 @@ import {
   waterskin,
   wine,
   wolfsbane,
-} from "./inventory-class-v1.js";
+} from "./Classes/inventory-class-v1.js";
 
 //class-level-imports
 

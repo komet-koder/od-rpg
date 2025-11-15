@@ -5,7 +5,7 @@ import {
   continueChapterThreeFour,
   render,
   animate,
-} from "./js_v14-3.js";
+} from "../js_v14-3.js";
 import Weapon from "./weapon-class-v2.js";
 import {
   normalSword,
@@ -59,18 +59,18 @@ import {
   fighterVeteran,
   fighterWarrior,
   fighterSwordmaster,
-} from "./character-class-levels/fighter-level-class.js";
+} from "../character-class-levels/fighter-level-class.js";
 import {
   veteranMedium,
   warriorSeer,
   swordMasterConjurer,
-} from "./character-class-levels/elf-level-class.js";
+} from "../character-class-levels/elf-level-class.js";
 import {
   apprentice,
   footpad,
   robber,
-} from "./character-class-levels/thief-level-class.js";
-import { dragonWarriorVeteran } from "./character-class-levels/dragon-warrior-level-class.js";
+} from "../character-class-levels/thief-level-class.js";
+import { dragonWarriorVeteran } from "../character-class-levels/dragon-warrior-level-class.js";
 import {
   continualLight,
   detectEvil,
@@ -84,7 +84,7 @@ import {
   web,
   wizardLock,
   detectInvisible,
-} from "./mage-spells/mage-level-two-spells-class.js";
+} from "../mage-spells/mage-level-two-spells-class.js";
 import {
   charmPerson,
   detectMagic,
@@ -98,7 +98,7 @@ import {
   sleep,
   ventriloquism,
   readMagic,
-} from "./mage-spells/mage-level-one-spells-class.js";
+} from "../mage-spells/mage-level-one-spells-class.js";
 import {
   smallWolf,
   wolf1,
@@ -113,7 +113,7 @@ import {
   kobold,
   phantasmalTroll,
 } from "./monster-class-v2.js";
-import { Utilities } from "./Utilities/utilityFunctions.js";
+import { Utilities } from "../Utilities/utilityFunctions.js";
 
 //import { noAchievements, killedFarmWolves, spokeToRaynard } from './achievements-v1.js';
 
