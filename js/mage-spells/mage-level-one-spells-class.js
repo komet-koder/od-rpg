@@ -5,6 +5,8 @@ import
 
 import { toggleShowSpellList } from "../js_v14-3.js";
 import { Utilities } from "../Utilities/utilityFunctions.js";
+import { SpellUtilities } from "../Utilities/spellUtilityFunctions.js";
+import Spell from "../spell-class-v2.js";
 
 export let mageLevelOneSpells = [];
 
@@ -67,12 +69,12 @@ let readMagic = new MageLevelOneSpells("Read Magic", 1, 0, 0, "The Mage only", f
 
 ventriloquism.castSpell = function (monster1, monster2, continueNextChapter, attackedMonster)
 {
+    
     let dialogue = document.querySelector('#fight-module-dialogue');
-    console.log('Casting Ventriloquism')
-    console.log(attackedMonster, attackedMonster.status)
+    
     if (this.numberOfUses <= 0)
     {
-        dialogue.innerHTML = `<p>You try to cast Ventriloquism, but the words won't come to your mind.</p>`;
+        SpellUtilities.cantCastSpells("Ventriloquism", dialogue);
         toggleShowSpellList();
     } else
     {
@@ -141,11 +143,11 @@ holdPortal.castSpell = function ()
 }
 
 light.castSpell = function (monster1, monster2, continueNextChapter, attackedMonster)
-{
+{     
     let dialogue = document.querySelector('#fight-module-dialogue');
     if (this.numberOfUses <= 0)
     {
-        dialogue.innerHTML = `<p>You try to cast Light, but the words won't come to your mind.</p>`;
+        SpellUtilities.cantCastSpells("Light", dialogue);
         toggleShowSpellList();
 
     } else
