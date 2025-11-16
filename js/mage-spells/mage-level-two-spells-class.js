@@ -45,25 +45,25 @@ let esp = new MageLevelTwoSpells("ESP", 2, 60, 12, "All thoughts in one directio
 let knock = new MageLevelTwoSpells("Knock", 2, 60, 1, "One lock or bar", function () { console.log('Casting'); }, "knock", false, 0, false, 0, false, false);
 
 
-let levitate = new MageLevelTwoSpells("Levitate", 2, 0, 6, "The Mage only", function () { console.log('Casting'); }, "levitate", false, 0, false);
+let levitate = new MageLevelTwoSpells("Levitate", 2, 0, 6, "The Mage only", function () { console.log('Casting'); }, "levitate", false, 0, false, 0, false, true);
 
 
-let locateObject = new MageLevelTwoSpells("Locate Object", 2, 60, 2, "One object within range", function () { console.log('Casting'); }, "locate-object", false, 0, true);
+let locateObject = new MageLevelTwoSpells("Locate Object", 2, 60, 2, "One object within range", function () { console.log('Casting'); }, "locate-object", false, 0, true, 0, false, false);
 
 //completed
-let mirrorImage = new MageLevelTwoSpells("Mirror Image", 2, 0, 6, "The Mage only", function () { console.log('Casting'); }, "mirror-image", true, 0, false);
+let mirrorImage = new MageLevelTwoSpells("Mirror Image", 2, 0, 6, "The Mage only", function () { console.log('Casting'); }, "mirror-image", true, 0, false, 0, false, true);
 
 //battle spell
-let phantasmalForce = new MageLevelTwoSpells("Phantasmal Force", 2, 999, 12, "20 foot volume", function () { console.log('Casting'); }, "phantasmal-force", true, 0, true);
+let phantasmalForce = new MageLevelTwoSpells("Phantasmal Force", 2, 999, 12, "20 foot volume", function () { console.log('Casting'); }, "phantasmal-force", true, 0, true, 0, true, false);
 
 //completed
-let web = new MageLevelTwoSpells("Web", 2, 10, 48, "A volume of 10 by 10 by 10", function () { console.log('Casting'); }, "web", true, 0, true);
+let web = new MageLevelTwoSpells("Web", 2, 10, 48, "A volume of 10 by 10 by 10", function () { console.log('Casting'); }, "web", true, 0, true, 0, true, false);
 
 
-let wizardLock = new MageLevelTwoSpells("Wizard Lock", 2, 10, 999, "One portal or lock", function () { console.log('Casting'); }, "wizard-lock", false, 0, false);
+let wizardLock = new MageLevelTwoSpells("Wizard Lock", 2, 10, 999, "One portal or lock", function () { console.log('Casting'); }, "wizard-lock", false, 0, false, 0, false, false);
 
 
-let detectInvisible = new MageLevelTwoSpells("Detect Invisible", 2, 10, 6, "Detect invisibility", function () { console.log('Casting'); }, "detect-invisible", false, 0, true);
+let detectInvisible = new MageLevelTwoSpells("Detect Invisible", 2, 10, 6, "Detect invisibility", function () { console.log('Casting'); }, "detect-invisible", true, 0, true, 0, true, false);
 
 continualLight.castSpell = function (monster1, monster2, continueNextChapter, attackedMonster)
 {
