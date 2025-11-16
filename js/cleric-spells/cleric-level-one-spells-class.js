@@ -5,6 +5,10 @@ import
 
 import { toggleShowSpellList } from "../js_v14-3.js";
 
+import { Utilities } from "../Utilities/utilityFunctions.js";
+
+import { SpellUtilities } from "../Utilities/spellUtilityFunctions.js";
+
 export let clericLevelOneSpells = [];
 
 export default class ClericLevelOneSpells {

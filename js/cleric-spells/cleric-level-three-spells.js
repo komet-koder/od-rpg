@@ -1,3 +1,13 @@
+import
+{
+    finalCharacter
+} from "../js_v14-3.js";
+
+import { toggleShowSpellList } from "../js_v14-3.js";
+
+import { Utilities } from "../Utilities/utilityFunctions.js";
+
+import { SpellUtilities } from "../Utilities/spellUtilityFunctions.js";
 
 export default class ClericLevelThreeSpells {
      constructor (name, level, range, duration, effect, castingEffect, className, useBattle, damage, isAreaEffect, numberOfUses = 0) {
