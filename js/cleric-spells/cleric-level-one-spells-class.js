@@ -24,7 +24,7 @@ export default class ClericLevelOneSpells {
         this.damage = damage;
         this.isAreaEffect = isAreaEffect;
         this.numberOfUses = numberOfUses;
-        this.isUsedOnMonster = isUsedOnOthers;
+        this.isUsedOnOthers = isUsedOnOthers;
         this.isUsedOnSelf = isUsedOnSelf;
     }
 };
