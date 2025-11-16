@@ -12,7 +12,7 @@ import { SpellUtilities } from "../Utilities/spellUtilityFunctions.js";
 export let clericLevelOneSpells = [];
 
 export default class ClericLevelOneSpells {
-    constructor (name, level, range, duration, effect, castingEffect, className, useBattle, damage, isAreaEffect, numberOfUses = 0) {
+    constructor (name, level, range, duration, effect, castingEffect, className, useBattle, damage, isAreaEffect, numberOfUses = 0, isUsedOnMonster, isUsedOnSelf) {
         this.name = name;
         this.level = level;
         this.range = range;
@@ -24,6 +24,8 @@ export default class ClericLevelOneSpells {
         this.damage = damage;
         this.isAreaEffect = isAreaEffect;
         this.numberOfUses = numberOfUses;
+        this.isUsedOnMonster = this.isUsedOnMonster;
+        this.isUsedOnSelf = this.isUsedOnSelf;
     }
 };
 
@@ -124,6 +126,27 @@ let resistColdCleric = new ClericLevelOneSpells (
     true);
 
 cureLightWoundsCleric.castSpell = function (monster1, monster2, continueNextChapter, attackedMonster) {
+    let dialogue = document.querySelector('#fight-module-dialogue');
+        if (this.numberOfUses <= 0)
+        {
+            SpellUtilities.cantCastSpell("Cure Light Wounds", dialogue);
+            toggleShowSpellList();
+    
+        } else
+        {
+            this.numberOfUses -= 1;
+    
+            if (this.numberOfUses <= 0)
+            {
+                this.numberOfUses = 0;
+            }
+            toggleShowSpellList();
+    
+            finalCharacter.greyOutAttackButtons(monster1, monster2);
+            dialogue.innerHTML = `<p>You cast Cure Light Wounds, which cures 2-7 hitpoints.</p>`;
+        }
+
+
     console.log(monster1);
     console.log(monster2);
     console.log(continueNextChapter);

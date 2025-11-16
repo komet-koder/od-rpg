@@ -7,7 +7,7 @@ import { toggleShowSpellList } from "../js_v14-3.js";
 
 export default class MageLevelThreeSpells
 {
-    constructor (name, level, range, duration, effect, castingEffect, className, useBattle, damage, isAreaEffect)
+    constructor (name, level, range, duration, effect, castingEffect, className, useBattle, damage, isAreaEffect, numberOfUses = 0, isUsedOnMonster, isUsedOnSelf)
     {
         this.name = name;
         this.level = level;
@@ -19,6 +19,9 @@ export default class MageLevelThreeSpells
         this.useBattle = useBattle;
         this.damage = damage;
         this.isAreaEffect = isAreaEffect;
+        this.numberOfUses = numberOfUses;
+        this.isUsedOnMonster = this.isUsedOnMonster;
+        this.isUsedOnSelf = this.isUsedOnSelf;
     }
 };
 

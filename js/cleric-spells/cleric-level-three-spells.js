@@ -10,7 +10,7 @@ import { Utilities } from "../Utilities/utilityFunctions.js";
 import { SpellUtilities } from "../Utilities/spellUtilityFunctions.js";
 
 export default class ClericLevelThreeSpells {
-     constructor (name, level, range, duration, effect, castingEffect, className, useBattle, damage, isAreaEffect, numberOfUses = 0) {
+     constructor (name, level, range, duration, effect, castingEffect, className, useBattle, damage, isAreaEffect, numberOfUses = 0, isUsedOnMonster, isUsedOnSelf) {
         this.name = name;
         this.level = level;
         this.range = range;
@@ -22,6 +22,8 @@ export default class ClericLevelThreeSpells {
         this.damage = damage;
         this.isAreaEffect = isAreaEffect;
         this.numberOfUses = numberOfUses;
+        this.isUsedOnMonster = this.isUsedOnMonster;
+        this.isUsedOnSelf = this.isUsedOnSelf;
     }
 };
 
