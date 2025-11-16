@@ -125,7 +125,7 @@ export function createModal(modalConfig) {
 }
 
 export function updateMonsterOne(monsterOne) {
-  if (monsterOne.name !== " " && monsterOne.healthPoints > 0) {
+  if (monsterOne.name !== " " && monsterOne.healthPoints >= 0) {
     let monsterOneHP = document.querySelector('#monster-one-hp');
     monsterOneHP.innerHTML = 
     `
@@ -146,7 +146,7 @@ export function updateMonsterOne(monsterOne) {
 }
 
 export function updateMonsterTwo(monsterTwo) {
-  if (monsterTwo.name !== " " && monsterTwo.healthPoints > 0) {
+  if (monsterTwo.name !== " " && monsterTwo.healthPoints >= 0) {
     let monsterTwoHP = document.querySelector('#monster-two-hp');
       monsterTwoHP.innerHTML = 
       `
