@@ -635,7 +635,8 @@ export default class Character {
         monster1.healthPoints = 0;
 
         Utilities.updateMonsterOne(monster1);
-
+        
+        let defeatMonster1 = document.querySelector("#fight-module-dialogue");
         defeatMonster1.innerHTML = `<p>Congratulations, you defeated the Monster 1!</p>`;
 
         let characterExperienceGuage = document.querySelector(
