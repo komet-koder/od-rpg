@@ -5,6 +5,7 @@ import
 
 import { toggleShowSpellList } from "../js_v14-3.js";
 import { SpellUtilities } from "../Utilities/spellUtilityFunctions.js";
+import { Utilities } from "../Utilities/utilityFunctions.js";
 
 export let mageLevelTwoSpells = [];
 
@@ -101,22 +102,9 @@ continualLight.castSpell = function (monster1, monster2, continueNextChapter, at
             {
                 let removeBlindM1 = monster1.status.filter((x) => "Blind");
                 monster1.status.splice(removeBlindM1); //removing Blind after function call
-                let updateM1Status = document.querySelector("#monster-one");
-                updateM1Status.innerHTML = `
-                <div class='monster-info-module'>
-                    <div id="monster-one-hp">
-                        <div>Hit Points</div>
-                        <progress class='monster-hp-prog-bar'  id="monster-one-hp-progress-bar" max="${monster1.startingHealthPoints}" value="${monster1.healthPoints}"></progress>
-                        <div>${monster1.healthPoints}</div>
-                    </div> 
-                        <div id="monster-one-ap">Armor Class: ${monster1.armorClass}</div>
-                        <div id="monster-one-damage">Damage: ${monster1.damage}</div>
-                        <div id="monster-one-status-heading">Status</div>
-                        <div id="monster-one-status">${monster1.status}</div>           
-                    <div id="canvas-area-monster-one">                  
-                        <canvas id="canvas-monster-one" height="200" width="200"></canvas>
-                    </div>
-                </div>`;
+                
+                Utilities.updateMonsterOne(monster1);
+                                
                 console.log('Blind removed m1')
             }, 60000);
 
@@ -134,18 +122,9 @@ continualLight.castSpell = function (monster1, monster2, continueNextChapter, at
             {
                 let removeBlindM2 = monster2.status.filter((x) => "Blind");
                 monster2.status.splice(removeBlindM2);
-                let updateM2Status = document.querySelector("#monster-two");
-                updateM2Status.innerHTML = `
-                <div class="monster" id="monster-two">
-                    <fieldset class='monster-info-module'>
-                        <legend class='monster-dashboard'>Monster 2</legend>
-                        <h4 id="monster-two-type">Monster Type: ${monster2.name}</h4>
-                        <h4 id="monster-two-hp">Hit Points: ${monster2.healthPoints}<progress class='monster-hp-prog-bar'  id="monster-two-hp-progress-bar" max="${monster2.startingHealthPoints}" value="${monster2.healthPoints}"></progress></h4> 
-                        <h4 id="monster-two-ap">Armor Class: ${monster2.armorClass}</h4>
-                        <h4 id="monster-two-damage">Damage: ${monster2.damage}</h4>
-                        <h4 id="monster-two-status">Status: ${monster2.status}</h4>
-                    </fieldset>   
-                </div>`;
+                
+                Utilities.updateMonsterTwo(monster2);                
+                
                 console.log('blind removed m2')
 
             }, 60000);
@@ -426,25 +405,9 @@ web.castSpell = function (monster1, monster2, continueNextChapter, attackedMonst
                 let removeWebM1 = monster1.status.filter((x) => "Web");
                 monster1.status.splice(removeWebM1); //removing Web after function call
                 
-                
-                let updateM1Status = document.querySelector("#monster-one");
-                updateM1Status.innerHTML = `
-                <div class='monster-info-module'>
-                    <div id="monster-one-hp">
-                        <div>Hit Points</div>
-                        <progress class='monster-hp-prog-bar'  id="monster-one-hp-progress-bar" max="${monster1.startingHealthPoints}" value="${monster1.healthPoints}"></progress>
-                        <div>${monster1.healthPoints}</div>
-                    </div> 
-                        <div id="monster-one-ap">Armor Class: ${monster1.armorClass}</div>
-                        <div id="monster-one-damage">Damage: ${monster1.damage}</div>
-                        <div id="monster-one-status-heading">Status</div>
-                        <div id="monster-one-status">${monster1.status}</div>           
-                    <div id="canvas-area-monster-one">                  
-                        <canvas id="canvas-monster-one" height="200" width="200"></canvas>
-                    </div>
-                </div>`;
+                Utilities.updateMonsterOne(monster1);
+                                
                 console.log('Web removed m1')
-                console.log(monster1.status)
 
             }, 30000);
 
@@ -463,18 +426,9 @@ web.castSpell = function (monster1, monster2, continueNextChapter, attackedMonst
             {
                 let removeWebM2 = monster2.status.filter((x) => "Web");
                 monster2.status.splice(removeWebM2);
-                let updateM2Status = document.querySelector("#monster-two");
-                updateM2Status.innerHTML = `
-                <div class="monster" id="monster-two">
-                    <fieldset class='monster-info-module'>
-                        <legend class='monster-dashboard'>Monster 2</legend>
-                        <h4 id="monster-two-type">Monster Type: ${monster2.name}</h4>
-                        <h4 id="monster-two-hp">Hit Points: ${monster2.healthPoints}<progress class='monster-hp-prog-bar'  id="monster-two-hp-progress-bar" max="${monster2.startingHealthPoints}" value="${monster2.healthPoints}"></progress></h4> 
-                        <h4 id="monster-two-ap">Armor Class: ${monster2.armorClass}</h4>
-                        <h4 id="monster-two-damage">Damage: ${monster2.damage}</h4>
-                        <h4 id="monster-two-status">Status: ${monster2.status}</h4>
-                    </fieldset>   
-                </div>`;
+
+                Utilities.updateMonsterTwo(monster2);
+                
                 console.log('Web removed m2');
                 console.log(monster2.status)
 
