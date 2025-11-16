@@ -11,7 +11,7 @@ export let mageLevelTwoSpells = [];
 
 export default class MageLevelTwoSpells
 {
-    constructor (name, level, range, duration, effect, castingEffect, className, useBattle, damage, isAreaEffect, numberOfUses = 0, isUsedOnMonster, isUsedOnSelf)
+    constructor (name, level, range, duration, effect, castingEffect, className, useBattle, damage, isAreaEffect, numberOfUses = 0, isUsedOnOthers, isUsedOnSelf)
     {
         this.name = name;
         this.level = level;
@@ -24,25 +24,25 @@ export default class MageLevelTwoSpells
         this.damage = damage;
         this.isAreaEffect = isAreaEffect;
         this.numberOfUses = numberOfUses;
-        this.isUsedOnMonster = this.isUsedOnMonster;
-        this.isUsedOnSelf = this.isUsedOnSelf;
+        this.isUsedOnOthers = isUsedOnOthers;
+        this.isUsedOnSelf = isUsedOnSelf;
     }
 };
 
 //completed
-let continualLight = new MageLevelTwoSpells("Continual Light", 2, 120, 999, "Volume of 60 foot diameter", function () { console.log('Casting'); }, "continual-light", true, 0, true);
+let continualLight = new MageLevelTwoSpells("Continual Light", 2, 120, 999, "Volume of 60 foot diameter", function () { console.log('Casting'); }, "continual-light", true, 0, true, 0, true, false);
 
 
-let detectEvil = new MageLevelTwoSpells("Detect Evil", 2, 60, 2, "Everything within 60 feet", function () { console.log('Casting'); }, "detect-evil", false, 0, true);
+let detectEvil = new MageLevelTwoSpells("Detect Evil", 2, 60, 2, "Everything within 60 feet", function () { console.log('Casting'); }, "detect-evil", false, 0, true, 0, true, false);
 
 //completed
-let invisibility = new MageLevelTwoSpells("Invisibility", 2, 240, 999, "The Mage only", function () { console.log('Casting'); }, "invisibility", true, 0, false);
+let invisibility = new MageLevelTwoSpells("Invisibility", 2, 240, 999, "The Mage only", function () { console.log('Casting'); }, "invisibility", true, 0, false, 0, false, true);
 
 
-let esp = new MageLevelTwoSpells("ESP", 2, 60, 12, "All thoughts in one direction", function () { console.log('Casting'); }, "esp", false, 0, false);
+let esp = new MageLevelTwoSpells("ESP", 2, 60, 12, "All thoughts in one direction", function () { console.log('Casting'); }, "esp", false, 0, false, 0, true, false);
 
 
-let knock = new MageLevelTwoSpells("Knock", 2, 60, 1, "One lock or bar", function () { console.log('Casting'); }, "knock", false, 0, false);
+let knock = new MageLevelTwoSpells("Knock", 2, 60, 1, "One lock or bar", function () { console.log('Casting'); }, "knock", false, 0, false, 0, false, false);
 
 
 let levitate = new MageLevelTwoSpells("Levitate", 2, 0, 6, "The Mage only", function () { console.log('Casting'); }, "levitate", false, 0, false);

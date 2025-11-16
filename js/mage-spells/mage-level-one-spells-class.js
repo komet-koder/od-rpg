@@ -12,7 +12,7 @@ export let mageLevelOneSpells = [];
 
 export default class MageLevelOneSpells
 {
-    constructor (name, level, range, duration, effect, castingEffect, className, useBattle, damage, isAreaEffect, numberOfUses = 0, isUsedOnMonster, isUsedOnSelf)
+    constructor (name, level, range, duration, effect, castingEffect, className, useBattle, damage, isAreaEffect, numberOfUses = 0, isUsedOnOthers, isUsedOnSelf)
     {
         this.name = name;
         this.level = level;
@@ -25,8 +25,8 @@ export default class MageLevelOneSpells
         this.damage = damage;
         this.isAreaEffect = isAreaEffect;
         this.numberOfUses = numberOfUses;
-        this.isUsedOnMonster = this.isUsedOnMonster;
-        this.isUsedOnSelf = this.isUsedOnSelf;
+        this.isUsedOnOthers = isUsedOnOthers;
+        this.isUsedOnSelf = isUsedOnSelf;
 
     }
     castingSpell(monster1, monster2, continueNextChapter)
@@ -37,35 +37,35 @@ export default class MageLevelOneSpells
 };
 
 //completed charm person
-let charmPerson = new MageLevelOneSpells("Charm Person", 1, 120, 0, "Charms one person", function casting() { console.log('casting') }, "charm-person", true, 6, false);
+let charmPerson = new MageLevelOneSpells("Charm Person", 1, 120, 0, "Charms one person", function casting() { console.log('casting') }, "charm-person", true, 6, false, 0, true, false);
 
-let detectMagic = new MageLevelOneSpells("Detect Magic", 1, 0, 2, "Detects magic within 60 feet", function () { console.log('casting') }, "detect-magic", false, 0, false);
+let detectMagic = new MageLevelOneSpells("Detect Magic", 1, 0, 2, "Detects magic within 60 feet", function () { console.log('casting') }, "detect-magic", false, 0, false, 0, false, false);
 
-let floatingDisc = new MageLevelOneSpells("Floating Disc", 1, 0, 6, "Creates an invisible disc that can carry 5000 cn", function () { console.log('casting') }, "floating-disc", false, 0, false);
+let floatingDisc = new MageLevelOneSpells("Floating Disc", 1, 0, 6, "Creates an invisible disc that can carry 5000 cn", function () { console.log('casting') }, "floating-disc", false, 0, false, false, false);
 
-let holdPortal = new MageLevelOneSpells("Hold Portal", 1, 10, [2, 12], "On door, gate, or similar portal", function () { console.log('casting') }, "hold-portal", false, 0, false);
+let holdPortal = new MageLevelOneSpells("Hold Portal", 1, 10, [2, 12], "On door, gate, or similar portal", function () { console.log('casting') }, "hold-portal", false, 0, false, 0, false, false);
 
 //complete light 
-let light = new MageLevelOneSpells("Light", 1, 120, 6, "Volume of 30 feet diameter", function () { console.log('casting') }, "light", true, 0, true);
+let light = new MageLevelOneSpells("Light", 1, 120, 6, "Volume of 30 feet diameter", function () { console.log('casting') }, "light", true, 0, true, 0, true, false);
 
 //completed magic missile
-let magicMissile = new MageLevelOneSpells("Magic Missile", 1, 150, 0.1, "Creates one or more arrows", function () { console.log('casting') }, "magic-missile", true, 8, false);
+let magicMissile = new MageLevelOneSpells("Magic Missile", 1, 150, 0.1, "Creates one or more arrows", function () { console.log('casting') }, "magic-missile", true, 8, false, 0, true, false);
 
 //comleted protection from evil
-let protectionFromEvil = new MageLevelOneSpells("Protection from Evil", 1, 0, 6, "The Mage only", function () { console.log('casting') }, "protection-from-evil", true, 0, false);
+let protectionFromEvil = new MageLevelOneSpells("Protection from Evil", 1, 0, 6, "The Mage only", function () { console.log('casting') }, "protection-from-evil", true, 0, false, 0, false, true);
 
-let readLanguages = new MageLevelOneSpells("Read Languages", 1, 0, 2, "The Mage only", function () { console.log('casting') }, "read-languages", false, 0, false);
+let readLanguages = new MageLevelOneSpells("Read Languages", 1, 0, 2, "The Mage only", function () { console.log('casting') }, "read-languages", false, 0, false, 0, false, false);
 
 //completed shield
-let shield = new MageLevelOneSpells("Shield", 1, 0, 2, "The Mage only", function () { console.log('casting') }, "shield", true, 0, false);
+let shield = new MageLevelOneSpells("Shield", 1, 0, 2, "The Mage only", function () { console.log('casting') }, "shield", true, 0, false, 0, false, true);
 
 //completed sleep
-let sleep = new MageLevelOneSpells("Sleep", 1, 240, [4, 16], "2-16 Hit Dice of leaving creatures within a 40 foot square area", function () { console.log('casting') }, "sleep", true, 0, true);
+let sleep = new MageLevelOneSpells("Sleep", 1, 240, [4, 16], "2-16 Hit Dice of leaving creatures within a 40 foot square area", function () { console.log('casting') }, "sleep", true, 0, true, 0, true, false);
 
 //completed ventriloquism
-let ventriloquism = new MageLevelOneSpells("Ventriloquism", 1, 60, 2, "One item or location", function () { console.log('casting') }, "ventriloquism", true, 0, false);
+let ventriloquism = new MageLevelOneSpells("Ventriloquism", 1, 60, 2, "One item or location", function () { console.log('casting') }, "ventriloquism", true, 0, false, 0, true, false);
 
-let readMagic = new MageLevelOneSpells("Read Magic", 1, 0, 0, "The Mage only", function () { console.log('casting') }, "read-magic", false, 0, false);
+let readMagic = new MageLevelOneSpells("Read Magic", 1, 0, 0, "The Mage only", function () { console.log('casting') }, "read-magic", false, 0, false, 0, false, false);
 
 //CREATING METHODS TO INDIVIDUAL SPELLS AND NOT TO THE ENTIRE SPELL PROTOTYPE
 
