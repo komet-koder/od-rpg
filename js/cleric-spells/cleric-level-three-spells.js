@@ -38,7 +38,9 @@ let continualLightCleric = new ClericLevelThreeSpells (
     true,
     0,
     false,
-    0
+    0,
+    true,
+    false
 );
 
 let cureBlindnessCleric = new ClericLevelThreeSpells (
@@ -52,7 +54,9 @@ let cureBlindnessCleric = new ClericLevelThreeSpells (
     true,
     0,
     false,
-    0
+    0,
+    true,
+    true
 );
 
 let cureDiseaseCleric = new ClericLevelThreeSpells (
@@ -66,7 +70,9 @@ let cureDiseaseCleric = new ClericLevelThreeSpells (
     true,
     0,
     false,
-    0
+    0,
+    true,
+    true
 );
 
 let growthOfAnimalsCleric = new ClericLevelThreeSpells (
@@ -80,7 +86,9 @@ let growthOfAnimalsCleric = new ClericLevelThreeSpells (
     true,
     0,
     false,
-    0
+    0,
+    true,
+    false
 );
 
 let locateObjectCleric = new ClericLevelThreeSpells (
@@ -94,7 +102,9 @@ let locateObjectCleric = new ClericLevelThreeSpells (
     false,
     0,
     true,
-    0
+    0,
+    false,
+    false
 );
 
 let removeCurseCleric = new ClericLevelThreeSpells (
@@ -108,7 +118,9 @@ let removeCurseCleric = new ClericLevelThreeSpells (
     true,
     0,
     false,
-    0
+    0,
+    true,
+    true
 );
 
 let speakWithTheDeadCleric = new ClericLevelThreeSpells (
@@ -122,7 +134,9 @@ let speakWithTheDeadCleric = new ClericLevelThreeSpells (
     true,
     0,
     false,
-    0
+    0,
+    true,
+    false
 );
 
 let strikingCleric = new ClericLevelThreeSpells (
@@ -136,7 +150,9 @@ let strikingCleric = new ClericLevelThreeSpells (
     true,
     6,
     false,
-    0
+    0,
+    true,
+    true
 );
 
 

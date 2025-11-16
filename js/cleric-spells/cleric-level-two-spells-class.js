@@ -40,7 +40,9 @@ let blessCleric = new ClericLevelTwoSpells (
     true,
     0,
     false,
-    0
+    0,
+    true,
+    true
 );
 
 let findTrapsCleric = new ClericLevelTwoSpells (
@@ -54,7 +56,9 @@ let findTrapsCleric = new ClericLevelTwoSpells (
     false,
     0,
     true,
-    0
+    0,
+    false,
+    false
 );
 
 let holdPersonCleric = new ClericLevelTwoSpells (
@@ -68,7 +72,9 @@ let holdPersonCleric = new ClericLevelTwoSpells (
     true,
     0,
     false,
-    0
+    0,
+    true,
+    false
 );
 
 let knowAlignmentCleric = new ClericLevelTwoSpells (
@@ -82,7 +88,9 @@ let knowAlignmentCleric = new ClericLevelTwoSpells (
     false,
     0,
     true,
-    0
+    0,
+    true,
+    false
 );
 
 let resistFireCleric = new ClericLevelTwoSpells (
@@ -96,7 +104,9 @@ let resistFireCleric = new ClericLevelTwoSpells (
     true,
     0,
     false,
-    0
+    0,
+    true,
+    true
 );
 
 let silence15ftCleric = new ClericLevelTwoSpells (
@@ -110,7 +120,9 @@ let silence15ftCleric = new ClericLevelTwoSpells (
     true,
     0,
     true,
-    0
+    0,
+    true,
+    false
 );
 
 let snakeCharmCleric = new ClericLevelTwoSpells (
@@ -124,7 +136,9 @@ let snakeCharmCleric = new ClericLevelTwoSpells (
     true,
     0,
     false,
-    0
+    0,
+    true,
+    false
 );
 
 let speakWithAnimalCleric = new ClericLevelTwoSpells (
@@ -138,7 +152,9 @@ let speakWithAnimalCleric = new ClericLevelTwoSpells (
     true,
     0,
     false,
-    0
+    0,
+    true,
+    false
 );
 
 

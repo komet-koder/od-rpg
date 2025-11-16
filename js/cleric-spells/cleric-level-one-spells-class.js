@@ -39,7 +39,10 @@ let cureLightWoundsCleric = new ClericLevelOneSpells (
     "cure-light-wounds-cleric",
     true,
     7,
-    false
+    false,
+    0,
+    true,
+    true
 );
 
 let detectMagicCleric = new ClericLevelOneSpells (
@@ -52,7 +55,11 @@ let detectMagicCleric = new ClericLevelOneSpells (
     "detect-magic-cleric",
     false,
     0,
-    true);
+    true,
+    0,
+    false,
+    false
+    );
 
 let detectEvilCleric = new ClericLevelOneSpells (
     "Detect Evil", 
@@ -64,7 +71,10 @@ let detectEvilCleric = new ClericLevelOneSpells (
     "detect-evil-cleric",
     false,
     0,
-    true);
+    true,
+    0,
+    true,
+    false);
 
 let purifyFoodAndWaterCleric = new ClericLevelOneSpells (
     "Purify Food and Water", 
@@ -75,6 +85,9 @@ let purifyFoodAndWaterCleric = new ClericLevelOneSpells (
     "purify-food-and-water-cleric",
     false,
     0,
+    false,
+    0,
+    false,
     false);
 
 let lightCleric = new ClericLevelOneSpells (
@@ -87,7 +100,10 @@ let lightCleric = new ClericLevelOneSpells (
     "light-cleric",
     true,
     0,
-    true);
+    true,
+    0,
+    true,
+    false);
 
 let removeFearCleric = new ClericLevelOneSpells (
     "Remove Fear", 
@@ -99,6 +115,9 @@ let removeFearCleric = new ClericLevelOneSpells (
     "remove-fear-cleric",
     true,
     0,
+    false,
+    0,
+    true,
     false);
 
 let protectionFromEvilCleric = new ClericLevelOneSpells (
@@ -111,6 +130,9 @@ let protectionFromEvilCleric = new ClericLevelOneSpells (
     "protection-from-evil-cleric",
     true,
     0,
+    false,
+    0,
+    true,
     false);
 
 let resistColdCleric = new ClericLevelOneSpells (
@@ -123,6 +145,9 @@ let resistColdCleric = new ClericLevelOneSpells (
     "resist-cold-cleric",
     true,
     0,
+    true,
+    0,
+    true,
     true);
 
 cureLightWoundsCleric.castSpell = function (monster1, monster2, continueNextChapter, attackedMonster) {

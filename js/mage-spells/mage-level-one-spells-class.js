@@ -52,7 +52,7 @@ let light = new MageLevelOneSpells("Light", 1, 120, 6, "Volume of 30 feet diamet
 let magicMissile = new MageLevelOneSpells("Magic Missile", 1, 150, 0.1, "Creates one or more arrows", function () { console.log('casting') }, "magic-missile", true, 8, false, 0, true, false);
 
 //comleted protection from evil
-let protectionFromEvil = new MageLevelOneSpells("Protection from Evil", 1, 0, 6, "The Mage only", function () { console.log('casting') }, "protection-from-evil", true, 0, false, 0, false, true);
+let protectionFromEvil = new MageLevelOneSpells("Protection from Evil", 1, 0, 6, "The Mage only", function () { console.log('casting') }, "protection-from-evil", true, 0, false, 0, true, true);
 
 let readLanguages = new MageLevelOneSpells("Read Languages", 1, 0, 2, "The Mage only", function () { console.log('casting') }, "read-languages", false, 0, false, 0, false, false);
 
