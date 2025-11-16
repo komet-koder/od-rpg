@@ -93,7 +93,7 @@ continualLight.castSpell = function (monster1, monster2, continueNextChapter, at
             dialogue.textContent += `${monster1.name} has been blinded.`;
             monster1.status.push('Blind');
             let monster1Status = document.querySelector("#monster-one-status");
-            monster1Status.innerHTML = `<h4 id="monster-one-status">Status: ${monster1.status.join(', ')}</h4>`
+            monster1Status.innerHTML = `${monster1.status.join(', ')}`
 
             //need to make variable, push to an array, and then call the function expression
 
@@ -128,7 +128,7 @@ continualLight.castSpell = function (monster1, monster2, continueNextChapter, at
             dialogue.textContent += `${monster2.name} is blinded.`;
             monster2.status.push('Blind');
             let monster2Status = document.querySelector("#monster-two-status");
-            monster2Status.innerHTML = `<h4 id="monster-two-status">Status: ${monster2.status.join(', ')}</h4>`
+            monster2Status.innerHTML = `${monster2.status.join(', ')}`
 
             let blindTimer2 = setTimeout(function ()
             {
@@ -204,12 +204,6 @@ invisibility.castSpell = function (monster1, monster2, continueNextChapter, atta
 
         addInvisibilityStatus.classList.toggle('hide-status')
 
-
-        // let playerStatus = document.querySelector("#char-status");
-        // playerStatus.innerHTML = `<h4 id="char-status" class="char-info-label">Status: 
-        // <span class="character-display-info">${finalCharacter.status}</span>
-        // </h4>`
-
         let invisibilityTimer = setTimeout(function ()
         {
             finalCharacter.status.splice(finalCharacter.status.indexOf("Invisible"), 1);
@@ -218,9 +212,6 @@ invisibility.castSpell = function (monster1, monster2, continueNextChapter, atta
                 addInvisibilityStatus.classList.toggle('hide-status');
             }
 
-            // playerStatus.innerHTML = `<h4 id="char-status" class="char-info-label">Status: 
-            //     <span class="character-display-info">${finalCharacter.status}</span>
-            //     </h4>`
             console.log('Invisibility removed from player')
         }, 30000);
 
@@ -466,7 +457,7 @@ web.castSpell = function (monster1, monster2, continueNextChapter, attackedMonst
             dialogue.textContent += `${monster2.name} is stuck in the web.`;
             monster2.status.push('Web');
             let monster2Status = document.querySelector("#monster-two-status");
-            monster2Status.innerHTML = `<h4 id="monster-two-status">Status: ${monster2.status.join(', ')}</h4>`
+            monster2Status.innerHTML = `${monster2.status.join(', ')}`
 
             let webTimer2 = setTimeout(function ()
             {
