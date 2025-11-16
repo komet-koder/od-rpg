@@ -41,14 +41,14 @@ let holdPerson = new MageLevelThreeSpells("Hold Person", 3, 120, 1, "Parlyzes up
 
 let infravision = new MageLevelThreeSpells("Infravision", 3, 0, 24, "One living creature", function () { console.log('Casting'); }, "infravision", false, 0, false, 0, true, true);
 
-let invisibilityTenFoot = new MageLevelThreeSpells("Invisibility 10 feet radius", 3, 120, 999, "All creatures within 10 feet", function () { console.log('Casting'); }, "invisibility-ten-feet", true, 0, true, 0, false, true);
+let invisibilityTenFoot = new MageLevelThreeSpells("Invisibility 10 feet radius", 3, 120, 999, "All creatures within 10 feet", function () { console.log('Casting'); }, "invisibility-ten-feet", true, 0, true, 0, true, true);
 
 // completed lightenBolt
 let lightningBolt = new MageLevelThreeSpells("Lightning Bolt", 3, 180, 0, "Bolt 60 feet long, 5 feet wide", function () { console.log('Casting'); }, "lightning-bolt", true, 6, true, 0, true, false);
 
-let protectionFromEvilTenFoot = new MageLevelThreeSpells("Prot From Evil 10 ft radius", 3, 0, 12, "Barrier 20 feet in diameter", function () { console.log('Casting'); }, "protection-from-evil-ten-feet", true, 0, true, 0, false, true);
+let protectionFromEvilTenFoot = new MageLevelThreeSpells("Prot From Evil 10 ft radius", 3, 0, 12, "Barrier 20 feet in diameter", function () { console.log('Casting'); }, "protection-from-evil-ten-feet", true, 0, true, 0, true, true);
 
-let protectionFromNormalMissiles = new MageLevelThreeSpells("Protection From Missiles", 3, 30, 12, "One creature", function () { console.log('Casting'); }, "protection-from-missiles", true, 0, false, 0, false, true);
+let protectionFromNormalMissiles = new MageLevelThreeSpells("Protection From Missiles", 3, 30, 12, "One creature", function () { console.log('Casting'); }, "protection-from-missiles", true, 0, false, 0, true, true);
 
 let waterBreathing = new MageLevelThreeSpells("Water Breathing", 3, 30, 24, "One air-breathing creature", function () { console.log('Casting'); }, "water-breathing", false, 0, false, 0, true, true);
 

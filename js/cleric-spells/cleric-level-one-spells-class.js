@@ -118,7 +118,7 @@ let removeFearCleric = new ClericLevelOneSpells (
     false,
     0,
     true,
-    false);
+    true);
 
 let protectionFromEvilCleric = new ClericLevelOneSpells (
     "Protection from Evil", 
@@ -132,8 +132,8 @@ let protectionFromEvilCleric = new ClericLevelOneSpells (
     0,
     false,
     0,
-    true,
-    false);
+    false,
+    true);
 
 let resistColdCleric = new ClericLevelOneSpells (
     "Resist Cold", 
