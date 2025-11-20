@@ -2867,9 +2867,10 @@ function beginChapterTwoSix() {
       yesTalkButton.remove();
       beginChapterThreeOne()
     }, false);
-     let containerDiv = document.querySelector('#container');
-     containerDiv.appendChild(yesTalkToRayard);
-     containerDiv.appendChild(noTalkToRayard);
+     
+    let containerDiv = document.querySelector('#container');
+    containerDiv.appendChild(yesTalkToRayard);
+    containerDiv.appendChild(noTalkToRayard);
   }
 
   chapterConfig.thisChapterNumber = "2-6";
@@ -2905,6 +2906,7 @@ function beginChapterTwoSeven() {
   chapterConfig.dialogueDiv = document.querySelector('#dialogue');
   chapterConfig.nextChapterFunction = beginChapterTwoEight;
   chapterConfig.dialogueDiv.innerHTML = "";
+  chapterConfig.callbackFunction = "";
   Utilities.continueTextAnimation(chapterConfig);
   //add talk to raynard buttons
 }
@@ -2922,6 +2924,8 @@ function beginChapterTwoEight() {
   chapterConfig.buttonText = "Continue";
   chapterConfig.dialogueDiv = document.querySelector('#dialogue');
   chapterConfig.nextChapterFunction = beginChapterTwoNine;
+  chapterConfig.callbackFunction = "";
+
   Utilities.continueTextAnimation(chapterConfig);
   //add talk to raynard buttons
 }
@@ -3091,18 +3095,6 @@ function beginChapterThreeFive() {
   chapterThreeFiveText = `You quicken your pace. Ahead, you see two dark figures hovering over a shape on the ground. As you come closer, you can make out a wolf picking at a sheep, dead on the road. Not only is this odd because of the time of day. This wolf has no intention of leaving the sheep, and wolves are dangerous. What do you do?
   `;
 
-  chapterConfig.thisChapterNumber = "3-5";
-  chapterConfig.thisChapterDialogue = chapterThreeFiveText;
-  chapterConfig.buttonText = "";
-  chapterConfig.dialogueDiv = document.querySelector('#dialogue');
-  chapterConfig.nextChapterFunction = beginChapterThreeSix;
-  chapterConfig.dialogueDiv.innerHTML = "";
-  Utilities.continueTextAnimation(chapterConfig);
-
-  setTimeout(() => {
-    populateAttackWolfButtons();
-  }, 2500);
-
   let populateAttackWolfButtons = function() {
     let attackWolvesButton = document.createElement('input');
     attackWolvesButton.setAttribute('type', 'submit');
@@ -3142,6 +3134,22 @@ function beginChapterThreeFive() {
      containerDiv.appendChild(attackWolvesButton);
      containerDiv.appendChild(goAroundButton);  
   }
+  
+  chapterConfig.thisChapterNumber = "3-5";
+  chapterConfig.thisChapterDialogue = chapterThreeFiveText;
+  chapterConfig.buttonText = "";
+  chapterConfig.dialogueDiv = document.querySelector('#dialogue');
+  chapterConfig.nextChapterFunction = beginChapterThreeSix;
+  chapterConfig.dialogueDiv.innerHTML = "";
+  chapterConfig.callbackFunction = populateAttackWolfButtons;
+
+  Utilities.continueTextAnimation(chapterConfig);
+
+  // setTimeout(() => {
+  //   populateAttackWolfButtons();
+  // }, 2500);
+
+  
 }
 
 let chapterThreeSixText;
