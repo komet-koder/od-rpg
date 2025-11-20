@@ -2841,7 +2841,7 @@ function beginChapterTwoSix() {
   As you complete preparing, you finish a small bit of tea and some bread with cheese you prepared for breakfast. Afterwards, you head down to the main floor of the inn. You see the innkeeper, Raynard, sitting at the counter. Would you like to speak with Raynard on your way out?      
   `;
 
-  function callbackFunction() {
+  function addTalkToRaynardButtons() {
 
     let yesTalkToRayard = document.createElement('input');
     yesTalkToRayard.setAttribute('type', 'submit');
@@ -2873,7 +2873,7 @@ function beginChapterTwoSix() {
   chapterConfig.thisChapterDialogue = chapterTwoSixText;
   chapterConfig.buttonText = "";
   chapterConfig.dialogueDiv = document.querySelector('#dialogue');
-  chapterConfig.addTwoButtons = callbackFunction;
+  chapterConfig.callbackFunction = addTalkToRaynardButtons;
   Utilities.continueTextAnimation(chapterConfig);
   //add talk to raynard buttons
 
