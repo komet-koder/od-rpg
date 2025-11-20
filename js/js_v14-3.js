@@ -678,7 +678,9 @@ function charNameSubmitted() {
 //ADDING ABILITY SCORE GENERATOR FUNCTION
 
 function rollAttributes() {
-  $("#submit-name").addClass("disabled");
+  // $("#submit-name").addClass("disabled");
+  $("#submit-name").remove();
+
 
   let goldPieces = (Math.ceil(Math.random() * 15) + 3) * 10;
   finalCharacter.treasure = {
