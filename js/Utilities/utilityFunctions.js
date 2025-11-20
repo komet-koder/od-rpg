@@ -13,6 +13,9 @@ export function continueTextAnimation(chapterConfig) {
     chapterConfig.dialogueIterator = 0;
     if (chapterConfig.buttonText !== "") {
       createContinueButton(chapterConfig);
+    } else {
+      console.log("callback")
+      chapterConfig.callbackFunction();
     }
   }  
 }

@@ -628,17 +628,20 @@ function beginChapterOneSix() {
   chapterConfig.thisChapterNumber = "1-6",
   chapterConfig.thisChapterDialogue = chapterOneSixText,
   chapterConfig.buttonText = "";
+
+  chapterConfig.callbackFunction = addSubmitNameButton;
   Utilities.continueTextAnimation(chapterConfig); 
  
-  let submitNameButton = document.querySelector("#submit-name-div");
-  submitNameButton.classList.remove("not-visible");
-  setTimeout(() => {
-    addSubmitNameButton();
-  }, 1000)
+
+  // setTimeout(() => {
+  //   addSubmitNameButton();
+  // }, 1000)
   
 }
 
 function addSubmitNameButton() {
+    let submitNameButton = document.querySelector("#submit-name-div");
+  submitNameButton.classList.remove("not-visible");
   let confirmStart = document.querySelector("#confirm-start");
   confirmStart.style.display = "block";
   let dialogueDivID = document.querySelector("#dialogue");
@@ -2831,23 +2834,14 @@ function beginChapterTwoFour() {
 
 let chapterTwoSixText;
 
+
 function beginChapterTwoSix() {
   
   chapterTwoSixText = `
   As you complete preparing, you finish a small bit of tea and some bread with cheese you prepared for breakfast. Afterwards, you head down to the main floor of the inn. You see the innkeeper, Raynard, sitting at the counter. Would you like to speak with Raynard on your way out?      
   `;
-  chapterConfig.thisChapterNumber = "2-6";
-  chapterConfig.thisChapterDialogue = chapterTwoSixText;
-  chapterConfig.buttonText = "";
-  chapterConfig.dialogueDiv = document.querySelector('#dialogue');
-  Utilities.continueTextAnimation(chapterConfig);
-  //add talk to raynard buttons
 
-  setTimeout(() => {
-    populateRaynardButtons();
-  }, 2500);
-
-  let populateRaynardButtons = function() {
+  function callbackFunction() {
 
     let yesTalkToRayard = document.createElement('input');
     yesTalkToRayard.setAttribute('type', 'submit');
@@ -2874,6 +2868,20 @@ function beginChapterTwoSix() {
      containerDiv.appendChild(yesTalkToRayard);
      containerDiv.appendChild(noTalkToRayard);
   }
+
+  chapterConfig.thisChapterNumber = "2-6";
+  chapterConfig.thisChapterDialogue = chapterTwoSixText;
+  chapterConfig.buttonText = "";
+  chapterConfig.dialogueDiv = document.querySelector('#dialogue');
+  chapterConfig.addTwoButtons = callbackFunction;
+  Utilities.continueTextAnimation(chapterConfig);
+  //add talk to raynard buttons
+
+  // setTimeout(() => {
+  //   populateRaynardButtons();
+  // }, 2500);
+
+  
 }
 
 let chapterTwoSevenText;
