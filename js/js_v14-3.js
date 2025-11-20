@@ -680,6 +680,7 @@ function charNameSubmitted() {
 function rollAttributes() {
   // $("#submit-name").addClass("disabled");
   $("#submit-name").remove();
+  $("#submit-name-div").remove();
 
 
   let goldPieces = (Math.ceil(Math.random() * 15) + 3) * 10;
@@ -916,12 +917,12 @@ function confirmingAttributes() {
   let welcomeMessage = document.querySelector('#welcome-message');
   let rollNewAttributes = document.querySelector("#generate-attributes");
   let confirmAttributes = document.querySelector("#confirm-attributes");
-  let submitNameButton = document.querySelector("#submit-name-div");
+  // let submitNameButton = document.querySelector("#submit-name-div");
 
   welcomeMessage.remove();
   rollNewAttributes.remove();
   confirmAttributes.remove();
-  submitNameButton.remove();
+  // submitNameButton.remove();
 
   let chapterHeading = document.createElement("div");
   chapterHeading.setAttribute('id', 'chapter-heading');
