@@ -1714,6 +1714,35 @@ input[name="selected-specialty"] {
     font-size: .75em;
   }
 
+
+  .monster-info-module-one-monster {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--bg-200);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30% 30% 10% 30%;
+    padding: 5px;
+    font-size: .75em;
+    justify-content: space-around;
+  }
+
+  #monster-info.monster-info-one-monster {
+    display: grid;
+    grid-template-rows: 10% 90%;
+    grid-template-columns: 100%;
+    grid-area: 2 / 1 / 3 / 2;
+    gap: 2px 8px;
+    height: 98%;
+    padding-top: 5px;
+    padding: 5px 0px 5px 0px;
+    width: 50%;
+    justify-content: space-evenly;
+    margin: 0px auto;
+  }
+
   .monster-info-module > div {
     font-size: .75em;
   }

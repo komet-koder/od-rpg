@@ -429,7 +429,33 @@ export default class Character {
     }
 
     //----------------------------------------------------------------------------------------------------------
-    let monsterInfo = document.querySelector("#monster-info");
+    if (monsterTwo.name = " ") {
+
+      let monsterInfo = document.querySelector("#monster-info");
+      monsterInfo.classList.add("monster-info-one-monster");
+
+      monsterInfo.innerHTML = `
+        <div class="monster-one-info-heading"> ${monsterOne.name}</div>
+        <div class="monster" id="monster-one">
+          <div class='monster-info-module'>
+            <div id="monster-one-hp">
+              <div>Hit Points</div>
+              <progress class='monster-hp-prog-bar' id="monster-one-hp-progress-bar" max="${monsterOne.startingHealthPoints}" value="${monsterOne.healthPoints}"></progress>
+              <div>${monsterOne.healthPoints}</div>
+              </div> 
+            <div id="monster-one-ap">Armor Class: ${monsterOne.armorClass}</div>
+            <div id="monster-one-damage">Damage: ${monsterOne.damage}</div>
+            <div id="monster-one-status-heading">Status</div>
+            <div id="monster-one-status">${monsterOne.status}</div>           
+            <div id="canvas-area-monster-one">                  
+              <canvas id="canvas-monster-one"></canvas>
+            </div>
+          </div>  
+        </div>`
+              let monsterInfoModule = document.querySelector(".monster-info-module");
+      monsterInfoModule.classList.add("monster-info-module-one-monster");
+    } else {
+      let monsterInfo = document.querySelector("#monster-info");
     monsterInfo.innerHTML = `
         <div class="monster-one-info-heading"> ${monsterOne.name}</div>
         <div class="monster" id="monster-one">
@@ -467,6 +493,8 @@ export default class Character {
         </div>
 
         `;
+    }
+    
   }
 
   //attacking monster 1
