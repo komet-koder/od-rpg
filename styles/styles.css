@@ -1579,6 +1579,12 @@ input[name="selected-specialty"] {
     height: 100%;
     grid-template-columns: 100%;
     grid-template-rows: 10% 90%;
+    border-radius: 7px;
+  }
+
+  #monster-one-card:hover {
+    /* box-shadow: 0px 0px 5px 5px var(--btn-bg); */
+    outline: 2px solid var(--btn-bg);
   }
 
   .monster-one-info-heading {
