@@ -451,12 +451,12 @@ export default class Character {
               <canvas id="canvas-monster-one"></canvas>
             </div>
           </div>  
-        </div>`
-              let monsterInfoModule = document.querySelector(".monster-info-module");
+        </div>`;
+      let monsterInfoModule = document.querySelector(".monster-info-module");
       monsterInfoModule.classList.add("monster-info-module-one-monster");
     } else {
       let monsterInfo = document.querySelector("#monster-info");
-    monsterInfo.innerHTML = `
+      monsterInfo.innerHTML = `
         <div class="monster-one-info-heading"> ${monsterOne.name}</div>
         <div class="monster" id="monster-one">
           <div class='monster-info-module'>
@@ -491,10 +491,8 @@ export default class Character {
             </div>    
           </div>        
         </div>
-
-        `;
-    }
-    
+      `;
+    }    
   }
 
   //attacking monster 1
