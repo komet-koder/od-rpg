@@ -1548,8 +1548,7 @@ input[name="selected-specialty"] {
   #fight-module {
     grid-area: 5 / 1 / 5 / 4;
     width: 100%;
-    height: 100%;
-  
+    height: 100%;  
   }
 
   .attack-buttons {
@@ -1560,19 +1559,26 @@ input[name="selected-specialty"] {
     grid-template-rows: 100%;
     align-self: center;
     justify-self: center;
-    margin-bottom: 0px;
-    
+    margin-bottom: 0px;    
   }
 
   #monster-info {
     display: grid;
-    grid-template-rows: 10% 90%;
+    grid-template-rows: 100%;
     grid-template-columns: 1fr 1fr;
     grid-area: 2 / 1 / 3 / 2;
     gap: 2px 8px;
     height: 98%;
     padding-top: 5px;
     padding: 5px 0px 5px 0px;
+  }
+
+  #monster-one-card {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 90%;
   }
 
   .monster-one-info-heading {
@@ -1586,8 +1592,15 @@ input[name="selected-specialty"] {
     background-color:  var(--accent-green-200);
     color: var(--primary);
     text-align: center;
-    grid-area: 1 / 1 / 1 / 2;
+    grid-area: 1 / 1 / 1 / 1;
   }
+  
+  #monster-one {
+    width: 100%;
+    height: 100%;    
+    grid-area: 2 / 1 / 3 / 2;
+  }
+
   .monster-two-info-heading {
     font-size: .9em;
     height: 1em;
@@ -1600,6 +1613,104 @@ input[name="selected-specialty"] {
     color: var(--primary);
     text-align: center;
     grid-area: 1 / 2 / 1 / 3;
+  }
+
+  
+  #monster-two {
+    width: 100%;
+    height: 100%;    
+    grid-area: 1 / 2
+  }
+
+  
+  .monster-info-module {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--bg-200);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 30% 30% 10% 30%;
+    padding: 5px;
+    font-size: .75em;
+  }
+
+
+  .monster-info-module-one-monster {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--bg-200);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30% 30% 10% 30%;
+    padding: 5px;
+    font-size: .75em;
+    justify-content: space-around;
+  }
+
+  #monster-info.monster-info-one-monster {
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 100%;
+    grid-area: 2 / 1 / 3 / 2;
+    gap: 2px 8px;
+    height: 98%;
+    padding-top: 5px;
+    padding: 5px 0px 5px 0px;
+    width: 50%;
+    justify-content: space-evenly;
+    margin: 0px auto;
+  }
+
+  .monster-info-module > div {
+    font-size: .75em;
+  }
+
+  #monster-one-hp,
+  #monster-two-hp {
+    grid-area: 1 / 1 / 2 / 2;
+    text-align: center;
+  }
+
+  #monster-one-ap,
+  #monster-two-ap {
+    grid-area: 2 / 1 / 3 / 2;
+    text-align: center;
+  }
+
+  #monster-one-damage,
+  #monster-two-damage {
+    grid-area: 2 / 2 / 3 / 3;
+    text-align: center;
+  }
+
+  #monster-one-status-heading,
+  #monster-two-status-heading {
+    background-color: var(--primary-300);
+    text-align: center;
+    line-height: 1em;
+    grid-area: 3 / 1 / 4 / 3;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+
+  #monster-one-status,
+  #monster-two-status {
+    height: 100%;
+    width: 100%;
+    grid-area: 4 / 1 / 5 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  } 
+  
+  .minimized {
+    display: none;
+    height: 0px;
+    width: 0px;
   }
 
   .fight-module-button {
@@ -1689,102 +1800,6 @@ input[name="selected-specialty"] {
     background-color: rgb(255, 105, 105);
   }
 
-  .minimized {
-    display: none;
-    height: 0px;
-    width: 0px;
-  }
-
-  #monster-one,
-  #monster-two {
-    width: 100%;
-    height: 100%;    
-  }
-
-  .monster-info-module {
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--bg-200);
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 30% 30% 10% 30%;
-    padding: 5px;
-    font-size: .75em;
-  }
-
-
-  .monster-info-module-one-monster {
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--bg-200);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 30% 30% 10% 30%;
-    padding: 5px;
-    font-size: .75em;
-    justify-content: space-around;
-  }
-
-  #monster-info.monster-info-one-monster {
-    display: grid;
-    grid-template-rows: 10% 90%;
-    grid-template-columns: 100%;
-    grid-area: 2 / 1 / 3 / 2;
-    gap: 2px 8px;
-    height: 98%;
-    padding-top: 5px;
-    padding: 5px 0px 5px 0px;
-    width: 50%;
-    justify-content: space-evenly;
-    margin: 0px auto;
-  }
-
-  .monster-info-module > div {
-    font-size: .75em;
-  }
-
-  #monster-one-hp,
-  #monster-two-hp {
-    grid-area: 1 / 1 / 2 / 2;
-    text-align: center;
-  }
-
-  #monster-one-ap,
-  #monster-two-ap {
-    grid-area: 2 / 1 / 3 / 2;
-    text-align: center;
-  }
-
-  #monster-one-damage,
-  #monster-two-damage {
-    grid-area: 2 / 2 / 3 / 3;
-    text-align: center;
-  }
-
-  #monster-one-status-heading,
-  #monster-two-status-heading {
-    background-color: var(--primary-300);
-    text-align: center;
-    line-height: 1em;
-    grid-area: 3 / 1 / 4 / 3;
-    border-radius: 5px;
-    font-size: 1em;
-  }
-
-  #monster-one-status,
-  #monster-two-status {
-    height: 100%;
-    width: 100%;
-    grid-area: 4 / 1 / 5 / 3;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-  }
- 
   .monster-dashboard {
     float: clear;
     border-radius: 5px;

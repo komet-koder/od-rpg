@@ -435,61 +435,67 @@ export default class Character {
       monsterInfo.classList.add("monster-info-one-monster");
 
       monsterInfo.innerHTML = `
-        <div class="monster-one-info-heading"> ${monsterOne.name}</div>
-        <div class="monster" id="monster-one">
-          <div class='monster-info-module'>
-            <div id="monster-one-hp">
-              <div>Hit Points</div>
-              <progress class='monster-hp-prog-bar' id="monster-one-hp-progress-bar" max="${monsterOne.startingHealthPoints}" value="${monsterOne.healthPoints}"></progress>
-              <div>${monsterOne.healthPoints}</div>
-              </div> 
-            <div id="monster-one-ap">Armor Class: ${monsterOne.armorClass}</div>
-            <div id="monster-one-damage">Damage: ${monsterOne.damage}</div>
-            <div id="monster-one-status-heading">Status</div>
-            <div id="monster-one-status">${monsterOne.status}</div>           
-            <div id="canvas-area-monster-one">                  
-              <canvas id="canvas-monster-one"></canvas>
-            </div>
-          </div>  
+        <div id="monster-one-card">
+          <div class="monster-one-info-heading"> ${monsterOne.name}</div>
+          <div class="monster" id="monster-one">
+            <div class='monster-info-module'>
+              <div id="monster-one-hp">
+                <div>Hit Points</div>
+                <progress class='monster-hp-prog-bar' id="monster-one-hp-progress-bar" max="${monsterOne.startingHealthPoints}" value="${monsterOne.healthPoints}"></progress>
+                <div>${monsterOne.healthPoints}</div>
+                </div> 
+              <div id="monster-one-ap">Armor Class: ${monsterOne.armorClass}</div>
+              <div id="monster-one-damage">Damage: ${monsterOne.damage}</div>
+              <div id="monster-one-status-heading">Status</div>
+              <div id="monster-one-status">${monsterOne.status}</div>           
+              <div id="canvas-area-monster-one">                  
+                <canvas id="canvas-monster-one"></canvas>
+              </div>
+            </div>  
+          </div>
         </div>`;
       let monsterInfoModule = document.querySelector(".monster-info-module");
       monsterInfoModule.classList.add("monster-info-module-one-monster");
     } else {
       let monsterInfo = document.querySelector("#monster-info");
       monsterInfo.innerHTML = `
-        <div class="monster-one-info-heading"> ${monsterOne.name}</div>
-        <div class="monster" id="monster-one">
-          <div class='monster-info-module'>
-            <div id="monster-one-hp">
-              <div>Hit Points</div>
-              <progress class='monster-hp-prog-bar' id="monster-one-hp-progress-bar" max="${monsterOne.startingHealthPoints}" value="${monsterOne.healthPoints}"></progress>
-              <div>${monsterOne.healthPoints}</div>
-              </div> 
-            <div id="monster-one-ap">Armor Class: ${monsterOne.armorClass}</div>
-            <div id="monster-one-damage">Damage: ${monsterOne.damage}</div>
-            <div id="monster-one-status-heading">Status</div>
-            <div id="monster-one-status">${monsterOne.status}</div>           
-            <div id="canvas-area-monster-one">                  
-              <canvas id="canvas-monster-one"></canvas>
-            </div>
-          </div>  
+        <div id="monster-one-card">
+          <div class="monster-one-info-heading"> ${monsterOne.name}</div>
+          <div class="monster" id="monster-one">
+            <div class='monster-info-module'>
+              <div id="monster-one-hp">
+                <div>Hit Points</div>
+                <progress class='monster-hp-prog-bar' id="monster-one-hp-progress-bar" max="${monsterOne.startingHealthPoints}" value="${monsterOne.healthPoints}"></progress>
+                <div>${monsterOne.healthPoints}</div>
+                </div> 
+              <div id="monster-one-ap">Armor Class: ${monsterOne.armorClass}</div>
+              <div id="monster-one-damage">Damage: ${monsterOne.damage}</div>
+              <div id="monster-one-status-heading">Status</div>
+              <div id="monster-one-status">${monsterOne.status}</div>           
+              <div id="canvas-area-monster-one">                  
+                <canvas id="canvas-monster-one"></canvas>
+              </div>
+            </div>  
+          </div>
         </div>
-        <div class="monster-two-info-heading"> ${monsterTwo.name}</div>
-        <div class="monster" id="monster-two">
-          <div class='monster-info-module'>
-            <div id="monster-two-hp">
-              <div>Hit Points</div>            
-              <progress class='monster-hp-prog-bar'  id="monster-two-hp-progress-bar" max="${monsterTwo.startingHealthPoints}" value="${monsterTwo.healthPoints}"></progress>
-              <div>${monsterTwo.healthPoints}</div>
-            </div> 
-            <div id="monster-two-ap">Armor Class: ${monsterTwo.armorClass}</div>
-            <div id="monster-two-damage">Damage: ${monsterTwo.damage}</div> 
-            <div id="monster-two-status-heading">Status</div>
-            <div id="monster-two-status">${monsterTwo.status}</div>
-            <div id="canvas-area-monster-two">                  
-              <canvas id="canvas-monster-two"></canvas>
-            </div>    
-          </div>        
+        <div id="monster-two-card>
+          <div class="monster-two-info-heading"> ${monsterTwo.name}</div>
+          <div class="monster" id="monster-two">
+            <div class='monster-info-module'>
+              <div id="monster-two-hp">
+                <div>Hit Points</div>            
+                <progress class='monster-hp-prog-bar'  id="monster-two-hp-progress-bar" max="${monsterTwo.startingHealthPoints}" value="${monsterTwo.healthPoints}"></progress>
+                <div>${monsterTwo.healthPoints}</div>
+              </div> 
+              <div id="monster-two-ap">Armor Class: ${monsterTwo.armorClass}</div>
+              <div id="monster-two-damage">Damage: ${monsterTwo.damage}</div> 
+              <div id="monster-two-status-heading">Status</div>
+              <div id="monster-two-status">${monsterTwo.status}</div>
+              <div id="canvas-area-monster-two">                  
+                <canvas id="canvas-monster-two"></canvas>
+              </div>    
+            </div>        
+          </div>
         </div>
       `;
     }    
