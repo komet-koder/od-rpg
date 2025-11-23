@@ -1065,7 +1065,7 @@ input[name="selected-specialty"] {
     grid-template-rows: 1fr 1fr 1fr 1fr;
     column-gap: 10px;
     height: 100%;
-    padding-bottom: 5px;
+    /* padding-bottom: 5px; */
     border: none;
     border-radius: 5px;
     background-color: var(--bg-200);
