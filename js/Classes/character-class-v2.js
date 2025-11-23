@@ -1441,9 +1441,9 @@ export default class Character {
     )}`;
 
     let monster2Status = document.querySelector("#monster-two-status");
-    monster2Status.innerHTML = `${monster2.status.join(
-      ", "
-    )}`;
+    if (monster2Status) {
+      monster2Status.innerHTML = `${monster2.status.join(", ")}`;
+    };   
 
     finalCharacter.greyOutAttackButtons(
       monster1,
@@ -1561,14 +1561,14 @@ export default class Character {
     }
   }
 
-  confirmMonsterStatus(monster1, monster2) {
-    if (monster1.status.includes("Sleep")) {
-      let sleepDialogue = document.querySelector("#fight-module-dialogue");
+  // confirmMonsterStatus(monster1, monster2) {
+  //   if (monster1.status.includes("Sleep")) {
+  //     let sleepDialogue = document.querySelector("#fight-module-dialogue");
 
-      sleepDialogue.innerHTML += `
-            <p>Monster 1 is asleep.</p>`;
-    }
-  }
+  //     sleepDialogue.innerHTML += `
+  //           <p>Monster 1 is asleep.</p>`;
+  //   }
+  // }
 
   clearSpellTimeouts(spellTimeouts) {
     //need to iterate over the spell timer object id property from mage-level spell classes
