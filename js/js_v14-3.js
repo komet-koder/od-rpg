@@ -3541,6 +3541,8 @@ function populateMageSpells(m1, m2, nextChap) {
         false
       );
       
+      mageFirstLevelSpellDetails.appendChild(addMonster1Btn);    
+
       if ((m2.name !== " ") || (m2.healthPoints > 0)) {
         let addMonster2Btn = document.createElement("div");
         addMonster2Btn.classList.add("mage-monster-two-spell-list");
@@ -3553,10 +3555,11 @@ function populateMageSpells(m1, m2, nextChap) {
           castSpellFromList(e, m1, m2, nextChap);
         },
         false
-      );
+        );
+        mageFirstLevelSpellDetails.appendChild(addMonster2Btn);    
       }
 
-      mageFirstLevelSpellDetails.appendChild(addMonster1Btn);
+          
       mageFirstLevelSpellDetails.appendChild(mageFirstLevelSpellSummary);      
       firstLevelSpellContainer.appendChild(mageFirstLevelSpellDetails);
     }
@@ -3681,6 +3684,8 @@ function populateMageSpells(m1, m2, nextChap) {
         false
       );
       
+      mageSecondLevelSpellDetails.appendChild(addMonster1Btn);
+
       if ((m2.name !== " ") || (m2.healthPoints > 0)) {
         let addMonster2Btn = document.createElement("div");
         addMonster2Btn.classList.add("mage-monster-two-spell-list");
@@ -3694,9 +3699,10 @@ function populateMageSpells(m1, m2, nextChap) {
         },
         false
       );
+      mageSecondLevelSpellDetails.appendChild(addMonster2Btn);
       }
 
-      mageSecondLevelSpellDetails.appendChild(addMonster1Btn);
+      
       mageSecondLevelSpellDetails.appendChild(mageSecondLevelSpellSummary);      
       secondLevelSpellContainer.appendChild(mageSecondLevelSpellDetails);
     }
@@ -3819,6 +3825,8 @@ function populateMageSpells(m1, m2, nextChap) {
         false
       );
       
+      mageThirdLevelSpellDetails.appendChild(addMonster1Btn);
+
       if ((m2.name !== " ") || (m2.healthPoints > 0)) {
         let addMonster2Btn = document.createElement("div");
         addMonster2Btn.classList.add("mage-monster-two-spell-list");
@@ -3832,9 +3840,9 @@ function populateMageSpells(m1, m2, nextChap) {
         },
         false
       );
+      mageThirdLevelSpellDetails.appendChild(addMonster2Btn);
       }
 
-      mageThirdLevelSpellDetails.appendChild(addMonster1Btn);
       mageThirdLevelSpellDetails.appendChild(mageThirdLevelSpellSummary);      
       thirdLevelSpellContainer.appendChild(mageThirdLevelSpellDetails);
     }
@@ -4031,6 +4039,8 @@ function populateClericSpells(m1, m2, nextChap) {
         false
       );
       
+      clericFirstLevelSpellDetails.appendChild(addMonster1Btn);
+
       if ((m2.name !== " ") || (m2.healthPoints > 0)) {
         let addMonster2Btn = document.createElement("div");
         addMonster2Btn.classList.add("cleric-monster-two-spell-list");
@@ -4044,9 +4054,10 @@ function populateClericSpells(m1, m2, nextChap) {
         },
         false
       );
+      clericFirstLevelSpellDetails.appendChild(addMonster2Btn);
+
       }
 
-      clericFirstLevelSpellDetails.appendChild(addMonster1Btn);
       clericFirstLevelSpellDetails.appendChild(clericFirstLevelSpellSummary);      
       firstLevelSpellContainer.appendChild(clericFirstLevelSpellDetails);
     }
@@ -4171,6 +4182,8 @@ function populateClericSpells(m1, m2, nextChap) {
         false
       );
       
+      clericSecondLevelSpellDetails.appendChild(addMonster1Btn);
+
       if ((m2.name !== " ") || (m2.healthPoints > 0)) {
         let addMonster2Btn = document.createElement("div");
         addMonster2Btn.classList.add("cleric-monster-two-spell-list");
@@ -4184,9 +4197,10 @@ function populateClericSpells(m1, m2, nextChap) {
         },
         false
       );
+      clericSecondLevelSpellDetails.appendChild(addMonster2Btn);
+
       }
 
-      clericSecondLevelSpellDetails.appendChild(addMonster1Btn);
       clericSecondLevelSpellDetails.appendChild(clericSecondLevelSpellSummary);      
       secondLevelSpellContainer.appendChild(clericSecondLevelSpellDetails);
     }
@@ -4309,6 +4323,8 @@ function populateClericSpells(m1, m2, nextChap) {
         false
       );
       
+      clericThirdLevelSpellDetails.appendChild(addMonster1Btn);
+
       if ((m2.name !== " ") || (m2.healthPoints > 0)) {
         let addMonster2Btn = document.createElement("div");
         addMonster2Btn.classList.add("cleric-monster-two-spell-list");
@@ -4322,9 +4338,10 @@ function populateClericSpells(m1, m2, nextChap) {
         },
         false
       );
+      clericThirdLevelSpellDetails.appendChild(addMonster2Btn);
+
       }
 
-      clericThirdLevelSpellDetails.appendChild(addMonster1Btn);
       clericThirdLevelSpellDetails.appendChild(clericThirdLevelSpellSummary);      
       thirdLevelSpellContainer.appendChild(clericThirdLevelSpellDetails);
     }
