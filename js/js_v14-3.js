@@ -4425,25 +4425,41 @@ function castSpellFromList(e, m1, m2, nextChap) {
   console.log("casting spell from list");
   let parentNodeInnerText = e.target.parentNode.firstChild.textContent;
   let thisNodeInnerText = e.target.textContent;
+  let firstLevel,
+      secondLevel,
+      thirdLevel;
 
   if (
     finalCharacter.specialty === highMage ||
     finalCharacter.specialty === elf ||
     finalCharacter.specialty === dragonWarrior
   ) {
-    let firstLevel =
+    firstLevel =
       finalCharacter.specialty.characterLevel.specialtySkills[
         "First Level Mage Spells"
       ];
-    let secondLevel =
+    secondLevel =
       finalCharacter.specialty.characterLevel.specialtySkills[
         "Second Level Mage Spells"
       ];
-    let thirdLevel =
+    thirdLevel =
       finalCharacter.specialty.characterLevel.specialtySkills[
         "Third Level Mage Spells"
       ];
-
+  } else if (finalCharacter.specialty === cleric) {
+      firstLevel =
+      finalCharacter.specialty.characterLevel.specialtySkills[
+        "First Level Cleric Spells"
+      ];
+    secondLevel =
+      finalCharacter.specialty.characterLevel.specialtySkills[
+        "Second Level Cleric Spells"
+      ];
+    thirdLevel =
+      finalCharacter.specialty.characterLevel.specialtySkills[
+        "Third Level Cleric Spells"
+      ];
+  }
     //NEED TO ITERATE THROUGH THE 'NAME' PROPERTY AND MATCH THE PARENTNODEINNERTEXT TO LINK TO ASSOCIATED SPELL
     for (let i = 0; i < firstLevel.length; i++) {
       // 
@@ -4557,57 +4573,57 @@ function castSpellFromList(e, m1, m2, nextChap) {
     }
   }
 
-  else if (finalCharacter.specialty === cleric) {
-    console.log("casting cleric spell");
-    let firstLevel =
-      finalCharacter.specialty.characterLevel.specialtySkills[
-        "First Level Cleric Spells"
-      ];
-    let secondLevel =
-      finalCharacter.specialty.characterLevel.specialtySkills[
-        "Second Level Cleric Spells"
-      ];
-    let thirdLevel =
-      finalCharacter.specialty.characterLevel.specialtySkills[
-        "Third Level Cleric Spells"
-      ];
+//   else if (finalCharacter.specialty === cleric) {
+//     console.log("casting cleric spell");
+//     let firstLevel =
+//       finalCharacter.specialty.characterLevel.specialtySkills[
+//         "First Level Cleric Spells"
+//       ];
+//     let secondLevel =
+//       finalCharacter.specialty.characterLevel.specialtySkills[
+//         "Second Level Cleric Spells"
+//       ];
+//     let thirdLevel =
+//       finalCharacter.specialty.characterLevel.specialtySkills[
+//         "Third Level Cleric Spells"
+//       ];
 
-    for (let i = 0; i < firstLevel.length; i++) {
-      let firstSibling = document.querySelector(`#${e.target.id}`);
-      if (firstSibling !== null) {
-        let secondSiblng = firstSibling.nextSibling.textContent;
-        if (firstLevel[i].name === secondSiblng) {
-          console.log("spell names match");
-          if (finalCharacter.status.includes("Invisible")) {
+//     for (let i = 0; i < firstLevel.length; i++) {
+//       let firstSibling = document.querySelector(`#${e.target.id}`);
+//       if (firstSibling !== null) {
+//         let secondSiblng = firstSibling.nextSibling.textContent;
+//         if (firstLevel[i].name === secondSiblng) {
+//           console.log("spell names match");
+//           if (finalCharacter.status.includes("Invisible")) {
 
-            modalConfig = {
-              class: "invisibility-removed-modal",
-              buttonClass: "close-invisibility-removed-modal",
-              buttonText: "Close",
-              modalText: `You were invisible but the spell was broken after you cast the spell`
-            }
+//             modalConfig = {
+//               class: "invisibility-removed-modal",
+//               buttonClass: "close-invisibility-removed-modal",
+//               buttonText: "Close",
+//               modalText: `You were invisible but the spell was broken after you cast the spell`
+//             }
 
-            Utilities.createModal(modalConfig)
+//             Utilities.createModal(modalConfig)
 
-            finalCharacter.status.splice(
-              finalCharacter.status.indexOf("Invisible"),
-              1
-            );
+//             finalCharacter.status.splice(
+//               finalCharacter.status.indexOf("Invisible"),
+//               1
+//             );
 
-            let addInvisibilityStatus = $(".invisibility-status");
+//             let addInvisibilityStatus = $(".invisibility-status");
 
-            if (!addInvisibilityStatus.hasClass("hide-status")) {
-              addInvisibilityStatus.addClass("hide-status");
-              console.log(finalCharacter.activeSpellStatuses);
-            }
-          }
-        }      
+//             if (!addInvisibilityStatus.hasClass("hide-status")) {
+//               addInvisibilityStatus.addClass("hide-status");
+//               console.log(finalCharacter.activeSpellStatuses);
+//             }
+//           }
+//         }      
 
-        firstLevel[i].castSpell(m1, m2, nextChap, thisNodeInnerText);
-      }
-    }  
-  }
-}
+//         firstLevel[i].castSpell(m1, m2, nextChap, thisNodeInnerText);
+//       }
+//     }  
+//   }
+// }
 
 export function confirmAttackMonsters(monsterOne, monsterTwo) {
   //PUTTING FIGHT MODULE IN FOOTER FOR TESTING PURPOSES
