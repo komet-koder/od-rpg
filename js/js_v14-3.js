@@ -3108,7 +3108,7 @@ function beginChapterThreeFive() {
         
         let dialogueDiv = document.querySelector('#dialogue');
         dialogueDiv.innerHTML = "";
-        addingFightModule(smallWolf, noMonster, continueChapterThreeFour);
+        addingFightModule(smallWolf, wolf1, continueChapterThreeFour);
         declareAttack();
       },
       false

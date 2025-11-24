@@ -429,7 +429,7 @@ export default class Character {
     }
 
     //----------------------------------------------------------------------------------------------------------
-    if (monsterTwo.name = " ") {
+    if (monsterTwo.name === " ") {
 
       let monsterInfo = document.querySelector("#monster-info");
       monsterInfo.classList.add("monster-info-one-monster");
@@ -478,7 +478,7 @@ export default class Character {
             </div>  
           </div>
         </div>
-        <div id="monster-two-card>
+        <div id="monster-two-card">
           <div class="monster-two-info-heading"> ${monsterTwo.name}</div>
           <div class="monster" id="monster-two">
             <div class='monster-info-module'>
