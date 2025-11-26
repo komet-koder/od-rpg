@@ -101,6 +101,8 @@ body {
   cursor: url(""), auto;
   z-index: 2;
   justify-content: center;
+      background-image: url('../images/gui/backgrounds/dark-blue-stone2.png');
+    background-size: cover;
 }
 
 #lock-screen {
@@ -186,9 +188,9 @@ button {
     width: 100%;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
-    background-image: url('../images/gui/backgrounds/dark-blue-stone2.png');
-    background-size: cover;
-    border-image: url('../images/gui/gui-entire-border6.png') 10 stretch;
+    /* background-image: url('../images/gui/backgrounds/dark-blue-stone2.png');
+    background-size: cover; */
+    border-image: url('../images/gui/gui-entire-border7.png') 10 stretch;
   }
   
   #enter-game {
@@ -1186,7 +1188,7 @@ input[name="selected-specialty"] {
     grid-area: 5 / 2 / 5 / 2;  
     margin-bottom: 0px;
      border: 10px solid transparent;
-    border-image: url('../images/gui/gui-entire-border6.png') 10 stretch;
+    border-image: url('../images/gui/gui-entire-border7.png') 10 stretch;
 
   }
 
