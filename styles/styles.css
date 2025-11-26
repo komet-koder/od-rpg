@@ -177,7 +177,7 @@ button {
 @media only screen and (375px < width < 599px) {
   #container {
     border-image: none;
-    border: 0px solid transparent;   
+    border: 15px solid transparent;   
     margin: auto;
     background-color: var(--background);
     display: grid; 
@@ -188,12 +188,13 @@ button {
     justify-items: center;
     background-image: url('/images/gui/backgrounds/dark-blue-stone2.png');
     background-size: auto;
+        border-image: url('/images/gui/gui-entire-border5.png') 10 stretch;
   }
   
   #enter-game {
     grid-area: 5 / 1 / 5 / 3;
     margin: auto;
-
+   
   }
 
   .welcome-title {
@@ -1127,7 +1128,8 @@ input[name="selected-specialty"] {
     position: relative; 
     grid-auto-rows: minmax(100px, 100px);
     grid-template-rows: 70px;
-    
+    background-image: url('/images/gui/backgrounds/dark-blue-stone-diffused2.png');
+    background-size: cover;
   }
 
   #hp-prog-bar {
@@ -1183,6 +1185,9 @@ input[name="selected-specialty"] {
     justify-content: center;
     grid-area: 5 / 2 / 5 / 2;  
     margin-bottom: 0px;
+     border: 10px solid transparent;
+    border-image: url('/images/gui/gui-entire-border.png') 10 stretch;
+
   }
 
   #submit-all-mage-spells,
