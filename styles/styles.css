@@ -13,10 +13,10 @@
   --tertiary-200: #ff9983; */
   
   
-  --background: #000532;
-  --bg-200: #0f1842;
+  --background: #241b16;
+  --bg-200: #211408;
   --bg-300: #2a2e5c;
-  --primary: #0d6e6e;
+  --primary: #c0b99d;
   --primary-200: #4a9d9c;
   --tertiary: #6b0504;
   --tertiary-200: #ff9983;
@@ -35,12 +35,12 @@
   --btn-bg: #72ff7c; */
   
   
-  --primary-300: #afffff;
+  --primary-300: #403c36;
   --accent-orange: #f18701;
   --accent-orange-200: #822d00;
-  --accent-green: #0d6e6e;
-  --accent-green-200: #afffff;
-  --text: #8282a8;
+  --accent-green: #d7ccb8;
+  --accent-green-200: #403c36;
+  --text: #a2a097;
   --text-200: #e0e0e0;
   --accent-200: #822d00;
   --btn-hover: azure;
@@ -186,7 +186,7 @@ button {
     width: 100%;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
-    /* background-image: url('/images/gui/backgrounds/blue-stone.png'); */
+    background-image: url('/images/gui/backgrounds/blue-stone.png');
   }
   
   #enter-game {
@@ -280,8 +280,8 @@ button {
   }
 
   #chapter-heading {
-    background-color: var(--btn-bg);
-    color: var(--bg-200);
+    background-color: var(--primary-300);
+    color: var(--primary);
     border-radius: 7px;
     font-size: 1.5rem;
     text-align: center;
