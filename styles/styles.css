@@ -186,7 +186,8 @@ button {
     width: 100%;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
-    background-image: url('/images/gui/backgrounds/blue-stone.png');
+    background-image: url('/images/gui/backgrounds/dark-blue-stone2.png');
+    background-size: auto;
   }
   
   #enter-game {
