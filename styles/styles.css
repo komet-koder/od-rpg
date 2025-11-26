@@ -20,6 +20,7 @@
   --primary-200: #4a9d9c;
   --tertiary: #6b0504;
   --tertiary-200: #ff9983;
+  --black: rgb(0,0,0);
 
   /*button select*/
   /* --primary-300: #afffff;
@@ -71,7 +72,8 @@
   --hover-text: rgb(163, 205, 163);
   --btn-text: #0d6e6e;
 
-
+ /*spell containers*/
+  --spell-bg: #2a2446;
   interpolate-size: allow-keywords;
 }
 
@@ -2148,7 +2150,7 @@ input[name="selected-specialty"] {
     padding: 7px 0px 7px 0px;
     color: var(--btn-bg);
     border: 2px solid var(--btn-bg);
-    background-color: #2a2446;
+    background-color: var(--spell-bg);
     border-radius: 15px;
   }
 
@@ -2228,7 +2230,7 @@ input[name="selected-specialty"] {
     position: relative;
     width: 50%;
     display: block;
-    background-color: white;
+    background-color: var(--white-text);
     border: 1px solid black;
     cursor: url("../images/gui/cursor-hover.png"), auto;
     bottom: 200px;
@@ -2309,7 +2311,7 @@ input[name="selected-specialty"] {
     display: block;
     height: 2000px;
     width: 2000px;
-    background-color: rgb(0, 5, 50);
+    background-color: var(--background);
     z-index: 1;
     padding: 10% 30% 30%;
   }
