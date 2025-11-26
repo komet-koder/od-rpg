@@ -179,7 +179,7 @@ button {
     border-image: none;
     border: 15px solid transparent;   
     margin: auto;
-    background-color: var(--background);
+    /* background-color: var(--background); */
     display: grid; 
     grid-template-rows: 5% 17% 17% 56% 5%;
     padding: 10px;
@@ -187,7 +187,7 @@ button {
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
     background-image: url('/images/gui/backgrounds/dark-blue-stone2.png');
-    background-size: auto;
+    background-size: cover;
         border-image: url('/images/gui/gui-entire-border5.png') 10 stretch;
   }
   
