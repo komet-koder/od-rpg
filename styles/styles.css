@@ -188,7 +188,7 @@ button {
     justify-items: center;
     background-image: url('../images/gui/backgrounds/dark-blue-stone2.png');
     background-size: cover;
-        border-image: url('../images/gui/gui-entire-border5.png') 10 stretch;
+    border-image: url('../images/gui/gui-entire-border6.png') 10 stretch;
   }
   
   #enter-game {
@@ -1186,7 +1186,7 @@ input[name="selected-specialty"] {
     grid-area: 5 / 2 / 5 / 2;  
     margin-bottom: 0px;
      border: 10px solid transparent;
-    border-image: url('../images/gui/gui-entire-border.png') 10 stretch;
+    border-image: url('../images/gui/gui-entire-border6.png') 10 stretch;
 
   }
 
