@@ -1187,8 +1187,10 @@ input[name="selected-specialty"] {
     justify-content: center;
     grid-area: 5 / 2 / 5 / 2;  
     margin-bottom: 0px;
-     border: 10px solid transparent;
+    border: 10px solid transparent;
     border-image: url('../images/gui/gui-entire-border7.png') 10 stretch;
+    background-image: url('../images/gui/backgrounds/dark-blue-stone-buttons2.png');
+    background-size: cover;
 
   }
 
