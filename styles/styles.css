@@ -70,7 +70,7 @@
   --btn-text: #0d6e6e; */
   --white-text: rgb(255, 255, 255);
   --hover-text: rgb(163, 205, 163);
-  --btn-text: #0d6e6e;
+  --btn-text: #5d6767;
 
  /*spell containers*/
   --spell-bg: #2a2446;
@@ -79,7 +79,7 @@
 
 * {
   font-family: nightmare;
-  font-family: "VT323";
+  /* font-family: "VT323"; */
   cursor: url("../images/gui/cursor.png"), auto;
 }
 
@@ -103,6 +103,8 @@ body {
   justify-content: center;
       background-image: url('../images/gui/backgrounds/dark-blue-stone2.png');
     background-size: cover;
+    text-shadow: -.2px -.2px 0px rgba(173, 133, 47, 0.605), .5px .5px 0px rgba(0, 0, 0, 0.8);
+    
 }
 
 #lock-screen {
