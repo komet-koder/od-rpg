@@ -78,16 +78,17 @@
 }
 
 * {
-  font-family: nightmare;
-  /* font-family: "VT323"; */
-  cursor: url("../images/gui/cursor.png"), auto;
-}
-
-* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: nightmare;
+  font-family: "VT323";
+  font-family: "Copperplate Gothic";
+  font-family: serif;
+  cursor: url("../images/gui/cursor.png"), auto;
 }
+
+
 
 body {
   overflow: hidden;
@@ -101,10 +102,18 @@ body {
   cursor: url(""), auto;
   z-index: 2;
   justify-content: center;
-      background-image: url('../images/gui/backgrounds/dark-blue-stone2.png');
-    background-size: cover;
-    text-shadow: -.2px -.2px 0px rgba(173, 133, 47, 0.605), .5px .5px 0px rgba(0, 0, 0, 0.8);
+  background-image: url('../images/gui/backgrounds/dark-blue-stone2.png');
+  background-size: cover;
+  text-shadow: -.2px -.2px 0px rgba(173, 133, 47, 0.605), .5px .5px 0px rgba(0, 0, 0, 0.8);
     
+}
+
+*:not(body) { 
+  background: url('../images/gui/backgrounds/yellow-bg.jpg') 0 0 / cover no-repeat;
+  -webkit-background-clip: text;
+  text-shadow: -.2px -.2px 0px rgba(255, 255, 255, 0), .5px .5px 0px rgba(0, 0, 0, 0.151);    
+  background-size: cover;
+  -webkit-text-fill-color: rgba(156, 149, 122, 0.089);
 }
 
 #lock-screen {
@@ -1193,7 +1202,11 @@ input[name="selected-specialty"] {
     border-image: url('../images/gui/gui-entire-border7.png') 10 stretch;
     background-image: url('../images/gui/backgrounds/dark-blue-stone-buttons2.png');
     background-size: cover;
-
+    background: url('../images/gui/backgrounds/yellow-bg.jpg') 0 0 / cover no-repeat;
+    -webkit-background-clip: text;
+    text-shadow: -.2px -.2px 0px rgba(255, 255, 255, 0), .5px .5px 0px rgba(0, 0, 0, 0.151);    
+    background-size: cover;
+    -webkit-text-fill-color: rgba(156, 149, 122, 0.089);
   }
 
   #submit-all-mage-spells,
@@ -1356,6 +1369,12 @@ input[name="selected-specialty"] {
     margin: auto;
     text-align: center;
     font-size: 1.25em;
+    background-image: url('../images/gui/backgrounds/dark-blue-stone2.png');
+    background-size: auto;
+    background: transparent url('../images//gui/backgrounds/dark-blue-stone-buttons2.png') repeat;
+    background-position-y: -5px;
+    border: 10px solid transparent;
+    border-image: url('../images/gui/gui-entire-border7.png') 5 stretch;
   }
 
   #inventory-modal::backdrop,
@@ -1431,6 +1450,15 @@ input[name="selected-specialty"] {
     font-size: 1.1em;
     border-radius: 10px;
     text-align: center;
+   border: 10px solid transparent;
+    border-image: url('../images/gui/gui-entire-border7.png') 10 stretch;
+    background-image: url('../images/gui/backgrounds/dark-blue-stone-buttons2.png');
+    background-size: cover;
+    background: url('../images/gui/backgrounds/yellow-bg.jpg') 0 0 / cover no-repeat;
+    -webkit-background-clip: text;
+    text-shadow: -.2px -.2px 0px rgba(255, 255, 255, 0), .5px .5px 0px rgba(0, 0, 0, 0.151);    
+    background-size: cover;
+    -webkit-text-fill-color: rgba(156, 149, 122, 0.089);
   }
 
   .hide-inventory-container {
