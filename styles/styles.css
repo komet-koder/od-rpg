@@ -1369,8 +1369,6 @@ input[name="selected-specialty"] {
     margin: auto;
     text-align: center;
     font-size: 1.25em;
-    background-image: url('../images/gui/backgrounds/dark-blue-stone2.png');
-    background-size: auto;
     background: transparent url('../images//gui/backgrounds/dark-blue-stone-buttons2.png') repeat;
     background-position-y: -5px;
     border: 10px solid transparent;
@@ -1450,7 +1448,7 @@ input[name="selected-specialty"] {
     font-size: 1.1em;
     border-radius: 10px;
     text-align: center;
-   border: 10px solid transparent;
+    border: 10px solid transparent;
     border-image: url('../images/gui/gui-entire-border7.png') 10 stretch;
     background-image: url('../images/gui/backgrounds/dark-blue-stone-buttons2.png');
     background-size: cover;
