@@ -82,9 +82,9 @@
   margin: 0;
   padding: 0;
   font-family: nightmare;
-  font-family: "VT323";
+  /* font-family: "VT323";
   font-family: "Copperplate Gothic";
-  font-family: serif;
+  font-family: serif; */
   cursor: url("../images/gui/cursor.png"), auto;
 }
 
