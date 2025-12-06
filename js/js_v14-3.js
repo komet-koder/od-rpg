@@ -643,7 +643,7 @@ function addSubmitNameButton() {
   let submitNameButtonDiv = document.querySelector("#submit-name-div");
   let submitNameButton = document.querySelector('#submit-name');
   let submitNameButtonH2 = document.createElement('h2');
-  submitNameButtonH2.textContent = "Submit Name";
+  submitNameButtonH2.textContent = "Submit";
   submitNameButton.appendChild(submitNameButtonH2);
   submitNameButtonDiv.classList.remove("not-visible");
   let confirmStart = document.querySelector("#confirm-start");
