@@ -25,9 +25,12 @@ export function createContinueButton(
     if (chapterConfig.buttonText !== "") {
       let containerDiv = document.querySelector('#container');
       let newButton = document.createElement("button");
+      let newButtonH2 = document.createElement('h2');
+      newButtonH2.textContent = `${chapterConfig.buttonText}`;
       newButton.id = `button-${chapterConfig.thisChapterNumber}`;
       newButton.type = "button";
-      newButton.textContent = `${chapterConfig.buttonText}`;  
+      // newButton.textContent = `${chapterConfig.buttonText}`;  
+      newButton.appendChild(newButtonH2);
       newButton.classList.add("new-continue-button"); 
       newButton.addEventListener(
         "click",
