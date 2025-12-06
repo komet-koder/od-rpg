@@ -1195,32 +1195,11 @@ input[name="selected-specialty"] {
     border: 0px solid var(--btn-bg);  
     align-items: center;
     grid-area: 5 / 2 / 5 / 2;  
-    margin-bottom: 0px;
-    border: 10px solid transparent;
-    border-image: url('../images/gui/gui-entire-border7.png') 10 stretch;
-    background: url('../images/gui/backgrounds/blue-stone.png');
-    /* color: var(--btn-text);
-    border-radius: 10px;
-    font-size: 1.75rem;
-    text-align: center;
-    width: 210px;
-    border: 0px solid var(--btn-bg);  
-    align-items: center;
-    grid-area: 5 / 2 / 5 / 2;  
-    margin-bottom: 0px;
-    border: 10px solid transparent;
-    border-image: url('../images/gui/gui-entire-border7.png') 10 stretch; */
-
-
-
-    /* background: url('../images/gui/backgrounds/yellow-bg.jpg') 0 0 / cover no-repeat;
-    -webkit-background-clip: text;
-    text-shadow: -.2px -.2px 0px rgba(255, 255, 255, 0), .5px .5px 0px rgba(0, 0, 0, 0.151);    
-    -webkit-text-fill-color: rgba(156, 149, 122, 0.089); */
-    
+    margin-bottom: 0px; 
+    background: url('../images/gui/backgrounds/dark-blue-stone-buttons9.jpg');
+    background-position: top -5px left -10px;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0) inset;    
   }
-
-
 
   #enter-game {
     h2 {
@@ -1232,6 +1211,9 @@ input[name="selected-specialty"] {
     -webkit-background-clip: text;
     text-shadow: -.2px -.2px 0px rgba(255, 255, 255, 0), .5px .5px 0px rgba(0, 0, 0, 0.151);    
     -webkit-text-fill-color: rgba(156, 149, 122, 0.089);
+    border: 10px solid transparent;
+    border-image: url('../images/gui/gui-entire-border7.png') 10 stretch;
+
     }
   }
 
