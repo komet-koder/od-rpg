@@ -640,8 +640,12 @@ function beginChapterOneSix() {
 }
 
 function addSubmitNameButton() {
-    let submitNameButton = document.querySelector("#submit-name-div");
-  submitNameButton.classList.remove("not-visible");
+  let submitNameButtonDiv = document.querySelector("#submit-name-div");
+  let submitNameButton = document.querySelector('#submit-name');
+  let submitNameButtonH2 = document.createElement('h2');
+  submitNameButtonH2.textContent = "Submit Name";
+  submitNameButton.appendChild(submitNameButtonH2);
+  submitNameButtonDiv.classList.remove("not-visible");
   let confirmStart = document.querySelector("#confirm-start");
   confirmStart.style.display = "block";
   let dialogueDivID = document.querySelector("#dialogue");
@@ -662,6 +666,7 @@ function checkUsername() {
 
 function charNameSubmitted() {
   let submitNameButton = document.querySelector("#submit-name");
+  
   submitNameButton.removeEventListener("click", checkUsername, false);
   submitNameButton.classList.add("disabled");
   submitNameButton.style.display = "none";
