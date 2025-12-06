@@ -113,7 +113,8 @@ button {
 }
 
 .page-title {
-  font-size: 3rem;
+  font-size: 2em;
+  font-family: var(--title-font);
 }
 
 .page-title,
@@ -232,13 +233,15 @@ button {
     height: 100%;
     width: 100%;
     margin: auto;
+  
   }
+
   #confirm-start {
     display: none;
   }
 
   #welcome-title {
-    font-size: 3rem;
+    font-size: 2em;
     text-align: center;
   }
 
@@ -449,7 +452,7 @@ input[name="selected-specialty"] {
   .page-version {
     width: 100%;
     height: 100%;
-    font-size: large;
+    font-size: 1em;
   }
 
   #ready {
@@ -1171,6 +1174,7 @@ input[name="selected-specialty"] {
 
   #enter-game {
     h2 {
+    font-family: var(--title-font);
     font-size: 1em;
     -webkit-background-clip: unset;
     background: none;
