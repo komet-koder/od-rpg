@@ -23,7 +23,7 @@
   --text-200: #e0e0e0;
   --accent-200: #822d00;
   --btn-hover: azure;
-  --btn-bg: #72ff7c;
+  --btn-bg: #9c8a23;
   --btn-select: rgb(205, 210, 245);
 
 
@@ -197,6 +197,7 @@ button {
     grid-column: 2 / span 1;
     margin: auto;
   }
+
   input[type="text"] {
     font-size: 2rem;
     text-align: center;
@@ -204,8 +205,9 @@ button {
     width: 210px;
     border-radius: 10px;
     background-color: rgb(205, 210, 245);
-    border: 0px solid var(--btn-bg);
+    /* border: 0px solid var(--btn-bg); */
   }
+
   #submit-name-div {
     grid-area: 5 / 2 / 5 / 2;
     margin: auto;
@@ -215,7 +217,9 @@ button {
   #character-name {
   display: block;
   margin: auto;
+  font-size: 1em;
 }
+
   #dialogue {
     padding: 6px 0px 0px 0px;
     margin: auto;
@@ -319,6 +323,19 @@ button {
     margin: auto;
     grid-area: 5 / 1 / 5 / 2;
     margin-bottom: 0px;
+    h2 {
+      font-family: var(--title-font);
+      font-size: 1em;
+      -webkit-background-clip: unset;
+      background: none;
+      color: rgb(224, 224, 12);
+      background: url('../images/gui/backgrounds/yellow-bg.jpg') 0 0 / cover no-repeat;
+      -webkit-background-clip: text;
+      text-shadow: -.2px -.2px 0px rgba(255, 255, 255, 0), .5px .5px 0px rgba(0, 0, 0, 0.151);    
+      -webkit-text-fill-color: rgba(156, 149, 122, 0.089);
+      border: 10px solid transparent;
+      border-image: url('../images/gui/gui-entire-border7.png') 10 stretch;
+    }
   }
 
   #confirm-attributes {
@@ -334,6 +351,19 @@ button {
     grid-area: 5 / 3 / 5 / 4;
     margin: auto;
     margin-bottom: 0px;
+    h2 {
+      font-family: var(--title-font);
+      font-size: 1em;
+      -webkit-background-clip: unset;
+      background: none;
+      color: rgb(224, 224, 12);
+      background: url('../images/gui/backgrounds/yellow-bg.jpg') 0 0 / cover no-repeat;
+      -webkit-background-clip: text;
+      text-shadow: -.2px -.2px 0px rgba(255, 255, 255, 0), .5px .5px 0px rgba(0, 0, 0, 0.151);    
+      -webkit-text-fill-color: rgba(156, 149, 122, 0.089);
+      border: 10px solid transparent;
+      border-image: url('../images/gui/gui-entire-border7.png') 10 stretch;
+      }
   }
 
   #intro-button-container {
