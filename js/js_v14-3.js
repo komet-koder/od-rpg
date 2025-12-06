@@ -767,11 +767,16 @@ function rollAttributes() {
 
   let generateNewAttributeScores = document.createElement("button");
   generateNewAttributeScores.id = "generate-attributes";
-  generateNewAttributeScores.textContent = "Roll";
+  let generateNewAttributeScoresH2 = document.createElement('h2');
+  generateNewAttributeScoresH2.textContent = "Roll";
+  generateNewAttributeScores.appendChild(generateNewAttributeScoresH2)
 
   let confirmNewAttributeScores = document.createElement("button");
   confirmNewAttributeScores.id = "confirm-attributes";
-  confirmNewAttributeScores.textContent = "Confirm";
+  let confirmNewAttributeScoresH2 = document.createElement('h2');
+  confirmNewAttributeScoresH2.textContent = "Confirm";
+  confirmNewAttributeScores.appendChild(confirmNewAttributeScoresH2);
+ 
 
   containerDiv.appendChild(generateNewAttributeScores);
   containerDiv.appendChild(confirmNewAttributeScores);
