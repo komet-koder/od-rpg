@@ -249,7 +249,7 @@ button {
 
   #welcome-message {
     grid-area: 3 / 1 / 3 / 4;
-    font-size: 1.75rem;
+    font-size: 1.75em;
     height: 100%;
     width: 90%;
     margin: auto;
@@ -258,6 +258,7 @@ button {
 
   #welcome-message > p:first-child {
     text-align: justify;
+    font-size: .8em;
   }
 
   #welcome-message > p {
@@ -295,7 +296,12 @@ button {
   .ability-score-header-grid-item {
     text-align: center;
     width:100%;
-  
+    font-family: var(--title-font);
+  }
+
+   .ability-score-header-grid-item > b {  
+    font-family: var(--title-font);
+    font-size: .75em;
   }
 
   .ability-score-grid-item {
