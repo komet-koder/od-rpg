@@ -272,7 +272,7 @@ button {
     background-color: var(--primary-300);
     color: var(--primary);
     border-radius: 7px;
-    font-size: 1.5rem;
+    font-size: 1.25em;
     text-align: center;
     height: 25px;
     width: 98%;
@@ -283,6 +283,7 @@ button {
     padding: auto;
     align-content: center;
     grid-area: 1 / 1 / 1 / 4;
+    font-family: var(--title-font);
   }
 
   .ability-score-grid-container {
@@ -902,13 +903,17 @@ input[name="selected-specialty"] {
     height: 1em;
     border: none;
     border-radius: 7px;
-    font-size: 1.5em;
+    font-size: 1.25em;
     position: relative;
     background-color: var(--accent-green-200);
     color: var(--primary);
     text-align: center;
+    font-family: var(--title-font);
   }
 
+     div.character-hitpoints-summary > span {
+    font-family: var(--title-font);
+  }
 
   details > summary.character-statuses-summary,
   details > summary.character-stats-summary,
@@ -916,6 +921,21 @@ input[name="selected-specialty"] {
   details > summary.character-afflictions-summary {
     list-style: none;
     z-index: 1000;
+
+  }
+
+  details > summary.character-stats-summary {
+     font-family: var(--title-font);
+    font-size: 1.4em;
+  }
+
+  details > summary.character-statuses-summary > span,
+  details > summary.character-stats-summary > span,
+  details > summary.character-hitpoints-summary > span,
+  details > summary.character-afflictions-summary > span {
+     font-family: var(--title-font);
+    font-size: .9em;
+
 
   }
 
@@ -940,7 +960,11 @@ input[name="selected-specialty"] {
     }
   } 
 
-
+ details[open] {   
+    summary.character-stats-summary {
+      font-size: 1.4em;
+    }
+ }  
 
   details[open] > summary.character-statuses-summary > i.fa-minus,
   details[open] > summary.character-hitpoints-summary > i.fa-minus,
