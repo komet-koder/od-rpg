@@ -427,10 +427,11 @@ input[name="selected-specialty"] {
 
 .class-label {
   display: inline-block;
-  font-size: 1.5rem;
+  font-size: .75em;
   justify-self: center;
   text-align: center;
   color: var(--white-text);
+  font-family: var(--title-font);
 }
 
 .class-label::before {
