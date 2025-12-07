@@ -991,11 +991,12 @@ function confirmingAttributes() {
   chaoticSelected.addEventListener("click", updateAlignmentDescription, false);
 
   let beginningAdventure = document.createElement('button');
+  let beginningAdventureH2 = document.createElement('h2');
+  beginningAdventureH2.textContent = "Continue";
   beginningAdventure.classList.add('.new-continue-button');
-  beginningAdventure.setAttribute('id', 'beginingAdventure');
+  beginningAdventure.setAttribute('id', 'beginningAdventure');
   beginningAdventure.setAttribute('type', 'submit');
-  beginningAdventure.setAttribute('value', 'submit');  //
-  beginningAdventure.innerHTML = "Continue";
+  beginningAdventure.appendChild(beginningAdventureH2);
   beginningAdventure.addEventListener("click", startGame, false);
 
   let containerDiv = document.querySelector('#container');
@@ -1030,7 +1031,7 @@ function updateAlignmentDescription() {
 
 //TEST FUNCTION TO START GAME - creates player info
 function startGame() {
-  let beginningAdventureButton = document.querySelector('#beginingAdventure');
+  let beginningAdventureButton = document.querySelector('#beginningAdventure');
   beginningAdventureButton.remove();
   $("#character-info").css({margin: "0px"}).animate({width: "98%", height: "0px"}, 300).slideDown(300).next().dequeue();
   window.scrollTo(0, 0);

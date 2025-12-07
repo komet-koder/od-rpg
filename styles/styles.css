@@ -192,7 +192,7 @@ button {
     margin: auto;
   }
 
-  #beginingAdventure {
+  #beginningAdventure {
     grid-row: 5 / span 1;
     grid-column: 2 / span 1;
     margin: auto;
@@ -1185,7 +1185,7 @@ input[name="selected-specialty"] {
 
   input[type="submit"],  
   #beginAdventure,
-  #beginingAdventure,
+  #beginningAdventure,
   #intro-continue-button,
   #enter-game,
   #new-continue-button,
@@ -1210,7 +1210,7 @@ input[name="selected-specialty"] {
 
   input[type="submit"],  
   #beginAdventure,
-  #beginingAdventure,
+  #beginningAdventure,
   #intro-continue-button,
   #enter-game,
   #new-continue-button,
