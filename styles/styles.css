@@ -203,8 +203,6 @@ button {
     height: 68px;
     width: 210px;
     border-radius: 10px;
-    background-color: rgb(205, 210, 245);
-    /* border: 0px solid var(--btn-bg); */
   }
 
   #submit-name-div {
