@@ -395,7 +395,7 @@ button {
 
    #alignment-description-container {
     height: 95%;   
-    font-size: 1.5rem; 
+    font-size: .9em; 
     text-align: start;
   }
   .alignment-container-item {
@@ -420,6 +420,8 @@ input[name="selected-specialty"] {
 .alignment-label {
   display: inline-block;
   color: var(--white-text);
+  font-family: var(--title-font);
+  font-size: .75em;
 }
 
 
