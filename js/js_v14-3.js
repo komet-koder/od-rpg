@@ -1700,10 +1700,13 @@ function beginJourney() {
   let readyBeginJourney = document.querySelector("#container");
   let readyBeginJourneyButton = document.querySelector("#ready");
   if (readyBeginJourneyButton === null) {
-    let createReadyButton = document.createElement("input");
-    createReadyButton.type = "submit";
-    createReadyButton.value = "Confirm";
+    let createReadyButton = document.createElement("button");
+    // createReadyButton.type = "submit";
+    // createReadyButton.value = "Confirm";
     createReadyButton.id = "ready";
+    let createReadyButtonH2 = document.createElement('h2');
+    createReadyButtonH2.textContent = "Confirm";
+    createReadyButton.appendChild(createReadyButtonH2);
     readyBeginJourney.appendChild(createReadyButton);
     var beginningGame = document.querySelector("#ready");
     beginningGame.addEventListener("click", setSpellsAndInventory, false);
