@@ -78,6 +78,7 @@ body {
   background-size: cover;
   text-shadow: -.2px -.2px 0px rgba(173, 133, 47, 0.605), .5px .5px 0px rgba(0, 0, 0, 0.8);
   box-shadow: 0px 0px 20px rgb(0, 0, 0) inset;  
+  
 }
 
 *:not(body) { 
@@ -1202,7 +1203,10 @@ input[name="selected-specialty"] {
     display: grid;
     align-content: start;
     height: 100%;
-    grid-template-rows: auto auto auto 1fr 5%;
+    grid-template-rows: auto auto auto 1fr 8%;
+    /* background-image: url('../images/gui/backgrounds/dark-blue-stone2.png');
+    background-size: cover;
+    box-shadow: 0px 0px 20px rgb(0, 0, 0) inset;  */
   }
 
   #mage-first-level-spell-list,
@@ -1229,12 +1233,15 @@ input[name="selected-specialty"] {
   #attack-wolves,
   #dont-attack-wolves,
   .new-continue-button,
-  #submit-name
+  #submit-name,
+   #submit-all-mage-spells,
+  #submit-all-cleric-spells
   {
     border-radius: 10px;
     font-size: 1.75rem;
     text-align: center;
     width: 210px;
+    height: 50px;
     border: 0px solid var(--btn-bg);  
     align-items: center;
     grid-area: 5 / 2 / 5 / 2;  
@@ -1242,19 +1249,7 @@ input[name="selected-specialty"] {
     background: url('../images/gui/backgrounds/dark-blue-stone-buttons9.jpg');
     background-position: top -5px left -10px;
     box-shadow: 0px 0px 17px rgb(0, 0, 0) inset;    
-  }
-
-  input[type="submit"],  
-  #beginAdventure,
-  #beginningAdventure,
-  #intro-continue-button,
-  #enter-game,
-  #new-continue-button,
-  #ready,
-  #attack-wolves,
-  #dont-attack-wolves,
-  .new-continue-button,
-  #submit-name {
+    
     h2 {
     font-family: var(--title-font);
     font-size: 1em;
@@ -1272,21 +1267,12 @@ input[name="selected-specialty"] {
   }
 
   #submit-all-mage-spells,
-  #submit-all-cleric-spells {
-    background-color: var(--btn-bg);
-    color: var(--btn-text);
-    border-radius: 10px;
-    font-size: 1.75rem;
-    text-align: center;
-    height: 30px;
-    width: 210px;
-    border: 0px solid var(--btn-bg);  
-    align-items: center;
-    justify-content: center;
+  #submit-all-cleric-spells {    
+    /* justify-content: center; */
+    position: relative;
     justify-self: center;
-    align-self: end;
     grid-area: 5 / 1 / 5 / 1;
-    margin-bottom: 0px;
+    bottom: -7px;
   }
 
   #normal-equipment-link,
@@ -1371,9 +1357,9 @@ input[name="selected-specialty"] {
     display: block;
     height: 100%;
     width: 100%;
-    background-color: rgb(0, 5, 50);
+    border: 15px solid transparent;
+    border-image: url('../images/gui/gui-entire-border7.png') 10 stretch;
     z-index: 1;
-    padding: 10px;
   }
 
   .not-visible {
