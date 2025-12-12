@@ -315,19 +315,19 @@ button {
     color: var(--white-text);
   }
 
-  #generate-attributes {
-    background-color: var(--btn-bg);
-    color: var(--btn-text);
+  #generate-attributes {    
     border-radius: 10px;
-    font-size: 1.75rem;
+    font-size: 1.75em;
     text-align: center;
     width: 150px;
     border: 0px solid var(--btn-bg);  
     align-items: center;
-    justify-content: center;
+    grid-area: 5 / 1 / 5 / 2;  
+    background: url('../images/gui/backgrounds/dark-blue-stone-buttons9.jpg');
+    background-position: top -5px left -25px;
+    box-shadow: 0px 0px 17px rgb(0, 0, 0) inset;    
     margin: auto;
-    grid-area: 5 / 1 / 5 / 2;
-    margin-bottom: 0px;
+    margin-bottom: 0px; 
     h2 {
       font-family: var(--title-font);
       font-size: 1em;
@@ -343,19 +343,19 @@ button {
     }
   }
 
-  #confirm-attributes {
-    background-color: var(--btn-bg);
-    color: var(--btn-text);
+  #confirm-attributes {       
     border-radius: 10px;
-    font-size: 1.75rem;
+    font-size: 1.75em;
     text-align: center;
     width: 150px;
     border: 0px solid var(--btn-bg);  
     align-items: center;
-    justify-content: center;
-    grid-area: 5 / 3 / 5 / 4;
+    grid-area: 5 / 3 / 5 / 4;  
+    background: url('../images/gui/backgrounds/dark-blue-stone-buttons9.jpg');
+    background-position: top -5px left -25px;
+    box-shadow: 0px 0px 17px rgb(0, 0, 0) inset;    
     margin: auto;
-    margin-bottom: 0px;
+    margin-bottom: 0px;     
     h2 {
       font-family: var(--title-font);
       font-size: 1em;
