@@ -99,7 +99,6 @@ body {
   z-index: 9000 !important;  
   user-select: none;
   cursor: none;
-  /* background: url(../images/not-supported.png) 0 0 / cover no-repeat; */
   -webkit-background-clip: unset;
   text-shadow: unset;    
   background-size: unset;
@@ -157,8 +156,7 @@ button {
     inset: 0;
     display: block;    
     background-color: var(--background);
-  background-image: url(../images/not-supported.png) !important;
-
+    background-image: url(../images/not-supported.png) !important;
     z-index: 9000 !important;    
     user-select: none;
     cursor: none;
