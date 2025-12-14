@@ -90,14 +90,20 @@ body {
 }
 
 #lock-screen {
+  background: unset;
   inset: 0;
-  background-image: url(../images/not-supported.png);
+  background-image: url(../images/not-supported.png) !important;
+  background-size: repeat !important;
   position: fixed;
   display: none;
   z-index: 9000 !important;  
   user-select: none;
   cursor: none;
-  
+  /* background: url(../images/not-supported.png) 0 0 / cover no-repeat; */
+  -webkit-background-clip: unset;
+  text-shadow: unset;    
+  background-size: unset;
+  -webkit-text-fill-color: unset;
 }
 
 label {
@@ -143,12 +149,17 @@ button {
     display: none;  
   }
 
+    #container2 {
+    display: none;  
+  }
   #lock-screen {
     position: absolute;
     inset: 0;
     display: block;    
     background-color: var(--background);
-    z-index: 9000;    
+  background-image: url(../images/not-supported.png) !important;
+
+    z-index: 9000 !important;    
     user-select: none;
     cursor: none;
     text-align: center;
@@ -1420,7 +1431,6 @@ input[name="selected-specialty"] {
     margin: auto;
     text-align: center;
     font-size: 1.25em;
-    background: transparent url('../images//gui/backgrounds/dark-blue-stone-buttons2.png') repeat;
     background-position-y: -5px;
     border: 10px solid transparent;
     border-image: url('../images/gui/gui-entire-border7.png') 5 stretch;
