@@ -1162,7 +1162,7 @@ input[name="selected-specialty"] {
   }
 
   #character-stats[open] > .char-stats-module {
-    height: 4.5em;
+    height: 4em;
     transition: height 350ms;
   }
 
@@ -2508,11 +2508,10 @@ legend.afflictions-dashboard {
 #canvas2 {
   display: block;
   margin: 15% auto auto 10%;
- 
 }
 
 .char-info-label {
-  font-size: 1.25rem;
+  font-size: .8em;
   height: 100%;
   
 }
