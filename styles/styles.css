@@ -648,12 +648,11 @@ input[name="selected-specialty"] {
   .ac-guage > svg,
   .xp-guage > svg {
     position: relative;
-    transform: scale(.5) translateY(-170px);
+    transform: scale(.5) translateY(-160px) translateX(-20%);
     justify-self: center;
     align-self: center;
     height: 185%;
-    width: 100%;
-    
+    width: 125%;
   }
 
   .hitpoints-guage {
@@ -689,9 +688,10 @@ input[name="selected-specialty"] {
   }
 
   .hitpoints-guage > svg {
-    transform: scale(.65) translateY(-142px);
+    transform: scale(.65) translateY(-142px) translateX(-15%);
     margin-top: 10px;   
     height: 185%;
+    width: 125%;
     position: relative;
     justify-self: center;
     align-self: center;
