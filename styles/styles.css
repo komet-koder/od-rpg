@@ -581,7 +581,7 @@ input[name="selected-specialty"] {
     font-size: 1.75em;
     color: var(--white-text);
     position: relative;
-    transform: translateY(22px); 
+    transform: translateY(27px); 
     text-align: center;
     align-self: center;
     margin: auto;
@@ -594,7 +594,7 @@ input[name="selected-specialty"] {
     font-size: 1em;
     color: -var(--text);   
     position: relative;   
-    transform: translateY(22px);
+    transform: translateY(32px);
     text-align: center;
     align-self: center;
     margin: auto;
@@ -648,7 +648,7 @@ input[name="selected-specialty"] {
   .ac-guage > svg,
   .xp-guage > svg {
     position: relative;
-    transform: scale(.5) translateY(-160px) translateX(-20%);
+    transform: scale(.5) translateY(-150px) translateX(-20%);
     justify-self: center;
     align-self: center;
     height: 185%;
@@ -681,7 +681,7 @@ input[name="selected-specialty"] {
     font-size: 1.25em;
     color: -var(--text);
     position: relative;
-    transform: translateY(22px);
+    transform: translateY(25px);
     text-align: center;
     align-self: center;
     margin: auto;
@@ -862,7 +862,7 @@ input[name="selected-specialty"] {
   }
 
   #character-stats[open] {
-    height: 6em;
+    height: 5em;
     transition: height 350ms ease;
     border: 10px solid transparent;
     border-image: url('../images/gui/gui-entire-border7.png') 10 stretch;
@@ -877,7 +877,7 @@ input[name="selected-specialty"] {
   }
 
   #character-stats[open]::details-content {
-    height: 3.5em;
+    height: 2.8em;
 
   }
 
@@ -1161,7 +1161,7 @@ input[name="selected-specialty"] {
   }
 
   #character-stats[open] > .char-stats-module {
-    height: 4em;
+    height: 3em;
     transition: height 350ms ease;
   }
 
