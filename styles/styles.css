@@ -1688,19 +1688,62 @@ input[name="selected-specialty"] {
   }
 
   #attack-wolves {
-    margin: auto;
-    align-items: center;
-    grid-area: 5 / 3 / 5 / 4;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 1.75em;
+    text-align: center;
     width: 150px;
-    margin-bottom: 0px;
+    border: 0px solid var(--btn-bg);  
+    align-items: center;
+    background: url('../images/gui/backgrounds/dark-blue-stone-buttons9.jpg');
+    background-position: top -5px left -25px;
+    box-shadow: 0px 0px 17px rgb(0, 0, 0) inset;    
+    margin: auto;
+    margin-bottom: 0px;     
+    grid-area: 5 / 3 / 5 / 4;
+    h2 {
+      font-family: var(--title-font);
+      font-size: 1em;
+      -webkit-background-clip: unset;
+      background: none;
+      color: rgb(224, 224, 12);
+      background: url('../images/gui/backgrounds/yellow-bg.jpg') 0 0 / cover no-repeat;
+      -webkit-background-clip: text;
+      text-shadow: -.2px -.2px 0px rgba(255, 255, 255, 0), .5px .5px 0px rgba(0, 0, 0, 0.151);    
+      -webkit-text-fill-color: rgba(156, 149, 122, 0.089);
+      border: 10px solid transparent;
+      border-image: url('../images/gui/gui-entire-border7.png') 10 stretch;
+    }
   }
 
   #dont-attack-wolves {
-    margin: auto;
-    align-items: center;
-    grid-area: 5 / 1 / 5 / 2;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 1.75em;
+    text-align: center;
     width: 150px;
-    margin-bottom: 0px;
+    border: 0px solid var(--btn-bg);  
+    align-items: center;
+    background: url('../images/gui/backgrounds/dark-blue-stone-buttons9.jpg');
+    background-position: top -5px left -25px;
+    box-shadow: 0px 0px 17px rgb(0, 0, 0) inset;    
+    margin: auto;
+    margin-bottom: 0px; 
+    
+    grid-area: 5 / 1 / 5 / 2;
+    h2 {
+      font-family: var(--title-font);
+      font-size: 1em;
+      -webkit-background-clip: unset;
+      background: none;
+      color: rgb(224, 224, 12);
+      background: url('../images/gui/backgrounds/yellow-bg.jpg') 0 0 / cover no-repeat;
+      -webkit-background-clip: text;
+      text-shadow: -.2px -.2px 0px rgba(255, 255, 255, 0), .5px .5px 0px rgba(0, 0, 0, 0.151);    
+      -webkit-text-fill-color: rgba(156, 149, 122, 0.089);
+      border: 10px solid transparent;
+      border-image: url('../images/gui/gui-entire-border7.png') 10 stretch;
+    }
   }
 
   #fight-module-container {

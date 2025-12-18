@@ -3112,10 +3112,11 @@ function beginChapterThreeFive() {
   `;
 
   let populateAttackWolfButtons = function() {
-    let attackWolvesButton = document.createElement('input');
-    attackWolvesButton.setAttribute('type', 'submit');
+    let attackWolvesButton = document.createElement('button');
     attackWolvesButton.setAttribute('id', 'attack-wolves');
-    attackWolvesButton.setAttribute('value', 'Attack');
+    let attackWolvesButtonH2 = document.createElement('h2');
+    attackWolvesButtonH2.textContent = "Attack";
+    attackWolvesButton.appendChild(attackWolvesButtonH2);
     attackWolvesButton.addEventListener(
       "click", function() {
         this.remove();
@@ -3130,10 +3131,11 @@ function beginChapterThreeFive() {
       false
     );
 
-    let goAroundButton = document.createElement('input');
-    goAroundButton.setAttribute('type', 'submit');
+    let goAroundButton = document.createElement('button');
     goAroundButton.setAttribute('id', 'dont-attack-wolves');
-    goAroundButton.setAttribute('value', 'Go Around');
+    let goAroundButtonH2 = document.createElement('h2');
+    goAroundButtonH2.textContent = "Go Around";
+    goAroundButton.appendChild(goAroundButtonH2);
     goAroundButton.addEventListener(
       "click", function() {
         this.remove();
