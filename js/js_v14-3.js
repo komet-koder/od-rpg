@@ -1119,10 +1119,29 @@ function startGame() {
                 <div class="ac-guage-text">AC
                 </div>
               
-                <svg class="circle-ac-svg" xmlns="http://www.w3.org/2000/svg" version="1.1">                  
+                <svg  class="circle-ac-svg"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 120 120"
+                      version="1.1">
+
+                  <!-- Definitions live here -->
+                  <defs>
+                    <filter id="ac-glow" x="-50%" y="-50%" width="200%" height="200%">
+                      <feGaussianBlur stdDeviation="4" result="blur"/>
+                      <feMerge>
+                        <feMergeNode in="blur"/>
+                        <feMergeNode in="SourceGraphic"/>
+                      </feMerge>
+                    </filter>
+                  </defs>
+
+                  <!-- Background ring -->
                   <circle class="circle-ac-background"/>
-                  <circle class="circle-ac"/>
+
+                  <!-- Foreground / value ring -->
+                  <circle class="circle-ac" filter="url(#ac-glow)" />
                 </svg>
+
               </div>
 
               <div class="hitpoints-guage">
@@ -1155,13 +1174,55 @@ function startGame() {
               </div>
 
               <div class="xp-guage">
-                <div class="xp-guage-value-current">${
-                  finalCharacter.specialty.characterExperience
-                }</div>  
-                  <div class="xp-guage-value-total">${
-                    finalCharacter.specialty.characterLevel.level.maxXP
-                  }</div>
-                  <svg class="circle-xp-svg" xmlns="http://www.w3.org/2000/svg" version="1.1">                  
+                <div class="xp-guage-value-current">${finalCharacter.specialty.characterExperience}</div>  
+                  <div class="xp-guage-value-total">${finalCharacter.specialty.characterLevel.level.maxXP}</div>
+                  <svg class="circle-xp-svg" xmlns="http://www.w3.org/2000/svg" version="1.1">   
+                                    
+                  <!-- Definitions live here -->
+                    <defs>
+                      <filter id="xp-glow" 
+                              x="-50%" 
+                              y="-50%" 
+                              width="200%" 
+                              height="200%">
+                        <feGaussianBlur stdDeviation="4" result="blur"/>
+                        <feMerge>
+                          <feMergeNode in="blur"/>
+                          <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                      </filter>
+                        <filter id="stone-texture" x="-20%" y="-20%" width="140%" height="140%">
+    <!-- Base noise -->
+    <feTurbulence
+      type="fractalNoise"
+      baseFrequency="0.8"
+      numOctaves="3"
+      seed="2"
+      result="noise" />
+
+    <!-- Convert noise to height map -->
+    <feDisplacementMap
+      in="SourceGraphic"
+      in2="noise"
+      scale="6"
+      xChannelSelector="R"
+      yChannelSelector="G" />
+
+    <!-- Subtle lighting -->
+    <feDiffuseLighting
+      in="noise"
+      lighting-color="#ffffff"
+      surfaceScale="1.5"
+      result="light">
+      <feDistantLight azimuth="225" elevation="45" />
+    </feDiffuseLighting>
+
+    <feMerge>
+      <feMergeNode in="SourceGraphic" />
+      <feMergeNode in="light" />
+    </feMerge>
+  </filter>
+                    </defs>               
                     <circle class="circle-xp-background"/>
                     <circle class="circle-xp"/>
                   </svg>
