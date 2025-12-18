@@ -863,22 +863,21 @@ input[name="selected-specialty"] {
 
   #character-stats[open] {
     height: 6em;
-    transition: height 350ms;
+    transition: height 350ms ease;
     border: 10px solid transparent;
     border-image: url('../images/gui/gui-entire-border7.png') 10 stretch;
   }
 
   #character-stats::details-content {
     height: 0em;
-    transition: height 350ms,
-                content-visibility 350ms;
+    transition: height 350ms ease,
+                content-visibility 350ms ease;
     transition-behavior: allow-discrete;
     overflow: hidden;
   }
 
   #character-stats[open]::details-content {
     height: 3.5em;
-    /* transition: height 300ms; */
 
   }
 
@@ -1041,22 +1040,22 @@ input[name="selected-specialty"] {
 
   #character-statuses[open] {
     height: 6em;
-    transition: height 350ms;
+    transition: height 350ms ease;
     border: 10px solid transparent;
     border-image: url('../images/gui/gui-entire-border7.png') 10 stretch;
   }
 
   #character-statuses::details-content {
     height: 0;
-    transition: height 250ms,
-                content-visibility 250ms;
+    transition: height 350ms ease,
+                content-visibility 350ms ease;
     transition-behavior: allow-discrete;
     overflow: hidden;
   }
 
   #character-statuses[open]::details-content {
     height: 3.5em;
-    transition: height 350ms;
+    transition: height 350ms ease;
   }
 
   #character-statuses summary .fa-solid.fa-minus {
@@ -1153,8 +1152,8 @@ input[name="selected-specialty"] {
 
 
   #character-stats > .char-stats-module {
-    transition: height 350ms,
-                content-visibility 350ms;
+    transition: height 350ms ease,
+                content-visibility 350ms ease;
     transition-behavior: allow-discrete;
     height: 0em;
 
@@ -1163,7 +1162,7 @@ input[name="selected-specialty"] {
 
   #character-stats[open] > .char-stats-module {
     height: 4em;
-    transition: height 350ms;
+    transition: height 350ms ease;
   }
 
 
@@ -2304,8 +2303,8 @@ input[name="selected-specialty"] {
    .cleric-second-level-details::details-content,
    .cleric-third-level-details::details-content {
     block-size: 0;
-    transition: block-size 350ms,
-                content-visibility 350ms;
+    transition: block-size 350ms ease,
+                content-visibility 350ms ease; 
     transition-behavior: allow-discrete;
 
   }
