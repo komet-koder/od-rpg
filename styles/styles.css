@@ -1220,12 +1220,12 @@ input[name="selected-specialty"] {
   #cleric-first-level-spell-list,
   #cleric-second-level-spell-list,
   #cleric-third-level-spell-list {
-    padding: 10px 0px 10px 0px;
+    padding: 10px 0px 0px 0px;
   }
 
   .mage-spell-summary,
   .cleric-spell-summary {
-    font-size: 1.75rem;
+    font-size: 1.5em;
   }
 
   input[type="submit"],  
@@ -1380,7 +1380,7 @@ input[name="selected-specialty"] {
 
   .html-spell-tooltip {
     position: relative;
-    font-size: 1.5rem;
+    font-size: 1.5em;
     width: 100%;
     margin: 0px;
     height: 2.25rem;
