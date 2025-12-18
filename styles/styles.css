@@ -629,7 +629,8 @@ input[name="selected-specialty"] {
     stroke-dashoffset: 0;
     transform: rotate(var(--imageRotate));
     transform-origin: center;
-    filter: url(#xp-glow);
+    filter: url(#xp-glow)
+            url(#stone-texture);
   }
 
   .circle-xp-background {
@@ -645,7 +646,7 @@ input[name="selected-specialty"] {
     stroke-dashoffset: 0;
     transform: rotate(var(--imageRotate));
     transform-origin: center;
-
+    filter: url(#stone-texture);
   }
   .ac-guage > svg,
   .xp-guage > svg {

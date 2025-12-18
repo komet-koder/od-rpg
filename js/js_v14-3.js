@@ -1191,39 +1191,32 @@ function startGame() {
                           <feMergeNode in="SourceGraphic"/>
                         </feMerge>
                       </filter>
-                        <filter id="stone-texture" x="-20%" y="-20%" width="140%" height="140%">
-    <!-- Base noise -->
-    <feTurbulence
-      type="fractalNoise"
-      baseFrequency="0.8"
-      numOctaves="3"
-      seed="2"
-      result="noise" />
+                      <filter id="stone-texture" x="-50%" y="-50%" width="160%" height="160%">
+                        <!-- Noise -->
+                        <feTurbulence
+                          type="fractalNoise"
+                          baseFrequency="0.8"
+                          numOctaves="3"
+                          seed="2"
+                          result="noise" />
 
-    <!-- Convert noise to height map -->
-    <feDisplacementMap
-      in="SourceGraphic"
-      in2="noise"
-      scale="6"
-      xChannelSelector="R"
-      yChannelSelector="G" />
+                        <!-- Mask noise to the visible stroke -->
+                        <feComposite
+                          in="noise"
+                          in2="SourceGraphic"
+                          operator="in"
+                          result="maskedNoise" />
 
-    <!-- Subtle lighting -->
-    <feDiffuseLighting
-      in="noise"
-      lighting-color="#ffffff"
-      surfaceScale="1.5"
-      result="light">
-      <feDistantLight azimuth="225" elevation="45" />
-    </feDiffuseLighting>
-
-    <feMerge>
-      <feMergeNode in="SourceGraphic" />
-      <feMergeNode in="light" />
-    </feMerge>
-  </filter>
+                        <!-- Displace ONLY where the stroke exists -->
+                        <feDisplacementMap
+                          in="SourceGraphic"
+                          in2="maskedNoise"
+                          scale="2"
+                          xChannelSelector="R"
+                          yChannelSelector="G" />
+                      </filter>
                     </defs>               
-                    <circle class="circle-xp-background"/>
+                    <circle class="circle-xp-background"/> 
                     <circle class="circle-xp"/>
                   </svg>
               </div>            
