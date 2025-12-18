@@ -713,6 +713,8 @@ input[name="selected-specialty"] {
     stroke-dashoffset: 0;
     transform: rotate(133deg);
     transform-origin: center;
+    filter: url(#hp-glow)
+            url(#hp-stone-texture);
   }
 
   .circle-hitpoints-background {
@@ -728,6 +730,7 @@ input[name="selected-specialty"] {
     stroke-dashoffset: 0;
     transform: rotate(133deg);
     transform-origin: center;
+    filter: url(#hp-stone-texture);
   }
 
   #char-strength,

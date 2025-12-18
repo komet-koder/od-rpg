@@ -1167,7 +1167,45 @@ function startGame() {
                 }</div>                            
 
                 
-                <svg  class="circle-hp-svg" xmlns="http://www.w3.org/2000/svg" version="1.1">                  
+                <svg  class="circle-hp-svg" xmlns="http://www.w3.org/2000/svg" version="1.1">     
+                  <!-- Definitions live here -->
+                    <defs>
+                      <filter id="hp-glow" 
+                              x="-50%" 
+                              y="-50%" 
+                              width="200%" 
+                              height="200%">
+                        <feGaussianBlur stdDeviation="4" result="blur"/>
+                        <feMerge>
+                          <feMergeNode in="blur"/>
+                          <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                      </filter>
+                      <filter id="hp-stone-texture" x="-50%" y="-50%" width="160%" height="160%">
+                        <!-- Noise -->
+                        <feTurbulence
+                          type="fractalNoise"
+                          baseFrequency="0.8"
+                          numOctaves="3"
+                          seed="2"
+                          result="noise" />
+
+                        <!-- Mask noise to the visible stroke -->
+                        <feComposite
+                          in="noise"
+                          in2="SourceGraphic"
+                          operator="in"
+                          result="maskedNoise" />
+
+                        <!-- Displace ONLY where the stroke exists -->
+                        <feDisplacementMap
+                          in="SourceGraphic"
+                          in2="maskedNoise"
+                          scale="1"
+                          xChannelSelector="R"
+                          yChannelSelector="G" />
+                      </filter>
+                    </defs>                     
                   <circle class="circle-hitpoints-background"/>
                   <circle class="circle-hitpoints"/>
                 </svg>
