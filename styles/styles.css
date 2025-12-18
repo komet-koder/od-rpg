@@ -877,7 +877,7 @@ input[name="selected-specialty"] {
   }
 
   #character-stats[open]::details-content {
-    height: 4.5em;
+    height: 3.5em;
     /* transition: height 300ms; */
 
   }
@@ -1055,7 +1055,7 @@ input[name="selected-specialty"] {
   }
 
   #character-statuses[open]::details-content {
-    height: 4.5em;
+    height: 3.5em;
     transition: height 350ms;
   }
 
