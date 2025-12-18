@@ -2860,10 +2860,11 @@ function beginChapterTwoSix() {
 
   function addTalkToRaynardButtons() {
 
-    let yesTalkToRayard = document.createElement('input');
-    yesTalkToRayard.setAttribute('type', 'submit');
+    let yesTalkToRayard = document.createElement('button');
     yesTalkToRayard.setAttribute('id', 'talk-raynard-yes');
-    yesTalkToRayard.setAttribute('value', 'Yes');
+    let yesTalkToRayardH2 = document.createElement('h2');
+    yesTalkToRayardH2.textContent = "Yes";
+    yesTalkToRayard.appendChild(yesTalkToRayardH2);
     yesTalkToRayard.addEventListener("click", function() {
       this.remove();
       let noTalkButton = document.querySelector('#talk-raynard-no');
@@ -2871,10 +2872,11 @@ function beginChapterTwoSix() {
       beginChapterTwoSeven()
     }, false);
 
-    let noTalkToRayard = document.createElement('input');
-    noTalkToRayard.setAttribute('type', 'submit');
+    let noTalkToRayard = document.createElement('button');
     noTalkToRayard.setAttribute('id', 'talk-raynard-no');
-    noTalkToRayard.setAttribute('value', 'No');
+    let noTalkToRayardH2 = document.createElement('h2');
+    noTalkToRayardH2.textContent = "No";
+    noTalkToRayard.appendChild(noTalkToRayardH2);
     noTalkToRayard.addEventListener("click", function() {
       this.remove();
       let yesTalkButton = document.querySelector('#talk-raynard-yes');
