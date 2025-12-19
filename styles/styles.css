@@ -876,8 +876,10 @@ input[name="selected-specialty"] {
 
   #character-stats::details-content {
     height: 0em;
-    transition: height 350ms ease,
-                content-visibility 350ms ease;
+    transition: 
+    height 350ms ease,
+                content-visibility 200ms ease
+                ;
     transition-behavior: allow-discrete;
     overflow: hidden;
   }
