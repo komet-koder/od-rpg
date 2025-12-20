@@ -351,6 +351,11 @@ button {
       border: 10px solid transparent;
       border-image: url('../images/gui/gui-entire-border7.png') 10 stretch;
     }
+    h2:hover {
+      -webkit-text-fill-color: rgba(57, 162, 88, 0.365);
+      text-shadow: -.2px -.2px 10px rgba(34, 203, 99, 0.167), .5px .5px 10px rgba(26, 183, 60, 0.151);    
+
+    }
   }
 
   #confirm-attributes {       
@@ -379,6 +384,11 @@ button {
       border: 10px solid transparent;
       border-image: url('../images/gui/gui-entire-border7.png') 10 stretch;
       }
+      h2:hover {
+      -webkit-text-fill-color: rgba(57, 162, 88, 0.365);
+      text-shadow: -.2px -.2px 10px rgba(34, 203, 99, 0.167), .5px .5px 10px rgba(26, 183, 60, 0.151);    
+
+    }
   }
 
   #intro-button-container {
